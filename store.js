@@ -1,8 +1,18 @@
 /*
  * Pure state logic for the priorities tracker.
+ *
+ * The model, in the user's words: every night you set a list of priorities
+ * for the next day. The next day you say "I did this for that priority" and
+ * it books in. Everything saves by day.
+ *
+ * So each calendar day owns its own plan (a list of items, each filed under
+ * a category). Entries book against an item in that day's plan, or against a
+ * category when the thing you did was not on the list. A reusable "usual
+ * list" seeds a new day so you are not retyping every night.
+ *
  * No DOM, no storage. Every mutator returns a new state object.
- * Loaded as a classic script in the browser (exposes window.PriorityStore)
- * and via require() in Node for tests.
+ * Loaded as a classic script in the browser (window.PriorityStore) and via
+ * require() in Node for tests.
  */
 (function (root, factory) {
   if (typeof module !== 'undefined' && module.exports) {
@@ -13,7 +23,7 @@
 })(typeof self !== 'undefined' ? self : this, function () {
   'use strict';
 
-  const SCHEMA_VERSION = 1;
+  const SCHEMA_VERSION = 2;
 
   function uid(prefix) {
     return prefix + '_' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
@@ -31,8 +41,7 @@
 
   function shiftDateKey(key, days) {
     const [y, m, d] = key.split('-').map(Number);
-    const dt = new Date(y, m - 1, d + days);
-    return dateKey(dt);
+    return dateKey(new Date(y, m - 1, d + days));
   }
 
   function clone(state) {
@@ -47,50 +56,79 @@
       { id: 't_fitness', name: 'Fitness' },
       { id: 't_school', name: 'School' },
     ];
-    const priorities = [
-      { id: 'p_prayer', tierId: 't_faith', title: 'Morning prayer and scripture', note: 'Before anything else, before the phone.' },
-      { id: 'p_family_time', tierId: 't_family', title: 'Undistracted time with family', note: 'A call, a meal, or a real conversation.' },
-      { id: 'p_budget', tierId: 't_finance', title: 'Move the money forward', note: 'Budget check, a bill, income work.' },
-      { id: 'p_workout', tierId: 't_fitness', title: 'Train or walk', note: 'Something that raises the heart rate.' },
-      { id: 'p_coursework', tierId: 't_school', title: 'Coursework block', note: 'Focused study. It comes after the rest, not instead of them.' },
+    const template = [
+      { id: 'u_prayer', tierId: 't_faith', title: 'Morning prayer and scripture', note: 'Before anything else, before the phone.' },
+      { id: 'u_family', tierId: 't_family', title: 'Undistracted time with family', note: 'A call, a meal, or a real conversation.' },
+      { id: 'u_money', tierId: 't_finance', title: 'Move the money forward', note: 'Budget check, a bill, income work.' },
+      { id: 'u_train', tierId: 't_fitness', title: 'Train or walk', note: 'Something that raises the heart rate.' },
+      { id: 'u_course', tierId: 't_school', title: 'Coursework block', note: 'Focused study. It comes after the rest, not instead of them.' },
     ];
-    return {
-      version: SCHEMA_VERSION,
-      tiers,
-      priorities,
-      logs: [],
-      reflections: {},
-    };
+    return { version: SCHEMA_VERSION, tiers, template, plans: {}, logs: [], reflections: {} };
+  }
+
+  function cleanItems(rawItems, tierIds) {
+    const out = [];
+    for (const it of Array.isArray(rawItems) ? rawItems : []) {
+      if (!it || typeof it.id !== 'string' || typeof it.title !== 'string') continue;
+      if (!tierIds.has(it.tierId)) continue;
+      out.push({ id: it.id, tierId: it.tierId, title: it.title, note: typeof it.note === 'string' ? it.note : '' });
+    }
+    return out;
   }
 
   // Coerce anything loaded from storage into a valid state, or null.
+  // Understands version 1, where priorities were one standing list.
   function normalize(raw) {
     if (!raw || typeof raw !== 'object') return null;
-    if (!Array.isArray(raw.tiers) || !Array.isArray(raw.priorities)) return null;
+    if (!Array.isArray(raw.tiers)) return null;
     const tiers = raw.tiers
       .filter((t) => t && typeof t.id === 'string' && typeof t.name === 'string')
       .map((t) => ({ id: t.id, name: t.name }));
     const tierIds = new Set(tiers.map((t) => t.id));
-    const priorities = raw.priorities
-      .filter((p) => p && typeof p.id === 'string' && tierIds.has(p.tierId) && typeof p.title === 'string')
-      .map((p) => ({ id: p.id, tierId: p.tierId, title: p.title, note: typeof p.note === 'string' ? p.note : '' }));
-    const prioById = new Map(priorities.map((p) => [p.id, p]));
+
+    const legacy = !Array.isArray(raw.template) && Array.isArray(raw.priorities);
+    const template = cleanItems(legacy ? raw.priorities : raw.template, tierIds);
+    if (!legacy && !Array.isArray(raw.template) && !Array.isArray(raw.priorities)) return null;
+
+    const plans = {};
+    if (raw.plans && typeof raw.plans === 'object') {
+      for (const date of Object.keys(raw.plans)) {
+        plans[date] = cleanItems(raw.plans[date], tierIds);
+      }
+    }
+
+    const rawLogs = Array.isArray(raw.logs) ? raw.logs : [];
+
+    // Version 1 had no per-day plans: the standing list applied to every day.
+    // Rebuild each day that has history as a copy of that list.
+    if (legacy) {
+      const dates = new Set();
+      for (const l of rawLogs) if (l && typeof l.date === 'string') dates.add(l.date);
+      if (raw.reflections && typeof raw.reflections === 'object') {
+        for (const d of Object.keys(raw.reflections)) dates.add(d);
+      }
+      for (const d of dates) if (!plans[d]) plans[d] = template.map((it) => ({ ...it }));
+    }
+
     const logs = [];
-    for (const l of Array.isArray(raw.logs) ? raw.logs : []) {
+    for (const l of rawLogs) {
       if (!l || typeof l.id !== 'string' || typeof l.date !== 'string') continue;
-      // A log is booked under a tier, and optionally under one of that tier's priorities.
-      let priorityId = typeof l.priorityId === 'string' && prioById.has(l.priorityId) ? l.priorityId : null;
-      let tierId = priorityId ? prioById.get(priorityId).tierId : (typeof l.tierId === 'string' ? l.tierId : null);
+      const plan = plans[l.date] || [];
+      // v1 called it priorityId; either way it names an item in that day's plan.
+      const wanted = typeof l.itemId === 'string' ? l.itemId : (typeof l.priorityId === 'string' ? l.priorityId : null);
+      const item = wanted ? plan.find((it) => it.id === wanted) : null;
+      const tierId = item ? item.tierId : l.tierId;
       if (!tierIds.has(tierId)) continue;
       logs.push({
         id: l.id,
-        tierId,
-        priorityId,
         date: l.date,
+        tierId,
+        itemId: item ? item.id : null,
         text: typeof l.text === 'string' ? l.text : '',
         at: typeof l.at === 'number' ? l.at : 0,
       });
     }
+
     const reflections = {};
     if (raw.reflections && typeof raw.reflections === 'object') {
       for (const key of Object.keys(raw.reflections)) {
@@ -104,15 +142,16 @@
         };
       }
     }
-    return { version: SCHEMA_VERSION, tiers, priorities, logs, reflections };
+
+    return { version: SCHEMA_VERSION, tiers, template, plans, logs, reflections };
   }
 
-  // ---- Tiers -------------------------------------------------------------
+  // ---- Categories --------------------------------------------------------
 
   function addTier(state, name) {
-    const s = clone(state);
     const trimmed = String(name || '').trim();
     if (!trimmed) return state;
+    const s = clone(state);
     s.tiers.push({ id: uid('t'), name: trimmed });
     return s;
   }
@@ -137,106 +176,195 @@
   }
 
   function removeTier(state, tierId) {
+    if (!state.tiers.some((t) => t.id === tierId)) return state;
     const s = clone(state);
-    if (!s.tiers.some((t) => t.id === tierId)) return state;
     s.tiers = s.tiers.filter((t) => t.id !== tierId);
-    s.priorities = s.priorities.filter((p) => p.tierId !== tierId);
-    s.logs = s.logs.filter((l) => l.tierId !== tierId);
-    for (const key of Object.keys(s.reflections)) {
-      delete s.reflections[key].tierScores[tierId];
+    s.template = s.template.filter((it) => it.tierId !== tierId);
+    for (const date of Object.keys(s.plans)) {
+      s.plans[date] = s.plans[date].filter((it) => it.tierId !== tierId);
     }
+    s.logs = s.logs.filter((l) => l.tierId !== tierId);
+    for (const date of Object.keys(s.reflections)) delete s.reflections[date].tierScores[tierId];
     return s;
   }
 
-  // ---- Priorities --------------------------------------------------------
+  // ---- The usual list (seeds a new day) ----------------------------------
 
-  function prioritiesForTier(state, tierId) {
-    return state.priorities.filter((p) => p.tierId === tierId);
-  }
-
-  function addPriority(state, tierId, title, note) {
+  function addTemplateItem(state, tierId, title, note) {
     const trimmed = String(title || '').trim();
     if (!trimmed || !state.tiers.some((t) => t.id === tierId)) return state;
     const s = clone(state);
-    s.priorities.push({ id: uid('p'), tierId, title: trimmed, note: String(note || '').trim() });
+    s.template.push({ id: uid('u'), tierId, title: trimmed, note: String(note || '').trim() });
     return s;
   }
 
-  function updatePriority(state, priorityId, fields) {
+  function updateTemplateItem(state, itemId, fields) {
     const s = clone(state);
-    const p = s.priorities.find((x) => x.id === priorityId);
-    if (!p) return state;
-    if (typeof fields.title === 'string' && fields.title.trim()) p.title = fields.title.trim();
-    if (typeof fields.note === 'string') p.note = fields.note.trim();
-    if (typeof fields.tierId === 'string' && s.tiers.some((t) => t.id === fields.tierId) && fields.tierId !== p.tierId) {
-      p.tierId = fields.tierId;
-      for (const l of s.logs) if (l.priorityId === p.id) l.tierId = p.tierId;
-    }
+    const it = s.template.find((x) => x.id === itemId);
+    if (!it) return state;
+    if (typeof fields.title === 'string' && fields.title.trim()) it.title = fields.title.trim();
+    if (typeof fields.note === 'string') it.note = fields.note.trim();
+    if (typeof fields.tierId === 'string' && s.tiers.some((t) => t.id === fields.tierId)) it.tierId = fields.tierId;
     return s;
   }
 
-  // Moves a priority up or down within its own tier.
-  function movePriority(state, priorityId, direction) {
+  function moveTemplateItem(state, itemId, direction) {
+    return moveWithinTier(state, state.template, itemId, direction, (s) => s.template);
+  }
+
+  function removeTemplateItem(state, itemId) {
+    if (!state.template.some((it) => it.id === itemId)) return state;
     const s = clone(state);
-    const p = s.priorities.find((x) => x.id === priorityId);
-    if (!p) return state;
-    const siblings = s.priorities.filter((x) => x.tierId === p.tierId);
-    const i = siblings.findIndex((x) => x.id === priorityId);
+    s.template = s.template.filter((it) => it.id !== itemId);
+    return s;
+  }
+
+  // Shared reorder helper: swaps an item with its neighbour inside its own
+  // category, leaving every other category untouched.
+  function moveWithinTier(state, list, itemId, direction, pick) {
+    const item = list.find((x) => x.id === itemId);
+    if (!item) return state;
+    const s = clone(state);
+    const target = pick(s);
+    const siblings = target.filter((x) => x.tierId === item.tierId);
+    const i = siblings.findIndex((x) => x.id === itemId);
     const j = i + direction;
     if (j < 0 || j >= siblings.length) return state;
-    const a = s.priorities.indexOf(siblings[i]);
-    const b = s.priorities.indexOf(siblings[j]);
-    [s.priorities[a], s.priorities[b]] = [s.priorities[b], s.priorities[a]];
+    const a = target.indexOf(siblings[i]);
+    const b = target.indexOf(siblings[j]);
+    [target[a], target[b]] = [target[b], target[a]];
     return s;
   }
 
-  // Removing a priority keeps its history: entries fall back to the tier.
-  function removePriority(state, priorityId) {
-    if (!state.priorities.some((p) => p.id === priorityId)) return state;
-    const s = clone(state);
-    s.priorities = s.priorities.filter((p) => p.id !== priorityId);
-    for (const l of s.logs) if (l.priorityId === priorityId) l.priorityId = null;
-    return s;
+  // ---- A day's plan ------------------------------------------------------
+
+  function planFor(state, date) {
+    return state.plans[date] || [];
   }
 
-  // ---- Logs ("I did this", booked under a tier or a priority) ------------
+  function hasPlan(state, date) {
+    return Array.isArray(state.plans[date]);
+  }
 
-  // `target` is a priority id, a tier id, or { tierId, priorityId }.
-  function resolveTarget(state, target) {
-    if (target && typeof target === 'object') {
-      if (target.priorityId) return resolveTarget(state, target.priorityId);
-      return resolveTarget(state, target.tierId);
+  function planForTier(state, date, tierId) {
+    return planFor(state, date).filter((it) => it.tierId === tierId);
+  }
+
+  // Most recent date on or before `before` that has a plan.
+  function lastPlannedDate(state, before, lookback) {
+    for (let i = 1; i <= (lookback || 30); i++) {
+      const d = shiftDateKey(before, -i);
+      if (hasPlan(state, d) && planFor(state, d).length) return d;
     }
-    const p = state.priorities.find((x) => x.id === target);
-    if (p) return { tierId: p.tierId, priorityId: p.id };
-    if (state.tiers.some((t) => t.id === target)) return { tierId: target, priorityId: null };
     return null;
   }
 
-  function addLog(state, target, text, date, now) {
-    const where = resolveTarget(state, target);
+  function setPlan(state, date, items) {
+    const s = clone(state);
+    const tierIds = new Set(s.tiers.map((t) => t.id));
+    s.plans[date] = cleanItems(items, tierIds);
+    return s;
+  }
+
+  // Copy the usual list into a day, giving each item a fresh id so editing
+  // tomorrow never rewrites the template.
+  function seedPlanFromTemplate(state, date) {
+    return setPlan(state, date, state.template.map((it) => ({ ...it, id: uid('i') })));
+  }
+
+  function seedPlanFromDate(state, date, sourceDate) {
+    return setPlan(state, date, planFor(state, sourceDate).map((it) => ({ ...it, id: uid('i') })));
+  }
+
+  function clearPlan(state, date) {
+    if (!hasPlan(state, date)) return state;
+    const s = clone(state);
+    delete s.plans[date];
+    for (const l of s.logs) if (l.date === date) l.itemId = null;
+    return s;
+  }
+
+  function addPlanItem(state, date, tierId, title, note) {
+    const trimmed = String(title || '').trim();
+    if (!trimmed || !state.tiers.some((t) => t.id === tierId)) return state;
+    const s = clone(state);
+    if (!s.plans[date]) s.plans[date] = [];
+    s.plans[date].push({ id: uid('i'), tierId, title: trimmed, note: String(note || '').trim() });
+    return s;
+  }
+
+  function updatePlanItem(state, date, itemId, fields) {
+    const s = clone(state);
+    const it = (s.plans[date] || []).find((x) => x.id === itemId);
+    if (!it) return state;
+    if (typeof fields.title === 'string' && fields.title.trim()) it.title = fields.title.trim();
+    if (typeof fields.note === 'string') it.note = fields.note.trim();
+    if (typeof fields.tierId === 'string' && s.tiers.some((t) => t.id === fields.tierId) && fields.tierId !== it.tierId) {
+      it.tierId = fields.tierId;
+      for (const l of s.logs) if (l.date === date && l.itemId === itemId) l.tierId = it.tierId;
+    }
+    return s;
+  }
+
+  function movePlanItem(state, date, itemId, direction) {
+    return moveWithinTier(state, planFor(state, date), itemId, direction, (s) => s.plans[date]);
+  }
+
+  // Dropping an item from a day's list keeps anything already booked under
+  // it: those entries fall back to the category.
+  function removePlanItem(state, date, itemId) {
+    if (!planFor(state, date).some((it) => it.id === itemId)) return state;
+    const s = clone(state);
+    s.plans[date] = s.plans[date].filter((it) => it.id !== itemId);
+    for (const l of s.logs) if (l.date === date && l.itemId === itemId) l.itemId = null;
+    return s;
+  }
+
+  // Add a one-off item to a day's list and keep it for future days too.
+  function promoteToTemplate(state, date, itemId) {
+    const it = planFor(state, date).find((x) => x.id === itemId);
+    if (!it) return state;
+    if (state.template.some((t) => t.tierId === it.tierId && t.title === it.title)) return state;
+    const s = clone(state);
+    s.template.push({ id: uid('u'), tierId: it.tierId, title: it.title, note: it.note });
+    return s;
+  }
+
+  // ---- Entries ("I did this for that priority") --------------------------
+
+  // `target` is an item id within that day's plan, or a category id.
+  function resolveTarget(state, date, target) {
+    if (!target) return null;
+    const it = planFor(state, date).find((x) => x.id === target);
+    if (it) return { tierId: it.tierId, itemId: it.id };
+    if (state.tiers.some((t) => t.id === target)) return { tierId: target, itemId: null };
+    return null;
+  }
+
+  function addLog(state, date, target, text, now) {
+    const where = resolveTarget(state, date, target);
     if (!where) return state;
     const s = clone(state);
     s.logs.push({
       id: uid('l'),
+      date,
       tierId: where.tierId,
-      priorityId: where.priorityId,
-      date: date || dateKey(new Date()),
+      itemId: where.itemId,
       text: String(text || '').trim(),
       at: typeof now === 'number' ? now : Date.now(),
     });
     return s;
   }
 
-  // Re-book an existing entry under a different tier or priority.
   function moveLog(state, logId, target) {
-    const where = resolveTarget(state, target);
     const l = state.logs.find((x) => x.id === logId);
-    if (!where || !l) return state;
+    if (!l) return state;
+    const where = resolveTarget(state, l.date, target);
+    if (!where) return state;
     const s = clone(state);
-    const target_ = s.logs.find((x) => x.id === logId);
-    target_.tierId = where.tierId;
-    target_.priorityId = where.priorityId;
+    const moved = s.logs.find((x) => x.id === logId);
+    moved.tierId = where.tierId;
+    moved.itemId = where.itemId;
     return s;
   }
 
@@ -251,21 +379,20 @@
     return state.logs.filter((l) => l.date === date).sort((a, b) => a.at - b.at);
   }
 
-  function logsForPriority(state, priorityId, date) {
-    return logsForDate(state, date).filter((l) => l.priorityId === priorityId);
+  function logsForItem(state, date, itemId) {
+    return logsForDate(state, date).filter((l) => l.itemId === itemId);
   }
 
-  // Every entry booked anywhere in the tier.
-  function logsForTier(state, tierId, date) {
+  function logsForTier(state, date, tierId) {
     return logsForDate(state, date).filter((l) => l.tierId === tierId);
   }
 
-  // Entries booked under the tier itself, not under one of its priorities.
-  function generalLogsForTier(state, tierId, date) {
-    return logsForTier(state, tierId, date).filter((l) => !l.priorityId);
+  // Entries booked under a category rather than against a listed priority.
+  function offListLogs(state, date, tierId) {
+    return logsForTier(state, date, tierId).filter((l) => !l.itemId);
   }
 
-  // ---- Reflections (end of day) ------------------------------------------
+  // ---- Evening check-in --------------------------------------------------
 
   function saveReflection(state, date, fields, now) {
     const s = clone(state);
@@ -289,72 +416,74 @@
 
   // ---- Summaries ---------------------------------------------------------
 
-  // Per-tier picture of one day: how many priorities got touched, how many logs.
   function daySummary(state, date) {
     const logs = logsForDate(state, date);
+    const plan = planFor(state, date);
     const reflection = state.reflections[date] || null;
     const tiers = state.tiers.map((tier) => {
-      const prios = prioritiesForTier(state, tier.id);
+      const items = plan.filter((it) => it.tierId === tier.id);
       const tierLogs = logs.filter((l) => l.tierId === tier.id);
-      const touched = prios.filter((p) => tierLogs.some((l) => l.priorityId === p.id)).length;
+      const done = items.filter((it) => tierLogs.some((l) => l.itemId === it.id)).length;
       return {
         tierId: tier.id,
         name: tier.name,
-        total: prios.length,
-        touched,
+        planned: items.length,
+        done,
         logCount: tierLogs.length,
-        general: tierLogs.filter((l) => !l.priorityId).length,
+        offList: tierLogs.filter((l) => !l.itemId).length,
         active: tierLogs.length > 0,
         score: reflection && reflection.tierScores[tier.id] ? reflection.tierScores[tier.id] : null,
       };
     });
     const scored = tiers.filter((t) => t.score !== null);
-    const avgScore = scored.length ? scored.reduce((a, t) => a + t.score, 0) / scored.length : null;
     return {
       date,
       tiers,
+      hasPlan: hasPlan(state, date),
+      planned: plan.length,
+      done: tiers.reduce((a, t) => a + t.done, 0),
       logCount: logs.length,
-      touched: tiers.reduce((a, t) => a + t.touched, 0),
-      total: tiers.reduce((a, t) => a + t.total, 0),
+      offList: tiers.reduce((a, t) => a + t.offList, 0),
       activeTiers: tiers.filter((t) => t.active).length,
       reflection,
-      avgScore,
+      avgScore: scored.length ? scored.reduce((a, t) => a + t.score, 0) / scored.length : null,
     };
   }
 
-  // The first tier (top of the ladder) with nothing booked under it today.
-  function firstNeglectedTier(state, date) {
-    const summary = daySummary(state, date);
-    return summary.tiers.find((t) => !t.active) || null;
+  // Listed priorities with nothing booked against them.
+  function untouchedItems(state, date) {
+    const logs = logsForDate(state, date);
+    return planFor(state, date).filter((it) => !logs.some((l) => l.itemId === it.id));
   }
 
-  // Detects the failure mode the app exists for: a lower tier got attention
-  // while a higher tier got none.
+  // The highest category on the ladder with nothing booked today.
+  function firstNeglectedTier(state, date) {
+    return daySummary(state, date).tiers.find((t) => !t.active) || null;
+  }
+
+  // The failure mode this app exists for: a lower category got attention
+  // while a higher one got none.
   function inversions(state, date) {
-    const summary = daySummary(state, date);
+    const tiers = daySummary(state, date).tiers;
     const out = [];
-    for (let i = 0; i < summary.tiers.length; i++) {
-      const higher = summary.tiers[i];
-      if (higher.active) continue;
-      const lower = summary.tiers.slice(i + 1).find((t) => t.active);
-      if (lower) out.push({ neglected: higher, favored: lower });
+    for (let i = 0; i < tiers.length; i++) {
+      if (tiers[i].active) continue;
+      const lower = tiers.slice(i + 1).find((t) => t.active);
+      if (lower) out.push({ neglected: tiers[i], favored: lower });
     }
     return out;
   }
 
-  // Last `days` calendar days ending at `today`, newest first, only days
-  // with any activity or a reflection.
   function history(state, today, days) {
     const out = [];
     for (let i = 0; i < days; i++) {
       const date = shiftDateKey(today, -i);
       const s = daySummary(state, date);
-      if (s.logCount > 0 || s.reflection) out.push(s);
+      if (s.logCount > 0 || s.reflection || s.planned > 0) out.push(s);
     }
     return out;
   }
 
-  // Consecutive days (ending today or yesterday) with at least one log.
   function streak(state, today) {
     let count = 0;
     let date = today;
@@ -376,20 +505,33 @@
     renameTier,
     moveTier,
     removeTier,
-    prioritiesForTier,
-    addPriority,
-    updatePriority,
-    movePriority,
-    removePriority,
+    addTemplateItem,
+    updateTemplateItem,
+    moveTemplateItem,
+    removeTemplateItem,
+    planFor,
+    hasPlan,
+    planForTier,
+    lastPlannedDate,
+    setPlan,
+    seedPlanFromTemplate,
+    seedPlanFromDate,
+    clearPlan,
+    addPlanItem,
+    updatePlanItem,
+    movePlanItem,
+    removePlanItem,
+    promoteToTemplate,
     addLog,
     moveLog,
     removeLog,
     logsForDate,
-    logsForPriority,
+    logsForItem,
     logsForTier,
-    generalLogsForTier,
+    offListLogs,
     saveReflection,
     daySummary,
+    untouchedItems,
     firstNeglectedTier,
     inversions,
     history,
