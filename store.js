@@ -74,16 +74,23 @@
     const priorities = raw.priorities
       .filter((p) => p && typeof p.id === 'string' && tierIds.has(p.tierId) && typeof p.title === 'string')
       .map((p) => ({ id: p.id, tierId: p.tierId, title: p.title, note: typeof p.note === 'string' ? p.note : '' }));
-    const prioIds = new Set(priorities.map((p) => p.id));
-    const logs = (Array.isArray(raw.logs) ? raw.logs : [])
-      .filter((l) => l && typeof l.id === 'string' && prioIds.has(l.priorityId) && typeof l.date === 'string')
-      .map((l) => ({
+    const prioById = new Map(priorities.map((p) => [p.id, p]));
+    const logs = [];
+    for (const l of Array.isArray(raw.logs) ? raw.logs : []) {
+      if (!l || typeof l.id !== 'string' || typeof l.date !== 'string') continue;
+      // A log is booked under a tier, and optionally under one of that tier's priorities.
+      let priorityId = typeof l.priorityId === 'string' && prioById.has(l.priorityId) ? l.priorityId : null;
+      let tierId = priorityId ? prioById.get(priorityId).tierId : (typeof l.tierId === 'string' ? l.tierId : null);
+      if (!tierIds.has(tierId)) continue;
+      logs.push({
         id: l.id,
-        priorityId: l.priorityId,
+        tierId,
+        priorityId,
         date: l.date,
         text: typeof l.text === 'string' ? l.text : '',
         at: typeof l.at === 'number' ? l.at : 0,
-      }));
+      });
+    }
     const reflections = {};
     if (raw.reflections && typeof raw.reflections === 'object') {
       for (const key of Object.keys(raw.reflections)) {
@@ -132,10 +139,9 @@
   function removeTier(state, tierId) {
     const s = clone(state);
     if (!s.tiers.some((t) => t.id === tierId)) return state;
-    const doomed = new Set(s.priorities.filter((p) => p.tierId === tierId).map((p) => p.id));
     s.tiers = s.tiers.filter((t) => t.id !== tierId);
     s.priorities = s.priorities.filter((p) => p.tierId !== tierId);
-    s.logs = s.logs.filter((l) => !doomed.has(l.priorityId));
+    s.logs = s.logs.filter((l) => l.tierId !== tierId);
     for (const key of Object.keys(s.reflections)) {
       delete s.reflections[key].tierScores[tierId];
     }
@@ -162,7 +168,10 @@
     if (!p) return state;
     if (typeof fields.title === 'string' && fields.title.trim()) p.title = fields.title.trim();
     if (typeof fields.note === 'string') p.note = fields.note.trim();
-    if (typeof fields.tierId === 'string' && s.tiers.some((t) => t.id === fields.tierId)) p.tierId = fields.tierId;
+    if (typeof fields.tierId === 'string' && s.tiers.some((t) => t.id === fields.tierId) && fields.tierId !== p.tierId) {
+      p.tierId = fields.tierId;
+      for (const l of s.logs) if (l.priorityId === p.id) l.tierId = p.tierId;
+    }
     return s;
   }
 
@@ -181,26 +190,53 @@
     return s;
   }
 
+  // Removing a priority keeps its history: entries fall back to the tier.
   function removePriority(state, priorityId) {
     if (!state.priorities.some((p) => p.id === priorityId)) return state;
     const s = clone(state);
     s.priorities = s.priorities.filter((p) => p.id !== priorityId);
-    s.logs = s.logs.filter((l) => l.priorityId !== priorityId);
+    for (const l of s.logs) if (l.priorityId === priorityId) l.priorityId = null;
     return s;
   }
 
-  // ---- Logs ("I did this for that priority") -----------------------------
+  // ---- Logs ("I did this", booked under a tier or a priority) ------------
 
-  function addLog(state, priorityId, text, date, now) {
-    if (!state.priorities.some((p) => p.id === priorityId)) return state;
+  // `target` is a priority id, a tier id, or { tierId, priorityId }.
+  function resolveTarget(state, target) {
+    if (target && typeof target === 'object') {
+      if (target.priorityId) return resolveTarget(state, target.priorityId);
+      return resolveTarget(state, target.tierId);
+    }
+    const p = state.priorities.find((x) => x.id === target);
+    if (p) return { tierId: p.tierId, priorityId: p.id };
+    if (state.tiers.some((t) => t.id === target)) return { tierId: target, priorityId: null };
+    return null;
+  }
+
+  function addLog(state, target, text, date, now) {
+    const where = resolveTarget(state, target);
+    if (!where) return state;
     const s = clone(state);
     s.logs.push({
       id: uid('l'),
-      priorityId,
+      tierId: where.tierId,
+      priorityId: where.priorityId,
       date: date || dateKey(new Date()),
       text: String(text || '').trim(),
       at: typeof now === 'number' ? now : Date.now(),
     });
+    return s;
+  }
+
+  // Re-book an existing entry under a different tier or priority.
+  function moveLog(state, logId, target) {
+    const where = resolveTarget(state, target);
+    const l = state.logs.find((x) => x.id === logId);
+    if (!where || !l) return state;
+    const s = clone(state);
+    const target_ = s.logs.find((x) => x.id === logId);
+    target_.tierId = where.tierId;
+    target_.priorityId = where.priorityId;
     return s;
   }
 
@@ -217,6 +253,16 @@
 
   function logsForPriority(state, priorityId, date) {
     return logsForDate(state, date).filter((l) => l.priorityId === priorityId);
+  }
+
+  // Every entry booked anywhere in the tier.
+  function logsForTier(state, tierId, date) {
+    return logsForDate(state, date).filter((l) => l.tierId === tierId);
+  }
+
+  // Entries booked under the tier itself, not under one of its priorities.
+  function generalLogsForTier(state, tierId, date) {
+    return logsForTier(state, tierId, date).filter((l) => !l.priorityId);
   }
 
   // ---- Reflections (end of day) ------------------------------------------
@@ -249,14 +295,16 @@
     const reflection = state.reflections[date] || null;
     const tiers = state.tiers.map((tier) => {
       const prios = prioritiesForTier(state, tier.id);
-      const touched = prios.filter((p) => logs.some((l) => l.priorityId === p.id)).length;
-      const logCount = logs.filter((l) => prios.some((p) => p.id === l.priorityId)).length;
+      const tierLogs = logs.filter((l) => l.tierId === tier.id);
+      const touched = prios.filter((p) => tierLogs.some((l) => l.priorityId === p.id)).length;
       return {
         tierId: tier.id,
         name: tier.name,
         total: prios.length,
         touched,
-        logCount,
+        logCount: tierLogs.length,
+        general: tierLogs.filter((l) => !l.priorityId).length,
+        active: tierLogs.length > 0,
         score: reflection && reflection.tierScores[tier.id] ? reflection.tierScores[tier.id] : null,
       };
     });
@@ -268,26 +316,27 @@
       logCount: logs.length,
       touched: tiers.reduce((a, t) => a + t.touched, 0),
       total: tiers.reduce((a, t) => a + t.total, 0),
+      activeTiers: tiers.filter((t) => t.active).length,
       reflection,
       avgScore,
     };
   }
 
-  // The first tier (top of the ladder) that has priorities and none touched today.
+  // The first tier (top of the ladder) with nothing booked under it today.
   function firstNeglectedTier(state, date) {
     const summary = daySummary(state, date);
-    return summary.tiers.find((t) => t.total > 0 && t.touched === 0) || null;
+    return summary.tiers.find((t) => !t.active) || null;
   }
 
   // Detects the failure mode the app exists for: a lower tier got attention
-  // while a higher tier with priorities got none.
+  // while a higher tier got none.
   function inversions(state, date) {
     const summary = daySummary(state, date);
     const out = [];
     for (let i = 0; i < summary.tiers.length; i++) {
       const higher = summary.tiers[i];
-      if (higher.total === 0 || higher.touched > 0) continue;
-      const lower = summary.tiers.slice(i + 1).find((t) => t.touched > 0);
+      if (higher.active) continue;
+      const lower = summary.tiers.slice(i + 1).find((t) => t.active);
       if (lower) out.push({ neglected: higher, favored: lower });
     }
     return out;
@@ -333,9 +382,12 @@
     movePriority,
     removePriority,
     addLog,
+    moveLog,
     removeLog,
     logsForDate,
     logsForPriority,
+    logsForTier,
+    generalLogsForTier,
     saveReflection,
     daySummary,
     firstNeglectedTier,

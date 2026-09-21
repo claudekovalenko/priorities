@@ -166,10 +166,10 @@
     const strip = h(
       'div',
       { class: 'strip' },
-      h('span', { class: 'pill ' + (summary.touched > 0 ? 'done' : '') },
-        h('span', { class: 'mono', text: summary.touched + '/' + summary.total }), ' priorities touched'),
-      h('span', { class: 'pill' }, h('span', { class: 'mono', text: String(summary.logCount) }), ' entries'),
-      h('span', { class: 'pill' }, h('span', { class: 'mono', text: String(streak) }), streak === 1 ? ' day streak' : ' day streak')
+      h('span', { class: 'pill ' + (summary.activeTiers > 0 ? 'done' : '') },
+        h('span', { class: 'mono', text: summary.activeTiers + '/' + summary.tiers.length }), ' tiers active'),
+      h('span', { class: 'pill' }, h('span', { class: 'mono', text: String(summary.logCount) }), summary.logCount === 1 ? ' entry' : ' entries'),
+      h('span', { class: 'pill' }, h('span', { class: 'mono', text: String(streak) }), ' day streak')
     );
 
     let notice = null;
@@ -177,74 +177,138 @@
       const first = inv[0];
       notice = h('div', { class: 'notice' },
         h('span', {}, h('strong', { text: first.favored.name }), ' got attention while ',
-          h('strong', { text: first.neglected.name }), ' has nothing logged. That is the order flipped. Go back up the ladder.'));
-    } else if (summary.total > 0 && summary.touched === 0 && isToday(date)) {
-      const first = S.firstNeglectedTier(state, date);
+          h('strong', { text: first.neglected.name }), ' has nothing booked. That is the order flipped. Go back up the ladder.'));
+    } else if (summary.tiers.length > 0 && summary.logCount === 0 && isToday(date)) {
       notice = h('div', { class: 'notice' },
-        h('span', {}, 'Nothing logged yet. Start at the top: ', h('strong', { text: first ? first.name : '' }), '.'));
+        h('span', {}, 'Nothing booked yet. Start at the top: ', h('strong', { text: summary.tiers[0].name }), '.'));
     }
 
     const ladder = h('div', { class: 'ladder' });
     state.tiers.forEach((tier, i) => {
       const prios = S.prioritiesForTier(state, tier.id);
       const tierSummary = summary.tiers[i];
+      const general = S.generalLogsForTier(state, tier.id, date);
       const body = h('div', { class: 'tier-body' });
-      if (prios.length === 0) {
-        body.appendChild(h('p', { class: 'empty', text: 'No priorities here yet. Add some under Edit.' }));
-      }
       for (const p of prios) body.appendChild(renderPriority(p, date));
+      if (general.length) {
+        body.appendChild(h('article', { class: 'prio done general' },
+          h('div', { class: 'prio-top' },
+            h('div', { class: 'prio-check', 'aria-hidden': 'true' }, '✓'),
+            h('div', {}, h('p', { class: 'prio-title', text: 'Booked under ' + tier.name }))),
+          renderLogList(general)));
+      }
+      if (prios.length === 0 && general.length === 0) {
+        body.appendChild(h('p', { class: 'empty', text: 'Nothing here yet. Book something above, or add priorities under Edit.' }));
+      }
       ladder.appendChild(
-        h('section', { class: 'tier ' + (tierSummary.touched > 0 ? 'touched' : '') },
+        h('section', { class: 'tier ' + (tierSummary.active ? 'touched' : '') },
           h('div', { class: 'rank', text: String(i + 1) }),
           h('div', {},
             h('div', { class: 'tier-head' },
               h('h2', { text: tier.name }),
-              h('span', { class: 'count', text: tierSummary.touched + ' of ' + tierSummary.total })),
+              h('span', { class: 'count', text: tierSummary.logCount === 1 ? '1 entry' : tierSummary.logCount + ' entries' })),
             body))
       );
     });
 
-    return h('div', {}, strip, notice, ladder);
+    return h('div', {}, renderCapture(date), strip, notice, ladder);
+  }
+
+  // "I did this" first, then pick where it belongs.
+  function renderCapture(date) {
+    const input = h('input', {
+      type: 'text',
+      id: 'capture',
+      placeholder: isToday(date) ? 'What did you just do?' : 'What did you do on ' + fmtDate(date) + '?',
+      'aria-label': 'What did you do',
+      autocomplete: 'off',
+    });
+    const hint = h('p', { class: 'capture-hint', text: 'Then book it under the place it belongs.' });
+
+    const book = (targetId, label) => {
+      const text = input.value.trim();
+      if (!text) {
+        hint.textContent = 'Write what you did first, then pick where it goes.';
+        input.focus();
+        return;
+      }
+      commit(S.addLog(state, targetId, text, date));
+      toast('Booked under ' + label);
+      const again = document.getElementById('capture');
+      if (again) again.focus();
+    };
+
+    const rows = state.tiers.map((tier, i) => {
+      const prios = S.prioritiesForTier(state, tier.id);
+      return h('div', { class: 'book-row' },
+        h('span', { class: 'book-rank', text: String(i + 1) }),
+        h('div', { class: 'book-chips' },
+          h('button', { class: 'chip tier', type: 'button', onclick: () => book(tier.id, tier.name) }, tier.name),
+          prios.map((p) => h('button', { class: 'chip', type: 'button', onclick: () => book(p.id, tier.name + ' · ' + p.title) }, p.title))));
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const firstChip = document.querySelector('.book-row .chip');
+        if (input.value.trim() && firstChip) firstChip.focus();
+      }
+    });
+
+    return h('section', { class: 'capture' },
+      h('label', { class: 'capture-label', for: 'capture', text: 'I did this' }),
+      input,
+      hint,
+      h('div', { class: 'book' }, rows));
+  }
+
+  function renderLogList(logs) {
+    return h('ul', { class: 'prio-logs' }, logs.map((l) =>
+      h('li', {},
+        h('span', { class: 'time', text: fmtTime(l.at) }),
+        h('span', { class: 'text ' + (l.text ? '' : 'blank'), text: l.text || 'did it' }),
+        renderMoveControl(l),
+        h('button', { class: 'del', type: 'button', 'aria-label': 'Remove entry', onclick: () => commit(S.removeLog(state, l.id)) }, '×'))));
+  }
+
+  // A compact select for re-booking an entry somewhere else.
+  function renderMoveControl(log) {
+    const sel = h('select', { class: 'move', 'aria-label': 'Move entry', id: 'move-' + log.id });
+    sel.appendChild(h('option', { value: '', text: 'move…' }));
+    for (const tier of state.tiers) {
+      const group = h('optgroup', { label: tier.name });
+      group.appendChild(h('option', { value: tier.id, text: tier.name + ' (general)' }));
+      for (const p of S.prioritiesForTier(state, tier.id)) group.appendChild(h('option', { value: p.id, text: p.title }));
+      sel.appendChild(group);
+    }
+    sel.addEventListener('change', () => {
+      if (sel.value) commit(S.moveLog(state, log.id, sel.value));
+    });
+    return sel;
   }
 
   function renderPriority(p, date) {
     const logs = S.logsForPriority(state, p.id, date);
     const done = logs.length > 0;
-    const input = h('input', {
-      type: 'text',
-      id: 'log-' + p.id,
-      placeholder: done ? 'Add another thing you did' : 'What did you do for this?',
-      'aria-label': 'What did you do for ' + p.title,
-    });
-    const submit = () => {
-      commit(S.addLog(state, p.id, input.value, date));
-      const again = document.getElementById('log-' + p.id);
-      if (again) again.focus();
-    };
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        submit();
-      }
-    });
-
     return h('article', { class: 'prio ' + (done ? 'done' : '') },
       h('div', { class: 'prio-top' },
         h('div', { class: 'prio-check', 'aria-hidden': 'true' }, done ? '✓' : ''),
         h('div', {},
           h('p', { class: 'prio-title', text: p.title }),
           p.note ? h('p', { class: 'prio-note', text: p.note }) : null)),
-      logs.length
-        ? h('ul', { class: 'prio-logs' }, logs.map((l) =>
-            h('li', {},
-              h('span', { class: 'time', text: fmtTime(l.at) }),
-              h('span', { class: 'text ' + (l.text ? '' : 'blank'), text: l.text || 'did it' }),
-              h('button', { class: 'del', type: 'button', 'aria-label': 'Remove entry', onclick: () => commit(S.removeLog(state, l.id)) }, '×'))))
-        : null,
-      h('div', { class: 'logform' },
-        input,
-        h('button', { class: 'btn primary', type: 'button', onclick: submit }, done ? 'Add' : 'I did this'))
+      logs.length ? renderLogList(logs) : null
     );
+  }
+
+  // One line per entry in a tier: "Priority title: what you did", or just
+  // what you did when it was booked under the tier itself.
+  function tierEntryLines(tierId, date) {
+    const byId = new Map(state.priorities.map((p) => [p.id, p]));
+    return S.logsForTier(state, tierId, date).map((l) => {
+      const p = l.priorityId ? byId.get(l.priorityId) : null;
+      const what = l.text || 'did it';
+      return p ? p.title + ': ' + what : what;
+    });
   }
 
   // ---- Evening -----------------------------------------------------------
@@ -261,15 +325,10 @@
 
     const recap = h('div', { class: 'recap' });
     summary.tiers.forEach((t) => {
-      const prios = S.prioritiesForTier(state, t.tierId);
-      const items = [];
-      for (const p of prios) {
-        const logs = S.logsForPriority(state, p.id, date);
-        if (logs.length) items.push(p.title + ' (' + logs.length + ')');
-      }
+      const items = tierEntryLines(t.tierId, date);
       recap.appendChild(h('div', { class: 'recap-row' },
         h('span', { class: 'name', text: t.name }),
-        h('span', { class: 'items ' + (items.length ? '' : 'none'), text: items.length ? items.join(' · ') : 'nothing logged' })));
+        h('span', { class: 'items ' + (items.length ? '' : 'none'), text: items.length ? items.join(' · ') : 'nothing booked' })));
     });
 
     const scoreGrid = h('div', { class: 'score-grid' });
@@ -333,9 +392,9 @@
     const today = S.dateKey(new Date());
     const days = S.history(state, today, 60);
     const legend = h('div', { class: 'legend' },
-      h('span', {}, h('i', { class: 'dot on' }), 'all priorities touched'),
-      h('span', {}, h('i', { class: 'dot part' }), 'some'),
-      h('span', {}, h('i', { class: 'dot' }), 'none'),
+      h('span', {}, h('i', { class: 'dot on' }), 'every priority touched'),
+      h('span', {}, h('i', { class: 'dot part' }), 'something booked'),
+      h('span', {}, h('i', { class: 'dot' }), 'nothing'),
       h('span', {}, 'dots run top of the ladder to bottom'));
 
     if (!days.length) {
@@ -347,20 +406,16 @@
       const inv = S.inversions(state, d.date);
       const dots = h('span', { class: 'dots' }, d.tiers.map((t) => {
         let cls = 'dot';
-        if (t.total === 0) cls += ' empty';
-        else if (t.touched === t.total) cls += ' on';
-        else if (t.touched > 0) cls += ' part';
-        return h('i', { class: cls, title: t.name + ': ' + t.touched + ' of ' + t.total });
+        if (t.total > 0 && t.touched === t.total) cls += ' on';
+        else if (t.active) cls += ' part';
+        else if (t.total === 0) cls += ' empty';
+        return h('i', { class: cls, title: t.name + ': ' + t.logCount + (t.logCount === 1 ? ' entry' : ' entries') });
       }));
       const bodyRows = d.tiers.map((t) => {
-        const prios = S.prioritiesForTier(state, t.tierId);
-        const items = [];
-        for (const p of prios) {
-          for (const l of S.logsForPriority(state, p.id, d.date)) items.push(p.title + (l.text ? ': ' + l.text : ''));
-        }
+        const items = tierEntryLines(t.tierId, d.date);
         return h('div', { class: 'recap-row' },
           h('span', { class: 'name' }, t.name, t.score ? h('span', { class: 'avg', text: ' ' + t.score + '/5' }) : null),
-          h('span', { class: 'items ' + (items.length ? '' : 'none'), text: items.length ? items.join(' · ') : 'nothing logged' }));
+          h('span', { class: 'items ' + (items.length ? '' : 'none'), text: items.length ? items.join(' · ') : 'nothing booked' }));
       });
       const r = d.reflection;
       list.appendChild(h('li', {},
@@ -405,7 +460,7 @@
             h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move up', disabled: j === 0, onclick: () => commit(S.movePriority(state, p.id, -1)) }, '↑'),
             h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move down', disabled: j === prios.length - 1, onclick: () => commit(S.movePriority(state, p.id, 1)) }, '↓'),
             h('button', { class: 'btn icon danger', type: 'button', 'aria-label': 'Delete priority', onclick: () => {
-              if (confirm('Delete "' + p.title + '" and its history?')) commit(S.removePriority(state, p.id));
+              if (confirm('Delete "' + p.title + '"? Entries booked under it stay, filed under ' + tier.name + '.')) commit(S.removePriority(state, p.id));
             } }, '×'))));
       });
 
