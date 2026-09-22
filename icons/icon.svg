@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Order of the Day">
+  <rect width="512" height="512" rx="112" fill="#17384a"/>
+  <g>
+    <rect x="104" y="128" width="304" height="46" rx="23" fill="#6cc39a"/>
+    <rect x="104" y="206" width="252" height="46" rx="23" fill="#cfe0e8" opacity="0.92"/>
+    <rect x="104" y="284" width="196" height="46" rx="23" fill="#cfe0e8" opacity="0.62"/>
+    <rect x="104" y="362" width="140" height="46" rx="23" fill="#cfe0e8" opacity="0.34"/>
+  </g>
+</svg>

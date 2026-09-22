@@ -1122,6 +1122,42 @@ button {
   color: var(--muted);
 }
 
+/* ---- Install and update bar ------------------------------------------- */
+
+.pwa-bar {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  width: calc(100% - 32px);
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+  font-size: 14px;
+  z-index: 20;
+}
+
+.pwa-bar span {
+  flex: 1;
+  min-width: 0;
+}
+
+.pwa-dismiss {
+  flex: none;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 4px;
+}
+
 .toast {
   position: fixed;
   left: 50%;

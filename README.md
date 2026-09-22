@@ -21,6 +21,22 @@ Priorities are filed under categories in a fixed order. The default is **Faith, 
 
 Everything is stored in the browser you open it in. Nothing leaves your machine. Export from time to time.
 
+## Installing it on your phone
+
+The app is a PWA, so it installs to your home screen and runs full screen with no browser chrome, offline included. It must be served over HTTPS for this to work. GitHub Pages is enabled on this repo, which serves it at:
+
+```
+https://claudekovalenko.github.io/priorities/
+```
+
+- **iPhone or iPad (Safari):** open the link, tap Share, then "Add to Home Screen".
+- **Android (Chrome):** open the link and accept the install prompt, or use the menu and tap "Install app".
+- **Desktop (Chrome or Edge):** open the link and click the install icon in the address bar.
+
+Once installed it opens instantly and works with no signal. Your data lives in that installation, separate from any other browser you opened the app in.
+
+When a new version is deployed, the app notices and offers a Reload button rather than switching under you mid-entry.
+
 ## Running it
 
 No build step, no dependencies. Open `index.html` directly, or serve the folder:
@@ -47,7 +63,15 @@ npm test
 | `styles.css` | Theme tokens (light and dark) and layout |
 | `store.js` | Pure state functions, no DOM, also loadable in Node |
 | `app.js` | Rendering and browser storage |
+| `pwa.js` | Install prompt, update prompt, service worker registration |
+| `sw.js` | Service worker: offline shell cache |
+| `manifest.webmanifest` | App name, icons, colors, standalone display |
+| `icons/` | App icons, generated from `icons/icon.svg` |
 | `test/store.test.js` | Tests for the state logic |
+
+Every path in the manifest and the service worker is relative, so the app works whether it is served from a domain root or a subdirectory like `/priorities/`.
+
+When you change `styles.css`, `app.js`, or any other shell file, bump `CACHE` in `sw.js` so installed copies pick the change up.
 
 ## Data model
 
