@@ -8,6 +8,13 @@ window.PRIORITY_SEED = {
   "settings": {
     "dayStartHour": 4
   },
+  "standing": [
+    {
+      "id": "s_2e9zrwukmud6ty16",
+      "title": "Purity",
+      "body": "Spend almost all my time with others. Fellowship and connection."
+    }
+  ],
   "areas": [
     {
       "id": "a_ni4h5dgymucyoq4w",
@@ -182,6 +189,7 @@ window.PRIORITY_SEED = {
   "reflections": {
     "2026-09-21": {
       "scores": {},
+      "orderNotes": [],
       "crowdedOut": "",
       "note": "Felt like too much time went to brothers today. Progress, not perfection, the way it came up in group. Work development and help around the house still to do tonight.",
       "savedAt": 1790029800000

@@ -877,3 +877,93 @@ textarea::placeholder {
   background: var(--surface);
   font-variant-numeric: tabular-nums;
 }
+
+/* ---- Standing commitments and order notes ----------------------------- */
+
+.standing {
+  margin-top: 16px;
+  padding: 10px 12px;
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.standing-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+.standing-body {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.standing-edit {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.standing-edit .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.standing-edit input.note {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.ordernotes {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.ordernotes-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ordernote {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.ordernote input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  border-color: transparent;
+  background: transparent;
+  font-size: 14px;
+}
+
+.ordernote input:hover,
+.ordernote input:focus {
+  border-color: var(--line);
+  background: var(--surface);
+}
+
+.plainlist {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

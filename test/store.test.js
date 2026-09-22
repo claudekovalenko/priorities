@@ -381,3 +381,87 @@ test('the day-start hour is stored, validated and defaulted', () => {
   assert.equal(S.dayStartHour(S.normalize(JSON.parse(JSON.stringify(S.setDayStartHour(s, 5))))), 5, 'it survives a round trip');
   assert.equal(S.dayStartHour(S.normalize({ areas: [], template: [], settings: { dayStartHour: 99 } })), S.DEFAULT_DAY_START);
 });
+
+test('standing commitments are managed apart from the numbered list', () => {
+  let s = S.addStanding(S.createDefaultState(), 'Purity', 'Almost all my time with others.');
+  assert.equal(s.standing.length, 1);
+  assert.equal(s.standing[0].body, 'Almost all my time with others.');
+  s = S.addStanding(s, 'Rest', '');
+  s = S.moveStanding(s, s.standing[1].id, -1);
+  assert.deepEqual(s.standing.map((n) => n.title), ['Rest', 'Purity']);
+  s = S.updateStanding(s, s.standing[1].id, { title: 'Purity and fellowship' });
+  assert.equal(s.standing[1].title, 'Purity and fellowship');
+  assert.equal(S.addStanding(s, '   ', ''), s, 'a blank title is a no-op');
+  assert.deepEqual(S.planFor(s, DAY), [], 'it never touches a day’s list');
+  s = S.removeStanding(s, s.standing[0].id);
+  assert.deepEqual(s.standing.map((n) => n.title), ['Purity and fellowship']);
+});
+
+test('describeSkippedAbove names what was passed over, or nothing', () => {
+  let s = planned(DAY);
+  const items = S.planFor(s, DAY);
+  assert.equal(S.describeSkippedAbove(s, DAY, items[0].id), null, 'the top can never skip anything');
+
+  s = S.addLog(s, DAY, items[2].id, 'ran', 1);
+  const text = S.describeSkippedAbove(s, DAY, items[2].id);
+  assert.match(text, /^Worked #3 Train while #1 Prayer, #2 Time with family had nothing yet\.$/);
+
+  // Once the ones above are covered, the same entry skips nothing.
+  let t = planned(DAY);
+  t = S.addLog(t, DAY, items[0].id, '', 1);
+  t = S.addLog(t, DAY, items[1].id, '', 2);
+  t = S.addLog(t, DAY, items[2].id, '', 3);
+  assert.equal(S.describeSkippedAbove(t, DAY, items[2].id), null);
+  assert.equal(S.describeSkippedAbove(t, DAY, 'ghost'), null);
+});
+
+test('describeSkippedAbove summarises a long tail rather than listing it all', () => {
+  let s = planned(DAY);
+  s = S.addPlanItem(s, DAY, 'Fifth', '', null);
+  const items = S.planFor(s, DAY);
+  s = S.addLog(s, DAY, items[4].id, 'late', 1);
+  assert.match(S.describeSkippedAbove(s, DAY, items[4].id), /and 1 more had nothing yet\.$/);
+});
+
+test('order notes are recorded, editable and removable, and survive a round trip', () => {
+  let s = planned(DAY);
+  assert.deepEqual(S.orderNotesFor(s, DAY), []);
+
+  s = S.addOrderNote(s, DAY, 'Worked #4 before #1.', { auto: true }, 100);
+  s = S.addOrderNote(s, DAY, 'Felt rushed all morning.', { auto: false }, 200);
+  const notes = S.orderNotesFor(s, DAY);
+  assert.equal(notes.length, 2);
+  assert.equal(notes[0].auto, true);
+  assert.equal(notes[1].auto, false);
+
+  s = S.updateOrderNote(s, DAY, notes[0].id, '  Worked the essay before prayer.  ');
+  assert.equal(S.orderNotesFor(s, DAY)[0].text, 'Worked the essay before prayer.');
+  assert.equal(S.updateOrderNote(s, DAY, notes[0].id, '   '), s, 'a blank edit is a no-op');
+  assert.equal(S.addOrderNote(s, DAY, '  ', {}, 1), s);
+
+  assert.deepEqual(S.normalize(JSON.parse(JSON.stringify(s))), s);
+
+  s = S.removeOrderNote(s, DAY, notes[0].id);
+  assert.deepEqual(S.orderNotesFor(s, DAY).map((n) => n.text), ['Felt rushed all morning.']);
+});
+
+test('order notes stay put even after the skipped priority is caught up', () => {
+  let s = planned(DAY);
+  const items = S.planFor(s, DAY);
+  s = S.addLog(s, DAY, items[3].id, 'coursework', 1);
+  s = S.addOrderNote(s, DAY, S.describeSkippedAbove(s, DAY, items[3].id), { auto: true }, 2);
+  assert.equal(S.inversions(s, DAY).length, 3);
+
+  // Catching up clears the live warning, but the record of the day remains.
+  for (const it of items.slice(0, 3)) s = S.addLog(s, DAY, it.id, 'later', 3);
+  assert.deepEqual(S.inversions(s, DAY), [], 'nothing is out of order any more');
+  assert.equal(S.orderNotesFor(s, DAY).length, 1, 'but what happened is still written down');
+});
+
+test('an order note can be kept on a day with no check-in saved', () => {
+  let s = S.addOrderNote(planned(DAY), DAY, 'noticed something', { auto: false }, 1);
+  assert.equal(s.reflections[DAY].note, '', 'the rest of the check-in stays empty');
+  s = S.saveReflection(s, DAY, { note: 'tired' });
+  assert.equal(S.orderNotesFor(s, DAY).length, 1, 'saving a check-in keeps the notes');
+  assert.equal(s.reflections[DAY].note, 'tired');
+});

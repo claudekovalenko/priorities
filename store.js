@@ -78,6 +78,7 @@
     return {
       version: SCHEMA_VERSION,
       settings: { dayStartHour: DEFAULT_DAY_START },
+      standing: [],
       areas: [],
       template: [],
       plans: {},
@@ -199,8 +200,19 @@
             if (plan.some((it) => it.id === id) && v >= 1 && v <= 5) scores[id] = v;
           }
         }
+        const orderNotes = [];
+        for (const n of Array.isArray(r.orderNotes) ? r.orderNotes : []) {
+          if (!n || typeof n.id !== 'string' || typeof n.text !== 'string') continue;
+          orderNotes.push({
+            id: n.id,
+            text: n.text,
+            at: typeof n.at === 'number' ? n.at : 0,
+            auto: Boolean(n.auto),
+          });
+        }
         reflections[key] = {
           scores,
+          orderNotes,
           crowdedOut: typeof r.crowdedOut === 'string' ? r.crowdedOut : '',
           note: typeof r.note === 'string' ? r.note : '',
           savedAt: typeof r.savedAt === 'number' ? r.savedAt : 0,
@@ -213,7 +225,13 @@
       dayStartHour: Number.isInteger(rawStart) && rawStart >= 0 && rawStart <= 12 ? rawStart : DEFAULT_DAY_START,
     };
 
-    return { version: SCHEMA_VERSION, settings, areas, template, plans, logs, reflections };
+    const standing = [];
+    for (const n of Array.isArray(raw.standing) ? raw.standing : []) {
+      if (!n || typeof n.id !== 'string' || typeof n.title !== 'string') continue;
+      standing.push({ id: n.id, title: n.title, body: typeof n.body === 'string' ? n.body : '' });
+    }
+
+    return { version: SCHEMA_VERSION, settings, standing, areas, template, plans, logs, reflections };
   }
 
   // ---- Areas (optional tags that carry across days) ----------------------
@@ -448,11 +466,110 @@
     return logsForDate(state, date).filter((l) => !l.itemId);
   }
 
+  // ---- Standing commitments ----------------------------------------------
+  //
+  // Things that hold every day and are not worked through like a list item,
+  // so they never take a number or push a priority down.
+
+  function addStanding(state, title, body) {
+    const trimmed = String(title || '').trim();
+    if (!trimmed) return state;
+    const s = clone(state);
+    s.standing.push({ id: uid('s'), title: trimmed, body: String(body || '').trim() });
+    return s;
+  }
+
+  function updateStanding(state, id, fields) {
+    const s = clone(state);
+    const n = s.standing.find((x) => x.id === id);
+    if (!n) return state;
+    if (typeof fields.title === 'string' && fields.title.trim()) n.title = fields.title.trim();
+    if (typeof fields.body === 'string') n.body = fields.body.trim();
+    return s;
+  }
+
+  function moveStanding(state, id, direction) {
+    const s = clone(state);
+    return swap(s, s.standing, id, direction) ? s : state;
+  }
+
+  function removeStanding(state, id) {
+    if (!state.standing.some((n) => n.id === id)) return state;
+    const s = clone(state);
+    s.standing = s.standing.filter((n) => n.id !== id);
+    return s;
+  }
+
+  // ---- Order notes --------------------------------------------------------
+  //
+  // A live inversion disappears the moment the skipped priority gets an
+  // entry, so what actually happened has to be written down when it happens.
+  // These notes are that record, and they stay editable.
+
+  function ensureReflection(s, date) {
+    const prev = s.reflections[date];
+    if (!prev) s.reflections[date] = { scores: {}, orderNotes: [], crowdedOut: '', note: '', savedAt: 0 };
+    else if (!Array.isArray(prev.orderNotes)) prev.orderNotes = [];
+    return s.reflections[date];
+  }
+
+  function orderNotesFor(state, date) {
+    const r = state.reflections[date];
+    return r && Array.isArray(r.orderNotes) ? r.orderNotes : [];
+  }
+
+  function addOrderNote(state, date, text, opts, now) {
+    const trimmed = String(text || '').trim();
+    if (!trimmed) return state;
+    const s = clone(state);
+    ensureReflection(s, date).orderNotes.push({
+      id: uid('n'),
+      text: trimmed,
+      at: typeof now === 'number' ? now : Date.now(),
+      auto: Boolean(opts && opts.auto),
+    });
+    return s;
+  }
+
+  function updateOrderNote(state, date, noteId, text) {
+    const trimmed = String(text || '').trim();
+    if (!trimmed) return state;
+    const s = clone(state);
+    const n = orderNotesFor(s, date).find((x) => x.id === noteId);
+    if (!n) return state;
+    n.text = trimmed;
+    return s;
+  }
+
+  function removeOrderNote(state, date, noteId) {
+    if (!orderNotesFor(state, date).some((n) => n.id === noteId)) return state;
+    const s = clone(state);
+    s.reflections[date].orderNotes = s.reflections[date].orderNotes.filter((n) => n.id !== noteId);
+    return s;
+  }
+
+  // What to write down when a priority is worked while higher ones are still
+  // empty. Returns null when nothing above it was skipped.
+  function describeSkippedAbove(state, date, itemId) {
+    const items = daySummary(state, date).items;
+    const idx = items.findIndex((e) => e.item.id === itemId);
+    if (idx < 0) return null;
+    const above = items.slice(0, idx).filter((e) => !e.done);
+    if (!above.length) return null;
+    const me = items[idx];
+    const names = above.map((e) => '#' + e.position + ' ' + e.item.title);
+    const shown = names.slice(0, 3).join(', ');
+    const extra = names.length > 3 ? ' and ' + (names.length - 3) + ' more' : '';
+    return 'Worked #' + me.position + ' ' + me.item.title + ' while ' + shown + extra + ' had nothing yet.';
+  }
+
   // ---- Evening check-in ---------------------------------------------------
 
   function saveReflection(state, date, fields, now) {
     const s = clone(state);
-    const prev = s.reflections[date] || { scores: {}, crowdedOut: '', note: '', savedAt: 0 };
+    // ensureReflection also guarantees orderNotes exists, so saving a
+    // check-in can never quietly drop the day's order record.
+    const prev = ensureReflection(s, date);
     const scores = { ...prev.scores };
     if (fields.scores && typeof fields.scores === 'object') {
       const plan = planFor(s, date);
@@ -464,6 +581,7 @@
     }
     s.reflections[date] = {
       scores,
+      orderNotes: prev.orderNotes,
       crowdedOut: typeof fields.crowdedOut === 'string' ? fields.crowdedOut.trim() : prev.crowdedOut,
       note: typeof fields.note === 'string' ? fields.note.trim() : prev.note,
       savedAt: typeof now === 'number' ? now : Date.now(),
@@ -574,6 +692,15 @@
     logsForDate,
     logsForItem,
     offListLogs,
+    addStanding,
+    updateStanding,
+    moveStanding,
+    removeStanding,
+    orderNotesFor,
+    addOrderNote,
+    updateOrderNote,
+    removeOrderNote,
+    describeSkippedAbove,
     saveReflection,
     daySummary,
     untouchedItems,

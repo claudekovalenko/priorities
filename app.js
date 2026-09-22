@@ -185,7 +185,15 @@
 
     if (!summary.planned && !summary.logCount) return renderNoList(date);
 
-    const parts = [h('p', { class: 'summary', text: summary.done + ' of ' + summary.planned + ' done' })];
+    const parts = [];
+
+    for (const n of state.standing) {
+      parts.push(h('div', { class: 'standing' },
+        h('span', { class: 'standing-title', text: n.title }),
+        n.body ? h('span', { class: 'standing-body', text: n.body }) : null));
+    }
+
+    parts.push(h('p', { class: 'summary', text: summary.done + ' of ' + summary.planned + ' done' }));
 
     const inv = S.inversions(state, date);
     if (inv.length) {
@@ -213,7 +221,49 @@
         : h('button', { class: 'add', type: 'button', onclick: () => { ui.adding = 'off'; render(); } },
             off.length ? '+ add another off the list' : '+ something not on the list')));
 
+    parts.push(renderOrderNotes(date));
+
     return h('div', {}, parts);
+  }
+
+  // The record of how the day actually ran, kept and editable.
+  function renderOrderNotes(date) {
+    const notes = S.orderNotesFor(state, date);
+    const wrap = h('div', { class: 'ordernotes' },
+      h('p', { class: 'ordernotes-label', text: 'How the order went' }));
+
+    if (!notes.length) {
+      wrap.appendChild(h('p', { class: 'lede', text: 'Nothing out of order recorded yet.' }));
+    }
+
+    for (const n of notes) {
+      const field = h('input', { type: 'text', id: 'on-' + n.id, value: n.text, 'aria-label': 'Order note' });
+      field.addEventListener('change', () => {
+        if (!field.value.trim()) { field.value = n.text; return; }
+        commit(S.updateOrderNote(state, date, n.id, field.value));
+      });
+      wrap.appendChild(h('div', { class: 'ordernote' },
+        field,
+        h('button', { class: 'btn icon danger', type: 'button', 'aria-label': 'Remove note', onclick: () => commit(S.removeOrderNote(state, date, n.id)) }, '×')));
+    }
+
+    if (ui.adding === 'note') {
+      const input = h('input', { type: 'text', id: 'add-note', placeholder: 'Something you noticed about the order', 'aria-label': 'Add an order note', autocomplete: 'off' });
+      const save = () => {
+        const text = input.value.trim();
+        if (!text) { ui.adding = null; render(); return; }
+        commit(S.addOrderNote(state, date, text, { auto: false }));
+      };
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { e.preventDefault(); save(); }
+        if (e.key === 'Escape') { ui.adding = null; render(); }
+      });
+      wrap.appendChild(h('div', { class: 'addrow' }, input, h('button', { class: 'btn primary', type: 'button', onclick: save }, 'Save')));
+    } else {
+      wrap.appendChild(h('button', { class: 'add', type: 'button', onclick: () => { ui.adding = 'note'; render(); } }, '+ note something about the order'));
+    }
+
+    return wrap;
   }
 
   function renderPriority(entry, date) {
@@ -255,7 +305,14 @@
     const save = () => {
       const text = input.value.trim();
       if (!text) { ui.adding = null; render(); return; }
-      commit(S.addLog(state, date, itemId, text));
+      let next = S.addLog(state, date, itemId, text);
+      // Write down the order as it actually went. A live warning vanishes the
+      // moment the skipped priority gets an entry, so it has to be recorded.
+      if (itemId) {
+        const observed = S.describeSkippedAbove(next, date, itemId);
+        if (observed) next = S.addOrderNote(next, date, observed, { auto: true });
+      }
+      commit(next);
     };
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') { e.preventDefault(); save(); }
@@ -422,6 +479,10 @@
             h('span', { class: 'meta', text: d.done + '/' + d.planned })),
           h('div', { class: 'day-body' },
             rows,
+            S.orderNotesFor(state, d.date).length
+              ? h('div', {}, h('div', { class: 'q', text: 'How the order went' }),
+                  h('ul', { class: 'plainlist' }, S.orderNotesFor(state, d.date).map((n) => h('li', { text: n.text }))))
+              : null,
             r && r.crowdedOut ? h('div', {}, h('div', { class: 'q', text: 'Crowded out' }), r.crowdedOut) : null,
             r && r.note ? h('div', {}, h('div', { class: 'q', text: 'Notes' }), r.note) : null,
             h('div', { class: 'actions' },
@@ -484,6 +545,31 @@
       };
       reader.readAsText(file);
     });
+
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'Always true' }),
+      h('p', { class: 'lede', text: 'Commitments that hold every day. They show at the top of each day without taking a number or pushing a priority down.' })));
+
+    for (const n of state.standing) {
+      const title = h('input', { type: 'text', id: 'st-' + n.id, value: n.title, 'aria-label': 'Commitment' });
+      title.addEventListener('change', () => commit(S.updateStanding(state, n.id, { title: title.value })));
+      const body = h('input', { type: 'text', class: 'note', id: 'sb-' + n.id, value: n.body, placeholder: 'What it means for you', 'aria-label': 'What it means' });
+      body.addEventListener('change', () => commit(S.updateStanding(state, n.id, { body: body.value })));
+      wrap.appendChild(h('div', { class: 'standing-edit' },
+        h('div', { class: 'fields' }, title, body),
+        h('button', { class: 'btn icon danger', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removeStanding(state, n.id)) }, '×')));
+    }
+
+    const stTitle = h('input', { type: 'text', id: 'standingadd', placeholder: 'Add a standing commitment' });
+    const stBody = h('input', { type: 'text', id: 'standingaddbody', placeholder: 'What it means (optional)' });
+    const addStanding = () => {
+      if (!stTitle.value.trim()) return;
+      commit(S.addStanding(state, stTitle.value, stBody.value));
+    };
+    stTitle.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); addStanding(); } });
+    stBody.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); addStanding(); } });
+    wrap.appendChild(h('div', { class: 'addrow', style: 'margin-top:12px' },
+      stTitle, stBody, h('button', { class: 'btn', type: 'button', onclick: addStanding }, 'Add')));
 
     const hourInput = h('input', {
       type: 'number', id: 'daystart', min: '0', max: '12',
