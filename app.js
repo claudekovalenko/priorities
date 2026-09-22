@@ -9,6 +9,9 @@
 
   // ---- Persistence -------------------------------------------------------
 
+  // Anything saved in this browser wins. Failing that, the bundled starting
+  // data in seed.js, so a fresh install opens on real content rather than an
+  // empty shell. Failing that, bare categories.
   function loadState() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -17,9 +20,17 @@
         if (parsed) return parsed;
       }
     } catch (e) {
-      /* storage unavailable or corrupt: fall through to defaults */
+      /* storage unavailable or corrupt: fall through */
     }
-    return S.createDefaultState();
+    return seedState() || S.createDefaultState();
+  }
+
+  function seedState() {
+    try {
+      return window.PRIORITY_SEED ? S.normalize(window.PRIORITY_SEED) : null;
+    } catch (e) {
+      return null;
+    }
   }
 
   function persist() {
@@ -397,6 +408,7 @@
 
   function renderLists() {
     const wrap = h('div', {});
+    const seed = seedState();
 
     wrap.appendChild(h('div', { class: 'section' },
       h('h2', { text: 'Your order' }),
@@ -452,6 +464,18 @@
       h('div', { class: 'data-tools' },
         h('button', { class: 'btn', type: 'button', onclick: exportJson }, 'Export'),
         h('button', { class: 'btn', type: 'button', onclick: () => fileInput.click() }, 'Import'),
+        seed && seed.logs.length
+          ? h('button', { class: 'btn', type: 'button', onclick: () => {
+              if (confirm('Load the ' + seed.logs.length + ' bundled entries? This replaces what is in this browser.')) {
+                // Switch tabs before committing: commit re-renders, and the
+                // point of loading is to land on the day itself.
+                ui.tab = 'today';
+                persistUi();
+                commit(seed);
+                toast('Loaded');
+              }
+            } }, 'Load starting data')
+          : null,
         fileInput,
         h('span', { class: 'status', text: state.logs.length + ' entries stored.' }))));
 
