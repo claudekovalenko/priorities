@@ -860,3 +860,20 @@ textarea::placeholder {
     transition: none;
   }
 }
+
+.daystart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.daystart input {
+  width: 64px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-variant-numeric: tabular-nums;
+}

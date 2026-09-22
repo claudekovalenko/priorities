@@ -61,7 +61,7 @@
   let state = loadState();
   const ui = Object.assign({ tab: 'today' }, loadUi());
   if (!TABS.includes(ui.tab)) ui.tab = 'today';
-  ui.date = S.dateKey(new Date());
+  ui.date = S.dayKeyNow(S.dayStartHour(state));
   ui.adding = null; // priority id (or 'off') whose entry field is open
 
   function commit(next) {
@@ -106,8 +106,10 @@
     return MONTHS[m - 1].slice(0, 3) + ' ' + d;
   }
 
+  // The current day as the user lives it: before the day-start hour, the
+  // previous date is still "today", so a list set at 1am lands correctly.
   function today() {
-    return S.dateKey(new Date());
+    return S.dayKeyNow(S.dayStartHour(state));
   }
 
   function relativeName(key) {
@@ -483,6 +485,26 @@
       reader.readAsText(file);
     });
 
+    const hourInput = h('input', {
+      type: 'number', id: 'daystart', min: '0', max: '12',
+      value: String(S.dayStartHour(state)), 'aria-label': 'Hour the day rolls over',
+    });
+    hourInput.addEventListener('change', () => {
+      const next = S.setDayStartHour(state, hourInput.value);
+      if (next === state) { hourInput.value = String(S.dayStartHour(state)); toast('Pick an hour from 0 to 12.'); return; }
+      commit(next);
+      toast('The day now rolls over at ' + S.dayStartHour(next) + ':00');
+    });
+    hourInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); hourInput.blur(); } });
+
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'When the day ends' }),
+      h('p', { class: 'lede', text: 'If you write things up after midnight, they should still count for the day you just lived. Anything recorded before this hour belongs to the day before.' }),
+      h('div', { class: 'daystart' },
+        h('label', { for: 'daystart', text: 'Roll over at' }),
+        hourInput,
+        h('span', { class: 'status', text: 'o\u2019clock. Set 0 to use midnight.' }))));
+
     wrap.appendChild(h('div', { class: 'section' },
       h('h2', { text: 'Your data' }),
       h('p', { class: 'lede', text: 'Everything is stored in this browser only. Export now and then.' }),
@@ -508,7 +530,7 @@
   function exportJson() {
     const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
-    const a = h('a', { href: url, download: 'priorities-' + today() + '.json' });
+    const a = h('a', { href: url, download: 'priorities-' + S.dateKey(new Date()) + '.json' });
     document.body.appendChild(a);
     a.click();
     a.remove();

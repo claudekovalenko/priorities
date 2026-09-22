@@ -358,3 +358,26 @@ test('a round trip through JSON preserves state', () => {
   s = S.saveReflection(s, DAY, { scores: { [it.id]: 5 } }, 2);
   assert.deepEqual(S.normalize(JSON.parse(JSON.stringify(s))), s);
 });
+
+test('the day rolls over at the day-start hour, not midnight', () => {
+  const before = new Date(2026, 8, 22, 1, 0);   // 1am Tuesday
+  const after = new Date(2026, 8, 22, 9, 0);    // 9am Tuesday
+  const evening = new Date(2026, 8, 21, 23, 30); // late Monday
+  assert.equal(S.dayKeyNow(4, before), '2026-09-21', 'a 1am entry still belongs to Monday');
+  assert.equal(S.dayKeyNow(4, after), '2026-09-22');
+  assert.equal(S.dayKeyNow(4, evening), '2026-09-21');
+  assert.equal(S.dayKeyNow(0, before), '2026-09-22', 'a zero hour means plain midnight');
+  assert.equal(S.dayKeyNow(undefined, before), '2026-09-21', 'the default is used when unset');
+});
+
+test('the day-start hour is stored, validated and defaulted', () => {
+  const s = S.createDefaultState();
+  assert.equal(S.dayStartHour(s), S.DEFAULT_DAY_START);
+  assert.equal(S.dayStartHour(S.setDayStartHour(s, 6)), 6);
+  assert.equal(S.dayStartHour(S.setDayStartHour(s, 0)), 0);
+  assert.equal(S.setDayStartHour(s, 13), s, 'out of range is a no-op');
+  assert.equal(S.setDayStartHour(s, -1), s);
+  assert.equal(S.setDayStartHour(s, 'nope'), s);
+  assert.equal(S.dayStartHour(S.normalize(JSON.parse(JSON.stringify(S.setDayStartHour(s, 5))))), 5, 'it survives a round trip');
+  assert.equal(S.dayStartHour(S.normalize({ areas: [], template: [], settings: { dayStartHour: 99 } })), S.DEFAULT_DAY_START);
+});

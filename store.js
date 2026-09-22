@@ -45,6 +45,31 @@
     return dateKey(new Date(y, m - 1, d + days));
   }
 
+  const DEFAULT_DAY_START = 4;
+
+  // Which day it is for a person, not for a clock. Anything recorded before
+  // the day-start hour still belongs to the day that has not been slept on,
+  // so a list set at 1am lands on the evening it was actually set.
+  function dayKeyNow(startHour, now) {
+    const d = now === undefined || now === null ? new Date() : new Date(now);
+    const start = typeof startHour === 'number' ? startHour : DEFAULT_DAY_START;
+    const key = dateKey(d);
+    return d.getHours() < start ? shiftDateKey(key, -1) : key;
+  }
+
+  function dayStartHour(state) {
+    const v = state && state.settings ? Number(state.settings.dayStartHour) : NaN;
+    return Number.isInteger(v) && v >= 0 && v <= 12 ? v : DEFAULT_DAY_START;
+  }
+
+  function setDayStartHour(state, hour) {
+    const v = Number(hour);
+    if (!Number.isInteger(v) || v < 0 || v > 12) return state;
+    const s = clone(state);
+    s.settings = Object.assign({}, s.settings, { dayStartHour: v });
+    return s;
+  }
+
   function clone(state) {
     return JSON.parse(JSON.stringify(state));
   }
@@ -52,6 +77,7 @@
   function createDefaultState() {
     return {
       version: SCHEMA_VERSION,
+      settings: { dayStartHour: DEFAULT_DAY_START },
       areas: [],
       template: [],
       plans: {},
@@ -182,7 +208,12 @@
       }
     }
 
-    return { version: SCHEMA_VERSION, areas, template, plans, logs, reflections };
+    const rawStart = raw.settings ? Number(raw.settings.dayStartHour) : NaN;
+    const settings = {
+      dayStartHour: Number.isInteger(rawStart) && rawStart >= 0 && rawStart <= 12 ? rawStart : DEFAULT_DAY_START,
+    };
+
+    return { version: SCHEMA_VERSION, settings, areas, template, plans, logs, reflections };
   }
 
   // ---- Areas (optional tags that carry across days) ----------------------
@@ -510,6 +541,10 @@
     SCHEMA_VERSION,
     dateKey,
     shiftDateKey,
+    dayKeyNow,
+    dayStartHour,
+    setDayStartHour,
+    DEFAULT_DAY_START,
     createDefaultState,
     normalize,
     addArea,
