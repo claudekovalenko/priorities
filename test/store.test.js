@@ -6,7 +6,22 @@ const DAY = '2026-09-21';
 const NEXT = '2026-09-22';
 
 function seeded() {
-  return S.createDefaultState();
+  // A fixture with its own categories and usual list, so these tests do not
+  // depend on whatever the shipped defaults happen to be.
+  let s = S.createDefaultState();
+  s = { ...s, tiers: [
+    { id: 't_faith', name: 'Faith' },
+    { id: 't_family', name: 'Family' },
+    { id: 't_finance', name: 'Finance' },
+    { id: 't_fitness', name: 'Fitness' },
+    { id: 't_school', name: 'School' },
+  ] };
+  s = S.addTemplateItem(s, 't_faith', 'Morning prayer and scripture', 'Before anything else, before the phone.');
+  s = S.addTemplateItem(s, 't_family', 'Undistracted time with family', 'A call, a meal, or a real conversation.');
+  s = S.addTemplateItem(s, 't_finance', 'Move the money forward', 'Budget check, a bill, income work.');
+  s = S.addTemplateItem(s, 't_fitness', 'Train or walk', 'Something that raises the heart rate.');
+  s = S.addTemplateItem(s, 't_school', 'Coursework block', 'Focused study.');
+  return s;
 }
 
 // A day set up from the usual list, ready to book against.

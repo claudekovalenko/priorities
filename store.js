@@ -50,20 +50,18 @@
 
   function createDefaultState() {
     const tiers = [
-      { id: 't_faith', name: 'Faith' },
-      { id: 't_family', name: 'Family' },
-      { id: 't_finance', name: 'Finance' },
-      { id: 't_fitness', name: 'Fitness' },
-      { id: 't_school', name: 'School' },
+      { id: 'c_god', name: 'God' },
+      { id: 'c_marriage', name: 'Marriage' },
+      { id: 'c_brothers', name: 'Connection with brothers' },
+      { id: 'c_family', name: 'Family' },
+      { id: 'c_work', name: 'Work development' },
+      { id: 'c_house', name: 'Help and house' },
+      { id: 'c_school', name: 'School' },
     ];
-    const template = [
-      { id: 'u_prayer', tierId: 't_faith', title: 'Morning prayer and scripture', note: 'Before anything else, before the phone.' },
-      { id: 'u_family', tierId: 't_family', title: 'Undistracted time with family', note: 'A call, a meal, or a real conversation.' },
-      { id: 'u_money', tierId: 't_finance', title: 'Move the money forward', note: 'Budget check, a bill, income work.' },
-      { id: 'u_train', tierId: 't_fitness', title: 'Train or walk', note: 'Something that raises the heart rate.' },
-      { id: 'u_course', tierId: 't_school', title: 'Coursework block', note: 'Focused study. It comes after the rest, not instead of them.' },
-    ];
-    return { version: SCHEMA_VERSION, tiers, template, plans: {}, logs: [], reflections: {} };
+    // No usual list by default: the categories alone are enough to start
+    // booking against. Specific priorities are added per day, or built up
+    // into a usual list over time.
+    return { version: SCHEMA_VERSION, tiers, template: [], plans: {}, logs: [], reflections: {} };
   }
 
   function cleanItems(rawItems, tierIds) {
