@@ -5,26 +5,20 @@ const S = require('../store.js');
 const DAY = '2026-09-21';
 const NEXT = '2026-09-22';
 
+// A fixture with a usual list, so tests do not depend on the shipped defaults.
 function seeded() {
-  // A fixture with its own categories and usual list, so these tests do not
-  // depend on whatever the shipped defaults happen to be.
   let s = S.createDefaultState();
-  s = { ...s, tiers: [
-    { id: 't_faith', name: 'Faith' },
-    { id: 't_family', name: 'Family' },
-    { id: 't_finance', name: 'Finance' },
-    { id: 't_fitness', name: 'Fitness' },
-    { id: 't_school', name: 'School' },
-  ] };
-  s = S.addTemplateItem(s, 't_faith', 'Morning prayer and scripture', 'Before anything else, before the phone.');
-  s = S.addTemplateItem(s, 't_family', 'Undistracted time with family', 'A call, a meal, or a real conversation.');
-  s = S.addTemplateItem(s, 't_finance', 'Move the money forward', 'Budget check, a bill, income work.');
-  s = S.addTemplateItem(s, 't_fitness', 'Train or walk', 'Something that raises the heart rate.');
-  s = S.addTemplateItem(s, 't_school', 'Coursework block', 'Focused study.');
+  s = S.addArea(s, 'God');
+  s = S.addArea(s, 'Family');
+  const god = s.areas[0].id;
+  const family = s.areas[1].id;
+  s = S.addTemplateItem(s, 'Prayer', 'Before the phone.', god);
+  s = S.addTemplateItem(s, 'Time with family', '', family);
+  s = S.addTemplateItem(s, 'Train', '', null);
+  s = S.addTemplateItem(s, 'Coursework', '', null);
   return s;
 }
 
-// A day set up from the usual list, ready to book against.
 function planned(date) {
   return S.seedPlanFromTemplate(seeded(), date || DAY);
 }
@@ -33,13 +27,12 @@ function itemTitled(state, date, title) {
   return S.planFor(state, date).find((it) => it.title === title);
 }
 
-test('default state has categories and a usual list, but no days planned', () => {
-  const s = seeded();
-  assert.deepEqual(s.tiers.map((t) => t.name), ['Faith', 'Family', 'Finance', 'Fitness', 'School']);
-  assert.equal(s.template.length, 5);
+test('a fresh state has no areas, no usual list and no days', () => {
+  const s = S.createDefaultState();
+  assert.deepEqual(s.areas, []);
+  assert.deepEqual(s.template, []);
   assert.deepEqual(s.plans, {});
   assert.equal(s.logs.length, 0);
-  assert.equal(S.hasPlan(s, DAY), false);
 });
 
 test('dateKey and shiftDateKey use local calendar days', () => {
@@ -48,113 +41,98 @@ test('dateKey and shiftDateKey use local calendar days', () => {
   assert.equal(S.shiftDateKey('2026-12-31', 1), '2027-01-01');
 });
 
-test('seeding a day copies the usual list with fresh ids', () => {
+test('a day holds an ordered list, seeded from the usual list with fresh ids', () => {
   const s = planned(NEXT);
   const plan = S.planFor(s, NEXT);
-  assert.equal(plan.length, 5);
-  assert.deepEqual(plan.map((it) => it.title), s.template.map((it) => it.title));
-  assert.equal(plan.some((it) => s.template.some((u) => u.id === it.id)), false, 'ids are not shared with the template');
-  assert.equal(S.hasPlan(s, NEXT), true);
+  assert.deepEqual(plan.map((it) => it.title), ['Prayer', 'Time with family', 'Train', 'Coursework']);
+  assert.equal(plan.some((it) => s.template.some((u) => u.id === it.id)), false, 'ids are not shared');
   assert.equal(S.hasPlan(s, DAY), false, 'other days are untouched');
-});
-
-test('editing a day never rewrites the usual list', () => {
-  let s = planned(NEXT);
-  const it = itemTitled(s, NEXT, 'Train or walk');
-  s = S.updatePlanItem(s, NEXT, it.id, { title: 'Swim a mile' });
-  assert.equal(itemTitled(s, NEXT, 'Swim a mile').id, it.id);
-  assert.ok(s.template.some((u) => u.title === 'Train or walk'), 'usual list unchanged');
-});
-
-test('editing the usual list never rewrites a day already set', () => {
-  let s = planned(NEXT);
-  const usual = s.template.find((u) => u.title === 'Train or walk');
-  s = S.updateTemplateItem(s, usual.id, { title: 'Lift heavy' });
-  assert.ok(s.template.some((u) => u.title === 'Lift heavy'));
-  assert.ok(itemTitled(s, NEXT, 'Train or walk'), 'the planned day keeps what it was set to');
 });
 
 test('two days hold independent lists', () => {
   let s = planned(DAY);
   s = S.seedPlanFromTemplate(s, NEXT);
-  const it = itemTitled(s, NEXT, 'Coursework block');
-  s = S.removePlanItem(s, NEXT, it.id);
-  assert.equal(S.planFor(s, NEXT).length, 4);
-  assert.equal(S.planFor(s, DAY).length, 5);
+  s = S.removePlanItem(s, NEXT, itemTitled(s, NEXT, 'Coursework').id);
+  assert.equal(S.planFor(s, NEXT).length, 3);
+  assert.equal(S.planFor(s, DAY).length, 4);
 });
 
-test('a day can be copied from another day', () => {
+test('editing a day never rewrites the usual list, and the reverse holds', () => {
+  let s = planned(NEXT);
+  const it = itemTitled(s, NEXT, 'Train');
+  s = S.updatePlanItem(s, NEXT, it.id, { title: 'Swim' });
+  assert.ok(s.template.some((u) => u.title === 'Train'), 'usual list unchanged');
+  const usual = s.template.find((u) => u.title === 'Train');
+  s = S.updateTemplateItem(s, usual.id, { title: 'Lift' });
+  assert.equal(itemTitled(s, NEXT, 'Swim').id, it.id, 'the day keeps what it was set to');
+});
+
+test('addPlanItem appends and insertPlanItem slides one in at a position', () => {
   let s = planned(DAY);
-  s = S.addPlanItem(s, DAY, 't_family', 'Call my brother', '');
-  s = S.seedPlanFromDate(s, NEXT, DAY);
-  assert.deepEqual(S.planFor(s, NEXT).map((it) => it.title), S.planFor(s, DAY).map((it) => it.title));
-  assert.equal(S.planFor(s, NEXT)[0].id === S.planFor(s, DAY)[0].id, false, 'fresh ids');
+  s = S.addPlanItem(s, DAY, 'Last thing', '', null);
+  assert.equal(S.planFor(s, DAY)[4].title, 'Last thing');
+  s = S.insertPlanItem(s, DAY, 2, 'Slid in at two', '', null);
+  assert.deepEqual(S.planFor(s, DAY).map((it) => it.title),
+    ['Prayer', 'Slid in at two', 'Time with family', 'Train', 'Coursework', 'Last thing']);
+  s = S.insertPlanItem(s, DAY, 99, 'Past the end', '', null);
+  assert.equal(S.planFor(s, DAY)[6].title, 'Past the end', 'a position past the end lands last');
+  assert.equal(S.addPlanItem(s, DAY, '   ', '', null), s, 'a blank title is a no-op');
 });
 
-test('lastPlannedDate finds the most recent day with a list', () => {
-  let s = planned('2026-09-18');
-  s = S.setPlan(s, '2026-09-19', []);
-  assert.equal(S.lastPlannedDate(s, DAY, 10), '2026-09-18', 'an empty list does not count');
-  assert.equal(S.lastPlannedDate(seeded(), DAY, 10), null);
+test('movePlanItem reorders within the day and stops at the ends', () => {
+  let s = planned(DAY);
+  const train = itemTitled(s, DAY, 'Train');
+  s = S.movePlanItem(s, DAY, train.id, -1);
+  assert.deepEqual(S.planFor(s, DAY).map((it) => it.title), ['Prayer', 'Train', 'Time with family', 'Coursework']);
+  const first = S.planFor(s, DAY)[0];
+  assert.equal(S.movePlanItem(s, DAY, first.id, -1), s, 'cannot move above the top');
 });
 
-test('addLog books an entry against an item on that day’s list', () => {
+test('entries book against a priority on that day’s list', () => {
   const s = planned(DAY);
-  const it = itemTitled(s, DAY, 'Morning prayer and scripture');
+  const it = itemTitled(s, DAY, 'Prayer');
   const next = S.addLog(s, DAY, it.id, 'Read Psalm 23', 1000);
   assert.equal(s.logs.length, 0, 'input is never mutated');
-  assert.equal(next.logs.length, 1);
   assert.deepEqual(
-    { date: next.logs[0].date, tierId: next.logs[0].tierId, itemId: next.logs[0].itemId, text: next.logs[0].text },
-    { date: DAY, tierId: 't_faith', itemId: it.id, text: 'Read Psalm 23' }
+    { date: next.logs[0].date, itemId: next.logs[0].itemId, text: next.logs[0].text },
+    { date: DAY, itemId: it.id, text: 'Read Psalm 23' }
   );
+  assert.equal(S.daySummary(next, DAY).done, 1);
 });
 
-test('an item from another day cannot be booked against this one', () => {
+test('an entry with no priority sits off the list', () => {
+  const s = S.addLog(planned(DAY), DAY, null, 'Unplanned errand', 1);
+  assert.equal(s.logs[0].itemId, null);
+  assert.deepEqual(S.offListLogs(s, DAY).map((l) => l.text), ['Unplanned errand']);
+  assert.equal(S.daySummary(s, DAY).done, 0, 'it completes nothing on the list');
+  assert.equal(S.daySummary(s, DAY).logCount, 1);
+});
+
+test('a priority from another day cannot be booked against this one', () => {
   let s = planned(DAY);
   s = S.seedPlanFromTemplate(s, NEXT);
-  const other = itemTitled(s, NEXT, 'Train or walk');
-  assert.equal(S.addLog(s, DAY, other.id, 'ran', 1), s, 'no-op: that item belongs to another day');
+  const other = itemTitled(s, NEXT, 'Train');
+  assert.equal(S.addLog(s, DAY, other.id, 'ran', 1), s);
 });
 
-test('something you did that was not on the list books under a category', () => {
-  const s = S.addLog(planned(DAY), DAY, 't_family', 'Unplanned call with grandma', 1);
-  assert.equal(s.logs[0].tierId, 't_family');
-  assert.equal(s.logs[0].itemId, null);
-  assert.deepEqual(S.offListLogs(s, DAY, 't_family').map((l) => l.text), ['Unplanned call with grandma']);
-  assert.equal(S.daySummary(s, DAY).offList, 1);
-  assert.equal(S.daySummary(s, DAY).done, 0, 'it does not complete a listed priority');
-});
-
-test('moveLog re-books an entry against another item on the same day', () => {
+test('moveLog re-books an entry, and null moves it off the list', () => {
   let s = planned(DAY);
-  const prayer = itemTitled(s, DAY, 'Morning prayer and scripture');
-  const course = itemTitled(s, DAY, 'Coursework block');
+  const prayer = itemTitled(s, DAY, 'Prayer');
+  const course = itemTitled(s, DAY, 'Coursework');
   s = S.addLog(s, DAY, course.id, 'read a chapter', 1);
   const id = s.logs[0].id;
   s = S.moveLog(s, id, prayer.id);
   assert.equal(s.logs[0].itemId, prayer.id);
-  assert.equal(s.logs[0].tierId, 't_faith');
-  s = S.moveLog(s, id, 't_fitness');
+  s = S.moveLog(s, id, null);
   assert.equal(s.logs[0].itemId, null);
-  assert.equal(s.logs[0].tierId, 't_fitness');
   assert.equal(S.moveLog(s, id, 'ghost'), s);
-});
-
-test('removeLog drops only the named entry', () => {
-  let s = planned(DAY);
-  const it = itemTitled(s, DAY, 'Morning prayer and scripture');
-  s = S.addLog(s, DAY, it.id, 'a', 1);
-  s = S.addLog(s, DAY, it.id, 'b', 2);
-  const next = S.removeLog(s, s.logs[0].id);
-  assert.deepEqual(next.logs.map((l) => l.text), ['b']);
 });
 
 test('entries are scoped to their day and ordered by time', () => {
   let s = planned(DAY);
   s = S.seedPlanFromTemplate(s, NEXT);
-  const a = itemTitled(s, DAY, 'Train or walk');
-  const b = itemTitled(s, NEXT, 'Train or walk');
+  const a = itemTitled(s, DAY, 'Train');
+  const b = itemTitled(s, NEXT, 'Train');
   s = S.addLog(s, DAY, a.id, 'later', 200);
   s = S.addLog(s, DAY, a.id, 'earlier', 100);
   s = S.addLog(s, NEXT, b.id, 'other day', 50);
@@ -162,133 +140,104 @@ test('entries are scoped to their day and ordered by time', () => {
   assert.deepEqual(S.logsForDate(s, NEXT).map((l) => l.text), ['other day']);
 });
 
-test('daySummary reports done against planned, per category', () => {
+test('daySummary numbers the list and reports what is done', () => {
   let s = planned(DAY);
-  const prayer = itemTitled(s, DAY, 'Morning prayer and scripture');
-  const course = itemTitled(s, DAY, 'Coursework block');
-  s = S.addLog(s, DAY, prayer.id, '', 1);
-  s = S.addLog(s, DAY, prayer.id, 'again', 2);
-  s = S.addLog(s, DAY, 't_family', 'unplanned', 3);
-  s = S.addLog(s, DAY, course.id, 'lecture', 4);
+  const prayer = itemTitled(s, DAY, 'Prayer');
+  s = S.addLog(s, DAY, prayer.id, 'psalms', 1);
+  s = S.addLog(s, DAY, prayer.id, 'more', 2);
+  s = S.addLog(s, DAY, null, 'off list', 3);
   const sum = S.daySummary(s, DAY);
-  assert.equal(sum.planned, 5);
-  assert.equal(sum.done, 2);
-  assert.equal(sum.logCount, 4);
-  assert.equal(sum.offList, 1);
-  assert.equal(sum.activeTiers, 3);
-  assert.equal(sum.tiers[0].done, 1);
-  assert.equal(sum.tiers[0].logCount, 2);
-  assert.equal(sum.tiers[1].done, 0);
-  assert.equal(sum.tiers[1].active, true, 'an off-list entry still makes the category active');
+  assert.equal(sum.planned, 4);
+  assert.equal(sum.done, 1);
+  assert.equal(sum.logCount, 3);
+  assert.equal(sum.offList.length, 1);
+  assert.deepEqual(sum.items.map((e) => e.position), [1, 2, 3, 4]);
+  assert.equal(sum.items[0].logs.length, 2);
+  assert.equal(sum.items[1].done, false);
 });
 
 test('untouchedItems names what was planned but never booked', () => {
   let s = planned(DAY);
-  const prayer = itemTitled(s, DAY, 'Morning prayer and scripture');
-  s = S.addLog(s, DAY, prayer.id, '', 1);
-  const missed = S.untouchedItems(s, DAY);
-  assert.equal(missed.length, 4);
-  assert.equal(missed.some((it) => it.id === prayer.id), false);
+  s = S.addLog(s, DAY, itemTitled(s, DAY, 'Prayer').id, '', 1);
+  assert.deepEqual(S.untouchedItems(s, DAY).map((it) => it.title), ['Time with family', 'Train', 'Coursework']);
 });
 
-test('inversions flag a lower category getting attention over a neglected higher one', () => {
+test('inversions flag something lower down getting time before something above', () => {
   let s = planned(DAY);
-  const course = itemTitled(s, DAY, 'Coursework block');
-  s = S.addLog(s, DAY, course.id, 'homework', 1);
+  s = S.addLog(s, DAY, itemTitled(s, DAY, 'Coursework').id, 'homework', 1);
   const inv = S.inversions(s, DAY);
-  assert.equal(inv.length, 4);
-  assert.equal(inv[0].neglected.name, 'Faith');
-  assert.equal(inv[0].favored.name, 'School');
-  assert.equal(S.firstNeglectedTier(s, DAY).name, 'Faith');
+  assert.equal(inv.length, 3, 'the three above it were all skipped');
+  assert.equal(inv[0].neglected.position, 1);
+  assert.equal(inv[0].favored.position, 4);
 });
 
-test('a day honored top to bottom has no inversions', () => {
+test('a day worked top to bottom has no inversions', () => {
   let s = planned(DAY);
   for (const it of S.planFor(s, DAY)) s = S.addLog(s, DAY, it.id, '', 1);
   assert.deepEqual(S.inversions(s, DAY), []);
-  assert.equal(S.firstNeglectedTier(s, DAY), null);
   assert.deepEqual(S.untouchedItems(s, DAY), []);
 });
 
-test('dropping an item from a day keeps its entries, filed under the category', () => {
+test('dropping a priority keeps its entries, moved off the list', () => {
   let s = planned(DAY);
-  const it = itemTitled(s, DAY, 'Morning prayer and scripture');
+  const it = itemTitled(s, DAY, 'Prayer');
   s = S.addLog(s, DAY, it.id, 'prayed', 1);
+  s = S.saveReflection(s, DAY, { scores: { [it.id]: 4 } });
   s = S.removePlanItem(s, DAY, it.id);
   assert.equal(s.logs.length, 1);
   assert.equal(s.logs[0].itemId, null);
-  assert.equal(s.logs[0].tierId, 't_faith');
-  assert.equal(S.daySummary(s, DAY).tiers[0].active, true);
+  assert.deepEqual(s.reflections[DAY].scores, {}, 'its score goes with it');
 });
 
-test('moving an item to another category carries its entries along', () => {
+test('areas are optional tags; removing one clears the tag but keeps the work', () => {
   let s = planned(DAY);
-  const it = itemTitled(s, DAY, 'Train or walk');
-  s = S.addLog(s, DAY, it.id, 'ran', 1);
-  s = S.updatePlanItem(s, DAY, it.id, { tierId: 't_faith' });
-  assert.equal(s.logs[0].tierId, 't_faith');
-  assert.equal(S.daySummary(s, DAY).tiers[3].active, false);
+  const god = s.areas.find((a) => a.name === 'God').id;
+  assert.equal(itemTitled(s, DAY, 'Prayer').areaId, god);
+  assert.equal(S.areaName(s, god), 'God');
+  s = S.addLog(s, DAY, itemTitled(s, DAY, 'Prayer').id, 'prayed', 1);
+  s = S.removeArea(s, god);
+  assert.equal(itemTitled(s, DAY, 'Prayer').areaId, null);
+  assert.equal(S.planFor(s, DAY).length, 4, 'the priority survives');
+  assert.equal(s.logs.length, 1, 'the entry survives');
+  assert.equal(s.template.find((u) => u.title === 'Prayer').areaId, null);
+});
+
+test('renameArea and addArea manage the tag vocabulary', () => {
+  let s = S.addArea(seeded(), 'Work');
+  const id = s.areas[2].id;
+  s = S.renameArea(s, id, 'Work development');
+  assert.equal(S.areaName(s, id), 'Work development');
+  assert.equal(S.addArea(s, '  '), s, 'a blank name is a no-op');
 });
 
 test('a one-off can be promoted onto the usual list, without duplicating', () => {
   let s = planned(DAY);
-  s = S.addPlanItem(s, DAY, 't_family', 'Call my brother', '');
+  s = S.addPlanItem(s, DAY, 'Call my brother', '', null);
   const it = itemTitled(s, DAY, 'Call my brother');
   s = S.promoteToTemplate(s, DAY, it.id);
-  assert.equal(s.template.filter((u) => u.title === 'Call my brother').length, 1);
   s = S.promoteToTemplate(s, DAY, it.id);
-  assert.equal(s.template.filter((u) => u.title === 'Call my brother').length, 1, 'promoting twice adds one');
+  assert.equal(s.template.filter((u) => u.title === 'Call my brother').length, 1);
 });
 
-test('reordering moves an item within its own category only', () => {
+test('saveReflection keeps scores in range, tied to that day’s priorities', () => {
   let s = planned(DAY);
-  s = S.addPlanItem(s, DAY, 't_faith', 'Evening examen', '');
-  const examen = itemTitled(s, DAY, 'Evening examen');
-  s = S.movePlanItem(s, DAY, examen.id, -1);
-  assert.equal(S.planForTier(s, DAY, 't_faith')[0].id, examen.id);
-  assert.equal(S.planForTier(s, DAY, 't_family')[0].title, 'Undistracted time with family');
-  assert.equal(S.movePlanItem(s, DAY, examen.id, -1), s, 'cannot move past the top');
-});
-
-test('categories: add, rename, reorder, and delete cascading everywhere', () => {
-  let s = S.addTier(planned(DAY), 'Friends');
-  const id = s.tiers[5].id;
-  s = S.renameTier(s, id, 'Friendship');
-  assert.equal(s.tiers[5].name, 'Friendship');
-  s = S.moveTier(s, id, -1);
-  assert.equal(s.tiers[4].name, 'Friendship');
-  assert.equal(S.moveTier(s, s.tiers[0].id, -1), s);
-  s = S.addTemplateItem(s, id, 'Text a friend', '');
-  s = S.addPlanItem(s, DAY, id, 'Coffee with Sam', '');
-  const it = itemTitled(s, DAY, 'Coffee with Sam');
-  s = S.addLog(s, DAY, it.id, 'went', 1);
-  s = S.saveReflection(s, DAY, { tierScores: { [id]: 4, t_faith: 2 } });
-  s = S.removeTier(s, id);
-  assert.equal(s.tiers.length, 5);
-  assert.equal(s.template.some((u) => u.tierId === id), false);
-  assert.equal(S.planFor(s, DAY).some((x) => x.tierId === id), false);
-  assert.equal(s.logs.length, 0);
-  assert.deepEqual(s.reflections[DAY].tierScores, { t_faith: 2 });
-});
-
-test('saveReflection keeps scores in range and merges with what is there', () => {
-  let s = S.saveReflection(planned(DAY), DAY, {
-    tierScores: { t_faith: 4, t_family: 9, t_school: '2' },
-    crowdedOut: '  School pushed out the workout ',
+  const prayer = itemTitled(s, DAY, 'Prayer');
+  const train = itemTitled(s, DAY, 'Train');
+  s = S.saveReflection(s, DAY, {
+    scores: { [prayer.id]: 4, [train.id]: 9, ghost: 3 },
+    crowdedOut: '  Coursework pushed out the workout ',
     note: 'tired',
   }, 500);
-  assert.deepEqual(s.reflections[DAY].tierScores, { t_faith: 4, t_school: 2 });
-  assert.equal(s.reflections[DAY].crowdedOut, 'School pushed out the workout');
-  assert.equal(S.daySummary(s, DAY).avgScore, 3);
-  s = S.saveReflection(s, DAY, { tierScores: { t_family: 5 } });
-  assert.deepEqual(s.reflections[DAY].tierScores, { t_faith: 4, t_school: 2, t_family: 5 });
-  assert.equal(s.reflections[DAY].note, 'tired', 'fields left out are kept');
+  assert.deepEqual(s.reflections[DAY].scores, { [prayer.id]: 4 });
+  assert.equal(s.reflections[DAY].crowdedOut, 'Coursework pushed out the workout');
+  s = S.saveReflection(s, DAY, { note: 'second pass' });
+  assert.deepEqual(s.reflections[DAY].scores, { [prayer.id]: 4 }, 'fields left out are kept');
+  assert.equal(s.reflections[DAY].note, 'second pass');
 });
 
 test('history covers days that were planned, booked, or checked in', () => {
   let s = S.seedPlanFromTemplate(seeded(), '2026-09-19');
-  const it = itemTitled(s, '2026-09-19', 'Train or walk');
-  s = S.addLog(s, '2026-09-19', it.id, 'ran', 1);
+  s = S.addLog(s, '2026-09-19', itemTitled(s, '2026-09-19', 'Train').id, 'ran', 1);
   s = S.saveReflection(s, '2026-09-17', { note: 'quiet day' });
   s = S.seedPlanFromTemplate(s, '2026-09-16');
   assert.deepEqual(S.history(s, DAY, 7).map((d) => d.date), ['2026-09-19', '2026-09-17', '2026-09-16']);
@@ -297,83 +246,115 @@ test('history covers days that were planned, booked, or checked in', () => {
 test('streak counts consecutive days with entries, ending today or yesterday', () => {
   let s = seeded();
   for (const d of ['2026-09-19', '2026-09-20', DAY]) s = S.seedPlanFromTemplate(s, d);
-  const at = (d) => itemTitled(s, d, 'Morning prayer and scripture').id;
+  const at = (d) => itemTitled(s, d, 'Prayer').id;
   s = S.addLog(s, '2026-09-20', at('2026-09-20'), '', 1);
   s = S.addLog(s, '2026-09-19', at('2026-09-19'), '', 1);
-  assert.equal(S.streak(s, DAY), 2, 'today not booked yet, so it counts back from yesterday');
+  assert.equal(S.streak(s, DAY), 2);
   s = S.addLog(s, DAY, at(DAY), '', 1);
   assert.equal(S.streak(s, DAY), 3);
   assert.equal(S.streak(seeded(), DAY), 0);
 });
 
-test('clearPlan removes a day’s list and frees its entries to the category', () => {
+test('clearPlan removes a day’s list and frees its entries', () => {
   let s = planned(DAY);
-  const it = itemTitled(s, DAY, 'Train or walk');
+  const it = itemTitled(s, DAY, 'Train');
   s = S.addLog(s, DAY, it.id, 'ran', 1);
   s = S.clearPlan(s, DAY);
   assert.equal(S.hasPlan(s, DAY), false);
-  assert.equal(s.logs[0].itemId, null);
-  assert.equal(s.logs[0].tierId, 't_fitness');
+  assert.equal(s.logs[0].itemId, null, 'the entry survives, off the list');
 });
 
 test('normalize repairs a loaded blob and rejects garbage', () => {
   assert.equal(S.normalize(null), null);
-  assert.equal(S.normalize({ tiers: 'x' }), null);
+  assert.equal(S.normalize({ areas: 'x' }), null);
   const raw = {
-    tiers: [{ id: 'a', name: 'A' }, { bad: true }],
-    template: [{ id: 'u1', tierId: 'a', title: 'U' }, { id: 'u2', tierId: 'ghost', title: 'orphan' }],
-    plans: { [DAY]: [{ id: 'i1', tierId: 'a', title: 'P' }, { id: 'i2', tierId: 'ghost', title: 'orphan' }] },
+    version: 3,
+    areas: [{ id: 'a', name: 'A' }, { bad: true }],
+    template: [{ id: 'u1', title: 'U', areaId: 'a' }, { id: 'u2', title: 'Untagged', areaId: 'ghost' }],
+    plans: { [DAY]: [{ id: 'i1', title: 'P', areaId: 'a' }, { nope: 1 }] },
     logs: [
       { id: 'l1', date: DAY, itemId: 'i1', text: 'x', at: 5 },
-      { id: 'l2', date: DAY, itemId: 'i2' },
-      { id: 'l3', date: DAY, tierId: 'a', text: 'off list' },
-      { id: 'l4', date: DAY, tierId: 'ghost' },
-      { id: 'l5', date: NEXT, itemId: 'i1', tierId: 'a', text: 'item belongs to another day' },
-      { id: 'l6', date: NEXT, itemId: 'i1', text: 'nothing valid to file it under' },
+      { id: 'l2', date: DAY, itemId: 'ghost', text: 'falls off the list' },
+      { id: 'l3', date: DAY, text: 'already off the list' },
     ],
-    reflections: { [DAY]: { tierScores: { a: 3 }, note: 'n' }, junk: 5 },
+    reflections: { [DAY]: { scores: { i1: 3, ghost: 5 }, note: 'n' }, junk: 5 },
   };
   const s = S.normalize(raw);
-  assert.equal(s.tiers.length, 1);
-  assert.equal(s.template.length, 1);
+  assert.equal(s.areas.length, 1);
+  assert.equal(s.template.length, 2);
+  assert.equal(s.template[1].areaId, null, 'an unknown tag is dropped, the priority is kept');
   assert.equal(S.planFor(s, DAY).length, 1);
-  assert.deepEqual(s.logs.map((l) => l.id), ['l1', 'l3', 'l5'], 'l2, l4 and l6 have nothing valid to file them under');
+  assert.deepEqual(s.logs.map((l) => l.id), ['l1', 'l2', 'l3'], 'no entry is ever discarded');
   assert.equal(s.logs[1].itemId, null);
-  assert.equal(s.logs[2].itemId, null, 'an item id from another day does not carry over');
-  assert.equal(s.logs[2].tierId, 'a', 'but the category is kept when it is valid');
+  assert.deepEqual(s.reflections[DAY].scores, { i1: 3 });
   assert.deepEqual(Object.keys(s.reflections), [DAY]);
 });
 
-test('version 1 data migrates: the standing list becomes each recorded day’s list', () => {
+test('version 2 data migrates: each day’s categories become that day’s list', () => {
+  const v2 = {
+    version: 2,
+    tiers: [{ id: 't_god', name: 'God' }, { id: 't_fam', name: 'Family' }, { id: 't_school', name: 'School' }],
+    template: [],
+    plans: {},
+    logs: [
+      { id: 'l1', date: DAY, tierId: 't_god', itemId: null, text: 'prayed', at: 1 },
+      { id: 'l2', date: DAY, tierId: 't_fam', itemId: null, text: 'texted Mom', at: 2 },
+      { id: 'l3', date: DAY, tierId: 't_fam', itemId: null, text: 'called home', at: 3 },
+    ],
+    reflections: { [DAY]: { tierScores: { t_god: 5 }, note: 'good day' } },
+  };
+  const s = S.normalize(v2);
+  assert.equal(s.version, 3);
+  assert.deepEqual(S.planFor(s, DAY).map((it) => it.title), ['God', 'Family'],
+    'only the categories that carried entries become priorities, in order');
+  const sum = S.daySummary(s, DAY);
+  assert.equal(sum.done, 2);
+  assert.equal(sum.logCount, 3);
+  assert.equal(sum.offList.length, 0, 'every entry found its priority');
+  assert.deepEqual(sum.items[1].logs.map((l) => l.text), ['texted Mom', 'called home']);
+  assert.equal(s.reflections[DAY].note, 'good day');
+  assert.deepEqual(s.areas.map((a) => a.name), ['God', 'Family', 'School'], 'categories survive as tags');
+});
+
+test('version 2 days that already had priorities keep them', () => {
+  const v2 = {
+    version: 2,
+    tiers: [{ id: 't_god', name: 'God' }],
+    template: [],
+    plans: { [DAY]: [{ id: 'i1', tierId: 't_god', title: 'Morning prayer' }] },
+    logs: [
+      { id: 'l1', date: DAY, tierId: 't_god', itemId: 'i1', text: 'psalms', at: 1 },
+      { id: 'l2', date: DAY, tierId: 't_god', itemId: null, text: 'prayed in the car', at: 2 },
+    ],
+    reflections: {},
+  };
+  const s = S.normalize(v2);
+  const titles = S.planFor(s, DAY).map((it) => it.title);
+  assert.deepEqual(titles, ['Morning prayer', 'God'], 'the category entry gains a priority of its own');
+  const sum = S.daySummary(s, DAY);
+  assert.equal(sum.logCount, 2);
+  assert.equal(sum.offList.length, 0);
+});
+
+test('version 1 data migrates through to the flat model', () => {
   const v1 = {
     version: 1,
-    tiers: [{ id: 't_faith', name: 'Faith' }, { id: 't_school', name: 'School' }],
-    priorities: [
-      { id: 'p_prayer', tierId: 't_faith', title: 'Morning prayer', note: '' },
-      { id: 'p_course', tierId: 't_school', title: 'Coursework', note: '' },
-    ],
-    logs: [
-      { id: 'l1', priorityId: 'p_prayer', date: DAY, text: 'psalms', at: 5 },
-      { id: 'l2', tierId: 't_school', date: DAY, text: 'off list', at: 6 },
-    ],
-    reflections: { '2026-09-18': { tierScores: { t_faith: 4 }, note: 'ok' } },
+    tiers: [{ id: 't_faith', name: 'Faith' }],
+    priorities: [{ id: 'p_prayer', tierId: 't_faith', title: 'Morning prayer', note: '' }],
+    logs: [{ id: 'l1', priorityId: 'p_prayer', date: DAY, text: 'psalms', at: 5 }],
+    reflections: {},
   };
   const s = S.normalize(v1);
-  assert.equal(s.version, 2);
-  assert.deepEqual(s.template.map((u) => u.title), ['Morning prayer', 'Coursework']);
-  assert.deepEqual(S.planFor(s, DAY).map((it) => it.title), ['Morning prayer', 'Coursework'], 'the day it had history is rebuilt');
-  assert.deepEqual(S.planFor(s, '2026-09-18').map((it) => it.title), ['Morning prayer', 'Coursework'], 'so is the day it was only reflected on');
-  assert.equal(S.hasPlan(s, NEXT), false, 'days with no history are left unset');
-  assert.equal(s.logs[0].itemId, 'p_prayer', 'the old entry still points at its priority');
+  assert.equal(s.version, 3);
+  assert.deepEqual(S.planFor(s, DAY).map((it) => it.title), ['Morning prayer']);
   assert.equal(S.daySummary(s, DAY).done, 1);
-  assert.equal(S.daySummary(s, DAY).offList, 1);
 });
 
 test('a round trip through JSON preserves state', () => {
   let s = planned(DAY);
-  const it = itemTitled(s, DAY, 'Morning prayer and scripture');
+  const it = itemTitled(s, DAY, 'Prayer');
   s = S.addLog(s, DAY, it.id, 'x', 1);
-  s = S.addLog(s, DAY, 't_family', 'y', 2);
-  s = S.saveReflection(s, DAY, { tierScores: { t_faith: 5 } }, 2);
+  s = S.addLog(s, DAY, null, 'y', 2);
+  s = S.saveReflection(s, DAY, { scores: { [it.id]: 5 } }, 2);
   assert.deepEqual(S.normalize(JSON.parse(JSON.stringify(s))), s);
 });

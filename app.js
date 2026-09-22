@@ -9,9 +9,6 @@
 
   // ---- Persistence -------------------------------------------------------
 
-  // Anything saved in this browser wins. Failing that, the bundled starting
-  // data in seed.js, so a fresh install opens on real content rather than an
-  // empty shell. Failing that, bare categories.
   function loadState() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -65,7 +62,7 @@
   const ui = Object.assign({ tab: 'today' }, loadUi());
   if (!TABS.includes(ui.tab)) ui.tab = 'today';
   ui.date = S.dateKey(new Date());
-  ui.adding = null; // category id whose "what did you do" field is open
+  ui.adding = null; // priority id (or 'off') whose entry field is open
 
   function commit(next) {
     if (next === state) return;
@@ -178,80 +175,106 @@
     render();
   });
 
-  // ---- Today -------------------------------------------------------------
+  // ---- Today --------------------------------------------------------------
 
   function renderToday() {
     const date = ui.date;
     const summary = S.daySummary(state, date);
+
+    if (!summary.planned && !summary.logCount) return renderNoList(date);
+
+    const parts = [h('p', { class: 'summary', text: summary.done + ' of ' + summary.planned + ' done' })];
+
     const inv = S.inversions(state, date);
-
-    const line = summary.activeTiers + ' of ' + state.tiers.length + ' touched';
-    const parts = [h('p', { class: 'summary', text: line })];
-
     if (inv.length) {
       const first = inv[0];
-      parts.push(h('p', { class: 'alert', text: first.favored.name + ' got time before ' + first.neglected.name + '.' }));
+      parts.push(h('p', { class: 'alert', text: 'Number ' + first.favored.position + ' got time before number ' + first.neglected.position + '.' }));
     }
 
     const list = h('ol', { class: 'cats' });
-    state.tiers.forEach((tier, i) => {
-      const items = S.planForTier(state, date, tier.id);
-      const entries = S.logsForTier(state, date, tier.id);
-      const done = entries.length > 0;
-
-      const body = h('div', { class: 'cat-body' });
-
-      if (items.length) {
-        body.appendChild(h('ul', { class: 'items' }, items.map((it) => {
-          const hit = S.logsForItem(state, date, it.id).length > 0;
-          return h('li', { class: hit ? 'done' : '' },
-            h('span', { class: 'box', 'aria-hidden': 'true' }, hit ? '✓' : ''),
-            h('span', { class: 'label', text: it.title }));
-        })));
-      }
-
-      if (entries.length) {
-        body.appendChild(h('ul', { class: 'entries' }, entries.map((l) => {
-          const item = l.itemId ? items.find((x) => x.id === l.itemId) : null;
-          const text = item && l.text ? item.title + ' — ' + l.text : (l.text || (item ? item.title : 'did it'));
-          return h('li', {},
-            h('span', { class: 'bullet', 'aria-hidden': 'true' }),
-            h('span', { class: 'text', text }),
-            h('button', { class: 'del', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removeLog(state, l.id)) }, '×'));
-        })));
-      }
-
-      if (ui.adding === tier.id) {
-        const input = h('input', { type: 'text', id: 'add-' + tier.id, placeholder: 'What did you do?', 'aria-label': 'What did you do for ' + tier.name, autocomplete: 'off' });
-        const save = () => {
-          const text = input.value.trim();
-          if (!text) { ui.adding = null; render(); return; }
-          commit(S.addLog(state, date, tier.id, text));
-        };
-        input.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter') { e.preventDefault(); save(); }
-          if (e.key === 'Escape') { ui.adding = null; render(); }
-        });
-        body.appendChild(h('div', { class: 'addrow' },
-          input,
-          h('button', { class: 'btn primary', type: 'button', onclick: save }, 'Save')));
-      } else {
-        body.appendChild(h('button', {
-          class: 'add', type: 'button',
-          onclick: () => { ui.adding = tier.id; render(); },
-        }, done ? '+ add another' : '+ I did this'));
-      }
-
-      list.appendChild(h('li', { class: 'cat ' + (done ? 'done' : '') },
-        h('div', { class: 'cat-head' },
-          h('span', { class: 'num', text: String(i + 1) }),
-          h('h2', { text: tier.name }),
-          h('span', { class: 'mark', 'aria-hidden': 'true', text: done ? '✓' : '' })),
-        body));
+    summary.items.forEach((entry) => {
+      list.appendChild(renderPriority(entry, date));
     });
-
     parts.push(list);
+
+    // Anything done that was never on the list.
+    const off = summary.offList;
+    parts.push(h('div', { class: 'offlist' },
+      off.length
+        ? h('ul', { class: 'entries' }, off.map((l) => h('li', {},
+            h('span', { class: 'bullet off', 'aria-hidden': 'true' }),
+            h('span', { class: 'text off', text: l.text || 'did it' }),
+            h('button', { class: 'del', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removeLog(state, l.id)) }, '×'))))
+        : null,
+      ui.adding === 'off'
+        ? entryField('off', date, null)
+        : h('button', { class: 'add', type: 'button', onclick: () => { ui.adding = 'off'; render(); } },
+            off.length ? '+ add another off the list' : '+ something not on the list')));
+
     return h('div', {}, parts);
+  }
+
+  function renderPriority(entry, date) {
+    const it = entry.item;
+    const body = h('div', { class: 'cat-body' });
+
+    if (entry.logs.length) {
+      body.appendChild(h('ul', { class: 'entries' }, entry.logs.map((l) => h('li', {},
+        h('span', { class: 'bullet', 'aria-hidden': 'true' }),
+        h('span', { class: 'text', text: l.text || 'did it' }),
+        h('button', { class: 'del', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removeLog(state, l.id)) }, '×')))));
+    }
+
+    if (ui.adding === it.id) {
+      body.appendChild(entryField(it.id, date, it.id));
+    } else {
+      body.appendChild(h('button', {
+        class: 'add', type: 'button',
+        onclick: () => { ui.adding = it.id; render(); },
+      }, entry.done ? '+ add another' : '+ I did this'));
+    }
+
+    return h('li', { class: 'cat ' + (entry.done ? 'done' : '') },
+      h('div', { class: 'cat-head' },
+        h('span', { class: 'num', text: String(entry.position) }),
+        h('div', { class: 'title-wrap' },
+          h('h2', { text: it.title }),
+          it.note ? h('p', { class: 'prio-note', text: it.note }) : null,
+          it.areaId ? h('span', { class: 'area', text: S.areaName(state, it.areaId) }) : null),
+        h('span', { class: 'mark', 'aria-hidden': 'true', text: entry.done ? '✓' : '' })),
+      body);
+  }
+
+  function entryField(key, date, itemId) {
+    const input = h('input', {
+      type: 'text', id: 'add-' + key, placeholder: 'What did you do?',
+      'aria-label': 'What did you do', autocomplete: 'off',
+    });
+    const save = () => {
+      const text = input.value.trim();
+      if (!text) { ui.adding = null; render(); return; }
+      commit(S.addLog(state, date, itemId, text));
+    };
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); save(); }
+      if (e.key === 'Escape') { ui.adding = null; render(); }
+    });
+    return h('div', { class: 'addrow' }, input, h('button', { class: 'btn primary', type: 'button', onclick: save }, 'Save'));
+  }
+
+  function renderNoList(date) {
+    const source = S.lastPlannedDate(state, date, 30);
+    return h('div', { class: 'section' },
+      h('h2', { text: 'No list for ' + relativeName(date) }),
+      h('p', { class: 'lede', text: 'You set each day’s priorities the night before. Build one now if you want.' }),
+      h('div', { class: 'actions', style: 'margin-top:14px' },
+        state.template.length
+          ? h('button', { class: 'btn primary', type: 'button', onclick: () => commit(S.seedPlanFromTemplate(state, date)) }, 'Use my usual list')
+          : null,
+        source
+          ? h('button', { class: 'btn', type: 'button', onclick: () => commit(S.seedPlanFromDate(state, date, source)) }, 'Copy ' + fmtShort(source))
+          : null,
+        h('button', { class: 'btn', type: 'button', onclick: () => { ui.tab = 'tonight'; ui.date = S.shiftDateKey(date, -1); persistUi(); render(); } }, 'Set it now')));
   }
 
   // ---- Tonight ------------------------------------------------------------
@@ -262,76 +285,85 @@
   }
 
   function renderPlanner(target, from) {
+    const items = S.planFor(state, target);
+
     const wrap = h('div', { class: 'section' },
       h('h2', { text: 'Priorities for ' + relativeName(target) }),
-      h('p', { class: 'lede', text: 'Optional. Add anything specific you want to hit, under the category it belongs to.' }));
+      h('p', { class: 'lede', text: 'In order. Number one is what wins the day.' }));
 
+    const seedActions = [];
     if (S.planFor(state, from).length) {
-      wrap.appendChild(h('div', { class: 'actions', style: 'margin-top:12px' },
-        h('button', { class: 'btn small', type: 'button', onclick: () => {
+      seedActions.push(h('button', { class: 'btn small', type: 'button', onclick: () => {
+        if (!items.length || confirm('Replace the list for ' + relativeName(target) + '?')) {
           commit(S.seedPlanFromDate(state, target, from));
-          toast('Copied ' + relativeName(from) + '’s list');
-        } }, 'Copy ' + relativeName(from))));
+          toast('Copied ' + relativeName(from));
+        }
+      } }, 'Copy ' + relativeName(from)));
     }
+    if (state.template.length) {
+      seedActions.push(h('button', { class: 'btn small', type: 'button', onclick: () => {
+        if (!items.length || confirm('Replace the list for ' + relativeName(target) + '?')) {
+          commit(S.seedPlanFromTemplate(state, target));
+          toast('Loaded your usual list');
+        }
+      } }, 'Use usual list'));
+    }
+    if (seedActions.length) wrap.appendChild(h('div', { class: 'actions', style: 'margin-top:12px' }, seedActions));
 
-    state.tiers.forEach((tier, i) => {
-      const items = S.planForTier(state, target, tier.id);
-      const cat = h('div', { class: 'plan-cat' },
-        h('h3', {}, h('span', { class: 'num', text: String(i + 1) }), tier.name));
-
-      items.forEach((it) => {
-        const title = h('input', { type: 'text', id: 'plan-' + it.id, value: it.title, 'aria-label': 'Priority' });
-        title.addEventListener('change', () => commit(S.updatePlanItem(state, target, it.id, { title: title.value })));
-        cat.appendChild(h('div', { class: 'plan-row' },
-          title,
+    const list = h('ol', { class: 'plan-list' }, items.map((it, i) => {
+      const title = h('input', { type: 'text', id: 'plan-' + it.id, value: it.title, 'aria-label': 'Priority ' + (i + 1) });
+      title.addEventListener('change', () => commit(S.updatePlanItem(state, target, it.id, { title: title.value })));
+      return h('li', { class: 'plan-item' },
+        h('span', { class: 'num', text: String(i + 1) }),
+        title,
+        h('div', { class: 'ctl' },
+          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move up', disabled: i === 0, onclick: () => commit(S.movePlanItem(state, target, it.id, -1)) }, '↑'),
+          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move down', disabled: i === items.length - 1, onclick: () => commit(S.movePlanItem(state, target, it.id, 1)) }, '↓'),
           h('button', { class: 'btn icon danger', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removePlanItem(state, target, it.id)) }, '×')));
-      });
+    }));
+    wrap.appendChild(list);
 
-      const add = h('input', { type: 'text', id: 'planadd-' + tier.id, placeholder: 'Add something specific', 'aria-label': 'Add a priority to ' + tier.name });
-      const submit = () => {
-        if (!add.value.trim()) return;
-        commit(S.addPlanItem(state, target, tier.id, add.value, ''));
-        const again = document.getElementById('planadd-' + tier.id);
-        if (again) again.focus();
-      };
-      add.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submit(); } });
-      cat.appendChild(h('div', { class: 'plan-add' }, add, h('button', { class: 'btn small', type: 'button', onclick: submit }, 'Add')));
-
-      wrap.appendChild(cat);
-    });
+    const add = h('input', { type: 'text', id: 'planadd', placeholder: 'Add a priority', 'aria-label': 'Add a priority' });
+    const submit = () => {
+      if (!add.value.trim()) return;
+      commit(S.addPlanItem(state, target, add.value, '', null));
+      const again = document.getElementById('planadd');
+      if (again) again.focus();
+    };
+    add.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submit(); } });
+    wrap.appendChild(h('div', { class: 'addrow', style: 'margin-top:12px' }, add, h('button', { class: 'btn', type: 'button', onclick: submit }, 'Add')));
 
     return wrap;
   }
 
   function renderCheckin(date) {
     const summary = S.daySummary(state, date);
+    if (!summary.planned && !summary.logCount) return h('div', {});
+
     const existing = summary.reflection;
     const draft = {
-      tierScores: existing ? { ...existing.tierScores } : {},
+      scores: existing ? { ...existing.scores } : {},
       crowdedOut: existing ? existing.crowdedOut : '',
       note: existing ? existing.note : '',
     };
 
-    const recap = h('div', { class: 'recap' }, summary.tiers.map((t) => {
-      const lines = tierEntryLines(t.tierId, date);
-      return h('div', { class: 'recap-row' },
-        h('span', { class: 'name', text: t.name }),
-        h('span', { class: 'items-text ' + (lines.length ? '' : 'none'), text: lines.length ? lines.join(' · ') : 'nothing' }));
-    }));
+    const recap = h('div', { class: 'recap' }, summary.items.map((e) => h('div', { class: 'recap-row' },
+      h('span', { class: 'name', text: e.position + '. ' + e.item.title }),
+      h('span', { class: 'items-text ' + (e.logs.length ? '' : 'none'), text: e.logs.length ? e.logs.map((l) => l.text || 'did it').join(' · ') : 'nothing' }))));
 
-    const scoreGrid = h('div', { class: 'score-grid' }, state.tiers.map((tier) => {
-      const segs = h('div', { class: 'segs', role: 'group', 'aria-label': 'Score for ' + tier.name });
+    const scoreGrid = h('div', { class: 'score-grid' }, summary.items.map((e) => {
+      const segs = h('div', { class: 'segs', role: 'group', 'aria-label': 'Score for ' + e.item.title });
       for (let v = 1; v <= 5; v++) {
         segs.appendChild(h('button', {
           type: 'button',
-          'aria-pressed': draft.tierScores[tier.id] === v ? 'true' : 'false',
+          'aria-pressed': draft.scores[e.item.id] === v ? 'true' : 'false',
           onclick: () => {
-            draft.tierScores[tier.id] = draft.tierScores[tier.id] === v ? 0 : v;
-            for (const b of segs.children) b.setAttribute('aria-pressed', b.textContent === String(draft.tierScores[tier.id]) ? 'true' : 'false');
+            draft.scores[e.item.id] = draft.scores[e.item.id] === v ? 0 : v;
+            for (const b of segs.children) b.setAttribute('aria-pressed', b.textContent === String(draft.scores[e.item.id]) ? 'true' : 'false');
           },
         }, String(v)));
       }
-      return h('div', { class: 'score-row' }, h('span', { class: 'name', text: tier.name }), segs);
+      return h('div', { class: 'score-row' }, h('span', { class: 'name', text: e.item.title }), segs);
     }));
 
     const crowded = h('textarea', { id: 'crowded', rows: '2' });
@@ -340,15 +372,15 @@
     note.value = draft.note;
 
     const save = () => {
-      commit(S.saveReflection(state, date, { tierScores: draft.tierScores, crowdedOut: crowded.value, note: note.value }));
+      commit(S.saveReflection(state, date, { scores: draft.scores, crowdedOut: crowded.value, note: note.value }));
       toast('Saved');
     };
 
     return h('div', { class: 'section' },
       h('h2', { text: 'How ' + relativeName(date) + ' went' }),
       recap,
-      h('p', { class: 'lede', style: 'margin-top:18px', text: 'Score each one from 1 to 5. Tap again to clear.' }),
-      scoreGrid,
+      summary.planned ? h('p', { class: 'lede', style: 'margin-top:18px', text: 'Score each one from 1 to 5. Tap again to clear.' }) : null,
+      summary.planned ? scoreGrid : null,
       h('div', { class: 'field' },
         h('label', { for: 'crowded', text: 'Did anything lower crowd out something higher?' }),
         crowded),
@@ -360,15 +392,6 @@
         existing ? h('span', { class: 'saved-note', text: 'saved' }) : null));
   }
 
-  function tierEntryLines(tierId, date) {
-    const plan = S.planFor(state, date);
-    return S.logsForTier(state, date, tierId).map((l) => {
-      const it = l.itemId ? plan.find((x) => x.id === l.itemId) : null;
-      if (it && l.text) return it.title + ' — ' + l.text;
-      return l.text || (it ? it.title : 'did it');
-    });
-  }
-
   // ---- History ------------------------------------------------------------
 
   function renderHistory() {
@@ -378,21 +401,23 @@
     }
 
     const list = h('ul', { class: 'history' }, days.map((d) => {
-      const dots = h('span', { class: 'dots' }, d.tiers.map((t) =>
-        h('i', { class: 'dot ' + (t.active ? 'on' : ''), title: t.name + ': ' + t.logCount })));
-      const rows = d.tiers.map((t) => {
-        const lines = tierEntryLines(t.tierId, d.date);
-        return h('div', { class: 'recap-row' },
-          h('span', { class: 'name' }, t.name, t.score ? ' · ' + t.score + '/5' : ''),
-          h('span', { class: 'items-text ' + (lines.length ? '' : 'none'), text: lines.length ? lines.join(' · ') : 'nothing' }));
-      });
+      const dots = h('span', { class: 'dots' }, d.items.map((e) =>
+        h('i', { class: 'dot ' + (e.done ? 'on' : ''), title: e.position + '. ' + e.item.title })));
+      const rows = d.items.map((e) => h('div', { class: 'recap-row' },
+        h('span', { class: 'name', text: e.position + '. ' + e.item.title + (e.score ? ' · ' + e.score + '/5' : '') }),
+        h('span', { class: 'items-text ' + (e.logs.length ? '' : 'none'), text: e.logs.length ? e.logs.map((l) => l.text || 'did it').join(' · ') : 'nothing' })));
+      if (d.offList.length) {
+        rows.push(h('div', { class: 'recap-row' },
+          h('span', { class: 'name', text: 'Off the list' }),
+          h('span', { class: 'items-text', text: d.offList.map((l) => l.text || 'did it').join(' · ') })));
+      }
       const r = d.reflection;
       return h('li', {},
         h('details', { class: 'day' },
           h('summary', {},
             h('span', { class: 'date', text: fmtShort(d.date) }),
             dots,
-            h('span', { class: 'meta', text: d.activeTiers + '/' + d.tiers.length })),
+            h('span', { class: 'meta', text: d.done + '/' + d.planned })),
           h('div', { class: 'day-body' },
             rows,
             r && r.crowdedOut ? h('div', {}, h('div', { class: 'q', text: 'Crowded out' }), r.crowdedOut) : null,
@@ -411,31 +436,31 @@
     const seed = seedState();
 
     wrap.appendChild(h('div', { class: 'section' },
-      h('h2', { text: 'Your order' }),
-      h('p', { class: 'lede', text: 'Top of the list wins the day. Rename or reorder as your life changes.' })));
+      h('h2', { text: 'Your usual list' }),
+      h('p', { class: 'lede', text: 'The priorities that come back most days. Load it when setting a day, then change what that day needs.' })));
 
-    state.tiers.forEach((tier, i) => {
-      const nameInput = h('input', { type: 'text', id: 'tier-' + tier.id, value: tier.name, 'aria-label': 'Category name' });
-      nameInput.addEventListener('change', () => commit(S.renameTier(state, tier.id, nameInput.value)));
-      wrap.appendChild(h('div', { class: 'edit-cat' },
-        h('div', { class: 'edit-cat-head' },
-          h('span', { class: 'num', text: String(i + 1) }),
-          nameInput,
-          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move up', disabled: i === 0, onclick: () => commit(S.moveTier(state, tier.id, -1)) }, '↑'),
-          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move down', disabled: i === state.tiers.length - 1, onclick: () => commit(S.moveTier(state, tier.id, 1)) }, '↓'),
-          h('button', { class: 'btn icon danger', type: 'button', 'aria-label': 'Delete', onclick: () => {
-            if (confirm('Delete "' + tier.name + '" and everything recorded under it?')) commit(S.removeTier(state, tier.id));
-          } }, '×'))));
-    });
+    const list = h('ol', { class: 'plan-list' }, state.template.map((it, i) => {
+      const title = h('input', { type: 'text', id: 'ut-' + it.id, value: it.title, 'aria-label': 'Priority' });
+      title.addEventListener('change', () => commit(S.updateTemplateItem(state, it.id, { title: title.value })));
+      return h('li', { class: 'plan-item' },
+        h('span', { class: 'num', text: String(i + 1) }),
+        title,
+        h('div', { class: 'ctl' },
+          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move up', disabled: i === 0, onclick: () => commit(S.moveTemplateItem(state, it.id, -1)) }, '↑'),
+          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move down', disabled: i === state.template.length - 1, onclick: () => commit(S.moveTemplateItem(state, it.id, 1)) }, '↓'),
+          h('button', { class: 'btn icon danger', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removeTemplateItem(state, it.id)) }, '×')));
+    }));
+    wrap.appendChild(list);
 
-    const newTier = h('input', { type: 'text', id: 'add-tier', placeholder: 'Add a category' });
-    const addTier = () => {
-      if (!newTier.value.trim()) return;
-      commit(S.addTier(state, newTier.value));
+    const add = h('input', { type: 'text', id: 'usualadd', placeholder: 'Add to the usual list' });
+    const submit = () => {
+      if (!add.value.trim()) return;
+      commit(S.addTemplateItem(state, add.value, '', null));
+      const again = document.getElementById('usualadd');
+      if (again) again.focus();
     };
-    newTier.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); addTier(); } });
-    wrap.appendChild(h('div', { class: 'addrow', style: 'margin-top:16px' },
-      newTier, h('button', { class: 'btn', type: 'button', onclick: addTier }, 'Add')));
+    add.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submit(); } });
+    wrap.appendChild(h('div', { class: 'addrow', style: 'margin-top:12px' }, add, h('button', { class: 'btn', type: 'button', onclick: submit }, 'Add')));
 
     const fileInput = h('input', { type: 'file', id: 'import-file', accept: 'application/json', hidden: true });
     fileInput.addEventListener('change', () => {
@@ -466,9 +491,7 @@
         h('button', { class: 'btn', type: 'button', onclick: () => fileInput.click() }, 'Import'),
         seed && seed.logs.length
           ? h('button', { class: 'btn', type: 'button', onclick: () => {
-              if (confirm('Load the ' + seed.logs.length + ' bundled entries? This replaces what is in this browser.')) {
-                // Switch tabs before committing: commit re-renders, and the
-                // point of loading is to land on the day itself.
+              if (confirm('Load the bundled starting data? This replaces what is in this browser.')) {
                 ui.tab = 'today';
                 persistUi();
                 commit(seed);

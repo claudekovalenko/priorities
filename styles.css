@@ -305,10 +305,90 @@ textarea::placeholder {
   font-variant-numeric: tabular-nums;
 }
 
+.cat-head .title-wrap {
+  min-width: 0;
+}
+
 .cat-head h2 {
   margin: 0;
   font-size: 17px;
   line-height: 1.3;
+}
+
+.cat-head .prio-note {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cat-head .area {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--faint);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.offlist {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.offlist .entries {
+  margin-bottom: 4px;
+}
+
+.entries .bullet.off {
+  background: var(--faint);
+}
+
+.entries .text.off {
+  color: var(--muted);
+}
+
+.plan-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plan-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plan-item .num {
+  color: var(--faint);
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 16px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.plan-item input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  border-color: transparent;
+  background: transparent;
+}
+
+.plan-item input:hover,
+.plan-item input:focus {
+  border-color: var(--line);
+  background: var(--surface);
+}
+
+.plan-item .ctl {
+  display: flex;
+  gap: 3px;
 }
 
 .cat.done .cat-head h2 {
