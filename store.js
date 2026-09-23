@@ -563,6 +563,54 @@
     return 'Worked #' + me.position + ' ' + me.item.title + ' while ' + shown + extra + ' had nothing yet.';
   }
 
+  // ---- Merging in a day from elsewhere ------------------------------------
+  //
+  // Bringing a prepared day into a browser that is already in use. Only days
+  // with no list of their own are added, so nothing already recorded can be
+  // overwritten. Areas and standing commitments are matched by name so they
+  // are never duplicated.
+
+  function plansAvailableFrom(state, other) {
+    if (!other || !other.plans) return [];
+    return Object.keys(other.plans)
+      .filter((date) => (other.plans[date] || []).length && !planFor(state, date).length)
+      .sort();
+  }
+
+  function addPlansFrom(state, other) {
+    const dates = plansAvailableFrom(state, other);
+    const newStanding = (other && other.standing ? other.standing : [])
+      .filter((n) => !state.standing.some((x) => x.title.toLowerCase() === n.title.toLowerCase()));
+    if (!dates.length && !newStanding.length) return state;
+
+    const s = clone(state);
+    const byName = new Map(s.areas.map((a) => [a.name.toLowerCase(), a.id]));
+    const remap = new Map();
+    for (const a of (other.areas || [])) {
+      const key = a.name.toLowerCase();
+      if (!byName.has(key)) {
+        const id = uid('a');
+        s.areas.push({ id, name: a.name });
+        byName.set(key, id);
+      }
+      remap.set(a.id, byName.get(key));
+    }
+
+    for (const n of newStanding) {
+      s.standing.push({ id: uid('s'), title: n.title, body: n.body });
+    }
+
+    for (const date of dates) {
+      s.plans[date] = other.plans[date].map((it) => ({
+        id: it.id,
+        title: it.title,
+        note: it.note,
+        areaId: it.areaId && remap.has(it.areaId) ? remap.get(it.areaId) : null,
+      }));
+    }
+    return s;
+  }
+
   // ---- Evening check-in ---------------------------------------------------
 
   function saveReflection(state, date, fields, now) {
@@ -692,6 +740,8 @@
     logsForDate,
     logsForItem,
     offListLogs,
+    plansAvailableFrom,
+    addPlansFrom,
     addStanding,
     updateStanding,
     moveStanding,

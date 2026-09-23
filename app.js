@@ -497,6 +497,9 @@
   function renderLists() {
     const wrap = h('div', {});
     const seed = seedState();
+    // Days prepared elsewhere that this browser has no list for. Adding them
+    // cannot disturb a day you have already started.
+    const available = seed ? S.plansAvailableFrom(state, seed) : [];
 
     wrap.appendChild(h('div', { class: 'section' },
       h('h2', { text: 'Your usual list' }),
@@ -593,19 +596,30 @@
 
     wrap.appendChild(h('div', { class: 'section' },
       h('h2', { text: 'Your data' }),
-      h('p', { class: 'lede', text: 'Everything is stored in this browser only. Export now and then.' }),
+      h('p', { class: 'lede', text: available.length
+        ? 'Everything is stored in this browser only. There ' + (available.length === 1 ? 'is 1 prepared day' : 'are ' + available.length + ' prepared days') + ' to add: ' + available.map(fmtShort).join(', ') + '. Adding leaves every day you have already started untouched.'
+        : 'Everything is stored in this browser only. Export now and then.' }),
       h('div', { class: 'data-tools' },
         h('button', { class: 'btn', type: 'button', onclick: exportJson }, 'Export'),
         h('button', { class: 'btn', type: 'button', onclick: () => fileInput.click() }, 'Import'),
-        seed && seed.logs.length
+        available.length
+          ? h('button', { class: 'btn primary', type: 'button', onclick: () => {
+              ui.date = available[available.length - 1];
+              ui.tab = 'today';
+              persistUi();
+              commit(S.addPlansFrom(state, seed));
+              toast(available.length === 1 ? 'Added 1 day' : 'Added ' + available.length + ' days');
+            } }, available.length === 1 ? 'Add 1 prepared day' : 'Add ' + available.length + ' prepared days')
+          : null,
+        seed && seed.logs.length && !state.logs.length
           ? h('button', { class: 'btn', type: 'button', onclick: () => {
-              if (confirm('Load the bundled starting data? This replaces what is in this browser.')) {
+              if (confirm('Replace everything in this browser with the bundled data?')) {
                 ui.tab = 'today';
                 persistUi();
                 commit(seed);
                 toast('Loaded');
               }
-            } }, 'Load starting data')
+            } }, 'Replace with starting data')
           : null,
         fileInput,
         h('span', { class: 'status', text: state.logs.length + ' entries stored.' }))));

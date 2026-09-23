@@ -465,3 +465,49 @@ test('an order note can be kept on a day with no check-in saved', () => {
   assert.equal(S.orderNotesFor(s, DAY).length, 1, 'saving a check-in keeps the notes');
   assert.equal(s.reflections[DAY].note, 'tired');
 });
+
+test('a prepared day can be added without disturbing what is already recorded', () => {
+  let mine = S.createDefaultState();
+  mine = S.addArea(mine, 'Ministry');
+  mine = S.setPlan(mine, DAY, []);
+  mine = S.addPlanItem(mine, DAY, 'My own plan', '', null);
+  mine = S.addLog(mine, DAY, S.planFor(mine, DAY)[0].id, 'already done', 1);
+
+  let bundle = S.createDefaultState();
+  bundle = S.addArea(bundle, 'ministry');   // same area, different casing
+  bundle = S.addArea(bundle, 'Health');
+  bundle = S.addStanding(bundle, 'Purity', 'with others');
+  bundle = S.setPlan(bundle, DAY, []);
+  bundle = S.addPlanItem(bundle, DAY, 'Would have clobbered', '', null);
+  bundle = S.setPlan(bundle, NEXT, []);
+  bundle = S.addPlanItem(bundle, NEXT, 'Fresh day', '', bundle.areas[1].id);
+
+  assert.deepEqual(S.plansAvailableFrom(mine, bundle), [NEXT], 'only the day with no list of its own');
+
+  const merged = S.addPlansFrom(mine, bundle);
+  assert.deepEqual(S.planFor(merged, DAY).map((i) => i.title), ['My own plan'], 'the started day is left alone');
+  assert.equal(merged.logs.length, 1, 'nothing recorded is lost');
+  assert.deepEqual(S.planFor(merged, NEXT).map((i) => i.title), ['Fresh day']);
+  assert.deepEqual(merged.standing.map((n) => n.title), ['Purity']);
+  assert.deepEqual(merged.areas.map((a) => a.name), ['Ministry', 'Health'], 'areas match by name, never duplicated');
+  assert.equal(S.areaName(merged, S.planFor(merged, NEXT)[0].areaId), 'Health', 'the tag is remapped to this browser’s area');
+});
+
+test('adding prepared days is a no-op when there is nothing new', () => {
+  let s = S.createDefaultState();
+  s = S.setPlan(s, DAY, []);
+  s = S.addPlanItem(s, DAY, 'Mine', '', null);
+  let bundle = S.createDefaultState();
+  bundle = S.setPlan(bundle, DAY, []);
+  bundle = S.addPlanItem(bundle, DAY, 'Theirs', '', null);
+  assert.deepEqual(S.plansAvailableFrom(s, bundle), []);
+  assert.equal(S.addPlansFrom(s, bundle), s);
+  assert.deepEqual(S.plansAvailableFrom(s, null), []);
+});
+
+test('an empty prepared day is not offered', () => {
+  const s = S.createDefaultState();
+  let bundle = S.createDefaultState();
+  bundle = S.setPlan(bundle, DAY, []);
+  assert.deepEqual(S.plansAvailableFrom(s, bundle), [], 'a day set to an empty list has nothing to add');
+});

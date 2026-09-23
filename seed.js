@@ -1,7 +1,7 @@
 /*
  * Starting data, used only when this browser has nothing saved yet.
- * Also loadable at any time from Lists. Once you record anything of
- * your own, your saved data wins and this file is ignored.
+ * Days can also be added one by one from Lists without disturbing
+ * anything already recorded.
  */
 window.PRIORITY_SEED = {
   "version": 3,
@@ -43,6 +43,10 @@ window.PRIORITY_SEED = {
     {
       "id": "a_vban11q9mucyoq4w",
       "name": "Logistics"
+    },
+    {
+      "id": "a_6iees2memuenirlc",
+      "name": "Health"
     }
   ],
   "template": [],
@@ -139,6 +143,92 @@ window.PRIORITY_SEED = {
         "title": "Seminary",
         "note": "Start some of the essay.",
         "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-09-23": [
+      {
+        "id": "i_e53srpiomuenirld",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_curv9i0zmuenirld",
+        "title": "Clarity on mission, vision and church",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_beoy7i0smuenirld",
+        "title": "Reaching out to disciples",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_2ztl13lpmuenirld",
+        "title": "Marriage prep",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_dzt3gmn5muenirld",
+        "title": "Building relationships with brothers",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_jhpmpjfpmuenirld",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_z7msjtk0muenirld",
+        "title": "Work projects",
+        "note": "Including the social media project.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_3ps1fjfhmuenirle",
+        "title": "Prep for Hawaii",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_7ozugkj1muenirle",
+        "title": "Church search",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_teih21wmmuenirle",
+        "title": "Health research",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_6rdvbxvrmuenirle",
+        "title": "Five to ten year vision",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_1jj0cn8bmuenirle",
+        "title": "Seminary",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ro29ddv1muenirle",
+        "title": "Leadership cohort",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_ag1q6lshmuenirle",
+        "title": "Fun",
+        "note": "",
+        "areaId": null
       }
     ]
   },
