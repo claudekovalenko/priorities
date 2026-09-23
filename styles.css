@@ -978,3 +978,13 @@ textarea::placeholder {
   padding: 0 2px;
   cursor: pointer;
 }
+
+.preview {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 15px;
+}

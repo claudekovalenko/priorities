@@ -338,17 +338,41 @@
 
   function renderNoList(date) {
     const source = S.lastPlannedDate(state, date, 30);
-    return h('div', { class: 'section' },
-      h('h2', { text: 'No list for ' + relativeName(date) }),
-      h('p', { class: 'lede', text: 'You set each day’s priorities the night before. Build one now if you want.' }),
-      h('div', { class: 'actions', style: 'margin-top:14px' },
-        state.template.length
-          ? h('button', { class: 'btn primary', type: 'button', onclick: () => commit(S.seedPlanFromTemplate(state, date)) }, 'Use my usual list')
-          : null,
-        source
-          ? h('button', { class: 'btn', type: 'button', onclick: () => commit(S.seedPlanFromDate(state, date, source)) }, 'Copy ' + fmtShort(source))
-          : null,
-        h('button', { class: 'btn', type: 'button', onclick: () => { ui.tab = 'tonight'; ui.date = S.shiftDateKey(date, -1); persistUi(); render(); } }, 'Set it now')));
+    const seed = seedState();
+    // A list prepared for this very day belongs here, where you are standing,
+    // not buried in a settings tab.
+    const prepared = seed && S.plansAvailableFrom(state, seed).includes(date) ? seed.plans[date] : null;
+
+    const wrap = h('div', { class: 'section' },
+      h('h2', { text: 'No list for ' + relativeName(date) }));
+
+    if (prepared) {
+      wrap.appendChild(h('p', { class: 'lede', text: 'A list of ' + prepared.length + ' priorities is ready for this day.' }));
+      wrap.appendChild(h('ul', { class: 'preview' }, prepared.slice(0, 3).map((it, i) =>
+        h('li', { text: (i + 1) + '. ' + it.title }))));
+      if (prepared.length > 3) {
+        wrap.appendChild(h('p', { class: 'lede', text: 'and ' + (prepared.length - 3) + ' more.' }));
+      }
+    } else {
+      wrap.appendChild(h('p', { class: 'lede', text: 'You set each day’s priorities the night before. Build one now if you want.' }));
+    }
+
+    wrap.appendChild(h('div', { class: 'actions', style: 'margin-top:14px' },
+      prepared
+        ? h('button', { class: 'btn primary', type: 'button', onclick: () => {
+            commit(S.addPlansFrom(state, seed, [date]));
+            toast('List added');
+          } }, 'Use this list')
+        : null,
+      state.template.length
+        ? h('button', { class: 'btn ' + (prepared ? '' : 'primary'), type: 'button', onclick: () => commit(S.seedPlanFromTemplate(state, date)) }, 'Use my usual list')
+        : null,
+      source
+        ? h('button', { class: 'btn', type: 'button', onclick: () => commit(S.seedPlanFromDate(state, date, source)) }, 'Copy ' + fmtShort(source))
+        : null,
+      h('button', { class: 'btn', type: 'button', onclick: () => { ui.tab = 'tonight'; ui.date = S.shiftDateKey(date, -1); persistUi(); render(); } }, 'Set it now')));
+
+    return wrap;
   }
 
   // ---- Tonight ------------------------------------------------------------

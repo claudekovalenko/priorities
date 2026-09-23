@@ -577,8 +577,11 @@
       .sort();
   }
 
-  function addPlansFrom(state, other) {
-    const dates = plansAvailableFrom(state, other);
+  // `onlyDates` limits the merge to particular days, for offering a single
+  // day where the user is standing rather than all of them at once.
+  function addPlansFrom(state, other, onlyDates) {
+    const wanted = onlyDates ? new Set(onlyDates) : null;
+    const dates = plansAvailableFrom(state, other).filter((d) => !wanted || wanted.has(d));
     const newStanding = (other && other.standing ? other.standing : [])
       .filter((n) => !state.standing.some((x) => x.title.toLowerCase() === n.title.toLowerCase()));
     if (!dates.length && !newStanding.length) return state;

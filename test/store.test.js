@@ -562,3 +562,19 @@ test('an unchanged prepared day is not offered as a revision', () => {
   assert.deepEqual(S.plansDifferingFrom(s, same), []);
   assert.equal(S.replacePlanFrom(s, S.createDefaultState(), DAY), s, 'nothing to apply is a no-op');
 });
+
+test('a prepared day can be added one date at a time', () => {
+  let mine = S.createDefaultState();
+  let bundle = S.createDefaultState();
+  bundle = S.setPlan(bundle, DAY, [{ id: 'a', title: 'First day', note: '', areaId: null }]);
+  bundle = S.setPlan(bundle, NEXT, [{ id: 'b', title: 'Second day', note: '', areaId: null }]);
+
+  const one = S.addPlansFrom(mine, bundle, [NEXT]);
+  assert.deepEqual(S.planFor(one, NEXT).map((i) => i.title), ['Second day']);
+  assert.deepEqual(S.planFor(one, DAY), [], 'the day not asked for is left out');
+  assert.deepEqual(S.plansAvailableFrom(one, bundle), [DAY], 'the other stays on offer');
+
+  const both = S.addPlansFrom(mine, bundle);
+  assert.equal(Object.keys(both.plans).length, 2, 'with no dates given, all are added');
+  assert.equal(S.addPlansFrom(mine, bundle, ['2026-01-01']), mine, 'a date with nothing prepared is a no-op');
+});
