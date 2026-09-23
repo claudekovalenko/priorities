@@ -214,6 +214,7 @@
         ? h('ul', { class: 'entries' }, off.map((l) => h('li', {},
             h('span', { class: 'bullet off', 'aria-hidden': 'true' }),
             h('span', { class: 'text off', text: l.text || 'did it' }),
+            summary.items.length ? bookOntoControl(l, summary.items) : null,
             h('button', { class: 'del', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removeLog(state, l.id)) }, '×'))))
         : null,
       ui.adding === 'off'
@@ -224,6 +225,20 @@
     parts.push(renderOrderNotes(date));
 
     return h('div', {}, parts);
+  }
+
+  // Put an off-list entry onto one of the day's priorities. Needed whenever a
+  // list is revised and an entry's priority is gone.
+  function bookOntoControl(log, items) {
+    const sel = h('select', { class: 'bookonto', 'aria-label': 'Book onto a priority', id: 'onto-' + log.id });
+    sel.appendChild(h('option', { value: '', text: 'book onto…' }));
+    for (const e of items) {
+      sel.appendChild(h('option', { value: e.item.id, text: e.position + '. ' + e.item.title }));
+    }
+    sel.addEventListener('change', () => {
+      if (sel.value) commit(S.moveLog(state, log.id, sel.value));
+    });
+    return sel;
   }
 
   // The record of how the day actually ran, kept and editable.
@@ -500,6 +515,9 @@
     // Days prepared elsewhere that this browser has no list for. Adding them
     // cannot disturb a day you have already started.
     const available = seed ? S.plansAvailableFrom(state, seed) : [];
+    // Days this browser already holds, where the prepared version has since
+    // been revised.
+    const revised = seed ? S.plansDifferingFrom(state, seed) : [];
 
     wrap.appendChild(h('div', { class: 'section' },
       h('h2', { text: 'Your usual list' }),
@@ -610,6 +628,18 @@
               commit(S.addPlansFrom(state, seed));
               toast(available.length === 1 ? 'Added 1 day' : 'Added ' + available.length + ' days');
             } }, available.length === 1 ? 'Add 1 prepared day' : 'Add ' + available.length + ' prepared days')
+          : null,
+        revised.length
+          ? h('button', { class: 'btn', type: 'button', onclick: () => {
+              if (!confirm('Update the list for ' + revised.map(fmtShort).join(', ') + '? Entries you have already written stay, and any whose priority is gone move to the bottom of the day.')) return;
+              let next = state;
+              for (const d of revised) next = S.replacePlanFrom(next, seed, d);
+              ui.date = revised[revised.length - 1];
+              ui.tab = 'today';
+              persistUi();
+              commit(next);
+              toast('List updated');
+            } }, revised.length === 1 ? 'Update ' + fmtShort(revised[0]) + '\u2019s list' : 'Update ' + revised.length + ' lists')
           : null,
         seed && seed.logs.length && !state.logs.length
           ? h('button', { class: 'btn', type: 'button', onclick: () => {

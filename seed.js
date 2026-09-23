@@ -1,7 +1,7 @@
 /*
  * Starting data, used only when this browser has nothing saved yet.
- * Days can also be added one by one from Lists without disturbing
- * anything already recorded.
+ * Days can also be added, or a revised day applied, from Lists without
+ * disturbing anything already recorded.
  */
 window.PRIORITY_SEED = {
   "version": 3,
@@ -154,14 +154,14 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_curv9i0zmuenirld",
-        "title": "Clarity on mission, vision and church",
-        "note": "",
+        "title": "Mission, vision and church",
+        "note": "Includes the church search.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_beoy7i0smuenirld",
-        "title": "Reaching out to disciples",
-        "note": "",
+        "title": "Disciples and brothers",
+        "note": "Reaching out to disciples, and building relationships with brothers.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -169,12 +169,6 @@ window.PRIORITY_SEED = {
         "title": "Marriage prep",
         "note": "",
         "areaId": "a_blg8d4dnmucyoq4w"
-      },
-      {
-        "id": "i_dzt3gmn5muenirld",
-        "title": "Building relationships with brothers",
-        "note": "",
-        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_jhpmpjfpmuenirld",
@@ -195,12 +189,6 @@ window.PRIORITY_SEED = {
         "areaId": "a_vban11q9mucyoq4w"
       },
       {
-        "id": "i_7ozugkj1muenirle",
-        "title": "Church search",
-        "note": "",
-        "areaId": "a_d4q7ig0emucyoq4w"
-      },
-      {
         "id": "i_teih21wmmuenirle",
         "title": "Health research",
         "note": "",
@@ -214,15 +202,9 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_1jj0cn8bmuenirle",
-        "title": "Seminary",
-        "note": "",
+        "title": "Seminary and leadership cohort",
+        "note": "The essay, and the cohort.",
         "areaId": "a_7fukniewmucyoq4w"
-      },
-      {
-        "id": "i_ro29ddv1muenirle",
-        "title": "Leadership cohort",
-        "note": "",
-        "areaId": null
       },
       {
         "id": "i_ag1q6lshmuenirle",

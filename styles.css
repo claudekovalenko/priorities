@@ -967,3 +967,14 @@ textarea::placeholder {
   flex-direction: column;
   gap: 4px;
 }
+
+.entries .bookonto {
+  flex: none;
+  max-width: 110px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 0 2px;
+  cursor: pointer;
+}

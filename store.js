@@ -611,6 +611,64 @@
     return s;
   }
 
+  // Dates where both sides hold a list and the two differ. These are the days
+  // a revision would change, so they are offered separately and never applied
+  // without being asked for.
+  function plansDifferingFrom(state, other) {
+    if (!other || !other.plans) return [];
+    return Object.keys(other.plans).filter((date) => {
+      const mine = planFor(state, date);
+      const theirs = other.plans[date] || [];
+      if (!mine.length || !theirs.length) return false;
+      if (mine.length !== theirs.length) return true;
+      return mine.some((it, i) => it.title !== theirs[i].title || it.note !== theirs[i].note);
+    }).sort();
+  }
+
+  // Swap in a revised list for one day. Entries are re-attached by id, then by
+  // title; anything left over moves off the list rather than being deleted.
+  function replacePlanFrom(state, other, date) {
+    const theirs = other && other.plans ? other.plans[date] : null;
+    if (!theirs || !theirs.length) return state;
+
+    const s = clone(state);
+    const byName = new Map(s.areas.map((a) => [a.name.toLowerCase(), a.id]));
+    const remap = new Map();
+    for (const a of (other.areas || [])) {
+      const key = a.name.toLowerCase();
+      if (!byName.has(key)) {
+        const id = uid('a');
+        s.areas.push({ id, name: a.name });
+        byName.set(key, id);
+      }
+      remap.set(a.id, byName.get(key));
+    }
+
+    const oldTitleById = new Map(planFor(s, date).map((it) => [it.id, it.title]));
+    s.plans[date] = theirs.map((it) => ({
+      id: it.id,
+      title: it.title,
+      note: it.note,
+      areaId: it.areaId && remap.has(it.areaId) ? remap.get(it.areaId) : null,
+    }));
+
+    const ids = new Set(s.plans[date].map((it) => it.id));
+    const idByTitle = new Map(s.plans[date].map((it) => [it.title, it.id]));
+    for (const l of s.logs) {
+      if (l.date !== date || !l.itemId || ids.has(l.itemId)) continue;
+      const wasCalled = oldTitleById.get(l.itemId);
+      l.itemId = wasCalled && idByTitle.has(wasCalled) ? idByTitle.get(wasCalled) : null;
+    }
+    if (s.reflections[date]) {
+      const scores = {};
+      for (const id of Object.keys(s.reflections[date].scores)) {
+        if (ids.has(id)) scores[id] = s.reflections[date].scores[id];
+      }
+      s.reflections[date].scores = scores;
+    }
+    return s;
+  }
+
   // ---- Evening check-in ---------------------------------------------------
 
   function saveReflection(state, date, fields, now) {
@@ -742,6 +800,8 @@
     offListLogs,
     plansAvailableFrom,
     addPlansFrom,
+    plansDifferingFrom,
+    replacePlanFrom,
     addStanding,
     updateStanding,
     moveStanding,

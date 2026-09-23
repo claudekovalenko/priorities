@@ -511,3 +511,54 @@ test('an empty prepared day is not offered', () => {
   bundle = S.setPlan(bundle, DAY, []);
   assert.deepEqual(S.plansAvailableFrom(s, bundle), [], 'a day set to an empty list has nothing to add');
 });
+
+test('a revised list keeps every entry, by id, by title, or off the list', () => {
+  let s = S.createDefaultState();
+  s = S.setPlan(s, DAY, [
+    { id: 'i1', title: 'Reaching out to disciples', note: '', areaId: null },
+    { id: 'i2', title: 'Building relationships with brothers', note: '', areaId: null },
+    { id: 'i3', title: 'Fun', note: '', areaId: null },
+  ]);
+  s = S.addLog(s, DAY, 'i1', 'texted two guys', 1);
+  s = S.addLog(s, DAY, 'i2', 'coffee with Austin', 2);
+  s = S.addLog(s, DAY, 'i3', 'watched a game', 3);
+  s = S.saveReflection(s, DAY, { scores: { i1: 4, i2: 3 } });
+
+  let revised = S.createDefaultState();
+  revised = S.setPlan(revised, DAY, [
+    { id: 'i1', title: 'Disciples and brothers', note: 'merged', areaId: null },
+    { id: 'i3', title: 'Fun', note: '', areaId: null },
+  ]);
+
+  assert.deepEqual(S.plansDifferingFrom(s, revised), [DAY]);
+  assert.deepEqual(S.plansAvailableFrom(s, revised), [], 'a day already in use is never silently replaced');
+
+  const out = S.replacePlanFrom(s, revised, DAY);
+  const sum = S.daySummary(out, DAY);
+  assert.deepEqual(sum.items.map((e) => e.item.title), ['Disciples and brothers', 'Fun']);
+  assert.deepEqual(sum.items[0].logs.map((l) => l.text), ['texted two guys'], 'kept by id through a rename');
+  assert.deepEqual(sum.items[1].logs.map((l) => l.text), ['watched a game'], 'kept by title');
+  assert.deepEqual(sum.offList.map((l) => l.text), ['coffee with Austin'], 'the absorbed one moves off the list');
+  assert.equal(out.logs.length, 3, 'nothing is ever deleted');
+  assert.deepEqual(out.reflections[DAY].scores, { i1: 4 }, 'a score for a priority that is gone goes with it');
+});
+
+test('an off-list entry can be booked back onto a priority', () => {
+  let s = S.createDefaultState();
+  s = S.setPlan(s, DAY, [{ id: 'i1', title: 'Disciples and brothers', note: '', areaId: null }]);
+  s = S.addLog(s, DAY, null, 'coffee with Austin', 1);
+  assert.equal(S.daySummary(s, DAY).offList.length, 1);
+  s = S.moveLog(s, s.logs[0].id, 'i1');
+  const sum = S.daySummary(s, DAY);
+  assert.equal(sum.offList.length, 0);
+  assert.deepEqual(sum.items[0].logs.map((l) => l.text), ['coffee with Austin']);
+});
+
+test('an unchanged prepared day is not offered as a revision', () => {
+  let s = S.createDefaultState();
+  s = S.setPlan(s, DAY, [{ id: 'i1', title: 'God', note: 'x', areaId: null }]);
+  let same = S.createDefaultState();
+  same = S.setPlan(same, DAY, [{ id: 'i1', title: 'God', note: 'x', areaId: null }]);
+  assert.deepEqual(S.plansDifferingFrom(s, same), []);
+  assert.equal(S.replacePlanFrom(s, S.createDefaultState(), DAY), s, 'nothing to apply is a no-op');
+});
