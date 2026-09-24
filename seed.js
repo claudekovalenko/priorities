@@ -1,7 +1,7 @@
 /*
  * Starting data, used only when this browser has nothing saved yet.
- * Days can also be added, or a revised day applied, from Lists without
- * disturbing anything already recorded.
+ * Days can also be added, or a revised day applied, from Lists or from
+ * the day itself, without disturbing anything already recorded.
  */
 window.PRIORITY_SEED = {
   "version": 3,
@@ -211,6 +211,26 @@ window.PRIORITY_SEED = {
         "title": "Fun",
         "note": "",
         "areaId": null
+      }
+    ],
+    "2026-09-24": [
+      {
+        "id": "i_rrdlh9g6mufq754w",
+        "title": "Relationships and connections in the house",
+        "note": "Most of the day with other people, a little outside that. Josh is one to spend time with.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_d3oxs9camufq754w",
+        "title": "Prayer with the Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hklp9sremufq754w",
+        "title": "Time in the Word",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
       }
     ]
   },
