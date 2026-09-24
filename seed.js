@@ -215,6 +215,12 @@ window.PRIORITY_SEED = {
     ],
     "2026-09-24": [
       {
+        "id": "i_004qyb8dmufxui9l",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
         "id": "i_rrdlh9g6mufq754w",
         "title": "Relationships and connections in the house",
         "note": "Most of the day with other people, a little outside that. Josh is one to spend time with.",
