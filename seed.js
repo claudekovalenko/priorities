@@ -231,6 +231,12 @@ window.PRIORITY_SEED = {
         "title": "Time in the Word",
         "note": "",
         "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_mv30cypymufxqc3y",
+        "title": "Work projects",
+        "note": "Including the social media project.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ]
   },

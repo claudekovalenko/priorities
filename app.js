@@ -201,6 +201,19 @@
       parts.push(h('p', { class: 'alert', text: 'Number ' + first.favored.position + ' got time before number ' + first.neglected.position + '.' }));
     }
 
+    // A revised list for this day belongs here too, not only under Lists.
+    const seed = seedState();
+    if (seed && S.plansDifferingFrom(state, seed).includes(date)) {
+      const revised = seed.plans[date];
+      parts.push(h('div', { class: 'revision' },
+        h('span', { text: 'A revised list is ready for this day: ' + revised.length + ' priorities.' }),
+        h('button', { class: 'btn small', type: 'button', onclick: () => {
+          if (!confirm('Update this day to the revised list of ' + revised.length + ' priorities? Everything you have written stays, and anything whose priority is gone moves to the bottom.')) return;
+          commit(S.replacePlanFrom(state, seed, date));
+          toast('List updated');
+        } }, 'Update')));
+    }
+
     const list = h('ol', { class: 'cats' });
     summary.items.forEach((entry) => {
       list.appendChild(renderPriority(entry, date));

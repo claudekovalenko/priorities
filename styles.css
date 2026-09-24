@@ -988,3 +988,21 @@ textarea::placeholder {
   gap: 4px;
   font-size: 15px;
 }
+
+.revision {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+
+.revision span {
+  flex: 1;
+  min-width: 0;
+  color: var(--accent);
+}
