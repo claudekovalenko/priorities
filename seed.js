@@ -237,6 +237,12 @@ window.PRIORITY_SEED = {
         "title": "Work projects",
         "note": "Including the social media project.",
         "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_rg38mvz0mufxs0nb",
+        "title": "Working on my health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
       }
     ]
   },
