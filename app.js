@@ -3,9 +3,10 @@
   'use strict';
 
   const S = window.PriorityStore;
+  const A = window.PriorityAlignment;
   const STORAGE_KEY = 'priorities-tracker-v1';
   const UI_KEY = 'priorities-tracker-ui';
-  const TABS = ['today', 'tonight', 'history', 'lists'];
+  const TABS = ['today', 'tonight', 'history', 'aligned', 'lists'];
 
   // ---- Persistence -------------------------------------------------------
 
@@ -60,6 +61,9 @@
 
   let state = loadState();
   const ui = Object.assign({ tab: 'today' }, loadUi());
+  // The other apps link straight to a view, e.g. priorities/#aligned.
+  const hashTab = location.hash.slice(1);
+  if (TABS.includes(hashTab)) ui.tab = hashTab;
   if (!TABS.includes(ui.tab)) ui.tab = 'today';
   ui.date = S.dayKeyNow(S.dayStartHour(state));
   ui.adding = null; // priority id (or 'off') whose entry field is open
@@ -141,6 +145,7 @@
     if (ui.tab === 'today') root.appendChild(renderToday());
     else if (ui.tab === 'tonight') root.appendChild(renderTonight());
     else if (ui.tab === 'history') root.appendChild(renderHistory());
+    else if (ui.tab === 'aligned') root.appendChild(renderAligned());
     else root.appendChild(renderLists());
 
     if (ui.adding) {
@@ -173,6 +178,7 @@
     if (!btn) return;
     ui.tab = btn.dataset.tab;
     ui.adding = null;
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
     persistUi();
     render();
   });
@@ -542,6 +548,96 @@
     }));
 
     return h('div', {}, list);
+  }
+
+  // ---- Aligned -----------------------------------------------------------
+
+  // Stewardship lives on the same site, so when it has been opened in this
+  // browser its list is readable here. An installed app on iOS keeps its own
+  // storage, in which case this finds nothing and the bundled copy is used.
+  function stewardshipDeep() {
+    try {
+      const raw = localStorage.getItem(A.STEWARDSHIP_KEY);
+      return raw ? A.deepFromStewardship(JSON.parse(raw)) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function renderAligned() {
+    const live = stewardshipDeep();
+    const deepList = live || A.DEEP;
+    const r = A.report(state, ui.date, 7, deepList);
+    const wrap = h('div', {});
+
+    wrap.appendChild(h('p', { class: 'summary', text: 'The 7 days ending ' + fmtShort(ui.date) + ': '
+      + r.totalLogs + (r.totalLogs === 1 ? ' entry' : ' entries') + ' booked against '
+      + r.totalPlanned + (r.totalPlanned === 1 ? ' priority' : ' priorities') + '.' }));
+
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'Where it went, by calling' }),
+      h('p', { class: 'lede', text: 'Each area feeds one calling from your vision. The bar is the share of what you did. The mark is the share of what you planned.' }),
+      h('div', { class: 'align-bars' }, r.callings.map((c) => h('div', { class: 'align-row' + (c.id === 'untied' || c.id === 'offlist' ? ' aside' : '') },
+        h('span', { class: 'name', text: c.name }),
+        h('span', { class: 'track', title: c.shareOfLogs + '% of what you did, ' + c.shareOfPlan + '% of what you planned' },
+          h('span', { class: 'fill', style: 'width:' + c.shareOfLogs + '%' }),
+          c.planned ? h('span', { class: 'mark', style: 'left:' + c.shareOfPlan + '%' }) : null),
+        h('span', { class: 'pct', text: c.shareOfLogs + '%' }),
+        h('span', { class: 'sub', text: c.planned
+          ? c.plannedDone + ' of ' + c.planned + ' planned got done'
+          : (c.logs ? 'never planned' : 'not planned') }))))));
+
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'Stewardship: what fed the Deep things' }),
+      h('p', { class: 'lede', text: live
+        ? 'Read from your stewardship list in this browser. A dot is a day something booked here fed it. The score is stewardship’s own daily score for the week.'
+        : 'The Deep list as it stands in stewardship. A dot is a day something booked here fed it. Open stewardship in this same browser and its live list and daily scores show here too.' }),
+      h('ul', { class: 'deep-list' }, r.deep.map((d) => h('li', {},
+        h('span', { class: 'name', text: d.label }),
+        h('span', { class: 'dots' }, r.dates.map((date) =>
+          h('i', { class: 'dot ' + (d.fedDates.includes(date) ? 'on' : ''), title: fmtShort(date) }))),
+        h('span', { class: 'sub' + (d.carriedBy.length ? '' : ' warn'), text: (d.carriedBy.length ? 'via ' + d.carriedBy.join(', ') : 'nothing here carries it')
+          + (d.score !== null ? ' · scored ' + d.score + '%' : '') }))))));
+
+    const notes = A.suggestions(r);
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'Worth a look' }),
+      notes.length
+        ? h('ul', { class: 'plainlist align-notes' }, notes.map((n) => h('li', { text: n })))
+        : h('p', { class: 'lede', text: 'Every calling got something this week, and every Deep thing has an area carrying it.' })));
+
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'How your areas connect' }),
+      h('p', { class: 'lede', text: state.areas.length
+        ? 'Pick the calling each area serves, and tap the Deep things it carries. Areas you have not touched use a suggested link.'
+        : 'Priorities tagged with an area are what tie a day to the vision. There are no areas yet.' })));
+
+    for (const area of state.areas) {
+      const link = A.linkFor(state, area);
+      const select = h('select', { 'aria-label': 'Calling ' + area.name + ' serves' },
+        h('option', { value: '', text: 'No calling' }),
+        A.CALLINGS.map((c) => h('option', { value: c.id, text: c.name, selected: c.id === link.calling })));
+      select.addEventListener('change', () => commit(S.setAreaAlignment(state, area.id, { calling: select.value, carries: link.carries })));
+      const chips = h('div', { class: 'carry-chips', role: 'group', 'aria-label': 'Deep things ' + area.name + ' carries' },
+        deepList.map((d) => {
+          const on = link.carries.includes(d.id);
+          return h('button', {
+            type: 'button', class: 'chip', 'aria-pressed': on ? 'true' : 'false',
+            onclick: () => commit(S.setAreaAlignment(state, area.id, {
+              calling: link.calling,
+              carries: on ? link.carries.filter((x) => x !== d.id) : link.carries.concat([d.id]),
+            })),
+          }, d.label);
+        }));
+      wrap.appendChild(h('div', { class: 'area-link' },
+        h('div', { class: 'area-link-head' },
+          h('span', { class: 'area-name', text: area.name }),
+          select,
+          link.custom ? null : h('span', { class: 'hint', text: 'suggested' })),
+        chips));
+    }
+
+    return wrap;
   }
 
   // ---- Lists --------------------------------------------------------------

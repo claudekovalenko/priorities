@@ -9,7 +9,8 @@ Priorities are filed under categories in a fixed order. The default is **Faith, 
 1. **Tonight** — set tomorrow's priorities. Load your usual list, copy today's, or start empty, then edit it to fit tomorrow. Below that, check in on the day that is ending: score each category, name anything that crowded out something higher, add a note.
 2. **Today** — write what you just did in one box, then tap the priority it books against. The list below fills in as the day goes.
 3. **History** — every day, with the list that was set and what was done against it.
-4. **Lists** — your usual list, the one that seeds a new day, plus categories and data export.
+4. **Aligned** — the last seven days read against the other two apps. Each area feeds one calling from the vision app and carries some of stewardship's Deep items. It shows what share of what you did and planned went to each calling, which Deep items anything fed, and plain notes on the gaps. Links are suggested from each area's name until you set them. When stewardship has been opened in the same browser, its live Deep list and daily scores are used.
+5. **Lists** — your usual list, the one that seeds a new day, plus categories and data export.
 
 ## Details worth knowing
 
@@ -63,6 +64,7 @@ npm test
 | `styles.css` | Theme tokens (light and dark) and layout |
 | `store.js` | Pure state functions, no DOM, also loadable in Node |
 | `app.js` | Rendering and browser storage |
+| `alignment.js` | Vision callings, stewardship Deep list, and the weekly alignment report |
 | `pwa.js` | Install prompt, update prompt, service worker registration |
 | `sw.js` | Service worker: offline shell cache |
 | `manifest.webmanifest` | App name, icons, colors, standalone display |
@@ -81,4 +83,5 @@ template   your usual list, used to seed a day
 plans      { "2026-09-21": [ { id, tierId, title, note } ] }   one list per day
 logs       { id, date, tierId, itemId | null, text, at }       itemId null = off the list
 reflections{ "2026-09-21": { tierScores, crowdedOut, note } }
+alignment  { areaId: { calling, carries: [stewardshipDeepId] } }   set by hand; unset areas use defaults
 ```

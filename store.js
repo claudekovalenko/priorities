@@ -84,6 +84,7 @@
       plans: {},
       logs: [],
       reflections: {},
+      alignment: {},
     };
   }
 
@@ -231,7 +232,21 @@
       standing.push({ id: n.id, title: n.title, body: typeof n.body === 'string' ? n.body : '' });
     }
 
-    return { version: SCHEMA_VERSION, settings, standing, areas, template, plans, logs, reflections };
+    // Which vision calling an area feeds, and which stewardship Deep items it
+    // carries. Keyed by area; an area with no entry falls back to a default.
+    const alignment = {};
+    if (raw.alignment && typeof raw.alignment === 'object') {
+      for (const id of Object.keys(raw.alignment)) {
+        const a = raw.alignment[id];
+        if (!areaIds.has(id) || !a || typeof a !== 'object') continue;
+        alignment[id] = {
+          calling: typeof a.calling === 'string' && a.calling ? a.calling : null,
+          carries: Array.isArray(a.carries) ? [...new Set(a.carries.filter((x) => typeof x === 'string'))] : [],
+        };
+      }
+    }
+
+    return { version: SCHEMA_VERSION, settings, standing, areas, template, plans, logs, reflections, alignment };
   }
 
   // ---- Areas (optional tags that carry across days) ----------------------
@@ -263,6 +278,20 @@
     for (const date of Object.keys(s.plans)) {
       for (const it of s.plans[date]) if (it.areaId === areaId) it.areaId = null;
     }
+    if (s.alignment) delete s.alignment[areaId];
+    return s;
+  }
+
+  // Replaces an area's links outright. The caller passes the whole link, so
+  // the first edit to an area still on its default keeps the rest of it.
+  function setAreaAlignment(state, areaId, link) {
+    if (!state.areas.some((a) => a.id === areaId) || !link) return state;
+    const s = clone(state);
+    s.alignment = s.alignment || {};
+    s.alignment[areaId] = {
+      calling: typeof link.calling === 'string' && link.calling ? link.calling : null,
+      carries: Array.isArray(link.carries) ? [...new Set(link.carries.filter((x) => typeof x === 'string'))] : [],
+    };
     return s;
   }
 
@@ -778,6 +807,7 @@
     renameArea,
     removeArea,
     areaName,
+    setAreaAlignment,
     addTemplateItem,
     updateTemplateItem,
     moveTemplateItem,

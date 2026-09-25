@@ -4,7 +4,7 @@
  * Bump CACHE when any shell file changes. The old cache is deleted on
  * activate, and the page is told a new version is waiting.
  */
-const CACHE = 'order-of-the-day-v16';
+const CACHE = 'order-of-the-day-v17';
 
 const SHELL = [
   './',
@@ -12,6 +12,7 @@ const SHELL = [
   './styles.css',
   './store.js',
   './seed.js',
+  './alignment.js',
   './app.js',
   './pwa.js',
   './manifest.webmanifest',
