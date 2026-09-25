@@ -13,6 +13,11 @@ window.PRIORITY_SEED = {
       "id": "s_2e9zrwukmud6ty16",
       "title": "Purity",
       "body": "Spend almost all my time with others. Fellowship and connection."
+    },
+    {
+      "id": "s_kr6qkv22muhbaf70",
+      "title": "Progress in every area",
+      "body": "Making steps in all of them, not arriving at the ultimate goal immediately."
     }
   ],
   "areas": [
@@ -256,6 +261,62 @@ window.PRIORITY_SEED = {
         "note": "",
         "areaId": "a_6iees2memuenirlc"
       }
+    ],
+    "2026-09-25": [
+      {
+        "id": "i_x3tp8e19muhbaf6o",
+        "title": "The Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_elj38ltjmuhbaf6o",
+        "title": "Prayer",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6zjf12t2muhbaf6o",
+        "title": "Church search",
+        "note": "Lean on my decision-making app.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_af2rhdfumuhbaf6p",
+        "title": "Marriage prep",
+        "note": "Includes some finances.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_27ofk4qqmuhbaf6p",
+        "title": "Disciple outreach",
+        "note": "Seeking first his kingdom and his righteousness.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_6wtnlqk2muhbaf6p",
+        "title": "Business and work building",
+        "note": "The projects I am working on.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_5y8ysg2tmuhbaf6p",
+        "title": "Podcast",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_e33ty90emuhbaf6p",
+        "title": "Seminary",
+        "note": "Some Greek reading.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_hd2nxh3dmuhbaf6p",
+        "title": "Health research",
+        "note": "Tinnitus, researching it a bit more.",
+        "areaId": "a_6iees2memuenirlc"
+      }
     ]
   },
   "logs": [
@@ -300,6 +361,13 @@ window.PRIORITY_SEED = {
       "itemId": "i_fgyt2is1mucyoq4x",
       "text": "Texted Mom back about Andrea Bocelli.",
       "at": 1790006400000
+    },
+    {
+      "id": "l_2hnnv6okmuhbaf70",
+      "date": "2026-09-25",
+      "itemId": "i_27ofk4qqmuhbaf6p",
+      "text": "Good conversation with someone at the gym.",
+      "at": 1790326800000
     }
   ],
   "reflections": {
