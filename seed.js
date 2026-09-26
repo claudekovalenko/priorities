@@ -317,6 +317,80 @@ window.PRIORITY_SEED = {
         "note": "Tinnitus, researching it a bit more.",
         "areaId": "a_6iees2memuenirlc"
       }
+    ],
+    "2026-09-26": [
+      {
+        "id": "i_ar6sul77muixtrfh",
+        "title": "God",
+        "note": "Keep God first.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_v1adz2lamuixtrfi",
+        "title": "Emotionally protect myself",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_nz7itm3amuixtrfi",
+        "title": "Marriage prep",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_bj2k5hefmuixtrfi",
+        "title": "Seminary",
+        "note": "A little bit of the work.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_qdipzojkmuixtrfi",
+        "title": "Prayer",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_y8izn1fbmuixtrfi",
+        "title": "Conversations about the social media project",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hlvq7cvhmuixtrfi",
+        "title": "Kyle's Los Angeles push page",
+        "note": "Build it out, then make sure it works.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_lhwh938cmuixtrfj",
+        "title": "Communicate with Mom",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_3dxq8j97muixtrfj",
+        "title": "Messages to JT",
+        "note": "E3, and the house flipping things.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_mynayma5muixtrfj",
+        "title": "Hawaii",
+        "note": "See if there is any movement.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_oukbmb3lmuixtrfj",
+        "title": "Build trellises at home",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_hakspz66muixtrfj",
+        "title": "Extra cleaning for Roxanne",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      }
     ]
   },
   "logs": [
