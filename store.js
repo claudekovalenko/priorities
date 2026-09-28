@@ -614,6 +614,32 @@
     return s;
   }
 
+  // Copy a prepared list onto a different day, with fresh ids so the two days
+  // stay independent. Used when a list was filed against the wrong date.
+  function copyPlanFrom(state, other, fromDate, toDate) {
+    const theirs = other && other.plans ? other.plans[fromDate] : null;
+    if (!theirs || !theirs.length) return state;
+    const s = clone(state);
+    const byName = new Map(s.areas.map((a) => [a.name.toLowerCase(), a.id]));
+    const remap = new Map();
+    for (const a of (other.areas || [])) {
+      const key = a.name.toLowerCase();
+      if (!byName.has(key)) {
+        const id = uid('a');
+        s.areas.push({ id, name: a.name });
+        byName.set(key, id);
+      }
+      remap.set(a.id, byName.get(key));
+    }
+    s.plans[toDate] = theirs.map((it) => ({
+      id: uid('i'),
+      title: it.title,
+      note: it.note,
+      areaId: it.areaId && remap.has(it.areaId) ? remap.get(it.areaId) : null,
+    }));
+    return s;
+  }
+
   // Dates where both sides hold a list and the two differ. These are the days
   // a revision would change, so they are offered separately and never applied
   // without being asked for.
@@ -805,6 +831,7 @@
     addPlansFrom,
     plansDifferingFrom,
     replacePlanFrom,
+    copyPlanFrom,
     addStanding,
     updateStanding,
     moveStanding,

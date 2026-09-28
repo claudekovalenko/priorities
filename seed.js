@@ -392,7 +392,7 @@ window.PRIORITY_SEED = {
         "areaId": "a_vban11q9mucyoq4w"
       }
     ],
-    "2026-09-29": [
+    "2026-09-28": [
       {
         "id": "i_k2tp15pimukutsrz",
         "title": "The Lord",

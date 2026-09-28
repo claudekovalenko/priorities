@@ -578,3 +578,22 @@ test('a prepared day can be added one date at a time', () => {
   assert.equal(Object.keys(both.plans).length, 2, 'with no dates given, all are added');
   assert.equal(S.addPlansFrom(mine, bundle, ['2026-01-01']), mine, 'a date with nothing prepared is a no-op');
 });
+
+test('a prepared list can be copied onto a different day', () => {
+  let mine = S.createDefaultState();
+  mine = S.addArea(mine, 'Work');
+  let bundle = S.createDefaultState();
+  bundle = S.addArea(bundle, 'work');    // same area, different casing
+  bundle = S.setPlan(bundle, NEXT, [
+    { id: 'b1', title: 'The Lord', note: 'Word and prayer', areaId: bundle.areas[0].id },
+    { id: 'b2', title: 'Family', note: '', areaId: null },
+  ]);
+
+  const out = S.copyPlanFrom(mine, bundle, NEXT, DAY);
+  assert.deepEqual(S.planFor(out, DAY).map((i) => i.title), ['The Lord', 'Family']);
+  assert.equal(S.planFor(out, DAY)[0].note, 'Word and prayer');
+  assert.equal(S.planFor(out, DAY)[0].id === 'b1', false, 'fresh ids keep the days independent');
+  assert.equal(S.areaName(out, S.planFor(out, DAY)[0].areaId), 'Work', 'the area matches by name');
+  assert.deepEqual(out.areas.map((a) => a.name), ['Work'], 'no duplicate area');
+  assert.equal(S.copyPlanFrom(mine, bundle, '2026-01-01', DAY), mine, 'nothing prepared is a no-op');
+});

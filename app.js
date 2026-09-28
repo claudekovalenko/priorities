@@ -368,6 +368,21 @@
       }
     } else {
       wrap.appendChild(h('p', { class: 'lede', text: 'You set each day’s priorities the night before. Build one now if you want.' }));
+
+      // A list prepared for a different day is easy to miss from here, and a
+      // list filed one day off looks exactly like no list at all. Say so.
+      const elsewhere = seed ? S.plansAvailableFrom(state, seed).filter((d) => d !== date) : [];
+      for (const other of elsewhere) {
+        const n = seed.plans[other].length;
+        wrap.appendChild(h('div', { class: 'revision' },
+          h('span', { text: 'A list of ' + n + ' priorities is ready for ' + relativeName(other) + '.' }),
+          h('button', { class: 'btn small', type: 'button', onclick: () => setDate(other) }, 'Open ' + fmtShort(other)),
+          h('button', { class: 'btn small', type: 'button', onclick: () => {
+            if (!confirm('Use that list for ' + relativeName(date) + ' instead? It stays on ' + fmtShort(other) + ' too.')) return;
+            commit(S.copyPlanFrom(state, seed, other, date));
+            toast('List used for ' + relativeName(date));
+          } }, 'Use it here')));
+      }
     }
 
     wrap.appendChild(h('div', { class: 'actions', style: 'margin-top:14px' },
