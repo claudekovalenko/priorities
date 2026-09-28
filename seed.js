@@ -391,6 +391,68 @@ window.PRIORITY_SEED = {
         "note": "",
         "areaId": "a_vban11q9mucyoq4w"
       }
+    ],
+    "2026-09-29": [
+      {
+        "id": "i_k2tp15pimukutsrz",
+        "title": "The Lord",
+        "note": "Time in the Word, and time in prayer. One priority.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_fr7qvduwmukutsrz",
+        "title": "Family",
+        "note": "Reaching out, connecting, pouring in. Loving and caring for them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_3oqjlruqmukutsrz",
+        "title": "Business",
+        "note": "Build it out further. Praying and asking the Lord for clarity on the project, and on taking it on.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_b67hy53vmukutsrz",
+        "title": "Text JT",
+        "note": "The E3 thing, and my AIP.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_fb62wjvsmukutss0",
+        "title": "Real estate app",
+        "note": "Build it out some more.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_72gnywqwmukutss0",
+        "title": "Seminary",
+        "note": "Think through the grade I am going after and what I will be learning. The rest is review, so complete whatever readings are necessary.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_dc82k2limukutss0",
+        "title": "Disciple making",
+        "note": "Reach out to Michael at the gym.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_se1x3dchmukutss1",
+        "title": "Church",
+        "note": "Prayer and research.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_1ip7hafemukutss1",
+        "title": "Health",
+        "note": "More research and prep.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ub99jd8nmukutss1",
+        "title": "Podcast",
+        "note": "Automate the editing so it is quicker. Maybe clipping and putting it online. Not high, just something to consider.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      }
     ]
   },
   "logs": [
