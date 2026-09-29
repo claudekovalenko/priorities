@@ -464,13 +464,13 @@ window.PRIORITY_SEED = {
       {
         "id": "i_35vwt47tmun2j2qh",
         "title": "Church",
-        "note": "Which one to go to. Decision making, built out a little further. One of the two I am pressing toward.",
+        "note": "Which one to go to. Decision making, built out a little further. Same idea as the marriage list: write down what I am looking for, and keep adjusting it as time goes on. One of the two I am pressing toward.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_xg0x11l9mun2j2qg",
         "title": "Marriage",
-        "note": "Prep and the finances. Prayer about it. Working on myself in that way, and who that person would be. One of the two I am pressing toward.",
+        "note": "Prep and the finances. Prayer about it. Working on myself in that way, and who that person would be. Start the list of what I am actually looking for, one I can adjust rather than rewrite. One of the two I am pressing toward.",
         "areaId": "a_blg8d4dnmucyoq4w"
       },
       {
