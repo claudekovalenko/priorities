@@ -462,6 +462,18 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_35vwt47tmun2j2qh",
+        "title": "Church",
+        "note": "Which one to go to. Decision making, built out a little further. One of the two I am pressing toward.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_xg0x11l9mun2j2qg",
+        "title": "Marriage",
+        "note": "Prep and the finances. Prayer about it. Working on myself in that way, and who that person would be. One of the two I am pressing toward.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
         "id": "i_hjyh808xmun2j2qg",
         "title": "Major seminary assignments",
         "note": "The quiz especially.",
@@ -480,15 +492,9 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
-        "id": "i_xg0x11l9mun2j2qg",
-        "title": "Marriage prep",
-        "note": "Thinking how to prepare, and the finances.",
-        "areaId": "a_blg8d4dnmucyoq4w"
-      },
-      {
         "id": "i_91yiwi7pmun2j2qg",
-        "title": "Health research",
-        "note": "My ear and more about my knee. Build out a database and an understanding of how to manage it.",
+        "title": "Health",
+        "note": "Eating well, starting today. Research on my ear and more on my knee, building out a database and an understanding of how to manage it.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -513,18 +519,6 @@ window.PRIORITY_SEED = {
         "id": "i_cz0zqkg3mun2j2qg",
         "title": "Bible study",
         "note": "Develop it a little further.",
-        "areaId": "a_d4q7ig0emucyoq4w"
-      },
-      {
-        "id": "i_z7lcnpimmun2j2qh",
-        "title": "Prayer about marriage",
-        "note": "",
-        "areaId": "a_blg8d4dnmucyoq4w"
-      },
-      {
-        "id": "i_35vwt47tmun2j2qh",
-        "title": "Church",
-        "note": "Which one to go to.",
         "areaId": "a_d4q7ig0emucyoq4w"
       }
     ]
