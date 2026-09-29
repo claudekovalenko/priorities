@@ -492,6 +492,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_13tg6vmtmun3zcwd",
+        "title": "Growing in communication without losing conviction",
+        "note": "In light of social media. Bryce does it well: natural, not like he is applying techniques from books, more just him and following the Lord. Maybe a book on it.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
         "id": "i_91yiwi7pmun2j2qg",
         "title": "Health",
         "note": "Eating well, starting today. Research on my ear and more on my knee, building out a database and an understanding of how to manage it.",
