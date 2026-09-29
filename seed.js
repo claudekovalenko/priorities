@@ -510,6 +510,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_t4nwh5czmucyoq4w"
       },
       {
+        "id": "i_8csa4eowmun431xu",
+        "title": "Marcus",
+        "note": "Add him in as an app for me to work on, or just to have him in my group. Your words, kept as said until I know which.",
+        "areaId": null
+      },
+      {
         "id": "i_a76js49amun2j2qg",
         "title": "Children prep",
         "note": "Start looking at books. Maybe an app for managing and caring for each kid. Learn from Leo and his family.",
