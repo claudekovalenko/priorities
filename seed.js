@@ -498,6 +498,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_t4nwh5czmucyoq4w"
       },
       {
+        "id": "i_hwyo10qgmun44dfd",
+        "title": "How to deal with wokeness",
+        "note": "Best ways to approach topics like dissonance in male and female roles and leadership, and BLM. The sentence cut off at BLM, so there is likely more to add.",
+        "areaId": null
+      },
+      {
         "id": "i_91yiwi7pmun2j2qg",
         "title": "Health",
         "note": "Eating well, starting today. Research on my ear and more on my knee, building out a database and an understanding of how to manage it.",
