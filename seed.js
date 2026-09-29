@@ -453,6 +453,80 @@ window.PRIORITY_SEED = {
         "note": "Automate the editing so it is quicker. Maybe clipping and putting it online. Not high, just something to consider.",
         "areaId": "a_t4nwh5czmucyoq4w"
       }
+    ],
+    "2026-09-29": [
+      {
+        "id": "i_i83wmo1vmun2j2qg",
+        "title": "God",
+        "note": "Prayer and time in the Word.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hjyh808xmun2j2qg",
+        "title": "Major seminary assignments",
+        "note": "The quiz especially.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_5peclqv9mun2j2qg",
+        "title": "Family",
+        "note": "Updates, planning the Lakers game, visiting Papa. Thanksgiving plans can wait a bit.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_mh4nopn2mun2j2qg",
+        "title": "Deeper relationships with brothers",
+        "note": "Brothers I can just be myself with.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_xg0x11l9mun2j2qg",
+        "title": "Marriage prep",
+        "note": "Thinking how to prepare, and the finances.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_91yiwi7pmun2j2qg",
+        "title": "Health research",
+        "note": "My ear and more about my knee. Build out a database and an understanding of how to manage it.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_9qbene2ymun2j2qg",
+        "title": "Business",
+        "note": "The MLS stuff, a little social media, maybe some contract preparation.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_a76js49amun2j2qg",
+        "title": "Children prep",
+        "note": "Start looking at books. Maybe an app for managing and caring for each kid. Learn from Leo and his family.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_b1ezkf5fmun2j2qg",
+        "title": "Rest of the seminary homework",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_cz0zqkg3mun2j2qg",
+        "title": "Bible study",
+        "note": "Develop it a little further.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_z7lcnpimmun2j2qh",
+        "title": "Prayer about marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_35vwt47tmun2j2qh",
+        "title": "Church",
+        "note": "Which one to go to.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      }
     ]
   },
   "logs": [
