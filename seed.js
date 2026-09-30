@@ -539,6 +539,20 @@ window.PRIORITY_SEED = {
         "note": "Develop it a little further.",
         "areaId": "a_d4q7ig0emucyoq4w"
       }
+    ],
+    "2026-09-30": [
+      {
+        "id": "i_9yhkh7gzmunsewmc",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_2fac1be4munsewmc",
+        "title": "Flight and trip planning",
+        "note": "Build it out so booking flights and trips is not so challenging every time.",
+        "areaId": "a_vban11q9mucyoq4w"
+      }
     ]
   },
   "logs": [
