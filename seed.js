@@ -52,6 +52,10 @@ window.PRIORITY_SEED = {
     {
       "id": "a_6iees2memuenirlc",
       "name": "Health"
+    },
+    {
+      "id": "a_9oaz1uz4muohzf1y",
+      "name": "Finance"
     }
   ],
   "template": [],
@@ -546,6 +550,42 @@ window.PRIORITY_SEED = {
         "title": "God",
         "note": "",
         "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_1thaw1vmmuohzf1z",
+        "title": "Rest",
+        "note": "Three hours or so. Read something I enjoy, just hang out, not super intentional. Until I feel pretty rejuvenated.",
+        "areaId": null
+      },
+      {
+        "id": "i_6suje90smuohzf1z",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_xq7s0oyvmuohzf1z",
+        "title": "Disciples",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_p3w6xl8tmuohzf1z",
+        "title": "Finance",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_8lb2zz4umuohzf1z",
+        "title": "Development",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_wcim38s4muohzf1z",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
       },
       {
         "id": "i_2fac1be4munsewmc",
