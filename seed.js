@@ -612,6 +612,24 @@ window.PRIORITY_SEED = {
         "title": "Flight details",
         "note": "Really high priority. Get all the flight details figured out for this upcoming trip, and ask the questions about the November trip.",
         "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_pgw2p8pdmuq5r38b",
+        "title": "Seminary",
+        "note": "The essay, the tests, everything.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_i07dgxt6muq5r38c",
+        "title": "Building brotherly relationships",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_2okcs5mbmuq5r38c",
+        "title": "Bed early",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
       }
     ]
   },
