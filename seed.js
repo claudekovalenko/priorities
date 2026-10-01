@@ -560,7 +560,7 @@ window.PRIORITY_SEED = {
       {
         "id": "i_6suje90smuohzf1z",
         "title": "Family",
-        "note": "",
+        "note": "Flight thoughts and plans — text Rich and get some of those things sorted out.",
         "areaId": "a_i440wh9vmucyoq4w"
       },
       {
@@ -578,7 +578,7 @@ window.PRIORITY_SEED = {
       {
         "id": "i_8lb2zz4umuohzf1z",
         "title": "Development",
-        "note": "",
+        "note": "Updates to my own app, the PWA. Changes to the social media project so it is up to date.",
         "areaId": "a_t4nwh5czmucyoq4w"
       },
       {
@@ -591,6 +591,26 @@ window.PRIORITY_SEED = {
         "id": "i_2fac1be4munsewmc",
         "title": "Flight and trip planning",
         "note": "Build it out so booking flights and trips is not so challenging every time.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_w1tosr57mup2abcx",
+        "title": "Consider a preaching app",
+        "note": "Somewhere to hold all my thoughts and growth in preaching. Deciding whether to build it, not building it yet.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      }
+    ],
+    "2026-10-01": [
+      {
+        "id": "i_x82z2xbmmup2abcy",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_khak1njfmup2abcy",
+        "title": "Flight details",
+        "note": "Really high priority. Get all the flight details figured out for this upcoming trip, and ask the questions about the November trip.",
         "areaId": "a_vban11q9mucyoq4w"
       }
     ]
