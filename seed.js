@@ -640,16 +640,46 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
-        "id": "i_cl5iehydmuqbnezu",
-        "title": "Flights",
-        "note": "Go over them again and just figure that stuff out.",
-        "areaId": "a_vban11q9mucyoq4w"
+        "id": "i_decision",
+        "title": "Decision making",
+        "note": "Growing in it. Some reading on it.",
+        "areaId": null
+      },
+      {
+        "id": "i_marriage",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
       },
       {
         "id": "i_ooc17931muqbnezu",
         "title": "Planning ahead with family",
         "note": "The plan with Mom for the basketball game, and any family trips later on. I really want to get better at planning this stuff out in advance.",
         "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_cl5iehydmuqbnezu",
+        "title": "Flights",
+        "note": "Go over them again and just figure that stuff out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_health",
+        "title": "Health",
+        "note": "Eating well.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_seminary",
+        "title": "Seminary",
+        "note": "Figuring out my grades.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_social",
+        "title": "Social media project",
+        "note": "Some updates.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ]
   },
