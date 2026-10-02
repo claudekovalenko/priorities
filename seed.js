@@ -631,6 +631,26 @@ window.PRIORITY_SEED = {
         "note": "",
         "areaId": "a_6iees2memuenirlc"
       }
+    ],
+    "2026-10-02": [
+      {
+        "id": "i_jmawm5zcmuqbnezu",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_cl5iehydmuqbnezu",
+        "title": "Flights",
+        "note": "Go over them again and just figure that stuff out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_ooc17931muqbnezu",
+        "title": "Planning ahead with family",
+        "note": "The plan with Mom for the basketball game, and any family trips later on. I really want to get better at planning this stuff out in advance.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      }
     ]
   },
   "logs": [
