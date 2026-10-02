@@ -5,7 +5,12 @@
   const S = window.PriorityStore;
   const STORAGE_KEY = 'priorities-tracker-v1';
   const UI_KEY = 'priorities-tracker-ui';
-  const TABS = ['today', 'tonight', 'history', 'lists'];
+  const TABS = ['today', 'tonight', 'trends', 'history', 'lists'];
+  const TREND_RANGES = [
+    { days: 7, label: '7 days' },
+    { days: 30, label: '30 days' },
+    { days: 3650, label: 'All' },
+  ];
 
   // ---- Persistence -------------------------------------------------------
 
@@ -50,7 +55,7 @@
 
   function persistUi() {
     try {
-      localStorage.setItem(UI_KEY, JSON.stringify({ tab: ui.tab }));
+      localStorage.setItem(UI_KEY, JSON.stringify({ tab: ui.tab, trendDays: ui.trendDays }));
     } catch (e) {
       /* ignore */
     }
@@ -59,8 +64,9 @@
   // ---- State -------------------------------------------------------------
 
   let state = loadState();
-  const ui = Object.assign({ tab: 'today' }, loadUi());
+  const ui = Object.assign({ tab: 'today', trendDays: 30 }, loadUi());
   if (!TABS.includes(ui.tab)) ui.tab = 'today';
+  if (!TREND_RANGES.some((r) => r.days === ui.trendDays)) ui.trendDays = 30;
   ui.date = S.dayKeyNow(S.dayStartHour(state));
   ui.adding = null; // priority id (or 'off') whose entry field is open
 
@@ -140,6 +146,7 @@
     root.replaceChildren();
     if (ui.tab === 'today') root.appendChild(renderToday());
     else if (ui.tab === 'tonight') root.appendChild(renderTonight());
+    else if (ui.tab === 'trends') root.appendChild(renderTrends());
     else if (ui.tab === 'history') root.appendChild(renderHistory());
     else root.appendChild(renderLists());
 
@@ -557,6 +564,130 @@
     }));
 
     return h('div', {}, list);
+  }
+
+  // ---- Trends -------------------------------------------------------------
+
+  // One bar row: a thin mark anchored at the left, with its number spelled out
+  // beside it so the length is never the only way to read the value.
+  function barRow(name, fraction, label, sub, hint) {
+    const pct = Math.max(0, Math.min(1, fraction)) * 100;
+    return h('div', { class: 'trow', title: hint || null },
+      h('div', { class: 'tname', text: name }),
+      h('div', { class: 'tvalue', text: label }),
+      // Nothing draws nothing: a zero gets an empty track, never a stub that
+      // would read as a little bit of something.
+      h('div', { class: 'ttrack' },
+        pct > 0 ? h('i', { class: 'tbar', style: 'width:' + pct.toFixed(1) + '%' }) : null),
+      sub ? h('div', { class: 'tsub', text: sub }) : null);
+  }
+
+  function statTile(figure, caption) {
+    return h('div', { class: 'tile' },
+      h('div', { class: 'figure', text: String(figure) }),
+      h('div', { class: 'caption', text: caption }));
+  }
+
+  function placeOf(row) {
+    const p = row.avgPosition;
+    return 'usually #' + (Math.abs(p - Math.round(p)) < 0.05 ? Math.round(p) : p.toFixed(1));
+  }
+
+  function dayCount(n) {
+    return n + (n === 1 ? ' day' : ' days');
+  }
+
+  function renderTrends() {
+    const t = S.trends(state, today(), ui.trendDays);
+    const wrap = h('div', {});
+
+    wrap.appendChild(h('div', { class: 'ranges' }, TREND_RANGES.map((r) =>
+      h('button', {
+        type: 'button',
+        'aria-pressed': r.days === ui.trendDays ? 'true' : 'false',
+        onclick: () => { ui.trendDays = r.days; persistUi(); render(); },
+      }, r.label))));
+
+    if (!t.dates.length) {
+      wrap.appendChild(h('p', { class: 'lede', style: 'margin-top:18px',
+        text: 'Nothing to read back yet. Set a list for a day and book what you did, and the picture builds from there.' }));
+      return wrap;
+    }
+
+    wrap.appendChild(h('p', { class: 'range',
+      text: fmtShort(t.from) + ' – ' + fmtShort(t.to) }));
+
+    wrap.appendChild(h('div', { class: 'tiles' },
+      statTile(t.daysWithList, t.daysWithList === 1 ? 'day with a list' : 'days with a list'),
+      statTile(t.daysWithEntries, t.daysWithEntries === 1 ? 'day with entries' : 'days with entries'),
+      statTile(t.entries, t.entries === 1 ? 'entry booked' : 'entries booked'),
+      statTile(t.streak, 'day streak')));
+
+    // What gets put high. The bar is the average place on the list measured as
+    // a share of that list, so a day of three and a day of fourteen compare.
+    if (t.areas.length) {
+      wrap.appendChild(h('div', { class: 'section' },
+        h('h2', { text: 'What you put first' }),
+        h('p', { class: 'lede', text: 'How high each one sits, measured against the length of that day’s list so a day of three and a day of fourteen compare.' })));
+      wrap.appendChild(h('div', { class: 'trends' }, t.areas.map((a) =>
+        barRow(a.name, a.avgHeight, placeOf(a), 'on ' + dayCount(a.days),
+          a.name + ': listed on ' + dayCount(a.days) + ', average place ' + a.avgPosition.toFixed(1)))));
+    }
+
+    // Where the attention actually went. Empty until entries exist, and said
+    // plainly rather than drawn as a row of zeroes.
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'Where the time went' }),
+      h('p', { class: 'lede', text: 'How often something was booked against each one, out of the days it was on the list.' })));
+
+    if (!t.daysWithEntries) {
+      wrap.appendChild(h('p', { class: 'lede empty',
+        text: 'Nothing booked in this stretch, so there is nothing to weigh against the order yet. Tap “I did this” on a priority and this fills in.' }));
+    } else {
+      const worked = t.areas.slice().sort((x, y) =>
+        (y.workedDays / y.days) - (x.workedDays / x.days) || y.entries - x.entries);
+      wrap.appendChild(h('div', { class: 'trends' }, worked.map((a) =>
+        barRow(a.name, a.days ? a.workedDays / a.days : 0,
+          a.workedDays + ' of ' + a.days,
+          a.entries ? a.entries + (a.entries === 1 ? ' entry' : ' entries') : 'nothing yet',
+          a.name + ': worked on ' + dayCount(a.workedDays) + ' of the ' + dayCount(a.days) + ' it was listed'))));
+
+      if (t.gaps.length) {
+        wrap.appendChild(h('div', { class: 'gap' },
+          h('div', { class: 'q', text: 'Held high, nothing recorded' }),
+          h('p', { text: t.gaps.map((g) => g.name).join(', ') + ' — in the top half of the list most days, with nothing booked against ' + (t.gaps.length === 1 ? 'it' : 'them') + ' yet.' })));
+      }
+    }
+
+    if (t.titles.length) {
+      const repeat = t.titles.filter((x) => x.days > 1);
+      if (repeat.length) {
+        wrap.appendChild(h('div', { class: 'section' },
+          h('h2', { text: 'What keeps coming back' }),
+          h('p', { class: 'lede', text: 'The priorities you have written down more than once, by name.' })));
+        wrap.appendChild(h('ul', { class: 'recur' }, repeat.slice(0, 14).map((x) =>
+          h('li', {},
+            h('span', { class: 'rname', text: x.name }),
+            h('span', { class: 'rmeta', text: dayCount(x.days) + ' · ' + placeOf(x) })))));
+      }
+    }
+
+    if (t.orderNotes.length) {
+      wrap.appendChild(h('div', { class: 'section' },
+        h('h2', { text: 'How the order went' }),
+        h('p', { class: 'lede', text: 'The times something further down got worked while something above it had nothing.' })));
+      wrap.appendChild(h('ul', { class: 'tnotes' }, t.orderNotes.slice(0, 10).map((n) =>
+        h('li', {},
+          h('span', { class: 'when', text: fmtShort(n.date) }),
+          h('span', { text: n.text })))));
+    }
+
+    if (t.untagged) {
+      wrap.appendChild(h('p', { class: 'lede empty',
+        text: t.untagged + (t.untagged === 1 ? ' priority has' : ' priorities have') + ' no area tag, so ' + (t.untagged === 1 ? 'it is' : 'they are') + ' counted by name only. Tag them in Lists to fold them in.' }));
+    }
+
+    return wrap;
   }
 
   // ---- Lists --------------------------------------------------------------

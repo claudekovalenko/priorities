@@ -8,8 +8,9 @@ Priorities are filed under categories in a fixed order. The default is **Faith, 
 
 1. **Tonight** — set tomorrow's priorities. Load your usual list, copy today's, or start empty, then edit it to fit tomorrow. Below that, check in on the day that is ending: score each category, name anything that crowded out something higher, add a note.
 2. **Today** — write what you just did in one box, then tap the priority it books against. The list below fills in as the day goes.
-3. **History** — every day, with the list that was set and what was done against it.
-4. **Lists** — your usual list, the one that seeds a new day, plus categories and data export.
+3. **Trends** — what the days add up to: how high each area sits when you write it down, how often anything actually got booked against it, and the gap between the two.
+4. **History** — every day, with the list that was set and what was done against it.
+5. **Lists** — your usual list, the one that seeds a new day, plus categories and data export.
 
 ## Details worth knowing
 
@@ -18,6 +19,7 @@ Priorities are filed under categories in a fixed order. The default is **Faith, 
 - **If a lower category gets attention while a higher one has nothing booked**, Today says so plainly. That is the whole point of the app.
 - **A day with no list** offers to build one from your usual list or from the last day you planned, rather than showing you nothing.
 - **Untouched priorities** are listed at check-in time, so the evening review starts from what actually slipped.
+- **A place on the list is read as a share of that list**, not as a raw number, so a day of three priorities and a day of fourteen can be compared. Being last on a long list sits lower than being last on a short one.
 
 Everything is stored in the browser you open it in. Nothing leaves your machine. Export from time to time.
 

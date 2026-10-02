@@ -597,3 +597,141 @@ test('a prepared list can be copied onto a different day', () => {
   assert.deepEqual(out.areas.map((a) => a.name), ['Work'], 'no duplicate area');
   assert.equal(S.copyPlanFrom(mine, bundle, '2026-01-01', DAY), mine, 'nothing prepared is a no-op');
 });
+
+// ---- Trends ---------------------------------------------------------------
+
+test('a place on the list is measured as a share of that list', () => {
+  assert.equal(S.heightOf(1, 3), 1, 'the top of any list is 1');
+  assert.equal(S.heightOf(1, 14), 1);
+  // Last of three sits higher than last of fourteen: being at the bottom of a
+  // long list is further down than being at the bottom of a short one.
+  assert.ok(S.heightOf(3, 3) > S.heightOf(14, 14));
+  assert.equal(S.heightOf(2, 4), 0.75);
+  assert.equal(S.heightOf(1, 0), 0, 'an empty list has no height');
+});
+
+test('trends read how high each area sits and how often it was worked', () => {
+  let s = S.createDefaultState();
+  s = S.addArea(s, 'God');
+  s = S.addArea(s, 'Seminary');
+  const god = s.areas[0].id;
+  const sem = s.areas[1].id;
+
+  // Two days. God is first both times and never worked; seminary is last both
+  // times and gets an entry on the second day.
+  s = S.setPlan(s, DAY, [
+    { id: 'd1', title: 'God', note: '', areaId: god },
+    { id: 'd2', title: 'Seminary', note: '', areaId: sem },
+  ]);
+  s = S.setPlan(s, NEXT, [
+    { id: 'n1', title: 'God', note: '', areaId: god },
+    { id: 'n2', title: 'Essay', note: '', areaId: sem },
+  ]);
+  s = S.addLog(s, NEXT, 'n2', 'Wrote two pages');
+
+  const t = S.trends(s, NEXT, 30);
+  assert.deepEqual(t.dates, [DAY, NEXT]);
+  assert.equal(t.daysWithList, 2);
+  assert.equal(t.daysWithEntries, 1);
+  assert.equal(t.entries, 1);
+
+  const [first, second] = t.areas;
+  assert.equal(first.name, 'God', 'the area put highest comes first');
+  assert.equal(first.avgHeight, 1);
+  assert.equal(first.avgPosition, 1);
+  assert.equal(first.days, 2);
+  assert.equal(first.workedDays, 0);
+
+  assert.equal(second.name, 'Seminary');
+  assert.equal(second.days, 2);
+  assert.equal(second.workedDays, 1);
+  assert.equal(second.entries, 1);
+  assert.equal(second.lastWorked, NEXT);
+
+  // Titles are counted separately, keeping the casing last written.
+  const god2 = t.titles.find((x) => x.key === 'god');
+  assert.equal(god2.name, 'God');
+  assert.equal(god2.days, 2);
+  assert.equal(t.titles.find((x) => x.key === 'essay').days, 1);
+});
+
+test('an area listed twice in one day still counts as one day', () => {
+  let s = S.createDefaultState();
+  s = S.addArea(s, 'Work');
+  const work = s.areas[0].id;
+  s = S.setPlan(s, DAY, [
+    { id: 'a', title: 'Social media', note: '', areaId: work },
+    { id: 'b', title: 'MLS', note: '', areaId: work },
+  ]);
+  s = S.addLog(s, DAY, 'a', 'Posted');
+  s = S.addLog(s, DAY, 'b', 'Pulled the listings');
+
+  const row = S.trends(s, DAY, 30).areas[0];
+  assert.equal(row.days, 1, 'two priorities on one day is still one day');
+  assert.equal(row.appearances, 2, 'both appearances count towards the average place');
+  assert.equal(row.workedDays, 1);
+  assert.equal(row.entries, 2, 'but both entries count');
+});
+
+test('the held-high gap only appears once something has been booked', () => {
+  let s = S.createDefaultState();
+  s = S.addArea(s, 'God');
+  s = S.addArea(s, 'Work');
+  const god = s.areas[0].id;
+  const work = s.areas[1].id;
+  for (const d of [DAY, NEXT]) {
+    s = S.setPlan(s, d, [
+      { id: d + '1', title: 'God', note: '', areaId: god },
+      { id: d + '2', title: 'Work', note: '', areaId: work },
+    ]);
+  }
+
+  assert.deepEqual(S.trends(s, NEXT, 30).gaps, [], 'with no entries at all, nothing is flagged');
+
+  s = S.addLog(s, NEXT, NEXT + '2', 'Shipped it');
+  const gaps = S.trends(s, NEXT, 30).gaps;
+  assert.deepEqual(gaps.map((g) => g.name), ['God'],
+    'the one put first with nothing against it is the one worth seeing');
+});
+
+test('trends only read the days inside the range', () => {
+  let s = S.createDefaultState();
+  s = S.addArea(s, 'God');
+  const god = s.areas[0].id;
+  s = S.setPlan(s, DAY, [{ id: 'd', title: 'God', note: '', areaId: god }]);
+  s = S.setPlan(s, NEXT, [{ id: 'n', title: 'God', note: '', areaId: god }]);
+
+  assert.deepEqual(S.trends(s, NEXT, 1).dates, [NEXT], 'a one-day range is just that day');
+  assert.equal(S.trends(s, NEXT, 1).areas[0].days, 1);
+  assert.equal(S.trends(s, NEXT, 2).areas[0].days, 2);
+
+  const empty = S.trends(S.createDefaultState(), NEXT, 30);
+  assert.deepEqual(empty.dates, []);
+  assert.deepEqual(empty.areas, []);
+  assert.equal(empty.daysWithList, 0);
+});
+
+test('trends carry the order notes, newest first', () => {
+  let s = S.createDefaultState();
+  s = S.setPlan(s, DAY, [{ id: 'a', title: 'God', note: '', areaId: null }]);
+  s = S.addOrderNote(s, DAY, 'Older note');
+  s = S.addOrderNote(s, NEXT, 'Newer note');
+
+  const notes = S.trends(s, NEXT, 30).orderNotes;
+  assert.deepEqual(notes.map((n) => n.text), ['Newer note', 'Older note']);
+  assert.equal(notes[0].date, NEXT);
+});
+
+test('a priority with no area is counted by name but not folded into an area', () => {
+  let s = S.createDefaultState();
+  s = S.addArea(s, 'God');
+  s = S.setPlan(s, DAY, [
+    { id: 'a', title: 'God', note: '', areaId: s.areas[0].id },
+    { id: 'b', title: 'Rest', note: '', areaId: null },
+  ]);
+
+  const t = S.trends(s, DAY, 30);
+  assert.equal(t.untagged, 1);
+  assert.deepEqual(t.areas.map((a) => a.name), ['God'], 'the untagged one is not an area');
+  assert.ok(t.titles.some((x) => x.name === 'Rest'), 'but it is still counted by name');
+});

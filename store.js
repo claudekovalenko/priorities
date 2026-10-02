@@ -790,6 +790,128 @@
     return count;
   }
 
+  // ---- Trends -------------------------------------------------------------
+
+  // Where a priority sat, as a share of its list rather than a raw number, so
+  // a day of three and a day of fourteen can be compared. The top of any list
+  // is 1; the bottom of a long list sits lower than the bottom of a short one.
+  function heightOf(position, length) {
+    return length > 0 ? (length - position + 1) / length : 0;
+  }
+
+  // Reads back over the days: how often something was listed, how high it was
+  // put, and how often anything was actually booked against it. The gap
+  // between the second and the third is the thing worth seeing.
+  function trends(state, today, days) {
+    const span = Math.max(1, days || 30);
+    const from = shiftDateKey(today, -(span - 1));
+    const inRange = (d) => d >= from && d <= today;
+
+    const seen = new Set();
+    for (const d of Object.keys(state.plans)) if (inRange(d)) seen.add(d);
+    for (const l of state.logs) if (inRange(l.date)) seen.add(l.date);
+    for (const d of Object.keys(state.reflections)) if (inRange(d)) seen.add(d);
+    const dates = Array.from(seen).sort();
+
+    const areas = new Map();
+    const titles = new Map();
+    let daysWithList = 0;
+    let daysWithEntries = 0;
+    let entries = 0;
+    let untagged = 0;
+
+    const blank = () => ({
+      label: '', days: new Set(), workedDays: new Set(), appearances: 0,
+      entries: 0, posSum: 0, heightSum: 0, topThree: 0,
+      lastListed: null, lastWorked: null,
+    });
+
+    for (const date of dates) {
+      const plan = planFor(state, date);
+      const logs = logsForDate(state, date);
+      if (plan.length) daysWithList++;
+      if (logs.length) {
+        daysWithEntries++;
+        entries += logs.length;
+      }
+
+      for (let i = 0; i < plan.length; i++) {
+        const it = plan[i];
+        const position = i + 1;
+        const own = logs.filter((l) => l.itemId === it.id).length;
+
+        const bump = (map, key, label) => {
+          if (!map.has(key)) map.set(key, blank());
+          const a = map.get(key);
+          a.label = label;
+          a.days.add(date);
+          a.appearances++;
+          a.posSum += position;
+          a.heightSum += heightOf(position, plan.length);
+          if (position <= 3) a.topThree++;
+          a.lastListed = date;
+          if (own) {
+            a.workedDays.add(date);
+            a.entries += own;
+            a.lastWorked = date;
+          }
+        };
+
+        if (it.areaId) bump(areas, it.areaId, areaName(state, it.areaId) || 'Untagged');
+        else untagged++;
+        bump(titles, it.title.trim().toLowerCase(), it.title.trim());
+      }
+    }
+
+    const shape = (map) => Array.from(map.entries()).map(([key, a]) => ({
+      key,
+      name: a.label,
+      days: a.days.size,
+      workedDays: a.workedDays.size,
+      appearances: a.appearances,
+      entries: a.entries,
+      avgPosition: a.posSum / a.appearances,
+      avgHeight: a.heightSum / a.appearances,
+      topThree: a.topThree,
+      lastListed: a.lastListed,
+      lastWorked: a.lastWorked,
+    }));
+
+    const byHeight = (x, y) => y.avgHeight - x.avgHeight || y.days - x.days
+      || x.name.localeCompare(y.name);
+
+    const areaRows = shape(areas).sort(byHeight);
+    const titleRows = shape(titles).sort((x, y) => y.days - x.days || byHeight(x, y));
+
+    // Held high but with nothing booked against it. Only meaningful once some
+    // days have entries at all, or it would flag everything.
+    const gaps = daysWithEntries
+      ? areaRows.filter((r) => r.days >= 2 && r.avgHeight >= 0.5 && r.workedDays === 0)
+      : [];
+
+    const orderNotes = [];
+    for (const date of dates) {
+      for (const n of orderNotesFor(state, date)) orderNotes.push({ date, text: n.text, id: n.id });
+    }
+    orderNotes.reverse();
+
+    return {
+      from: dates.length ? dates[0] : from,
+      to: today,
+      span,
+      dates,
+      daysWithList,
+      daysWithEntries,
+      entries,
+      untagged,
+      streak: streak(state, today),
+      areas: areaRows,
+      titles: titleRows,
+      gaps,
+      orderNotes,
+    };
+  }
+
   return {
     SCHEMA_VERSION,
     dateKey,
@@ -847,5 +969,7 @@
     inversions,
     history,
     streak,
+    heightOf,
+    trends,
   };
 });
