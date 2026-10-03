@@ -681,6 +681,38 @@ window.PRIORITY_SEED = {
         "note": "Some updates.",
         "areaId": "a_t4nwh5czmucyoq4w"
       }
+    ],
+    "2026-10-03": [
+      {
+        "id": "i_po88ah5tmus49vl2",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_1g0oone3mus49vl3",
+        "title": "Flights for October",
+        "note": "This month. Just get it figured out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_6avj55wcmus49vl3",
+        "title": "Flights for November",
+        "note": "Then get November figured out too.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_ezsui368mus49vl4",
+        "title": "Seminary",
+        "note": "Study for the quiz. Then figure out what my grades are.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_zeovstilmus49vl4",
+        "title": "Get ordered",
+        "note": "It has been really chaotic. Get things a little bit in order.",
+        "areaId": null
+      }
     ]
   },
   "logs": [
