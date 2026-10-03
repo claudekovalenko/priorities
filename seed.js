@@ -18,6 +18,11 @@ window.PRIORITY_SEED = {
       "id": "s_kr6qkv22muhbaf70",
       "title": "Progress in every area",
       "body": "Making steps in all of them, not arriving at the ultimate goal immediately."
+    },
+    {
+      "id": "s_ngmvw03omus51di5",
+      "title": "Spend on what grows me",
+      "body": "Be willing to invest money in growing my health, the way I was willing to spend on purity and saw great development because of it. And somehow be willing to spend in preparation for marriage."
     }
   ],
   "areas": [
