@@ -56,6 +56,10 @@ window.PRIORITY_SEED = {
     {
       "id": "a_9oaz1uz4muohzf1y",
       "name": "Finance"
+    },
+    {
+      "id": "a_2f6pma6bmus4b33l",
+      "name": "Decisions"
     }
   ],
   "template": [],
@@ -643,7 +647,7 @@ window.PRIORITY_SEED = {
         "id": "i_decision",
         "title": "Decision making",
         "note": "Growing in it. Some reading on it.",
-        "areaId": null
+        "areaId": "a_2f6pma6bmus4b33l"
       },
       {
         "id": "i_marriage",
@@ -712,6 +716,12 @@ window.PRIORITY_SEED = {
         "title": "Get ordered",
         "note": "It has been really chaotic. Get things a little bit in order.",
         "areaId": null
+      },
+      {
+        "id": "i_dio5knlzmus4b33l",
+        "title": "Decision making",
+        "note": "All the decisions I have, and updating the app for it. Really backlogged on decisions I keep procrastinating — I just do not know how to move forward in them.",
+        "areaId": "a_2f6pma6bmus4b33l"
       }
     ]
   },
