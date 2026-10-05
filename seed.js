@@ -728,6 +728,74 @@ window.PRIORITY_SEED = {
         "note": "All the decisions I have, and updating the app for it. Really backlogged on decisions I keep procrastinating — I just do not know how to move forward in them.",
         "areaId": "a_2f6pma6bmus4b33l"
       }
+    ],
+    "2026-10-05": [
+      {
+        "id": "i_bq1atkd3muvm6k4t",
+        "title": "The Word",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_ohom11hvmuvm6k4u",
+        "title": "Standing in my classes",
+        "note": "Really bothering me. Find out where I actually stand.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_206oi7etmuvm6k4u",
+        "title": "Get a bookshelf",
+        "note": "When possible.",
+        "areaId": null
+      },
+      {
+        "id": "i_4mpqlbr1muvm6k4u",
+        "title": "Check in with Mom",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_97jp4ak0muvm6k4u",
+        "title": "Podcast",
+        "note": "Just a little bit.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ntkd328wmuvm6k4u",
+        "title": "Check in with Dad",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_35w3h6kvmuvm6k4u",
+        "title": "Check in with Tian",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_vretfivfmuvm6k4v",
+        "title": "Flights for the Dallas trip",
+        "note": "Figure these out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_wazekvtxmuvm6k4v",
+        "title": "Digital Collective",
+        "note": "Maybe some time on it.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_qcazwx3zmuvm6k4v",
+        "title": "Prayer",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_xg2pkk41muvm6k4y",
+        "title": "Marriage prep",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      }
     ]
   },
   "logs": [
