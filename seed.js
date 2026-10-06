@@ -796,6 +796,68 @@ window.PRIORITY_SEED = {
         "note": "",
         "areaId": "a_blg8d4dnmucyoq4w"
       }
+    ],
+    "2026-10-06": [
+      {
+        "id": "i_09ciuplwmux2s34p",
+        "title": "Time with the Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_jr8wt8j2mux2s34p",
+        "title": "Health in general",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_nk6emztwmux2s34p",
+        "title": "My ear",
+        "note": "Figure out what to do with it.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_2vhmbmq4mux2s34p",
+        "title": "Dentist appointment",
+        "note": "See if I can get a screening booked.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_kvstyjl7mux2s34p",
+        "title": "Physical therapy",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_6gu8vu2smux2s34p",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_y26esqegmux2s34p",
+        "title": "Finances",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_ffynlsshmux2s34p",
+        "title": "Podcast",
+        "note": "Possibly.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_2b2kjft7mux2s34p",
+        "title": "Seminary",
+        "note": "Would really love to get ahead. At least the bare minimum.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ku4i9fa9mux2s34p",
+        "title": "Family",
+        "note": "Still a priority.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      }
     ]
   },
   "logs": [
