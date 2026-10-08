@@ -858,6 +858,74 @@ window.PRIORITY_SEED = {
         "note": "Still a priority.",
         "areaId": "a_i440wh9vmucyoq4w"
       }
+    ],
+    "2026-10-08": [
+      {
+        "id": "i_6jm778s7muyulrap",
+        "title": "The Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_18umfd0ymuyulrap",
+        "title": "Preparation for my family",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_40q0zp45muyulrap",
+        "title": "Health",
+        "note": "Working on it some.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_3rlgeyybmuyulrap",
+        "title": "Finances",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_2ws066fomuyulrap",
+        "title": "Time in the Word",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_833xysztmuyulrap",
+        "title": "Seminary",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_4w8yu9l5muyulrap",
+        "title": "Rest",
+        "note": "Some rest.",
+        "areaId": null
+      },
+      {
+        "id": "i_xt9oi0admuyulrap",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_sdjmn5hcmuyulrap",
+        "title": "Disciples",
+        "note": "Messaging them.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_grp1p7xumuyulrap",
+        "title": "Recovery",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_h5ta8997muyulrap",
+        "title": "Catch up on text messages",
+        "note": "",
+        "areaId": null
+      }
     ]
   },
   "logs": [
