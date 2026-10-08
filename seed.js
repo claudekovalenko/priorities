@@ -861,70 +861,52 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-08": [
       {
-        "id": "i_6jm778s7muyulrap",
-        "title": "The Lord",
+        "id": "i_fifh5k8imuzu64sg",
+        "title": "God",
         "note": "",
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
-        "id": "i_18umfd0ymuyulrap",
-        "title": "Preparation for my family",
-        "note": "",
-        "areaId": "a_blg8d4dnmucyoq4w"
-      },
-      {
-        "id": "i_40q0zp45muyulrap",
-        "title": "Health",
-        "note": "Working on it some.",
-        "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_3rlgeyybmuyulrap",
-        "title": "Finances",
-        "note": "",
-        "areaId": "a_9oaz1uz4muohzf1y"
-      },
-      {
-        "id": "i_2ws066fomuyulrap",
-        "title": "Time in the Word",
-        "note": "",
-        "areaId": "a_ni4h5dgymucyoq4w"
-      },
-      {
-        "id": "i_833xysztmuyulrap",
-        "title": "Seminary",
-        "note": "",
-        "areaId": "a_7fukniewmucyoq4w"
-      },
-      {
-        "id": "i_4w8yu9l5muyulrap",
-        "title": "Rest",
-        "note": "Some rest.",
-        "areaId": null
-      },
-      {
-        "id": "i_xt9oi0admuyulrap",
+        "id": "i_gmfmnykumuzu64sg",
         "title": "Family",
         "note": "",
         "areaId": "a_i440wh9vmucyoq4w"
       },
       {
-        "id": "i_sdjmn5hcmuyulrap",
+        "id": "i_f9sf4tw1muzu64sg",
         "title": "Disciples",
-        "note": "Messaging them.",
+        "note": "",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
-        "id": "i_grp1p7xumuyulrap",
-        "title": "Recovery",
-        "note": "",
-        "areaId": null
+        "id": "i_kcarj315muzu64sg",
+        "title": "Marriage",
+        "note": "Including some finance there.",
+        "areaId": "a_blg8d4dnmucyoq4w"
       },
       {
-        "id": "i_h5ta8997muyulrap",
-        "title": "Catch up on text messages",
+        "id": "i_pe1r5biemuzu64sg",
+        "title": "Health",
         "note": "",
-        "areaId": null
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_a4s8p7mxmuzu64sg",
+        "title": "Social media updates",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_lj635z8umuzu64sg",
+        "title": "Seminary paper",
+        "note": "Includes my Greek studies.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_7k0yeo80muzu64sg",
+        "title": "Low-hanging fruit",
+        "note": "For the paper and the Greek. Check off the checkboxes of what needs to get done.",
+        "areaId": "a_7fukniewmucyoq4w"
       }
     ]
   },
