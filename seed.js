@@ -908,6 +908,64 @@ window.PRIORITY_SEED = {
         "note": "For the paper and the Greek. Check off the checkboxes of what needs to get done.",
         "areaId": "a_7fukniewmucyoq4w"
       }
+    ],
+    "2026-10-10": [
+      {
+        "id": "i_skzcuwr5mv1qku69",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_qoc7p8v5mv1qku69",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_i45voemgmv1qku69",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_sie3hz70mv1qku69",
+        "title": "Social media project",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_kavt4ge1mv1qku69",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_dv8hzp9nmv1qku69",
+        "title": "Essay",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_slvzgn4fmv1qku69",
+        "title": "Seminary",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ulh2qsdhmv1qku69",
+        "title": "Greek memory",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-10-11": [
+      {
+        "id": "i_3ozglev5mv1qku69",
+        "title": "Respond to the message about the flight",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      }
     ]
   },
   "logs": [
