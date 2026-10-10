@@ -909,7 +909,7 @@ window.PRIORITY_SEED = {
         "areaId": "a_7fukniewmucyoq4w"
       }
     ],
-    "2026-10-10": [
+    "2026-10-09": [
       {
         "id": "i_skzcuwr5mv1qku69",
         "title": "God",
@@ -959,11 +959,65 @@ window.PRIORITY_SEED = {
         "areaId": "a_7fukniewmucyoq4w"
       }
     ],
-    "2026-10-11": [
+    "2026-10-10": [
+      {
+        "id": "i_tgzwtl7dmv2qcyyg",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_rcskj7ngmv2qcyyg",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_286sfpmjmv2qcyyg",
+        "title": "Ministry job",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_w4vivcfcmv2qcyyg",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_8xzc7rw0mv2qcyyg",
+        "title": "Podcast",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_2air6jzrmv2qcyyg",
+        "title": "Greek midterm",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_peis3qgmmv2qcyyg",
+        "title": "Final paper",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_hzxe9k0bmv2qcyyg",
+        "title": "Stuff in the house",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_k4rzhbkimv2qcyyg",
+        "title": "Marriage prep",
+        "note": "Should be somewhere within all of this.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
       {
         "id": "i_3ozglev5mv1qku69",
         "title": "Respond to the message about the flight",
-        "note": "",
+        "note": "Said last night for today.",
         "areaId": "a_vban11q9mucyoq4w"
       }
     ]
