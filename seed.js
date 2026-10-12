@@ -1087,6 +1087,18 @@ window.PRIORITY_SEED = {
         "title": "Decision making",
         "note": "Every day, along with purity. Secondary, but something I need to grow in.",
         "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_4lajkd87mv5n1itg",
+        "title": "Essay",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_0oin41n5mv5n1ith",
+        "title": "Greek midterm",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
       }
     ]
   },
