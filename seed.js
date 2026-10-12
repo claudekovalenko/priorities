@@ -1035,6 +1035,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_txt7rich0mv4huggm",
+        "title": "Get back to major texts",
+        "note": "Including Rich. Pretty high up.",
+        "areaId": null
+      },
+      {
         "id": "i_62w4c611mv4huggl",
         "title": "Work on the book",
         "note": "Just do something.",
