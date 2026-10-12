@@ -1035,28 +1035,52 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_2w6afiywmv4huggl",
+        "title": "Marriage prep",
+        "note": "Includes purity.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
         "id": "i_txt7rich0mv4huggm",
         "title": "Get back to major texts",
         "note": "Including Rich. Pretty high up.",
         "areaId": null
       },
       {
-        "id": "i_62w4c611mv4huggl",
-        "title": "Work on the book",
-        "note": "Just do something.",
-        "areaId": null
-      },
-      {
-        "id": "i_2w6afiywmv4huggl",
-        "title": "Marriage prep",
-        "note": "Maybe.",
-        "areaId": "a_blg8d4dnmucyoq4w"
+        "id": "i_xjibyh9qmv5lif7c",
+        "title": "Business, work, or finances",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
       },
       {
         "id": "i_zvmb5bccmv4huggl",
         "title": "Family",
         "note": "Daily.",
         "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ejhhl74xmv5lif7c",
+        "title": "Connect with Mom",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8w6zdnsrmv5lif7c",
+        "title": "Get a haircut",
+        "note": "Of some kind.",
+        "areaId": null
+      },
+      {
+        "id": "i_62orjw2emv5lif7c",
+        "title": "Podcast",
+        "note": "Slight edits.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_62w4c611mv4huggl",
+        "title": "Work on the book",
+        "note": "Just do something.",
+        "areaId": null
       },
       {
         "id": "i_8fsrfubvmv4huggl",
