@@ -24,6 +24,12 @@ window.PRIORITY_SEED = {
       "title": "Spend on what grows me",
       "body": "Be willing to invest money in growing my health, the way I was willing to spend on purity and saw great development because of it. And somehow be willing to spend in preparation for marriage."
     }
+,
+    {
+      "id": "s_j15od8ukmv4huggl",
+      "title": "Decision making",
+      "body": "Something I go into every day, along with purity. Secondary, but I need to grow in it."
+    }
   ],
   "areas": [
     {
@@ -1019,6 +1025,38 @@ window.PRIORITY_SEED = {
         "title": "Respond to the message about the flight",
         "note": "Said last night for today.",
         "areaId": "a_vban11q9mucyoq4w"
+      }
+    ],
+    "2026-10-12": [
+      {
+        "id": "i_yx0ku1krmv4huggl",
+        "title": "Time with the Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_62w4c611mv4huggl",
+        "title": "Work on the book",
+        "note": "Just do something.",
+        "areaId": null
+      },
+      {
+        "id": "i_2w6afiywmv4huggl",
+        "title": "Marriage prep",
+        "note": "Maybe.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_zvmb5bccmv4huggl",
+        "title": "Family",
+        "note": "Daily.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8fsrfubvmv4huggl",
+        "title": "Decision making",
+        "note": "Every day, along with purity. Secondary, but something I need to grow in.",
+        "areaId": "a_2f6pma6bmus4b33l"
       }
     ]
   },
