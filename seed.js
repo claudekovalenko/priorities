@@ -1100,6 +1100,80 @@ window.PRIORITY_SEED = {
         "note": "",
         "areaId": "a_7fukniewmucyoq4w"
       }
+    ],
+    "2026-10-13": [
+      {
+        "id": "i_xe46p0qtmv6zz72s",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_bufpn8clmv6zz72s",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_xr0tbhaymv6zz72s",
+        "title": "Sort out everything for tomorrow",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_ciabe7pemv6zz72s",
+        "title": "Finance prep for tomorrow",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_hov4tqo2mv6zz72s",
+        "title": "Haircut",
+        "note": "For tomorrow.",
+        "areaId": null
+      },
+      {
+        "id": "i_fvufagt6mv6zz72s",
+        "title": "Plan for the flights",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_41f9cziymv6zz72s",
+        "title": "Parking",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_0dh2h9lkmv6zz72s",
+        "title": "Luggage",
+        "note": "Get it figured out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_i4n7dkximv6zz72s",
+        "title": "Podcast",
+        "note": "Potentially. Work on it a little bit.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_yma0wikqmv6zz72s",
+        "title": "Health prep and planning",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_yajo38fymv6zz72s",
+        "title": "Commitment and decision making",
+        "note": "Spend some time on it.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_9qiw0gxamv6zz72s",
+        "title": "Prepare for the conference",
+        "note": "To help me with commitment and decision making.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      }
     ]
   },
   "logs": [
