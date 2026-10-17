@@ -1223,6 +1223,12 @@ window.PRIORITY_SEED = {
         "title": "Build things out financially",
         "note": "",
         "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_ldwmpr27mvcu3mhg",
+        "title": "Rest",
+        "note": "Some rest.",
+        "areaId": null
       }
     ]
   },
