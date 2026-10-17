@@ -1174,6 +1174,56 @@ window.PRIORITY_SEED = {
         "note": "To help me with commitment and decision making.",
         "areaId": "a_2f6pma6bmus4b33l"
       }
+    ],
+    "2026-10-17": [
+      {
+        "id": "i_3x9lpa1umvcu1iu7",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_tzizfhuhmvcu1iu7",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_v2klyf3gmvcu1iu7",
+        "title": "Healthy church and sound doctrine",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ivpofpugmvcu1iu7",
+        "title": "Respond to Josh",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_42wadiasmvcu1iu7",
+        "title": "Take care of some work",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_4jica6ccmvcu1iu7",
+        "title": "Conference takeaways and next steps",
+        "note": "Make them even more practical: what I need to actually do.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_u5mge5qgmvcu1iu7",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_h4wh94bemvcu1iu7",
+        "title": "Build things out financially",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      }
     ]
   },
   "logs": [
