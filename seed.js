@@ -1230,6 +1230,70 @@ window.PRIORITY_SEED = {
         "note": "Some rest.",
         "areaId": null
       }
+    ],
+    "2026-10-19": [
+      {
+        "id": "i_2dmd6ouwmvfl0o9t",
+        "title": "The Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_q40ixif1mvfl0o9t",
+        "title": "Marriage prep",
+        "note": "One of the two, with church plantedness.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_plbrfr6ymvfl0o9t",
+        "title": "Church plantedness",
+        "note": "One of the two, with marriage prep.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_q9oftubtmvfl0o9t",
+        "title": "Purity work",
+        "note": "Medium to high.",
+        "areaId": null
+      },
+      {
+        "id": "i_1s1qt1upmvfl0o9t",
+        "title": "Leadership cohort",
+        "note": "Complete the basics.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_14oyk0yomvfl0o9t",
+        "title": "Family",
+        "note": "Decide on the day of the event.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_sya9d3afmvfl0o9t",
+        "title": "Commitment and decision making",
+        "note": "",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_k00og8tgmvfl0o9t",
+        "title": "Greek and systematic theology",
+        "note": "Some work on both.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_xxjkx0wnmvfl0o9t",
+        "title": "Low-hanging fruit",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-10-21": [
+      {
+        "id": "i_r0zowt4lmvfl0o9t",
+        "title": "Look into flights for Hawaii",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      }
     ]
   },
   "logs": [
