@@ -1333,6 +1333,42 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-21": [
       {
+        "id": "i_r24d4c0vmvicd1lh",
+        "title": "The Word",
+        "note": "Focus here today.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_epynqn23mvicd1lh",
+        "title": "Asleep by midnight",
+        "note": "Winding down by 11:30.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_8ss9sxpmmvicd1lh",
+        "title": "Keep AI light",
+        "note": "Don't get too far into it today.",
+        "areaId": null
+      },
+      {
+        "id": "i_kgih7ishmvicd1lh",
+        "title": "Rest and recalibrate",
+        "note": "I definitely don't feel recalibrated. Some time in it — a little, not too much.",
+        "areaId": null
+      },
+      {
+        "id": "i_0aks1ii6mvicd1lh",
+        "title": "Health: my ear",
+        "note": "Work on it a bit.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_o2utl7aemvicd1lh",
+        "title": "Church",
+        "note": "Deciding whether to go to Bible study tonight. The struggle with the church split is already showing itself, and I don't know how to deal with it yet. Not acting yet, even though I almost felt that's what I was supposed to do. Figure out if there are any steps I could take in that direction.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_r0zowt4lmvfl0o9t",
         "title": "Look into flights for Hawaii",
         "note": "",
