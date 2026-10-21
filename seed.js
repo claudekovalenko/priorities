@@ -1287,12 +1287,62 @@ window.PRIORITY_SEED = {
         "areaId": "a_7fukniewmucyoq4w"
       }
     ],
+    "2026-10-20": [
+      {
+        "id": "i_uogjptfxmvhdpdhv",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_2qrg7s5vmvhdpdhv",
+        "title": "Rest",
+        "note": "Feeling not the best right now. Today I need to rest.",
+        "areaId": null
+      },
+      {
+        "id": "i_921fkb9emvhdpdhv",
+        "title": "Purity",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_x8y1ltt6mvhdpdhv",
+        "title": "Family",
+        "note": "Maybe a check-in or something.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_lixc5ekzmvhdpdhv",
+        "title": "Seminary low-hanging fruit",
+        "note": "Finish all the easy stuff. I just need to get those things done.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ippo0qozmvhdpdhv",
+        "title": "Earlier bedtime",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_12fcutt2mvhdpdhv",
+        "title": "Eat something",
+        "note": "Cook a little: rice and turkey. Then build that out.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
     "2026-10-21": [
       {
         "id": "i_r0zowt4lmvfl0o9t",
         "title": "Look into flights for Hawaii",
         "note": "",
         "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_davduo3nmvhdpdhv",
+        "title": "Vision",
+        "note": "Work on it a little more. Develop more clearly what I am working toward.",
+        "areaId": null
       }
     ]
   },
