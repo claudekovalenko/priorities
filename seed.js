@@ -1380,6 +1380,62 @@ window.PRIORITY_SEED = {
         "note": "Work on it a little more. Develop more clearly what I am working toward.",
         "areaId": null
       }
+    ],
+    "2026-10-22": [
+      {
+        "id": "i_jccz1htymvk1vipi",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_uourdkcdmvk1vipi",
+        "title": "Marriage prep",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_c34ryxu7mvk1vipi",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ycsg71qtmvk1vipi",
+        "title": "Church commitment",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_p8xkncn3mvk1vipi",
+        "title": "Purity",
+        "note": "Keep it a priority too.",
+        "areaId": null
+      },
+      {
+        "id": "i_btpx0eu9mvk1vipi",
+        "title": "Disciples",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_2uox8fz1mvk1vipi",
+        "title": "Resolve the Hawaii trip",
+        "note": "Know where it stands.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_ii3qz9b7mvk1vipi",
+        "title": "Check in with family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ps34ams4mvk1vipi",
+        "title": "Business",
+        "note": "Real estate and AI development, both.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      }
     ]
   },
   "logs": [
