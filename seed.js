@@ -1503,6 +1503,12 @@ window.PRIORITY_SEED = {
         "title": "Purity",
         "note": "Growing more in it.",
         "areaId": null
+      },
+      {
+        "id": "i_bwogmz3smvmp9v8d",
+        "title": "Get a humidifier for my room",
+        "note": "I'm getting nosebleeds.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ]
   },
