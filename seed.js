@@ -1436,6 +1436,74 @@ window.PRIORITY_SEED = {
         "note": "Real estate and AI development, both.",
         "areaId": "a_t4nwh5czmucyoq4w"
       }
+    ],
+    "2026-10-24": [
+      {
+        "id": "i_ar6sil93mvmp8muu",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_g18zq1rumvmp8muu",
+        "title": "Marriage",
+        "note": "Includes the preparation.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_8z4sgkwhmvmp8muu",
+        "title": "Podcast",
+        "note": "Feeling it in my heart for some reason. Work on it a bit. Maybe build an app where I just upload my audio and it builds the rest out for me.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_998v6eq8mvmp8muu",
+        "title": "Seminary reading",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_3vei47kxmvmp8muu",
+        "title": "Greek",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_arloo6t4mvmp8muu",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_liv7uo1tmvmp8muu",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_nie9vqcbmvmp8muu",
+        "title": "Disciples",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_99zgsznxmvmp8muu",
+        "title": "Where I'm plugged in for ministry",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_dt6bzisvmvmp8muu",
+        "title": "Deep godly friendships",
+        "note": "Growing in them.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_oa2rrseqmvmp8muu",
+        "title": "Purity",
+        "note": "Growing more in it.",
+        "areaId": null
+      }
     ]
   },
   "logs": [
