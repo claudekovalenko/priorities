@@ -1531,6 +1531,18 @@ window.PRIORITY_SEED = {
         "areaId": "a_6iees2memuenirlc"
       },
       {
+        "id": "i_vp0ybr74mvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_bgcxubaumvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
         "id": "i_x7cwi3aqmvop280c",
         "title": "Investing, and getting connected with Orlando",
         "note": "Trying to do the thing with Orlando.",
@@ -1547,6 +1559,76 @@ window.PRIORITY_SEED = {
         "title": "Slide deck for Wednesday's AI meeting",
         "note": "A walkthrough. The ideas talked about initially with Jake, and with Luke, compiled all together.",
         "areaId": "a_t4nwh5czmucyoq4w"
+      }
+    ],
+    "2026-10-27": [
+      {
+        "id": "i_ns3gp0q2mvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_7d1b7q4nmvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      }
+    ],
+    "2026-10-28": [
+      {
+        "id": "i_myvn1tetmvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_by0tiypkmvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      }
+    ],
+    "2026-10-29": [
+      {
+        "id": "i_lf84jkdvmvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_6kj7jpq4mvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      }
+    ],
+    "2026-10-30": [
+      {
+        "id": "i_omy7g2c1mvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_13gd2hclmvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      }
+    ],
+    "2026-10-31": [
+      {
+        "id": "i_l31fh05mmvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_jrjrbqy2mvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
       }
     ]
   },
