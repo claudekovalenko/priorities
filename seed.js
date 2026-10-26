@@ -1513,10 +1513,34 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-26": [
       {
+        "id": "i_90i3awgomvpk93hz",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_8ergt7b4mvpk93hz",
+        "title": "Family and marriage",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_47c2bhxhmvpk93hz",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
         "id": "i_x7cwi3aqmvop280c",
         "title": "Investing, and getting connected with Orlando",
-        "note": "",
+        "note": "Trying to do the thing with Orlando.",
         "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_dwdxpdtzmvpk93hz",
+        "title": "Seminary work",
+        "note": "Some of it.",
+        "areaId": "a_7fukniewmucyoq4w"
       },
       {
         "id": "i_ehtaoc30mvop280c",
