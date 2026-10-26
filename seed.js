@@ -1510,6 +1510,20 @@ window.PRIORITY_SEED = {
         "note": "I'm getting nosebleeds.",
         "areaId": "a_6iees2memuenirlc"
       }
+    ],
+    "2026-10-26": [
+      {
+        "id": "i_x7cwi3aqmvop280c",
+        "title": "Investing, and getting connected with Orlando",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_ehtaoc30mvop280c",
+        "title": "Slide deck for Wednesday's AI meeting",
+        "note": "A walkthrough. The ideas talked about initially with Jake, and with Luke, compiled all together.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      }
     ]
   },
   "logs": [
