@@ -1563,6 +1563,18 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-27": [
       {
+        "id": "i_rrq9dahmmvr0pov2",
+        "title": "Discipleship",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_sv4svetfmvr0pov2",
+        "title": "Marriage prep",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
         "id": "i_ns3gp0q2mvpuj3b8",
         "title": "Purity cleanup",
         "note": "Spend some time on it. A priority for the rest of the week.",
