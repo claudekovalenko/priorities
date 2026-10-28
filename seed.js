@@ -1589,9 +1589,33 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-28": [
       {
+        "id": "i_3cqq9wgkmvsmuudi",
+        "title": "The Lord",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_wbp6s0nbmvsmuudi",
+        "title": "My wife",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_gpbj1zsdmvsmuudi",
+        "title": "Podcast",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_e05f76xnmvsmuudi",
+        "title": "Health",
+        "note": "A bit.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
         "id": "i_myvn1tetmvpuj3b8",
         "title": "Purity cleanup",
-        "note": "Spend some time on it. A priority for the rest of the week.",
+        "note": "Growth in purity. Spend some time on it. A priority for the rest of the week.",
         "areaId": null
       },
       {
@@ -1599,6 +1623,54 @@ window.PRIORITY_SEED = {
         "title": "Counsel about online teaching",
         "note": "In light of my purity. A priority for the rest of the week.",
         "areaId": null
+      },
+      {
+        "id": "i_hgafhet9mvsmuudi",
+        "title": "Prep for my children",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_cyhsodhsmvsmuudi",
+        "title": "Financial health",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_1oph7toymvsmuudi",
+        "title": "Church vision",
+        "note": "Growth and commitment.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_b26wh20qmvsmuudi",
+        "title": "Preparation for Hawaii",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_r43a794jmvsmuudi",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_gxu5ah2zmvsmuudi",
+        "title": "Deep Bible study",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_4msy3hbsmvsmuudi",
+        "title": "Bible study with Papa",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_101nysfwmvsmuudi",
+        "title": "Health with CERC",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-10-29": [
