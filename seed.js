@@ -1675,9 +1675,63 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-29": [
       {
+        "id": "i_oc101cvpmvu7ahlx",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
         "id": "i_lf84jkdvmvpuj3b8",
-        "title": "Purity cleanup",
-        "note": "Spend some time on it. A priority for the rest of the week.",
+        "title": "Purity",
+        "note": "Number two. Celebrate it.",
+        "areaId": null
+      },
+      {
+        "id": "i_d5gd8jvdmvu7ahlx",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_fdaa6bm7mvu7ahlx",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8g8fog2xmvu7ahlx",
+        "title": "Stress",
+        "note": "I'm just so stressed right now.",
+        "areaId": null
+      },
+      {
+        "id": "i_m0n6ulrmmvu7ahlx",
+        "title": "Podcast",
+        "note": "Maybe.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ksfjvrp4mvu7ahlx",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ly3p8438mvu7ahlx",
+        "title": "Unfunded AI projects",
+        "note": "I'm saying yes to too many of them.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_dd69d6aomvu7ahlx",
+        "title": "Clean the restroom",
+        "note": "Today.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_vpal2qv1mvu7ahlx",
+        "title": "Disneyland",
+        "note": "I'd like to go.",
         "areaId": null
       },
       {
