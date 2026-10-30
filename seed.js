@@ -1743,6 +1743,24 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-30": [
       {
+        "id": "i_h1zkr7q7mvvcx31o",
+        "title": "God",
+        "note": "Spending time with the Lord, and pursuing Him.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_c9ybfti5mvvcx31o",
+        "title": "Marriage prep",
+        "note": "Includes AI building.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_0jbzuu89mvvcx31o",
+        "title": "Business building",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
         "id": "i_omy7g2c1mvpuj3b8",
         "title": "Purity cleanup",
         "note": "Spend some time on it. A priority for the rest of the week.",
@@ -1753,6 +1771,54 @@ window.PRIORITY_SEED = {
         "title": "Counsel about online teaching",
         "note": "In light of my purity. A priority for the rest of the week.",
         "areaId": null
+      },
+      {
+        "id": "i_3yin8oizmvvcx31o",
+        "title": "Growth and development",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_5orp6dcrmvvcx31o",
+        "title": "Seminary work",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_5t9982owmvvcx31o",
+        "title": "Gabby stuff",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_msoceey3mvvcx31o",
+        "title": "Airplane tickets for Hawaii",
+        "note": "Get them sorted out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_mo1fuxvkmvvcx31o",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_9eq37b0gmvvcx31o",
+        "title": "Personal finances",
+        "note": "What needs to get done.",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_skg4ronmmvvcx31o",
+        "title": "Connect with family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8x6mwnfomvvcx31o",
+        "title": "Plugged in at church",
+        "note": "Working on it.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       }
     ],
     "2026-10-31": [
