@@ -1865,7 +1865,21 @@ window.PRIORITY_SEED = {
         "areaId": null
       }
     ],
+    "2026-11-01": [
+      {
+        "id": "i_s145a4rpmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      }
+    ],
     "2026-11-02": [
+      {
+        "id": "i_fw3tk9jemvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
       {
         "id": "i_s1xrzi1umvw2kugu",
         "title": "Purity cleanup",
@@ -1875,6 +1889,12 @@ window.PRIORITY_SEED = {
     ],
     "2026-11-03": [
       {
+        "id": "i_8704axv3mvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
         "id": "i_7zh5lhqdmvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -1882,6 +1902,12 @@ window.PRIORITY_SEED = {
       }
     ],
     "2026-11-04": [
+      {
+        "id": "i_2ixbbsh7mvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
       {
         "id": "i_uc4bx4i3mvw2kugu",
         "title": "Purity cleanup",
@@ -1891,6 +1917,12 @@ window.PRIORITY_SEED = {
     ],
     "2026-11-05": [
       {
+        "id": "i_37whug1wmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
         "id": "i_jt5zzwm1mvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -1899,6 +1931,12 @@ window.PRIORITY_SEED = {
     ],
     "2026-11-06": [
       {
+        "id": "i_12e22f0lmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
         "id": "i_8uyyv0q8mvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -1906,6 +1944,12 @@ window.PRIORITY_SEED = {
       }
     ],
     "2026-11-07": [
+      {
+        "id": "i_kqpfc6lsmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
       {
         "id": "i_6i2jagxzmvw2kugu",
         "title": "Purity cleanup",
