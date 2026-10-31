@@ -1833,6 +1833,12 @@ window.PRIORITY_SEED = {
         "title": "Counsel about online teaching",
         "note": "In light of my purity. A priority for the rest of the week.",
         "areaId": null
+      },
+      {
+        "id": "i_lb8ok0v4mvw3qayg",
+        "title": "Hawaii logistics",
+        "note": "Work on them.",
+        "areaId": "a_vban11q9mucyoq4w"
       }
     ],
     "2026-11-02": [
