@@ -1834,6 +1834,54 @@ window.PRIORITY_SEED = {
         "note": "In light of my purity. A priority for the rest of the week.",
         "areaId": null
       }
+    ],
+    "2026-11-02": [
+      {
+        "id": "i_s1xrzi1umvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      }
+    ],
+    "2026-11-03": [
+      {
+        "id": "i_7zh5lhqdmvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      }
+    ],
+    "2026-11-04": [
+      {
+        "id": "i_uc4bx4i3mvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      }
+    ],
+    "2026-11-05": [
+      {
+        "id": "i_jt5zzwm1mvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      }
+    ],
+    "2026-11-06": [
+      {
+        "id": "i_8uyyv0q8mvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      }
+    ],
+    "2026-11-07": [
+      {
+        "id": "i_6i2jagxzmvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      }
     ]
   },
   "logs": [
