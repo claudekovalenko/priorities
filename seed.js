@@ -1823,6 +1823,12 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-31": [
       {
+        "id": "i_ctt6vtw6mvwuctvr",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
         "id": "i_8842swkpmvwtrrai",
         "title": "Homework",
         "note": "Complete some of my assignments. That would be awesome. Get ahead on it if I can.",
