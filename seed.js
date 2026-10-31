@@ -1823,22 +1823,40 @@ window.PRIORITY_SEED = {
     ],
     "2026-10-31": [
       {
+        "id": "i_8842swkpmvwtrrai",
+        "title": "Homework",
+        "note": "Complete some of my assignments. That would be awesome. Get ahead on it if I can.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_lb8ok0v4mvw3qayg",
+        "title": "Hawaii logistics",
+        "note": "Love to get it sorted out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
         "id": "i_l31fh05mmvpuj3b8",
         "title": "Purity cleanup",
         "note": "Spend some time on it. A priority for the rest of the week.",
         "areaId": null
       },
       {
+        "id": "i_5hb1kgtfmvwtrrai",
+        "title": "Health",
+        "note": "Grow more in it.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_mzashj9tmvwtrrai",
+        "title": "Commitment",
+        "note": "I really want to grow more in it.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
         "id": "i_jrjrbqy2mvpuj3b8",
         "title": "Counsel about online teaching",
         "note": "In light of my purity. A priority for the rest of the week.",
         "areaId": null
-      },
-      {
-        "id": "i_lb8ok0v4mvw3qayg",
-        "title": "Hawaii logistics",
-        "note": "Work on them.",
-        "areaId": "a_vban11q9mucyoq4w"
       }
     ],
     "2026-11-02": [
