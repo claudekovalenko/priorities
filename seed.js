@@ -1829,6 +1829,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_8z5umlsemvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
         "id": "i_8842swkpmvwtrrai",
         "title": "Homework",
         "note": "Complete some of my assignments. That would be awesome. Get ahead on it if I can.",
@@ -1871,6 +1877,12 @@ window.PRIORITY_SEED = {
         "title": "God",
         "note": "Number one.",
         "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_q8rx1pwqmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
       }
     ],
     "2026-11-02": [
@@ -1879,6 +1891,12 @@ window.PRIORITY_SEED = {
         "title": "God",
         "note": "Number one.",
         "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_c0t95f21mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
       },
       {
         "id": "i_s1xrzi1umvw2kugu",
@@ -1901,6 +1919,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_3f1w6f2wmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
         "id": "i_7zh5lhqdmvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -1919,6 +1943,12 @@ window.PRIORITY_SEED = {
         "title": "God",
         "note": "Number one.",
         "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_7ikcb6a0mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
       },
       {
         "id": "i_uc4bx4i3mvw2kugu",
@@ -1941,6 +1971,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_m6hzqyy2mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
         "id": "i_jt5zzwm1mvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -1959,6 +1995,12 @@ window.PRIORITY_SEED = {
         "title": "God",
         "note": "Number one.",
         "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_0daapjelmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
       },
       {
         "id": "i_8uyyv0q8mvw2kugu",
@@ -1981,6 +2023,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_04lg0tu9mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
         "id": "i_6i2jagxzmvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -1990,6 +2038,762 @@ window.PRIORITY_SEED = {
         "id": "i_gixr6dlumvx7e3xj",
         "title": "Review social media and potential country blocks",
         "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
+      }
+    ],
+    "2026-11-08": [
+      {
+        "id": "i_7cj632ojmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_oidl0oaimvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-09": [
+      {
+        "id": "i_fwl42fjdmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_jv3f9og6mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-10": [
+      {
+        "id": "i_yav077c5mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6l1x6x2amvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-11": [
+      {
+        "id": "i_x5r4xbvlmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_dqe49d0zmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-12": [
+      {
+        "id": "i_njtozopemvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_dhgpa8avmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-13": [
+      {
+        "id": "i_7gg278wjmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zdciml3pmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-14": [
+      {
+        "id": "i_sq1lgr6cmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zy5daur4mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-15": [
+      {
+        "id": "i_uftoqo65mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_gtuyd0lmmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-16": [
+      {
+        "id": "i_g5aifu36mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_661a8f78mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-17": [
+      {
+        "id": "i_f0h8867lmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_g5y6kbqvmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-18": [
+      {
+        "id": "i_cd5wrh9kmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hr1cuergmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-19": [
+      {
+        "id": "i_maa20bdxmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_pbv76pugmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-20": [
+      {
+        "id": "i_1u3sblevmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_509banq7mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-21": [
+      {
+        "id": "i_64juzht2mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_l5cac56cmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-22": [
+      {
+        "id": "i_z6oh2fhsmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_8poksyojmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-23": [
+      {
+        "id": "i_cbk5ezfgmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_qku859ohmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-24": [
+      {
+        "id": "i_d8eozvtjmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_jhqbijdsmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-25": [
+      {
+        "id": "i_ygsmwjtemvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_u5jegb3qmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-26": [
+      {
+        "id": "i_8ugzfxvkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_u385vz9nmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-27": [
+      {
+        "id": "i_tzsne5r1mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_szshzjmxmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-28": [
+      {
+        "id": "i_2unqsr9amvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_x3fforcbmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-29": [
+      {
+        "id": "i_hbbqum31mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_0ploh5m5mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-30": [
+      {
+        "id": "i_2qalx3tlmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_j8sxnghsmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-01": [
+      {
+        "id": "i_zinhrmqtmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_yrhgidormvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-02": [
+      {
+        "id": "i_b0nlv9nzmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_w4gtbsikmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-03": [
+      {
+        "id": "i_hhzpcgfbmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_gcpw2ppzmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-04": [
+      {
+        "id": "i_10byev5fmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_kiubco9vmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-05": [
+      {
+        "id": "i_9d68n8odmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_cfhdqfg3mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-06": [
+      {
+        "id": "i_ieo6r9bkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_7l4kje4ymvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-07": [
+      {
+        "id": "i_wsxzvk7fmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_ul3rfpw9mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-08": [
+      {
+        "id": "i_0qh5ipxkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_vks0d0fqmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-09": [
+      {
+        "id": "i_7h5b3y9zmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_ykomuyjbmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-10": [
+      {
+        "id": "i_sgdbb5y3mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_twzcnp2rmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-11": [
+      {
+        "id": "i_4caff5mcmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zrj9r0cmmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-12": [
+      {
+        "id": "i_ue2i6l2vmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_mq85kwq4mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-13": [
+      {
+        "id": "i_lrtzo52umvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_je0qe3x8mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-14": [
+      {
+        "id": "i_zvcubi68mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hx6ms88pmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-15": [
+      {
+        "id": "i_ekzobmo0mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_olx97b9vmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-16": [
+      {
+        "id": "i_fyov83p9mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6as4a0w5mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-17": [
+      {
+        "id": "i_qwfaswq2mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_k4mojjmsmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-18": [
+      {
+        "id": "i_7v4dqr58mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_ppvv46szmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-19": [
+      {
+        "id": "i_285q9ldpmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6uz100dxmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-20": [
+      {
+        "id": "i_lmxsuczdmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hueynhffmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-21": [
+      {
+        "id": "i_kydmdwemmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_74z3825kmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-22": [
+      {
+        "id": "i_pldveogemvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_e06mvfszmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-23": [
+      {
+        "id": "i_72dtdhcymvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hwbhaxermvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-24": [
+      {
+        "id": "i_i9t8z856mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_5pq3exjimvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-25": [
+      {
+        "id": "i_flfq1gptmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_94r32s09mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-26": [
+      {
+        "id": "i_ejdle1rkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_1rj8cto4mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-27": [
+      {
+        "id": "i_fxmlxc6vmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_7sh4nnsomvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-28": [
+      {
+        "id": "i_i9i7w5wvmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_stvjqjsumvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-29": [
+      {
+        "id": "i_hqwtwr2qmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_j0uwy4b3mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-30": [
+      {
+        "id": "i_pcjdlfwqmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_0o2bqdcemvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-12-31": [
+      {
+        "id": "i_rzfertvdmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_4t9ll568mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
         "areaId": null
       }
     ]

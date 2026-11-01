@@ -4,7 +4,7 @@
  * Bump CACHE when any shell file changes. The old cache is deleted on
  * activate, and the page is told a new version is waiting.
  */
-const CACHE = 'order-of-the-day-v68';
+const CACHE = 'order-of-the-day-v69';
 
 const SHELL = [
   './',
