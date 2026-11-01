@@ -1885,6 +1885,12 @@ window.PRIORITY_SEED = {
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
         "areaId": null
+      },
+      {
+        "id": "i_s4t2q11tmvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
       }
     ],
     "2026-11-03": [
@@ -1898,6 +1904,12 @@ window.PRIORITY_SEED = {
         "id": "i_7zh5lhqdmvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_qiwlylq0mvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
         "areaId": null
       }
     ],
@@ -1913,6 +1925,12 @@ window.PRIORITY_SEED = {
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
         "areaId": null
+      },
+      {
+        "id": "i_qi0bvlsamvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
       }
     ],
     "2026-11-05": [
@@ -1926,6 +1944,12 @@ window.PRIORITY_SEED = {
         "id": "i_jt5zzwm1mvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_qig70ttomvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
         "areaId": null
       }
     ],
@@ -1941,6 +1965,12 @@ window.PRIORITY_SEED = {
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
         "areaId": null
+      },
+      {
+        "id": "i_vbb644lpmvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
       }
     ],
     "2026-11-07": [
@@ -1954,6 +1984,12 @@ window.PRIORITY_SEED = {
         "id": "i_6i2jagxzmvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_gixr6dlumvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
         "areaId": null
       }
     ]
