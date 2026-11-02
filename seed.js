@@ -1899,10 +1899,40 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_lltinuu4mvzs96iw",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
         "id": "i_s1xrzi1umvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
         "areaId": null
+      },
+      {
+        "id": "i_ii14bwxkmvzs96iw",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_yqpd4bd4mvzs96iw",
+        "title": "Church search",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_heunld0mmvzs96iw",
+        "title": "Prayer life",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_2ax07gk0mvzs96iw",
+        "title": "My children",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_s4t2q11tmvx7e3xj",
