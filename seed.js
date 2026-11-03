@@ -1955,6 +1955,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_vvzbzazmmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
         "id": "i_7zh5lhqdmvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -1979,6 +1985,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_taz63j9fmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       },
       {
         "id": "i_uc4bx4i3mvw2kugu",
@@ -2007,6 +2019,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_g3zhfk8dmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
         "id": "i_jt5zzwm1mvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -2031,6 +2049,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_3dbpcssrmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       },
       {
         "id": "i_8uyyv0q8mvw2kugu",
@@ -2059,6 +2083,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_gusx8y8vmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
         "id": "i_6i2jagxzmvw2kugu",
         "title": "Purity cleanup",
         "note": "Daily this week, every day but Sunday.",
@@ -2083,6 +2113,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_11z1t0jqmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-09": [
@@ -2097,6 +2133,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_yppkze77mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-10": [
@@ -2111,6 +2153,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_it5j0ftvmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-11": [
@@ -2125,6 +2173,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_e1drnp7amw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-12": [
@@ -2139,6 +2193,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_g1wd23f0mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-13": [
@@ -2153,6 +2213,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_rc757wcbmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-14": [
@@ -2167,6 +2233,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_2yejlaemmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-15": [
@@ -2181,6 +2253,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_fqnjzz09mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-16": [
@@ -2195,6 +2273,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_yr22rqthmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-17": [
@@ -2209,6 +2293,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_oh3r8ufsmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-18": [
@@ -2223,6 +2313,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_e2jmjukemw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-19": [
@@ -2237,6 +2333,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_hf0t78a8mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-20": [
@@ -2251,6 +2353,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_pbhzbmuomw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-21": [
@@ -2265,6 +2373,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_szzvqdj7mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-22": [
@@ -2279,6 +2393,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_z9wckrr5mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-23": [
@@ -2293,6 +2413,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_xzp3vi3qmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-24": [
@@ -2307,6 +2433,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_fiqy4aldmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-25": [
@@ -2321,6 +2453,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_3yc8h5izmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-26": [
@@ -2335,6 +2473,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_tiyvq5mgmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-27": [
@@ -2349,6 +2493,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_qmw0lxz1mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-28": [
@@ -2363,6 +2513,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_wwybhq7dmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-29": [
@@ -2377,6 +2533,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_m5hhe3zimw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-11-30": [
@@ -2391,6 +2553,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_bkhggn0qmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-01": [
@@ -2405,6 +2573,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_c6l2aov1mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-02": [
@@ -2419,6 +2593,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_9lowzpoxmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-03": [
@@ -2433,6 +2613,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_ifjcl9p0mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-04": [
@@ -2447,6 +2633,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_5ibze8q9mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-05": [
@@ -2461,6 +2653,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_gj7citcemw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-06": [
@@ -2475,6 +2673,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_z30maqdbmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-07": [
@@ -2489,6 +2693,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_8ljfjnd4mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-08": [
@@ -2503,6 +2713,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_oonj1ytymw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-09": [
@@ -2517,6 +2733,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_n9scj0temw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-10": [
@@ -2531,6 +2753,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_y0nzo45ymw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-11": [
@@ -2545,6 +2773,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_dqx5bgdwmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-12": [
@@ -2559,6 +2793,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_l28zi4h6mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-13": [
@@ -2573,6 +2813,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_6bbmchubmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-14": [
@@ -2587,6 +2833,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_3u68be7omw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-15": [
@@ -2601,6 +2853,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_1ca9dbyxmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-16": [
@@ -2615,6 +2873,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_ofmedwufmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-17": [
@@ -2629,6 +2893,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_fkw726qlmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-18": [
@@ -2643,6 +2913,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_wwcqsmzfmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-19": [
@@ -2657,6 +2933,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_m2y2f0l6mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-20": [
@@ -2671,6 +2953,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_dpyim4msmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-21": [
@@ -2685,6 +2973,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_sfoegjxymw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-22": [
@@ -2699,6 +2993,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_f4q11zn1mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-23": [
@@ -2713,6 +3013,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_ilg6b7jqmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-24": [
@@ -2727,6 +3033,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_1khcutmmmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-25": [
@@ -2741,6 +3053,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_s620ve0xmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-26": [
@@ -2755,6 +3073,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_26nlaf8umw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-27": [
@@ -2769,6 +3093,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_ovzngdqemw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-28": [
@@ -2783,6 +3113,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_wy4jjopsmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-29": [
@@ -2797,6 +3133,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_kj8dxsadmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-30": [
@@ -2811,6 +3153,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_pryar4hrmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ],
     "2026-12-31": [
@@ -2825,6 +3173,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_8p6zfksfmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
       }
     ]
   },
