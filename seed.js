@@ -1955,6 +1955,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_9rb0osxcmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_vvzbzazmmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -1985,6 +1991,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_dki9kx97mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_taz63j9fmw130r11",
@@ -2019,6 +2031,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_9kgfmbxxmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_g3zhfk8dmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2049,6 +2067,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_61hsqjxgmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_3dbpcssrmw130r11",
@@ -2083,6 +2107,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_bbki54n8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_gusx8y8vmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2115,6 +2145,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_u9kq63wcmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_11z1t0jqmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2133,6 +2169,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_093lizonmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_yppkze77mw130r11",
@@ -2155,6 +2197,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_ukuxb202mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_it5j0ftvmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2173,6 +2221,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_nv34njggmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_e1drnp7amw130r11",
@@ -2195,6 +2249,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_fidbjvb7mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_g1wd23f0mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2213,6 +2273,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_0iprf4trmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_rc757wcbmw130r11",
@@ -2235,6 +2301,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_l9hxbndomw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_2yejlaemmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2253,6 +2325,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_skmdgyw8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_fqnjzz09mw130r11",
@@ -2275,6 +2353,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_gulkr17imw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_yr22rqthmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2293,6 +2377,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_lalkvluqmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_oh3r8ufsmw130r11",
@@ -2315,6 +2405,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_vjdtqt77mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_e2jmjukemw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2333,6 +2429,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_zo3ajqixmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_hf0t78a8mw130r11",
@@ -2355,6 +2457,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_nxnn3pznmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_pbhzbmuomw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2373,6 +2481,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_roc0f87pmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_szzvqdj7mw130r11",
@@ -2395,6 +2509,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_mz98kjl6mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_z9wckrr5mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2413,6 +2533,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_q78sctndmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_xzp3vi3qmw130r11",
@@ -2435,6 +2561,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_f3rjdc1smw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_fiqy4aldmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2453,6 +2585,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_6g5sofp8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_3yc8h5izmw130r11",
@@ -2475,6 +2613,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_exph5p2hmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_tiyvq5mgmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2493,6 +2637,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_mdsf2y4xmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_qmw0lxz1mw130r11",
@@ -2515,6 +2665,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_e34nrj7hmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_wwybhq7dmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2533,6 +2689,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_ze9eboqbmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_m5hhe3zimw130r11",
@@ -2555,6 +2717,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_fsno98w1mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_bkhggn0qmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2573,6 +2741,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_l0qoytd8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_c6l2aov1mw130r11",
@@ -2595,6 +2769,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_ik37fkj0mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_9lowzpoxmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2613,6 +2793,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_nxzkzim8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_ifjcl9p0mw130r11",
@@ -2635,6 +2821,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_pr651jt1mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_5ibze8q9mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2653,6 +2845,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_0biexm0kmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_gj7citcemw130r11",
@@ -2675,6 +2873,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_04jrff6vmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_z30maqdbmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2693,6 +2897,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_7r010i24mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_8ljfjnd4mw130r11",
@@ -2715,6 +2925,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_wudonp0jmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_oonj1ytymw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2733,6 +2949,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_w4ela2lsmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_n9scj0temw130r11",
@@ -2755,6 +2977,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_2soykntomw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_y0nzo45ymw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2773,6 +3001,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_0girj0nomw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_dqx5bgdwmw130r11",
@@ -2795,6 +3029,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_p4ooqi7zmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_l28zi4h6mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2813,6 +3053,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_0h90h6lzmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_6bbmchubmw130r11",
@@ -2835,6 +3081,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_px9ubk40mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_3u68be7omw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2853,6 +3105,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_f33z267jmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_1ca9dbyxmw130r11",
@@ -2875,6 +3133,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_xjb4qt0amw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_ofmedwufmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2893,6 +3157,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_9gw53085mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_fkw726qlmw130r11",
@@ -2915,6 +3185,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_0ztd4oijmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_wwcqsmzfmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2933,6 +3209,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_17jlbsspmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_m2y2f0l6mw130r11",
@@ -2955,6 +3237,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_lazjqlgmmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_dpyim4msmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2973,6 +3261,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_wgrllpzwmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_sfoegjxymw130r11",
@@ -2995,6 +3289,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_q9gyp7kqmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_f4q11zn1mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3013,6 +3313,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_a4ijiyoqmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_ilg6b7jqmw130r11",
@@ -3035,6 +3341,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_0ra3x638mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_1khcutmmmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3053,6 +3365,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_sglitim2mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_s620ve0xmw130r11",
@@ -3075,6 +3393,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_rpypocowmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_26nlaf8umw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3093,6 +3417,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_k6eq7mi8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_ovzngdqemw130r11",
@@ -3115,6 +3445,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_hjhbzhnwmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_wy4jjopsmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3133,6 +3469,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_omthtthkmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_kj8dxsadmw130r11",
@@ -3155,6 +3497,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_vjwnvnzsmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
         "id": "i_pryar4hrmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3173,6 +3521,12 @@ window.PRIORITY_SEED = {
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
+      },
+      {
+        "id": "i_xgmy0soimw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_8p6zfksfmw130r11",
