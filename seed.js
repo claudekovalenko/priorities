@@ -1983,7 +1983,7 @@ window.PRIORITY_SEED = {
       {
         "id": "i_2ixbbsh7mvwuh3fw",
         "title": "God",
-        "note": "Number one.",
+        "note": "Focus on the Lord.",
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
@@ -1993,9 +1993,27 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_5y5679jbmw33aar3",
+        "title": "Prepare for marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
         "id": "i_dki9kx97mw131jtn",
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_uc4bx4i3mvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_90v71p4nmw33aar3",
+        "title": "Revival",
+        "note": "Focus on it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2005,10 +2023,16 @@ window.PRIORITY_SEED = {
         "areaId": "a_6iees2memuenirlc"
       },
       {
-        "id": "i_uc4bx4i3mvw2kugu",
-        "title": "Purity cleanup",
-        "note": "Daily this week, every day but Sunday.",
-        "areaId": null
+        "id": "i_l9g1hsrxmw33aar3",
+        "title": "Money and income",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_2dxkxt5imw33aar3",
+        "title": "Prepare for Hawaii next week",
+        "note": "Really want to get ahead on it.",
+        "areaId": "a_vban11q9mucyoq4w"
       },
       {
         "id": "i_qi0bvlsamvx7e3xj",
