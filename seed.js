@@ -2169,6 +2169,12 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_4t1j2m7tmw88nj1r",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
         "id": "i_u9kq63wcmw131jtn",
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
@@ -2179,6 +2185,30 @@ window.PRIORITY_SEED = {
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_neiifbvimw88nj1r",
+        "title": "Figure out the baptism thing",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7jrp27e0mw88nj1r",
+        "title": "Prayer for the Hawaii trip",
+        "note": "No crazy breakthrough needed. Just getting through it without any big issues.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6laibfg8mw88nj1r",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_z8qlogbkmw88nj1r",
+        "title": "Seminary homework",
+        "note": "If I can get ahead.",
+        "areaId": "a_7fukniewmucyoq4w"
       }
     ],
     "2026-11-09": [
@@ -2205,6 +2235,12 @@ window.PRIORITY_SEED = {
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_kf6fjjfkmw88nj1r",
+        "title": "AI business",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-10": [
