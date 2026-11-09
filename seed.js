@@ -2219,6 +2219,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
+        "id": "i_6fzasb3qmw9x18gi",
+        "title": "Survive here",
+        "note": "Just get through without making any crazy mistakes.",
+        "areaId": null
+      },
+      {
         "id": "i_jv3f9og6mvx7i7gp",
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
@@ -2237,9 +2243,27 @@ window.PRIORITY_SEED = {
         "areaId": "a_6iees2memuenirlc"
       },
       {
-        "id": "i_kf6fjjfkmw88nj1r",
-        "title": "AI business",
+        "id": "i_yjq793n2mw9x18gi",
+        "title": "My future spouse",
         "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_w8ce2qyvmw9x18gi",
+        "title": "Schoolwork",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_khys2ezjmw9x18gi",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_kf6fjjfkmw88nj1r",
+        "title": "Business with Craig",
+        "note": "The AI business.",
         "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
