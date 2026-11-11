@@ -2287,6 +2287,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_8biohjaxmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_it5j0ftvmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2311,6 +2317,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_up59az90mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_e1drnp7amw130r11",
@@ -2339,6 +2351,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_70syuendmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_g1wd23f0mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2365,6 +2383,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_18txruj5mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_rc757wcbmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2389,6 +2413,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_jglbe9ufmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_2yejlaemmw130r11",
@@ -2443,6 +2473,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_lajsemb0mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_yr22rqthmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2467,6 +2503,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_qp89bjfmmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_oh3r8ufsmw130r11",
@@ -2495,6 +2537,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_djrfhlqhmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_e2jmjukemw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2519,6 +2567,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_a3s1s2g6mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_hf0t78a8mw130r11",
@@ -2547,6 +2601,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_hy4tcybxmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_pbhzbmuomw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2571,6 +2631,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_j00pkh5emwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_szzvqdj7mw130r11",
@@ -2625,6 +2691,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_ybh8jvytmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_xzp3vi3qmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2649,6 +2721,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_vrxvfbh4mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_fiqy4aldmw130r11",
@@ -2677,6 +2755,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_qtoa7nqjmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_3yc8h5izmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2701,6 +2785,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_jycnm3gbmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_tiyvq5mgmw130r11",
@@ -2729,6 +2819,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_n5y2y1fgmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_qmw0lxz1mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2753,6 +2849,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_3bwv8zyumwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_wwybhq7dmw130r11",
@@ -2807,6 +2909,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_6t2c78gtmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_bkhggn0qmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2831,6 +2939,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_i0gpz7nomwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_c6l2aov1mw130r11",
@@ -2859,6 +2973,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_8c4oxmssmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_9lowzpoxmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2883,6 +3003,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_rezf3kttmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_ifjcl9p0mw130r11",
@@ -2911,6 +3037,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_uxux5vljmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_5ibze8q9mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -2935,6 +3067,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ixsy8w14mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_gj7citcemw130r11",
@@ -2989,6 +3127,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_cu9enulgmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_8ljfjnd4mw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3013,6 +3157,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ybz3e8mimwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_oonj1ytymw130r11",
@@ -3041,6 +3191,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_0bv3yqfimwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_n9scj0temw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3065,6 +3221,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_epxei12fmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_y0nzo45ymw130r11",
@@ -3093,6 +3255,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_wdhfpiz1mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_dqx5bgdwmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3117,6 +3285,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_aw3gli30mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_l28zi4h6mw130r11",
@@ -3171,6 +3345,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_qvvgx5drmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_3u68be7omw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3195,6 +3375,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_njfe3hwlmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_1ca9dbyxmw130r11",
@@ -3223,6 +3409,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_7ilqxmpzmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_ofmedwufmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3247,6 +3439,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_rk8vvbnxmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_fkw726qlmw130r11",
@@ -3275,6 +3473,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_xbcj4omkmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_wwcqsmzfmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3299,6 +3503,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_k1j70stimwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_m2y2f0l6mw130r11",
@@ -3353,6 +3563,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_tyv0h6qlmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_sfoegjxymw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3377,6 +3593,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_g6koi19rmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_f4q11zn1mw130r11",
@@ -3405,6 +3627,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_gl9zn1x8mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_ilg6b7jqmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3429,6 +3657,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_jan8u3gqmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_1khcutmmmw130r11",
@@ -3457,6 +3691,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_9cyhuvkvmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_s620ve0xmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3481,6 +3721,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_uqi8r0qkmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_26nlaf8umw130r11",
@@ -3535,6 +3781,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_s7ghuyz5mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_wy4jjopsmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3559,6 +3811,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ldng1r5gmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_kj8dxsadmw130r11",
@@ -3587,6 +3845,12 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
+        "id": "i_2qtrtq14mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
         "id": "i_pryar4hrmw130r11",
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
@@ -3611,6 +3875,12 @@ window.PRIORITY_SEED = {
         "title": "Find a home church in my area",
         "note": "A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_rsihk9xnmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
       },
       {
         "id": "i_8p6zfksfmw130r11",
