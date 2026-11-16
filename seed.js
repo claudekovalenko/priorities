@@ -2457,7 +2457,7 @@ window.PRIORITY_SEED = {
       {
         "id": "i_g5aifu36mvx7i7gp",
         "title": "God",
-        "note": "Number one.",
+        "note": "Pursue God.",
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
@@ -2467,9 +2467,15 @@ window.PRIORITY_SEED = {
         "areaId": null
       },
       {
+        "id": "i_5n102ogtmwjq3f0a",
+        "title": "Prepare for my future marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
         "id": "i_gulkr17imw131jtn",
         "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "note": "Figure out my church location, or foundation. A great priority. Every day until I find one.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2483,6 +2489,18 @@ window.PRIORITY_SEED = {
         "title": "Strength and muscle gain",
         "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_cs30irz6mwjq3f0a",
+        "title": "Thai food at Disneyland",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_bcwb4jpmmwjq3f0a",
+        "title": "Time with John",
+        "note": "Maybe an hour. Really want to get a good memory in.",
+        "areaId": null
       }
     ],
     "2026-11-17": [
