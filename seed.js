@@ -3908,6 +3908,45 @@ window.PRIORITY_SEED = {
       }
     ]
   },
+  "horizons": {
+    "year:2026": [
+      {
+        "id": "h_gn5buw6tmwkg2qho",
+        "title": "God",
+        "note": "Number one, every day.",
+        "areaId": "a_ni4h5dgymucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_3mtguu6fmwkg2qho",
+        "title": "Review goals and rhythms",
+        "note": "Daily. A priority.",
+        "areaId": null,
+        "done": false
+      },
+      {
+        "id": "h_hyo36zf4mwkg2qho",
+        "title": "Find a home church in my area",
+        "note": "A great priority, until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_ic0vw4djmwkg2qho",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday.",
+        "areaId": null,
+        "done": false
+      },
+      {
+        "id": "h_0w1cagptmwkg2qho",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day.",
+        "areaId": "a_6iees2memuenirlc",
+        "done": false
+      }
+    ]
+  },
   "logs": [
     {
       "id": "l_k06ha4m0mucyoq4x",

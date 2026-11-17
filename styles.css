@@ -1208,13 +1208,216 @@ textarea::placeholder {
   }
 }
 
-/* Five tabs need a little less air on a narrow phone. */
-@media (max-width: 380px) {
+/* Six tabs need a little less air on a phone, and may scroll sideways on
+   the narrowest rather than wrap. */
+.tabs {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs button {
+  flex: none;
+}
+
+@media (max-width: 440px) {
   .tabs {
-    gap: 13px;
+    gap: 14px;
   }
 
   .tabs button {
     font-size: 14px;
   }
+}
+
+@media (max-width: 360px) {
+  .tabs {
+    gap: 11px;
+  }
+}
+
+/* ---- Longer horizons --------------------------------------------------- */
+
+.horizons {
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.horizons > .revision {
+  margin-top: 0;
+}
+
+.hz-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+}
+
+.hz-head h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hz-reach {
+  flex: 1;
+  min-width: 0;
+  color: var(--faint);
+  font-size: 13px;
+}
+
+.hz.empty .hz-head h3 {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.hz-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hz-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tick {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--faint);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.tick[aria-pressed='true'] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hz-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding-top: 2px;
+}
+
+.hz-title {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.hz-note {
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.hz-list li.done .hz-title {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--faint);
+}
+
+.hz-on {
+  flex: none;
+  padding-top: 4px;
+  color: var(--faint);
+  font-size: 12px;
+}
+
+.hz-picker {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hz-group {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.hz-label {
+  color: var(--faint);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chips button {
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.chips button[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
+  font-weight: 500;
+}
+
+.hz-item {
+  align-items: flex-start;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.hz-item .tick {
+  margin-top: 5px;
+}
+
+.hz-item .fields {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hz-item input.note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.hz-item.done .fields input:first-child {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.hz-item .ctl {
+  padding-top: 4px;
 }

@@ -735,3 +735,94 @@ test('a priority with no area is counted by name but not folded into an area', (
   assert.deepEqual(t.areas.map((a) => a.name), ['God'], 'the untagged one is not an area');
   assert.ok(t.titles.some((x) => x.name === 'Rest'), 'but it is still counted by name');
 });
+
+// ---- Longer horizons -------------------------------------------------------
+
+test('weeks run Monday to Sunday, months and years by the calendar', () => {
+  assert.equal(S.weekStart('2026-11-17'), '2026-11-16', 'a Tuesday belongs to the Monday before');
+  assert.equal(S.weekStart('2026-11-22'), '2026-11-16', 'Sunday closes the week');
+  assert.equal(S.weekStart('2026-11-16'), '2026-11-16');
+  assert.equal(S.weekKey('2026-11-01'), 'week:2026-10-26', 'a week can start in the month before');
+  assert.equal(S.monthKey('2026-11-17'), 'month:2026-11');
+  assert.equal(S.yearKey('2026-11-17'), 'year:2026');
+  assert.deepEqual(S.horizonSpan('week:2026-11-16'), { kind: 'week', from: '2026-11-16', to: '2026-11-22' });
+  assert.deepEqual(S.horizonSpan('month:2026-02'), { kind: 'month', from: '2026-02-01', to: '2026-02-28' });
+  assert.deepEqual(S.horizonSpan('year:2026'), { kind: 'year', from: '2026-01-01', to: '2026-12-31' });
+});
+
+test('from any day, four weeks, two months and the year are open to plan', () => {
+  const k = S.horizonKeysFrom('2026-12-20');
+  assert.deepEqual(k.week, ['week:2026-12-14', 'week:2026-12-21', 'week:2026-12-28', 'week:2027-01-04']);
+  assert.deepEqual(k.month, ['month:2026-12', 'month:2027-01'], 'next month crosses the year');
+  assert.deepEqual(k.year, ['year:2026']);
+  assert.deepEqual(S.horizonsCovering('2026-11-17'), ['week:2026-11-16', 'month:2026-11', 'year:2026']);
+});
+
+test('a stretch holds its own ordered list that can be edited, ticked and reordered', () => {
+  let s = seeded();
+  const key = 'month:2026-11';
+  s = S.addHorizonItem(s, key, 'Find a home church', 'Until I find one.', s.areas[0].id);
+  s = S.addHorizonItem(s, key, 'Strength', '', null);
+  s = S.addHorizonItem(s, 'month:nope', 'Ignored', '', null);
+  assert.equal(Object.keys(s.horizons).length, 1, 'a malformed key is refused');
+
+  const [church, strength] = S.horizonFor(s, key);
+  assert.equal(church.done, false);
+  s = S.updateHorizonItem(s, key, church.id, { done: true, note: 'Visited two.' });
+  s = S.moveHorizonItem(s, key, strength.id, -1);
+  assert.deepEqual(S.horizonFor(s, key).map((it) => it.title), ['Strength', 'Find a home church']);
+  assert.equal(S.horizonFor(s, key)[1].done, true);
+  assert.equal(S.horizonFor(s, key)[1].note, 'Visited two.');
+
+  s = S.removeHorizonItem(s, key, strength.id);
+  s = S.removeHorizonItem(s, key, church.id);
+  assert.equal(key in s.horizons, false, 'an emptied stretch is dropped');
+});
+
+test('a stretch priority can be put on one day, once', () => {
+  let s = planned(DAY);
+  s = S.addHorizonItem(s, 'week:2026-09-21', 'Digital cleanup', 'Every day but Sunday.', null);
+  const it = S.horizonFor(s, 'week:2026-09-21')[0];
+  s = S.addHorizonItemToDay(s, 'week:2026-09-21', it.id, DAY);
+  const added = itemTitled(s, DAY, 'Digital cleanup');
+  assert.ok(added);
+  assert.equal(added.note, 'Every day but Sunday.');
+  assert.notEqual(added.id, it.id, 'the day gets its own copy');
+  assert.equal(S.addHorizonItemToDay(s, 'week:2026-09-21', it.id, DAY), s, 'not added twice');
+});
+
+test('horizons survive a round trip, and removing an area clears their tag', () => {
+  let s = seeded();
+  const god = s.areas[0].id;
+  s = S.addHorizonItem(s, 'year:2026', 'Review goals and rhythms', '', god);
+  s = S.updateHorizonItem(s, 'year:2026', S.horizonFor(s, 'year:2026')[0].id, { done: true });
+  const back = S.normalize(JSON.parse(JSON.stringify(s)));
+  assert.deepEqual(back.horizons, s.horizons);
+  assert.deepEqual(S.normalize({ version: 3, areas: [], template: [] }).horizons, {}, 'older data has none');
+  s = S.removeArea(s, god);
+  assert.equal(S.horizonFor(s, 'year:2026')[0].areaId, null);
+});
+
+test('prepared stretches are offered when new or revised, and keep what was ticked', () => {
+  let mine = seeded();
+  mine = S.addHorizonItem(mine, 'month:2026-11', 'Strength', '', null);
+  mine = S.updateHorizonItem(mine, 'month:2026-11', S.horizonFor(mine, 'month:2026-11')[0].id, { done: true });
+
+  let theirs = seeded();
+  theirs = S.addHorizonItem(theirs, 'month:2026-11', 'Find a home church', '', theirs.areas[1].id);
+  theirs = S.addHorizonItem(theirs, 'month:2026-11', 'Strength', '', null);
+  theirs = S.addHorizonItem(theirs, 'year:2026', 'Review goals', '', null);
+
+  assert.deepEqual(S.horizonsAvailableFrom(mine, theirs), ['year:2026']);
+  assert.deepEqual(S.horizonsDifferingFrom(mine, theirs), ['month:2026-11']);
+
+  const next = S.takeHorizonsFrom(mine, theirs);
+  assert.deepEqual(S.horizonFor(next, 'month:2026-11').map((it) => [it.title, it.done]),
+    [['Find a home church', false], ['Strength', true]]);
+  assert.equal(S.areaName(next, S.horizonFor(next, 'month:2026-11')[0].areaId), 'Family', 'areas match by name');
+  assert.equal(S.horizonFor(next, 'year:2026').length, 1);
+  assert.deepEqual(S.horizonsDifferingFrom(next, theirs), [], 'nothing left to offer');
+
+  const ticked = S.updateHorizonItem(next, 'year:2026', S.horizonFor(next, 'year:2026')[0].id, { done: true });
+  assert.deepEqual(S.horizonsDifferingFrom(ticked, theirs), [], 'ticking done is not a revision');
+});
