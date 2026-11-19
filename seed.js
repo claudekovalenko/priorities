@@ -2570,21 +2570,21 @@ window.PRIORITY_SEED = {
     "2026-11-19": [
       {
         "id": "i_maa20bdxmvx7i7gp",
-        "title": "God",
+        "title": "Time with God",
         "note": "Number one.",
         "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zo3ajqixmw131jtn",
+        "title": "Figure out church",
+        "note": "Where am I plugged in? Where do I belong? Where will I raise my family? A massive priority.",
+        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_pbv76pugmvx7i7gp",
         "title": "Review goals and rhythms",
         "note": "Daily through the end of the year. A priority.",
         "areaId": null
-      },
-      {
-        "id": "i_zo3ajqixmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
-        "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_a3s1s2g6mwbqz6a7",
@@ -3926,8 +3926,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "h_hyo36zf4mwkg2qho",
-        "title": "Find a home church in my area",
-        "note": "A great priority, until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Through the end of the year, until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w",
         "done": false
       },
@@ -3940,9 +3940,34 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "h_0w1cagptmwkg2qho",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day.",
+        "title": "Be healthy",
+        "note": "Strength and muscle gain: eat well and hit my goals in a healthy way, each day.",
         "areaId": "a_6iees2memuenirlc",
+        "done": false
+      },
+      {
+        "id": "h_eyo1qyilmwo69rsh",
+        "title": "Develop disciples",
+        "note": "A 5 to 10 year goal. Carried here so it stays in view.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      }
+    ],
+    "month:2026-11": [
+      {
+        "id": "h_71xixmjsmwo69rsh",
+        "title": "Prepare to make social media content",
+        "note": "Figure out the purity checkpoints, and decide whether to show my face online. David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      }
+    ],
+    "month:2026-12": [
+      {
+        "id": "h_qy1g46wimwo69rsh",
+        "title": "Prepare to make social media content",
+        "note": "Figure out the purity checkpoints, and decide whether to show my face online. David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
+        "areaId": "a_d4q7ig0emucyoq4w",
         "done": false
       }
     ]
