@@ -511,9 +511,11 @@
   // Priorities that hold for a stretch rather than a day: the rest of a week,
   // the rest of a month, the rest of the year. Each stretch owns one ordered
   // list, keyed by when it starts, so it is written once instead of copied
-  // onto every day. Weeks run Monday to Sunday.
+  // onto every day. Weeks run Monday to Sunday. One more list, 'long', holds
+  // what runs past the year (five or ten years out) and has no end date.
 
-  const HORIZON_KEY = /^(week:\d{4}-\d{2}-\d{2}|month:\d{4}-\d{2}|year:\d{4})$/;
+  const LONG_KEY = 'long';
+  const HORIZON_KEY = /^(week:\d{4}-\d{2}-\d{2}|month:\d{4}-\d{2}|year:\d{4}|long)$/;
 
   function isHorizonKey(key) {
     return typeof key === 'string' && HORIZON_KEY.test(key);
@@ -539,6 +541,7 @@
 
   // The first and last day a stretch covers.
   function horizonSpan(key) {
+    if (key === LONG_KEY) return { kind: 'long', from: '0000-01-01', to: '9999-12-31' };
     const [kind, start] = key.split(':');
     if (kind === 'week') return { kind, from: start, to: shiftDateKey(start, 6) };
     if (kind === 'month') {
@@ -549,13 +552,13 @@
   }
 
   // The stretches worth planning from a given day: this week and the three
-  // after it, this month and the next, and this year.
+  // after it, this month and the next, this year, and the long term.
   function horizonKeysFrom(date) {
     const thisMonth = monthKey(date);
     const [y, m] = date.split('-').map(Number);
     const nextMonth = monthKey(dateKey(new Date(y, m, 1)));
     const weeks = [0, 1, 2, 3].map((i) => weekKey(shiftDateKey(weekStart(date), i * 7)));
-    return { week: weeks, month: [thisMonth, nextMonth], year: [yearKey(date)] };
+    return { week: weeks, month: [thisMonth, nextMonth], year: [yearKey(date)], long: [LONG_KEY] };
   }
 
   // The stretches a given day falls inside, narrowest first.
@@ -1156,6 +1159,7 @@
     weekKey,
     monthKey,
     yearKey,
+    LONG_KEY,
     horizonSpan,
     horizonKeysFrom,
     horizonsCovering,

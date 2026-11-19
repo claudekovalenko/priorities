@@ -1241,6 +1241,33 @@ textarea::placeholder {
 
 /* ---- Longer horizons --------------------------------------------------- */
 
+.focus-card {
+  margin-top: 16px;
+  padding: 14px 16px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.focus-card .hz-head h3 {
+  font-size: 16px;
+}
+
+.focus-card.empty .hz-head h3 {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.focus-list {
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.focus-list .hz-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .horizons {
   margin-top: 26px;
   padding-top: 16px;

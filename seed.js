@@ -3944,13 +3944,6 @@ window.PRIORITY_SEED = {
         "note": "Strength and muscle gain: eat well and hit my goals in a healthy way, each day.",
         "areaId": "a_6iees2memuenirlc",
         "done": false
-      },
-      {
-        "id": "h_eyo1qyilmwo69rsh",
-        "title": "Develop disciples",
-        "note": "A 5 to 10 year goal. Carried here so it stays in view.",
-        "areaId": "a_d4q7ig0emucyoq4w",
-        "done": false
       }
     ],
     "month:2026-11": [
@@ -3967,6 +3960,15 @@ window.PRIORITY_SEED = {
         "id": "h_qy1g46wimwo69rsh",
         "title": "Prepare to make social media content",
         "note": "Figure out the purity checkpoints, and decide whether to show my face online. David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      }
+    ],
+    "long": [
+      {
+        "id": "h_eyo1qyilmwo69rsh",
+        "title": "Develop disciples",
+        "note": "A 5 to 10 year goal.",
         "areaId": "a_d4q7ig0emucyoq4w",
         "done": false
       }

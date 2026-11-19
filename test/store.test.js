@@ -748,6 +748,8 @@ test('weeks run Monday to Sunday, months and years by the calendar', () => {
   assert.deepEqual(S.horizonSpan('week:2026-11-16'), { kind: 'week', from: '2026-11-16', to: '2026-11-22' });
   assert.deepEqual(S.horizonSpan('month:2026-02'), { kind: 'month', from: '2026-02-01', to: '2026-02-28' });
   assert.deepEqual(S.horizonSpan('year:2026'), { kind: 'year', from: '2026-01-01', to: '2026-12-31' });
+  assert.equal(S.horizonSpan('long').kind, 'long');
+  assert.ok(S.horizonSpan('long').to > '2100-01-01', 'the long term never runs out');
 });
 
 test('from any day, four weeks, two months and the year are open to plan', () => {
@@ -755,6 +757,7 @@ test('from any day, four weeks, two months and the year are open to plan', () =>
   assert.deepEqual(k.week, ['week:2026-12-14', 'week:2026-12-21', 'week:2026-12-28', 'week:2027-01-04']);
   assert.deepEqual(k.month, ['month:2026-12', 'month:2027-01'], 'next month crosses the year');
   assert.deepEqual(k.year, ['year:2026']);
+  assert.deepEqual(k.long, ['long']);
   assert.deepEqual(S.horizonsCovering('2026-11-17'), ['week:2026-11-16', 'month:2026-11', 'year:2026']);
 });
 
@@ -777,6 +780,15 @@ test('a stretch holds its own ordered list that can be edited, ticked and reorde
   s = S.removeHorizonItem(s, key, strength.id);
   s = S.removeHorizonItem(s, key, church.id);
   assert.equal(key in s.horizons, false, 'an emptied stretch is dropped');
+});
+
+test('the long term holds its own list and survives a round trip', () => {
+  let s = seeded();
+  s = S.addHorizonItem(s, 'long', 'Develop disciples', 'Five to ten years.', null);
+  assert.equal(S.horizonFor(s, 'long')[0].title, 'Develop disciples');
+  const back = S.normalize(JSON.parse(JSON.stringify(s)));
+  assert.deepEqual(back.horizons, s.horizons);
+  assert.equal(S.horizonsCovering('2026-11-19').includes('long'), false, 'it is not tied to any day');
 });
 
 test('a stretch priority can be put on one day, once', () => {

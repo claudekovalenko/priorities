@@ -8,10 +8,11 @@ Priorities are filed under categories in a fixed order. The default is **Faith, 
 
 1. **Tonight** — set tomorrow's priorities. Load your usual list, copy today's, or start empty, then edit it to fit tomorrow. Below that, check in on the day that is ending: score each category, name anything that crowded out something higher, add a note.
 2. **Today** — write what you just did in one box, then tap the priority it books against. The list below fills in as the day goes. Under the day's own list sit the longer stretches it falls inside: this week, the rest of the month, and the rest of the year.
-3. **Ahead** — set priorities that hold for a stretch rather than a day: this week and the three after it, this month and next, and the rest of the year. Each stretch keeps one ordered list, written once instead of copied onto every day. Tick one done when it is, or put it on a day's list to book against it there.
-4. **Trends** — what the days add up to: how high each area sits when you write it down, how often anything actually got booked against it, and the gap between the two.
-5. **History** — every day, with the list that was set and what was done against it.
-6. **Lists** — your usual list, the one that seeds a new day, plus categories and data export.
+3. **Focus** — this month, the rest of the year, and the long term on one screen: what to keep in front of you beyond today. Tick one done here, or tap Edit to change it in Ahead. In the last week of a month, next month joins them once it has anything on it.
+4. **Ahead** — set priorities that hold for a stretch rather than a day: this week and the three after it, this month and next, the rest of the year, and the long term (five and ten year goals, with no end date). Each stretch keeps one ordered list, written once instead of copied onto every day. Tick one done when it is, or put it on a day's list to book against it there.
+5. **Trends** — what the days add up to: how high each area sits when you write it down, how often anything actually got booked against it, and the gap between the two.
+6. **History** — every day, with the list that was set and what was done against it.
+7. **Lists** — your usual list, the one that seeds a new day, plus categories and data export.
 
 ## Details worth knowing
 
@@ -83,7 +84,7 @@ When you change `styles.css`, `app.js`, or any other shell file, bump `CACHE` in
 tiers      ordered categories
 template   your usual list, used to seed a day
 plans      { "2026-09-21": [ { id, areaId, title, note } ] }   one list per day
-horizons   { "week:2026-11-16" | "month:2026-11" | "year:2026": [ { id, areaId, title, note, done } ] }
+horizons   { "week:2026-11-16" | "month:2026-11" | "year:2026" | "long": [ { id, areaId, title, note, done } ] }
 logs       { id, date, tierId, itemId | null, text, at }       itemId null = off the list
 reflections{ "2026-09-21": { tierScores, crowdedOut, note } }
 ```
