@@ -635,6 +635,47 @@
     return addPlanItem(state, date, it.title, it.note, it.areaId);
   }
 
+  // The stretch just before this one, of the same kind: the month before a
+  // month, the year before a year. Weeks and the long term have none here.
+  function previousHorizonKey(key) {
+    const span = horizonSpan(key);
+    if (span.kind === 'month') return monthKey(shiftDateKey(span.from, -1));
+    if (span.kind === 'year') return yearKey(shiftDateKey(span.from, -1));
+    return null;
+  }
+
+  // What the stretch before this one left unfinished and this one does not
+  // already hold by name.
+  function carryableInto(state, key) {
+    const prev = previousHorizonKey(key);
+    if (!prev) return [];
+    const have = new Set(horizonFor(state, key).map((it) => it.title.trim().toLowerCase()));
+    return horizonFor(state, prev).filter((it) => !it.done && !have.has(it.title.trim().toLowerCase()));
+  }
+
+  // Bring those unfinished priorities forward, after anything already set.
+  // The earlier stretch keeps its own record unchanged.
+  function carryOverInto(state, key) {
+    const items = carryableInto(state, key);
+    if (!items.length) return state;
+    const s = clone(state);
+    if (!s.horizons) s.horizons = {};
+    s.horizons[key] = horizonFor(s, key).concat(items.map((it) => ({
+      id: uid('h'), title: it.title, note: it.note, areaId: it.areaId, done: false,
+    })));
+    return s;
+  }
+
+  // Whether a day's list already serves a stretch priority: the same name,
+  // or something filed under the same area when no other priority in view
+  // (peers) shares that area, so one area never vouches for two goals.
+  function servedOnDay(state, item, date, peers) {
+    const name = item.title.trim().toLowerCase();
+    const areaOnly = item.areaId && !(peers || []).some((p) => p.id !== item.id && p.areaId === item.areaId
+      && p.title.trim().toLowerCase() !== name);
+    return planFor(state, date).some((x) => x.title.trim().toLowerCase() === name || (areaOnly && x.areaId === item.areaId));
+  }
+
   function remapAreas(s, other) {
     const byName = new Map(s.areas.map((a) => [a.name.toLowerCase(), a.id]));
     const remap = new Map();
@@ -1160,6 +1201,10 @@
     monthKey,
     yearKey,
     LONG_KEY,
+    previousHorizonKey,
+    carryableInto,
+    carryOverInto,
+    servedOnDay,
     horizonSpan,
     horizonKeysFrom,
     horizonsCovering,

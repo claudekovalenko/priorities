@@ -55,7 +55,7 @@
 
   function persistUi() {
     try {
-      localStorage.setItem(UI_KEY, JSON.stringify({ tab: ui.tab, trendDays: ui.trendDays, horizon: ui.horizon }));
+      localStorage.setItem(UI_KEY, JSON.stringify({ tab: ui.tab, trendDays: ui.trendDays, horizon: ui.horizon, carryDismissed: ui.carryDismissed }));
     } catch (e) {
       /* ignore */
     }
@@ -614,6 +614,7 @@
     // Near the end of a month, next month is close enough to keep in view.
     if (daysLeft(from, S.horizonSpan(thisMonth).to) <= 7 && S.horizonFor(state, nextMonth).length) shown.push(nextMonth);
     shown.push(keys.year[0], keys.long[0]);
+    const peers = shown.flatMap((k) => S.horizonFor(state, k).filter((it) => !it.done));
 
     const wrap = h('div', {});
     const bar = horizonRevisionBar();
@@ -622,6 +623,16 @@
     wrap.appendChild(h('div', { class: 'section' },
       h('h2', { text: 'Focus' }),
       h('p', { class: 'lede', text: 'What to keep in front of you beyond today: this month, the rest of the year, and the long term.' })));
+
+    // How well today's list lines up with the month and the year.
+    const open = [keys.month[0], keys.year[0]].flatMap((k) => S.horizonFor(state, k).filter((it) => !it.done));
+    if (open.length && S.hasPlan(state, from)) {
+      const missing = open.filter((it) => !S.servedOnDay(state, it, from, peers));
+      const names = [...new Set(missing.map((it) => it.title))];
+      wrap.appendChild(h('p', { class: names.length ? 'alert' : 'summary', text: names.length
+        ? 'Not on today’s list: ' + names.join(', ') + '.'
+        : 'Today’s list covers every open priority for the month and the year.' }));
+    }
 
     for (const key of shown) {
       const span = S.horizonSpan(key);
@@ -640,6 +651,22 @@
           h('span', { class: 'hz-reach', text: reach }),
           h('button', { class: 'btn small', type: 'button', onclick: () => openAhead(key) }, items.length ? 'Edit' : 'Set')));
 
+      const carry = S.carryableInto(state, key);
+      const prevKey = S.previousHorizonKey(key);
+      const dismissed = (ui.carryDismissed || []).includes(key);
+      if (carry.length && !dismissed) {
+        const prevName = span.kind === 'year' ? prevKey.slice(5) : horizonName(prevKey, from);
+        card.appendChild(h('div', { class: 'revision carry' },
+          h('span', { text: carry.length + (carry.length === 1 ? ' priority' : ' priorities') + ' from ' + prevName + ' not ticked done: ' + carry.map((it) => it.title).join(', ') + '.' }),
+          h('div', { class: 'actions' },
+            h('button', { class: 'btn small primary', type: 'button', onclick: () => { commit(S.carryOverInto(state, key)); toast('Carried over'); } }, 'Carry over'),
+            h('button', { class: 'btn small', type: 'button', onclick: () => {
+              ui.carryDismissed = (ui.carryDismissed || []).concat(key).slice(-12);
+              persistUi();
+              render();
+            } }, 'Leave them'))));
+      }
+
       if (!items.length) {
         card.appendChild(h('p', { class: 'lede', text: 'Nothing set yet.' }));
       } else {
@@ -651,7 +678,14 @@
           }, it.done ? '✓' : String(i + 1)),
           h('div', { class: 'hz-text' },
             h('span', { class: 'hz-title', text: it.title }),
-            it.note ? h('span', { class: 'hz-note', text: it.note }) : null)))));
+            it.note ? h('span', { class: 'hz-note', text: it.note }) : null),
+          it.done ? null
+            : S.servedOnDay(state, it, from, peers)
+              ? h('span', { class: 'hz-on', text: 'on today' })
+              : h('button', { class: 'btn small', type: 'button', 'aria-label': 'Put ' + it.title + ' on today’s list', onclick: () => {
+                  commit(S.addHorizonItemToDay(state, key, it.id, from));
+                  toast('Added to today');
+                } }, '+ Today')))));
       }
       wrap.appendChild(card);
     }

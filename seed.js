@@ -2748,8 +2748,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_f3rjdc1smw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2760,9 +2760,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_fiqy4aldmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_67v4gds6mwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-25": [
@@ -2780,8 +2786,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_6g5sofp8mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2792,9 +2798,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_3yc8h5izmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_uq3bq8cvmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-26": [
@@ -2812,8 +2824,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_exph5p2hmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2824,9 +2836,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_tiyvq5mgmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_kixv0eutmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-27": [
@@ -2844,8 +2862,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_mdsf2y4xmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2856,9 +2874,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_qmw0lxz1mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_x5gf17qmmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-28": [
@@ -2876,8 +2900,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_e34nrj7hmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2888,9 +2912,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wwybhq7dmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_vnqqikammwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-29": [
@@ -2908,15 +2938,21 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ze9eboqbmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_m5hhe3zimw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ou2pu9rrmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-30": [
@@ -2934,8 +2970,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_fsno98w1mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2946,9 +2982,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_bkhggn0qmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_yhiihgsomwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-01": [
@@ -2966,8 +3008,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_l0qoytd8mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -2978,9 +3020,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_c6l2aov1mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_r1q9ms9qmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-02": [
@@ -2998,8 +3046,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ik37fkj0mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3010,9 +3058,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_9lowzpoxmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_tmpufl7emwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-03": [
@@ -3030,8 +3084,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_nxzkzim8mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3042,9 +3096,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ifjcl9p0mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_gjizzaqhmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-04": [
@@ -3062,8 +3122,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_pr651jt1mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3074,9 +3134,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_5ibze8q9mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_dhh1fabgmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-05": [
@@ -3094,8 +3160,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_0biexm0kmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3106,9 +3172,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_gj7citcemw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_jfqqrc72mwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-06": [
@@ -3126,15 +3198,21 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_04jrff6vmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_z30maqdbmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_4it2671wmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-07": [
@@ -3152,8 +3230,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_7r010i24mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3164,9 +3242,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_8ljfjnd4mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_f851l4namwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-08": [
@@ -3184,8 +3268,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wudonp0jmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3196,9 +3280,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_oonj1ytymw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_eph6kwtumwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-09": [
@@ -3216,8 +3306,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_w4ela2lsmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3228,9 +3318,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_n9scj0temw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_sfp4j2v3mwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-10": [
@@ -3248,8 +3344,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_2soykntomw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3260,9 +3356,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_y0nzo45ymw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_664slsvamwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-11": [
@@ -3280,8 +3382,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_0girj0nomw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3292,9 +3394,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_dqx5bgdwmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_83md1fr2mwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-12": [
@@ -3312,8 +3420,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_p4ooqi7zmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3324,9 +3432,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_l28zi4h6mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_gkcjs3sfmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-13": [
@@ -3344,15 +3458,21 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_0h90h6lzmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_6bbmchubmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_46n3v05ymwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-14": [
@@ -3370,8 +3490,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_px9ubk40mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3382,9 +3502,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_3u68be7omw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_xth9jkh2mwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-15": [
@@ -3402,8 +3528,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_f33z267jmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3414,9 +3540,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_1ca9dbyxmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_1rengjujmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-16": [
@@ -3434,8 +3566,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_xjb4qt0amw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3446,9 +3578,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ofmedwufmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_g8khld2fmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-17": [
@@ -3466,8 +3604,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_9gw53085mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3478,9 +3616,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_fkw726qlmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_bu4pis5xmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-18": [
@@ -3498,8 +3642,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_0ztd4oijmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3510,9 +3654,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wwcqsmzfmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ht7rycbqmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-19": [
@@ -3530,8 +3680,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_17jlbsspmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3542,9 +3692,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_m2y2f0l6mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_gb1eymnhmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-20": [
@@ -3562,15 +3718,21 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_lazjqlgmmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_dpyim4msmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_4973ci7kmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-21": [
@@ -3588,8 +3750,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wgrllpzwmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3600,9 +3762,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_sfoegjxymw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_7mvlo2hxmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-22": [
@@ -3620,8 +3788,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_q9gyp7kqmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3632,9 +3800,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_f4q11zn1mw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_n0uigj2zmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-23": [
@@ -3652,8 +3826,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_a4ijiyoqmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3664,9 +3838,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ilg6b7jqmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_vlje2b3hmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-24": [
@@ -3684,8 +3864,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_0ra3x638mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3696,9 +3876,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_1khcutmmmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_dun9ievzmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-25": [
@@ -3716,8 +3902,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_sglitim2mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3728,9 +3914,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_s620ve0xmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ih88zhefmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-26": [
@@ -3748,8 +3940,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_rpypocowmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3760,9 +3952,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_26nlaf8umw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_7b324g55mwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-27": [
@@ -3780,15 +3978,21 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_k6eq7mi8mw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
         "id": "i_ovzngdqemw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_7ujewg9pmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-28": [
@@ -3806,8 +4010,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_hjhbzhnwmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3818,9 +4022,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wy4jjopsmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_e8c1rpwtmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-29": [
@@ -3838,8 +4048,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_omthtthkmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3850,9 +4060,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_kj8dxsadmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_74pcb1fgmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-30": [
@@ -3870,8 +4086,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_vjwnvnzsmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3882,9 +4098,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_pryar4hrmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_nlllgzsfmwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-31": [
@@ -3902,8 +4124,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_xgmy0soimw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
@@ -3914,9 +4136,15 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_8p6zfksfmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_i1hwlshamwtpr7s4",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ]
   },
@@ -3963,7 +4191,7 @@ window.PRIORITY_SEED = {
         "id": "h_71xixmjsmwo69rsh",
         "title": "Prepare to make social media content",
         "note": "Figure out the purity checkpoints, and decide whether to show my face online. David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
-        "areaId": "a_d4q7ig0emucyoq4w",
+        "areaId": "a_t4nwh5czmucyoq4w",
         "done": false
       }
     ],
@@ -3972,7 +4200,7 @@ window.PRIORITY_SEED = {
         "id": "h_qy1g46wimwo69rsh",
         "title": "Prepare to make social media content",
         "note": "Figure out the purity checkpoints, and decide whether to show my face online. David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
-        "areaId": "a_d4q7ig0emucyoq4w",
+        "areaId": "a_t4nwh5czmucyoq4w",
         "done": false
       }
     ],

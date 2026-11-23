@@ -782,6 +782,44 @@ test('a stretch holds its own ordered list that can be edited, ticked and reorde
   assert.equal(key in s.horizons, false, 'an emptied stretch is dropped');
 });
 
+test('unfinished priorities can be carried into the next month or year, once', () => {
+  let s = seeded();
+  s = S.addHorizonItem(s, 'month:2026-11', 'Social media prep', 'Purity checkpoints.', null);
+  s = S.addHorizonItem(s, 'month:2026-11', 'Done already', '', null);
+  s = S.updateHorizonItem(s, 'month:2026-11', S.horizonFor(s, 'month:2026-11')[1].id, { done: true });
+  s = S.addHorizonItem(s, 'year:2026', 'Figure out church', '', null);
+  assert.equal(S.previousHorizonKey('month:2027-01'), 'month:2026-12');
+  assert.equal(S.previousHorizonKey('year:2027'), 'year:2026');
+  assert.equal(S.previousHorizonKey('long'), null);
+
+  assert.deepEqual(S.carryableInto(s, 'month:2026-12').map((it) => it.title), ['Social media prep'], 'done ones stay behind');
+  s = S.carryOverInto(s, 'month:2026-12');
+  const moved = S.horizonFor(s, 'month:2026-12')[0];
+  assert.equal(moved.note, 'Purity checkpoints.');
+  assert.notEqual(moved.id, S.horizonFor(s, 'month:2026-11')[0].id, 'a fresh copy');
+  assert.equal(S.horizonFor(s, 'month:2026-11').length, 2, 'November keeps its record');
+  assert.equal(S.carryableInto(s, 'month:2026-12').length, 0, 'not offered twice');
+  assert.equal(S.carryOverInto(s, 'month:2026-12'), s);
+
+  s = S.carryOverInto(s, 'year:2027');
+  assert.deepEqual(S.horizonFor(s, 'year:2027').map((it) => it.title), ['Figure out church']);
+});
+
+test('a day serves a stretch priority by name or by area', () => {
+  let s = planned(DAY);
+  const area = s.areas[0].id;
+  s = S.addHorizonItem(s, 'year:2026', 'Some goal', '', area);
+  s = S.addHorizonItem(s, 'year:2026', 'Unrelated', '', null);
+  const [goal, other] = S.horizonFor(s, 'year:2026');
+  s = S.addPlanItem(s, DAY, 'Something under that area', '', area);
+  assert.equal(S.servedOnDay(s, goal, DAY), true);
+  assert.equal(S.servedOnDay(s, other, DAY), false);
+  s = S.addHorizonItem(s, 'long', 'Second goal, same area', '', area);
+  const peers = S.horizonFor(s, 'year:2026').concat(S.horizonFor(s, 'long'));
+  assert.equal(S.servedOnDay(s, peers[2], DAY, peers), false, 'a shared area does not count for either');
+  assert.equal(S.servedOnDay(s, goal, DAY, peers), false);
+});
+
 test('the long term holds its own list and survives a round trip', () => {
   let s = seeded();
   s = S.addHorizonItem(s, 'long', 'Develop disciples', 'Five to ten years.', null);
