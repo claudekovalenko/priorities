@@ -2697,28 +2697,40 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
-        "id": "i_qku859ohmvx7i7gp",
-        "title": "Review goals and rhythms",
-        "note": "Daily through the end of the year. A priority.",
-        "areaId": null
-      },
-      {
-        "id": "i_q78sctndmw131jtn",
-        "title": "Find a home church in my area",
-        "note": "A great priority. Every day until I find one.",
-        "areaId": "a_d4q7ig0emucyoq4w"
-      },
-      {
-        "id": "i_ybh8jvytmwbqz6a7",
-        "title": "Digital cleanup",
-        "note": "Continually, every day but Sunday, through the end of the year.",
+        "id": "i_gg4ga37xmwtn3vzb",
+        "title": "Purity",
+        "note": "",
         "areaId": null
       },
       {
         "id": "i_xzp3vi3qmw130r11",
-        "title": "Strength and muscle gain",
-        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "title": "Health",
+        "note": "Moved up. Strength and muscle gain: eat well and hit my goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_5staa5yimwtn3vzb",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ipdhuzanmwtn3vzb",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_dd31eklbmwtn3vzb",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_otwgq3h8mwtn3vzb",
+        "title": "Homework",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
       }
     ],
     "2026-11-24": [
