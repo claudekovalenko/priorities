@@ -4249,6 +4249,73 @@ window.PRIORITY_SEED = {
         "areaId": "a_d4q7ig0emucyoq4w",
         "done": false
       }
+    ],
+    "week:2026-11-23": [
+      {
+        "id": "h_u9jyid4kmwv9if21",
+        "title": "Figure out church",
+        "note": "Keep working on it: my home church, where I will be plugged in.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_1x7z1y71mwv9if21",
+        "title": "Thanksgiving decisions",
+        "note": "Thanksgiving is Thursday. Decide the plans.",
+        "areaId": "a_2f6pma6bmus4b33l",
+        "done": false
+      },
+      {
+        "id": "h_hlhsxeo4mwv9if21",
+        "title": "Set dating boundaries",
+        "note": "Chill out on Hinge. Stay away from interactions that make me feel insecure.",
+        "areaId": "a_blg8d4dnmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_hwaxlxqomwv9if21",
+        "title": "Schoolwork",
+        "note": "Read Bavinck, Greek translation, study for the quiz.",
+        "areaId": "a_7fukniewmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_5yn8s999mwv9if21",
+        "title": "Plan the Hawaii trip",
+        "note": "Figure it out.",
+        "areaId": "a_vban11q9mucyoq4w",
+        "done": false
+      }
+    ],
+    "week:2026-11-30": [
+      {
+        "id": "h_ijykcdzzmwv9if21",
+        "title": "Figure out church",
+        "note": "Take the next step toward my home church.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_63vfaonsmwv9if21",
+        "title": "Social media prep",
+        "note": "Work on the purity checkpoints.",
+        "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_y5qdlt9cmwv9if21",
+        "title": "Hawaii trip planned",
+        "note": "Have the plan settled.",
+        "areaId": "a_vban11q9mucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_lrwy4gekmwv9if21",
+        "title": "Schoolwork",
+        "note": "Stay on top of reading and Greek.",
+        "areaId": "a_7fukniewmucyoq4w",
+        "done": false
+      }
     ]
   },
   "logs": [
