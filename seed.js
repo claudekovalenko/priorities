@@ -2787,6 +2787,18 @@ window.PRIORITY_SEED = {
         "title": "Study for the quiz",
         "note": "Schoolwork, the quiz coming up.",
         "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_iwxbs209mwv8kyl8",
+        "title": "Set dating boundaries",
+        "note": "How I am going to go about the dating process, honestly. Watch out for relationships and interactions that make me feel insecure: they are not good for me, and I do not want to be around them.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_chx8e0xamwv8kyl9",
+        "title": "Plan the Hawaii trip",
+        "note": "Figure it out.",
+        "areaId": "a_vban11q9mucyoq4w"
       }
     ],
     "2026-11-25": [
