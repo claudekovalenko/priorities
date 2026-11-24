@@ -2828,8 +2828,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_3yc8h5izmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -2866,8 +2866,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_tiyvq5mgmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -2904,8 +2904,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_qmw0lxz1mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -2942,8 +2942,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wwybhq7dmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -2974,8 +2974,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_m5hhe3zimw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3012,8 +3012,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_bkhggn0qmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3050,8 +3050,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_c6l2aov1mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3088,8 +3088,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_9lowzpoxmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3126,8 +3126,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ifjcl9p0mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3164,8 +3164,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_5ibze8q9mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3202,8 +3202,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_gj7citcemw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3234,8 +3234,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_z30maqdbmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3272,8 +3272,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_8ljfjnd4mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3310,8 +3310,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_oonj1ytymw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3348,8 +3348,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_n9scj0temw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3386,8 +3386,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_y0nzo45ymw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3424,8 +3424,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_dqx5bgdwmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3462,8 +3462,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_l28zi4h6mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3494,8 +3494,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_6bbmchubmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3532,8 +3532,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_3u68be7omw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3570,8 +3570,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_1ca9dbyxmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3608,8 +3608,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ofmedwufmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3646,8 +3646,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_fkw726qlmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3684,8 +3684,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wwcqsmzfmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3722,8 +3722,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_m2y2f0l6mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3754,8 +3754,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_dpyim4msmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3792,8 +3792,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_sfoegjxymw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3830,8 +3830,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_f4q11zn1mw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3868,8 +3868,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ilg6b7jqmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3906,8 +3906,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_1khcutmmmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3944,8 +3944,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_s620ve0xmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -3982,8 +3982,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_26nlaf8umw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -4014,8 +4014,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_ovzngdqemw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -4052,8 +4052,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_wy4jjopsmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -4090,8 +4090,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_kj8dxsadmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -4128,8 +4128,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_pryar4hrmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -4166,8 +4166,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "i_8p6zfksfmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
       },
       {
@@ -4210,8 +4210,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "h_0w1cagptmwkg2qho",
-        "title": "Be healthy",
-        "note": "Strength and muscle gain: eat well and hit my goals in a healthy way, each day.",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way, each day.",
         "areaId": "a_6iees2memuenirlc",
         "done": false
       },
@@ -4247,6 +4247,13 @@ window.PRIORITY_SEED = {
         "title": "Develop disciples",
         "note": "A 5 to 10 year goal.",
         "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_3j29nf38mwv9qa4q",
+        "title": "Gain strength well",
+        "note": "For the future, not just this year: build strength that lasts, in a healthy way.",
+        "areaId": "a_6iees2memuenirlc",
         "done": false
       }
     ],
