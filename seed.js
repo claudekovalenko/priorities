@@ -2741,34 +2741,52 @@ window.PRIORITY_SEED = {
         "areaId": "a_ni4h5dgymucyoq4w"
       },
       {
-        "id": "i_jhqbijdsmvx7i7gp",
-        "title": "Review goals and rhythms",
-        "note": "Daily through the end of the year. A priority.",
-        "areaId": null
+        "id": "i_r4ovwutkmwv8ieub",
+        "title": "Marriage",
+        "note": "The main thing for it right now is my home church.",
+        "areaId": "a_blg8d4dnmucyoq4w"
       },
       {
         "id": "i_f3rjdc1smw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Continue working on it: my home church, where I am going to be plugged in. The main thing for marriage.",
         "areaId": "a_d4q7ig0emucyoq4w"
       },
       {
-        "id": "i_vrxvfbh4mwbqz6a7",
-        "title": "Digital cleanup",
-        "note": "Continually, every day but Sunday, through the end of the year.",
+        "id": "i_xewf796bmwv8ieub",
+        "title": "Purity",
+        "note": "",
         "areaId": null
       },
       {
-        "id": "i_fiqy4aldmw130r11",
-        "title": "Health",
-        "note": "Be healthy. Strength and muscle gain: eat well and hit my goals in a healthy way.",
-        "areaId": "a_6iees2memuenirlc"
+        "id": "i_omq5gdpxmwv8ieub",
+        "title": "Thanksgiving decisions",
+        "note": "Make some decisions about Thanksgiving.",
+        "areaId": "a_2f6pma6bmus4b33l"
       },
       {
-        "id": "i_67v4gds6mwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
+        "id": "i_xr3nacvxmwv8ieub",
+        "title": "Chill out on Hinge",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_u7djr8llmwv8ieub",
+        "title": "Read Bavinck",
+        "note": "Schoolwork, first.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_s2kpd1njmwv8ieub",
+        "title": "Greek translation",
+        "note": "Schoolwork, after Bavinck.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_wtykp5w4mwv8ieub",
+        "title": "Study for the quiz",
+        "note": "Schoolwork, the quiz coming up.",
+        "areaId": "a_7fukniewmucyoq4w"
       }
     ],
     "2026-11-25": [
