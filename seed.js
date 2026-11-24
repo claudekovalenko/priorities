@@ -4214,6 +4214,13 @@ window.PRIORITY_SEED = {
         "note": "Strength and muscle gain: eat well and hit my goals in a healthy way, each day.",
         "areaId": "a_6iees2memuenirlc",
         "done": false
+      },
+      {
+        "id": "h_fg91m4a7mwv8lwe1",
+        "title": "Guard against insecure relationships",
+        "note": "Set boundaries for how I go about dating, honestly. Watch out for relationships and interactions that make me feel insecure: they are not good for me, and I do not want to be around them.",
+        "areaId": "a_blg8d4dnmucyoq4w",
+        "done": false
       }
     ],
     "month:2026-11": [
