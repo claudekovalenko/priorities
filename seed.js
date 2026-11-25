@@ -24,6 +24,12 @@ window.PRIORITY_SEED = {
       "title": "Spend on what grows me",
       "body": "Be willing to invest money in growing my health, the way I was willing to spend on purity and saw great development because of it. And somehow be willing to spend in preparation for marriage."
     }
+,
+    {
+      "id": "s_j15od8ukmv4huggl",
+      "title": "Decision making",
+      "body": "Something I go into every day, along with purity. Secondary, but I need to grow in it."
+    }
   ],
   "areas": [
     {
@@ -795,6 +801,3777 @@ window.PRIORITY_SEED = {
         "title": "Marriage prep",
         "note": "",
         "areaId": "a_blg8d4dnmucyoq4w"
+      }
+    ],
+    "2026-10-06": [
+      {
+        "id": "i_09ciuplwmux2s34p",
+        "title": "Time with the Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_jr8wt8j2mux2s34p",
+        "title": "Health in general",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_nk6emztwmux2s34p",
+        "title": "My ear",
+        "note": "Figure out what to do with it.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_2vhmbmq4mux2s34p",
+        "title": "Dentist appointment",
+        "note": "See if I can get a screening booked.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_kvstyjl7mux2s34p",
+        "title": "Physical therapy",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_6gu8vu2smux2s34p",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_y26esqegmux2s34p",
+        "title": "Finances",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_ffynlsshmux2s34p",
+        "title": "Podcast",
+        "note": "Possibly.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_2b2kjft7mux2s34p",
+        "title": "Seminary",
+        "note": "Would really love to get ahead. At least the bare minimum.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ku4i9fa9mux2s34p",
+        "title": "Family",
+        "note": "Still a priority.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      }
+    ],
+    "2026-10-08": [
+      {
+        "id": "i_fifh5k8imuzu64sg",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_gmfmnykumuzu64sg",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_f9sf4tw1muzu64sg",
+        "title": "Disciples",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_kcarj315muzu64sg",
+        "title": "Marriage",
+        "note": "Including some finance there.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_pe1r5biemuzu64sg",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_a4s8p7mxmuzu64sg",
+        "title": "Social media updates",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_lj635z8umuzu64sg",
+        "title": "Seminary paper",
+        "note": "Includes my Greek studies.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_7k0yeo80muzu64sg",
+        "title": "Low-hanging fruit",
+        "note": "For the paper and the Greek. Check off the checkboxes of what needs to get done.",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-10-09": [
+      {
+        "id": "i_skzcuwr5mv1qku69",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_qoc7p8v5mv1qku69",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_i45voemgmv1qku69",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_sie3hz70mv1qku69",
+        "title": "Social media project",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_kavt4ge1mv1qku69",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_dv8hzp9nmv1qku69",
+        "title": "Essay",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_slvzgn4fmv1qku69",
+        "title": "Seminary",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ulh2qsdhmv1qku69",
+        "title": "Greek memory",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-10-10": [
+      {
+        "id": "i_tgzwtl7dmv2qcyyg",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_rcskj7ngmv2qcyyg",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_286sfpmjmv2qcyyg",
+        "title": "Ministry job",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_w4vivcfcmv2qcyyg",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_8xzc7rw0mv2qcyyg",
+        "title": "Podcast",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_2air6jzrmv2qcyyg",
+        "title": "Greek midterm",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_peis3qgmmv2qcyyg",
+        "title": "Final paper",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_hzxe9k0bmv2qcyyg",
+        "title": "Stuff in the house",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_k4rzhbkimv2qcyyg",
+        "title": "Marriage prep",
+        "note": "Should be somewhere within all of this.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_3ozglev5mv1qku69",
+        "title": "Respond to the message about the flight",
+        "note": "Said last night for today.",
+        "areaId": "a_vban11q9mucyoq4w"
+      }
+    ],
+    "2026-10-12": [
+      {
+        "id": "i_yx0ku1krmv4huggl",
+        "title": "Time with the Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_2w6afiywmv4huggl",
+        "title": "Marriage prep",
+        "note": "Includes purity.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_txt7rich0mv4huggm",
+        "title": "Get back to major texts",
+        "note": "Including Rich. Pretty high up.",
+        "areaId": null
+      },
+      {
+        "id": "i_xjibyh9qmv5lif7c",
+        "title": "Business, work, or finances",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_zvmb5bccmv4huggl",
+        "title": "Family",
+        "note": "Daily.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ejhhl74xmv5lif7c",
+        "title": "Connect with Mom",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8w6zdnsrmv5lif7c",
+        "title": "Get a haircut",
+        "note": "Of some kind.",
+        "areaId": null
+      },
+      {
+        "id": "i_62orjw2emv5lif7c",
+        "title": "Podcast",
+        "note": "Slight edits.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_62w4c611mv4huggl",
+        "title": "Work on the book",
+        "note": "Just do something.",
+        "areaId": null
+      },
+      {
+        "id": "i_8fsrfubvmv4huggl",
+        "title": "Decision making",
+        "note": "Every day, along with purity. Secondary, but something I need to grow in.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_4lajkd87mv5n1itg",
+        "title": "Essay",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_0oin41n5mv5n1ith",
+        "title": "Greek midterm",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-10-13": [
+      {
+        "id": "i_xe46p0qtmv6zz72s",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_bufpn8clmv6zz72s",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_xr0tbhaymv6zz72s",
+        "title": "Sort out everything for tomorrow",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_ciabe7pemv6zz72s",
+        "title": "Finance prep for tomorrow",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_hov4tqo2mv6zz72s",
+        "title": "Haircut",
+        "note": "For tomorrow.",
+        "areaId": null
+      },
+      {
+        "id": "i_fvufagt6mv6zz72s",
+        "title": "Plan for the flights",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_41f9cziymv6zz72s",
+        "title": "Parking",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_0dh2h9lkmv6zz72s",
+        "title": "Luggage",
+        "note": "Get it figured out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_i4n7dkximv6zz72s",
+        "title": "Podcast",
+        "note": "Potentially. Work on it a little bit.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_yma0wikqmv6zz72s",
+        "title": "Health prep and planning",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_yajo38fymv6zz72s",
+        "title": "Commitment and decision making",
+        "note": "Spend some time on it.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_9qiw0gxamv6zz72s",
+        "title": "Prepare for the conference",
+        "note": "To help me with commitment and decision making.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      }
+    ],
+    "2026-10-17": [
+      {
+        "id": "i_3x9lpa1umvcu1iu7",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_tzizfhuhmvcu1iu7",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_v2klyf3gmvcu1iu7",
+        "title": "Healthy church and sound doctrine",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ivpofpugmvcu1iu7",
+        "title": "Respond to Josh",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_42wadiasmvcu1iu7",
+        "title": "Take care of some work",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_4jica6ccmvcu1iu7",
+        "title": "Conference takeaways and next steps",
+        "note": "Make them even more practical: what I need to actually do.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_u5mge5qgmvcu1iu7",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_h4wh94bemvcu1iu7",
+        "title": "Build things out financially",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_ldwmpr27mvcu3mhg",
+        "title": "Rest",
+        "note": "Some rest.",
+        "areaId": null
+      }
+    ],
+    "2026-10-19": [
+      {
+        "id": "i_2dmd6ouwmvfl0o9t",
+        "title": "The Lord",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_q40ixif1mvfl0o9t",
+        "title": "Marriage prep",
+        "note": "One of the two, with church plantedness.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_plbrfr6ymvfl0o9t",
+        "title": "Church plantedness",
+        "note": "One of the two, with marriage prep.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_q9oftubtmvfl0o9t",
+        "title": "Purity work",
+        "note": "Medium to high.",
+        "areaId": null
+      },
+      {
+        "id": "i_1s1qt1upmvfl0o9t",
+        "title": "Leadership cohort",
+        "note": "Complete the basics.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_14oyk0yomvfl0o9t",
+        "title": "Family",
+        "note": "Decide on the day of the event.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_sya9d3afmvfl0o9t",
+        "title": "Commitment and decision making",
+        "note": "",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_k00og8tgmvfl0o9t",
+        "title": "Greek and systematic theology",
+        "note": "Some work on both.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_xxjkx0wnmvfl0o9t",
+        "title": "Low-hanging fruit",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-10-20": [
+      {
+        "id": "i_uogjptfxmvhdpdhv",
+        "title": "God",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_2qrg7s5vmvhdpdhv",
+        "title": "Rest",
+        "note": "Feeling not the best right now. Today I need to rest.",
+        "areaId": null
+      },
+      {
+        "id": "i_921fkb9emvhdpdhv",
+        "title": "Purity",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_x8y1ltt6mvhdpdhv",
+        "title": "Family",
+        "note": "Maybe a check-in or something.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_lixc5ekzmvhdpdhv",
+        "title": "Seminary low-hanging fruit",
+        "note": "Finish all the easy stuff. I just need to get those things done.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ippo0qozmvhdpdhv",
+        "title": "Earlier bedtime",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_12fcutt2mvhdpdhv",
+        "title": "Eat something",
+        "note": "Cook a little: rice and turkey. Then build that out.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-10-21": [
+      {
+        "id": "i_r24d4c0vmvicd1lh",
+        "title": "The Word",
+        "note": "Focus here today.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_epynqn23mvicd1lh",
+        "title": "Asleep by midnight",
+        "note": "Winding down by 11:30.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_8ss9sxpmmvicd1lh",
+        "title": "Keep AI light",
+        "note": "Don't get too far into it today.",
+        "areaId": null
+      },
+      {
+        "id": "i_kgih7ishmvicd1lh",
+        "title": "Rest and recalibrate",
+        "note": "I definitely don't feel recalibrated. Some time in it — a little, not too much.",
+        "areaId": null
+      },
+      {
+        "id": "i_0aks1ii6mvicd1lh",
+        "title": "Health: my ear",
+        "note": "Work on it a bit.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_o2utl7aemvicd1lh",
+        "title": "Church",
+        "note": "Deciding whether to go to Bible study tonight. The struggle with the church split is already showing itself, and I don't know how to deal with it yet. Not acting yet, even though I almost felt that's what I was supposed to do. Figure out if there are any steps I could take in that direction.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_r0zowt4lmvfl0o9t",
+        "title": "Look into flights for Hawaii",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_davduo3nmvhdpdhv",
+        "title": "Vision",
+        "note": "Work on it a little more. Develop more clearly what I am working toward.",
+        "areaId": null
+      }
+    ],
+    "2026-10-22": [
+      {
+        "id": "i_jccz1htymvk1vipi",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_uourdkcdmvk1vipi",
+        "title": "Marriage prep",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_c34ryxu7mvk1vipi",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ycsg71qtmvk1vipi",
+        "title": "Church commitment",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_p8xkncn3mvk1vipi",
+        "title": "Purity",
+        "note": "Keep it a priority too.",
+        "areaId": null
+      },
+      {
+        "id": "i_btpx0eu9mvk1vipi",
+        "title": "Disciples",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_2uox8fz1mvk1vipi",
+        "title": "Resolve the Hawaii trip",
+        "note": "Know where it stands.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_ii3qz9b7mvk1vipi",
+        "title": "Check in with family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ps34ams4mvk1vipi",
+        "title": "Business",
+        "note": "Real estate and AI development, both.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      }
+    ],
+    "2026-10-24": [
+      {
+        "id": "i_ar6sil93mvmp8muu",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_g18zq1rumvmp8muu",
+        "title": "Marriage",
+        "note": "Includes the preparation.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_8z4sgkwhmvmp8muu",
+        "title": "Podcast",
+        "note": "Feeling it in my heart for some reason. Work on it a bit. Maybe build an app where I just upload my audio and it builds the rest out for me.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_998v6eq8mvmp8muu",
+        "title": "Seminary reading",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_3vei47kxmvmp8muu",
+        "title": "Greek",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_arloo6t4mvmp8muu",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_liv7uo1tmvmp8muu",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_nie9vqcbmvmp8muu",
+        "title": "Disciples",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_99zgsznxmvmp8muu",
+        "title": "Where I'm plugged in for ministry",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_dt6bzisvmvmp8muu",
+        "title": "Deep godly friendships",
+        "note": "Growing in them.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_oa2rrseqmvmp8muu",
+        "title": "Purity",
+        "note": "Growing more in it.",
+        "areaId": null
+      },
+      {
+        "id": "i_bwogmz3smvmp9v8d",
+        "title": "Get a humidifier for my room",
+        "note": "I'm getting nosebleeds.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-10-26": [
+      {
+        "id": "i_90i3awgomvpk93hz",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_8ergt7b4mvpk93hz",
+        "title": "Family and marriage",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_47c2bhxhmvpk93hz",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_vp0ybr74mvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_bgcxubaumvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_x7cwi3aqmvop280c",
+        "title": "Investing, and getting connected with Orlando",
+        "note": "Trying to do the thing with Orlando.",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_dwdxpdtzmvpk93hz",
+        "title": "Seminary work",
+        "note": "Some of it.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_ehtaoc30mvop280c",
+        "title": "Slide deck for Wednesday's AI meeting",
+        "note": "A walkthrough. The ideas talked about initially with Jake, and with Luke, compiled all together.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      }
+    ],
+    "2026-10-27": [
+      {
+        "id": "i_rrq9dahmmvr0pov2",
+        "title": "Discipleship",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_sv4svetfmvr0pov2",
+        "title": "Marriage prep",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_ns3gp0q2mvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_7d1b7q4nmvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      }
+    ],
+    "2026-10-28": [
+      {
+        "id": "i_3cqq9wgkmvsmuudi",
+        "title": "The Lord",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_wbp6s0nbmvsmuudi",
+        "title": "My wife",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_gpbj1zsdmvsmuudi",
+        "title": "Podcast",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_e05f76xnmvsmuudi",
+        "title": "Health",
+        "note": "A bit.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_myvn1tetmvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Growth in purity. Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_by0tiypkmvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_hgafhet9mvsmuudi",
+        "title": "Prep for my children",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_cyhsodhsmvsmuudi",
+        "title": "Financial health",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_1oph7toymvsmuudi",
+        "title": "Church vision",
+        "note": "Growth and commitment.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_b26wh20qmvsmuudi",
+        "title": "Preparation for Hawaii",
+        "note": "",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_r43a794jmvsmuudi",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_gxu5ah2zmvsmuudi",
+        "title": "Deep Bible study",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_4msy3hbsmvsmuudi",
+        "title": "Bible study with Papa",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_101nysfwmvsmuudi",
+        "title": "Health with CERC",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-10-29": [
+      {
+        "id": "i_oc101cvpmvu7ahlx",
+        "title": "God",
+        "note": "First.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_lf84jkdvmvpuj3b8",
+        "title": "Purity",
+        "note": "Number two. Celebrate it.",
+        "areaId": null
+      },
+      {
+        "id": "i_d5gd8jvdmvu7ahlx",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_fdaa6bm7mvu7ahlx",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8g8fog2xmvu7ahlx",
+        "title": "Stress",
+        "note": "I'm just so stressed right now.",
+        "areaId": null
+      },
+      {
+        "id": "i_m0n6ulrmmvu7ahlx",
+        "title": "Podcast",
+        "note": "Maybe.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ksfjvrp4mvu7ahlx",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_ly3p8438mvu7ahlx",
+        "title": "Unfunded AI projects",
+        "note": "I'm saying yes to too many of them.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_dd69d6aomvu7ahlx",
+        "title": "Clean the restroom",
+        "note": "Today.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_vpal2qv1mvu7ahlx",
+        "title": "Disneyland",
+        "note": "I'd like to go.",
+        "areaId": null
+      },
+      {
+        "id": "i_6kj7jpq4mvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      }
+    ],
+    "2026-10-30": [
+      {
+        "id": "i_h1zkr7q7mvvcx31o",
+        "title": "God",
+        "note": "Spending time with the Lord, and pursuing Him.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_c9ybfti5mvvcx31o",
+        "title": "Marriage prep",
+        "note": "Includes AI building.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_0jbzuu89mvvcx31o",
+        "title": "Business building",
+        "note": "",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_omy7g2c1mvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_13gd2hclmvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_3yin8oizmvvcx31o",
+        "title": "Growth and development",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_5orp6dcrmvvcx31o",
+        "title": "Seminary work",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_5t9982owmvvcx31o",
+        "title": "Gabby stuff",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_msoceey3mvvcx31o",
+        "title": "Airplane tickets for Hawaii",
+        "note": "Get them sorted out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_mo1fuxvkmvvcx31o",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_9eq37b0gmvvcx31o",
+        "title": "Personal finances",
+        "note": "What needs to get done.",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_skg4ronmmvvcx31o",
+        "title": "Connect with family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8x6mwnfomvvcx31o",
+        "title": "Plugged in at church",
+        "note": "Working on it.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      }
+    ],
+    "2026-10-31": [
+      {
+        "id": "i_ctt6vtw6mvwuctvr",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_8z5umlsemvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_8842swkpmvwtrrai",
+        "title": "Homework",
+        "note": "Complete some of my assignments. That would be awesome. Get ahead on it if I can.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_lb8ok0v4mvw3qayg",
+        "title": "Hawaii logistics",
+        "note": "Love to get it sorted out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_l31fh05mmvpuj3b8",
+        "title": "Purity cleanup",
+        "note": "Spend some time on it. A priority for the rest of the week.",
+        "areaId": null
+      },
+      {
+        "id": "i_5hb1kgtfmvwtrrai",
+        "title": "Health",
+        "note": "Grow more in it.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_mzashj9tmvwtrrai",
+        "title": "Commitment",
+        "note": "I really want to grow more in it.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_jrjrbqy2mvpuj3b8",
+        "title": "Counsel about online teaching",
+        "note": "In light of my purity. A priority for the rest of the week.",
+        "areaId": null
+      }
+    ],
+    "2026-11-01": [
+      {
+        "id": "i_s145a4rpmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_q8rx1pwqmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      }
+    ],
+    "2026-11-02": [
+      {
+        "id": "i_fw3tk9jemvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_c0t95f21mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_lltinuu4mvzs96iw",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_s1xrzi1umvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_ii14bwxkmvzs96iw",
+        "title": "Health",
+        "note": "",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_yqpd4bd4mvzs96iw",
+        "title": "Church search",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_heunld0mmvzs96iw",
+        "title": "Prayer life",
+        "note": "",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_2ax07gk0mvzs96iw",
+        "title": "My children",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_s4t2q11tmvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
+      }
+    ],
+    "2026-11-03": [
+      {
+        "id": "i_8704axv3mvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_3f1w6f2wmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_9rb0osxcmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_vvzbzazmmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_7zh5lhqdmvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_qiwlylq0mvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
+      }
+    ],
+    "2026-11-04": [
+      {
+        "id": "i_2ixbbsh7mvwuh3fw",
+        "title": "God",
+        "note": "Focus on the Lord.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_7ikcb6a0mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_5y5679jbmw33aar3",
+        "title": "Prepare for marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_dki9kx97mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_uc4bx4i3mvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_90v71p4nmw33aar3",
+        "title": "Revival",
+        "note": "Focus on it.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_taz63j9fmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_l9g1hsrxmw33aar3",
+        "title": "Money and income",
+        "note": "",
+        "areaId": "a_9oaz1uz4muohzf1y"
+      },
+      {
+        "id": "i_2dxkxt5imw33aar3",
+        "title": "Prepare for Hawaii next week",
+        "note": "Really want to get ahead on it.",
+        "areaId": "a_vban11q9mucyoq4w"
+      },
+      {
+        "id": "i_qi0bvlsamvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
+      }
+    ],
+    "2026-11-05": [
+      {
+        "id": "i_37whug1wmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_m6hzqyy2mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_9kgfmbxxmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_g3zhfk8dmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_jt5zzwm1mvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_qig70ttomvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
+      }
+    ],
+    "2026-11-06": [
+      {
+        "id": "i_12e22f0lmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_0daapjelmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_61hsqjxgmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_3dbpcssrmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_8uyyv0q8mvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_vbb644lpmvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
+      }
+    ],
+    "2026-11-07": [
+      {
+        "id": "i_kqpfc6lsmvwuh3fw",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_04lg0tu9mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_bbki54n8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_gusx8y8vmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_6i2jagxzmvw2kugu",
+        "title": "Purity cleanup",
+        "note": "Daily this week, every day but Sunday.",
+        "areaId": null
+      },
+      {
+        "id": "i_gixr6dlumvx7e3xj",
+        "title": "Review social media and potential country blocks",
+        "note": "This week. Once it is done, it can come off the rest of the days.",
+        "areaId": null
+      }
+    ],
+    "2026-11-08": [
+      {
+        "id": "i_7cj632ojmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_oidl0oaimvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_4t1j2m7tmw88nj1r",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_u9kq63wcmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_11z1t0jqmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_neiifbvimw88nj1r",
+        "title": "Figure out the baptism thing",
+        "note": "",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7jrp27e0mw88nj1r",
+        "title": "Prayer for the Hawaii trip",
+        "note": "No crazy breakthrough needed. Just getting through it without any big issues.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6laibfg8mw88nj1r",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_z8qlogbkmw88nj1r",
+        "title": "Seminary homework",
+        "note": "If I can get ahead.",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-11-09": [
+      {
+        "id": "i_fwl42fjdmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6fzasb3qmw9x18gi",
+        "title": "Survive here",
+        "note": "Just get through without making any crazy mistakes.",
+        "areaId": null
+      },
+      {
+        "id": "i_jv3f9og6mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_093lizonmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_yppkze77mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_yjq793n2mw9x18gi",
+        "title": "My future spouse",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_w8ce2qyvmw9x18gi",
+        "title": "Schoolwork",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_khys2ezjmw9x18gi",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_kf6fjjfkmw88nj1r",
+        "title": "Business with Craig",
+        "note": "The AI business.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      }
+    ],
+    "2026-11-10": [
+      {
+        "id": "i_yav077c5mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6l1x6x2amvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_ukuxb202mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_8biohjaxmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_it5j0ftvmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-11": [
+      {
+        "id": "i_x5r4xbvlmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_dqe49d0zmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_nv34njggmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_up59az90mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_e1drnp7amw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-12": [
+      {
+        "id": "i_njtozopemvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_dhgpa8avmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_fidbjvb7mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_70syuendmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_g1wd23f0mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-13": [
+      {
+        "id": "i_7gg278wjmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zdciml3pmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_0iprf4trmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_18txruj5mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_rc757wcbmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-14": [
+      {
+        "id": "i_sq1lgr6cmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zy5daur4mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_l9hxbndomw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_jglbe9ufmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_2yejlaemmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-15": [
+      {
+        "id": "i_uftoqo65mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_gtuyd0lmmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_skmdgyw8mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_fqnjzz09mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-16": [
+      {
+        "id": "i_g5aifu36mvx7i7gp",
+        "title": "God",
+        "note": "Pursue God.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_661a8f78mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_5n102ogtmwjq3f0a",
+        "title": "Prepare for my future marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_gulkr17imw131jtn",
+        "title": "Find a home church in my area",
+        "note": "Figure out my church location, or foundation. A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_lajsemb0mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_yr22rqthmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_cs30irz6mwjq3f0a",
+        "title": "Thai food at Disneyland",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_bcwb4jpmmwjq3f0a",
+        "title": "Time with John",
+        "note": "Maybe an hour. Really want to get a good memory in.",
+        "areaId": null
+      }
+    ],
+    "2026-11-17": [
+      {
+        "id": "i_f0h8867lmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_g5y6kbqvmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_lalkvluqmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_qp89bjfmmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_oh3r8ufsmw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-18": [
+      {
+        "id": "i_cd5wrh9kmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hr1cuergmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_vjdtqt77mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_djrfhlqhmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_e2jmjukemw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-19": [
+      {
+        "id": "i_maa20bdxmvx7i7gp",
+        "title": "Time with God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zo3ajqixmw131jtn",
+        "title": "Figure out church",
+        "note": "Where am I plugged in? Where do I belong? Where will I raise my family? A massive priority.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_pbv76pugmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_a3s1s2g6mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_hf0t78a8mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-20": [
+      {
+        "id": "i_1u3sblevmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_509banq7mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_nxnn3pznmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_hy4tcybxmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_pbhzbmuomw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-21": [
+      {
+        "id": "i_64juzht2mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_l5cac56cmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_roc0f87pmw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_j00pkh5emwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_szzvqdj7mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-22": [
+      {
+        "id": "i_z6oh2fhsmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_8poksyojmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_mz98kjl6mw131jtn",
+        "title": "Find a home church in my area",
+        "note": "A great priority. Every day until I find one.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_z9wckrr5mw130r11",
+        "title": "Strength and muscle gain",
+        "note": "Eat well and hit my goals in a healthy way, each day. Daily through the end of the year.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-23": [
+      {
+        "id": "i_cbk5ezfgmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_gg4ga37xmwtn3vzb",
+        "title": "Purity",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_xzp3vi3qmw130r11",
+        "title": "Health",
+        "note": "Moved up. Strength and muscle gain: eat well and hit my goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      },
+      {
+        "id": "i_5staa5yimwtn3vzb",
+        "title": "Family",
+        "note": "",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ipdhuzanmwtn3vzb",
+        "title": "Marriage",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_dd31eklbmwtn3vzb",
+        "title": "Social media project",
+        "note": "Prepare: purity checkpoints, and whether to show my face.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_otwgq3h8mwtn3vzb",
+        "title": "Homework",
+        "note": "",
+        "areaId": "a_7fukniewmucyoq4w"
+      }
+    ],
+    "2026-11-24": [
+      {
+        "id": "i_d8eozvtjmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_r4ovwutkmwv8ieub",
+        "title": "Marriage",
+        "note": "The main thing for it right now is my home church.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_f3rjdc1smw131jtn",
+        "title": "Figure out church",
+        "note": "Continue working on it: my home church, where I am going to be plugged in. The main thing for marriage.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_xewf796bmwv8ieub",
+        "title": "Purity",
+        "note": "",
+        "areaId": null
+      },
+      {
+        "id": "i_omq5gdpxmwv8ieub",
+        "title": "Thanksgiving decisions",
+        "note": "Make some decisions about Thanksgiving.",
+        "areaId": "a_2f6pma6bmus4b33l"
+      },
+      {
+        "id": "i_xr3nacvxmwv8ieub",
+        "title": "Chill out on Hinge",
+        "note": "",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_u7djr8llmwv8ieub",
+        "title": "Read Bavinck",
+        "note": "Schoolwork, first.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_s2kpd1njmwv8ieub",
+        "title": "Greek translation",
+        "note": "Schoolwork, after Bavinck.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_wtykp5w4mwv8ieub",
+        "title": "Study for the quiz",
+        "note": "Schoolwork, the quiz coming up.",
+        "areaId": "a_7fukniewmucyoq4w"
+      },
+      {
+        "id": "i_iwxbs209mwv8kyl8",
+        "title": "Set dating boundaries",
+        "note": "How I am going to go about the dating process, honestly. Watch out for relationships and interactions that make me feel insecure: they are not good for me, and I do not want to be around them.",
+        "areaId": "a_blg8d4dnmucyoq4w"
+      },
+      {
+        "id": "i_chx8e0xamwv8kyl9",
+        "title": "Plan the Hawaii trip",
+        "note": "Figure it out.",
+        "areaId": "a_vban11q9mucyoq4w"
+      }
+    ],
+    "2026-11-25": [
+      {
+        "id": "i_ygsmwjtemvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_u5jegb3qmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_6g5sofp8mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_uq3bq8cvmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_uyxh99aumwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_qtoa7nqjmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_3yc8h5izmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-26": [
+      {
+        "id": "i_8ugzfxvkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_u385vz9nmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_exph5p2hmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_kixv0eutmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_nmtc1bdrmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_jycnm3gbmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_tiyvq5mgmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-27": [
+      {
+        "id": "i_tzsne5r1mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_szshzjmxmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_mdsf2y4xmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_x5gf17qmmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_0o1z9043mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_n5y2y1fgmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_qmw0lxz1mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-28": [
+      {
+        "id": "i_2unqsr9amvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_x3fforcbmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_e34nrj7hmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_vnqqikammwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_f6d4sj4dmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_3bwv8zyumwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_wwybhq7dmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-29": [
+      {
+        "id": "i_hbbqum31mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_0ploh5m5mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_ze9eboqbmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ou2pu9rrmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_e4jjcyu2mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_m5hhe3zimw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-11-30": [
+      {
+        "id": "i_2qalx3tlmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_j8sxnghsmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_fsno98w1mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_yhiihgsomwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_zoksoxxwmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_6t2c78gtmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_bkhggn0qmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-01": [
+      {
+        "id": "i_zinhrmqtmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_yrhgidormvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_l0qoytd8mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_r1q9ms9qmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_kjj0eceimwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_i0gpz7nomwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_c6l2aov1mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-02": [
+      {
+        "id": "i_b0nlv9nzmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_w4gtbsikmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_ik37fkj0mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_tmpufl7emwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_a9ox7x1smwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_8c4oxmssmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_9lowzpoxmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-03": [
+      {
+        "id": "i_hhzpcgfbmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_gcpw2ppzmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_nxzkzim8mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_gjizzaqhmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_q71or5r9mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_rezf3kttmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_ifjcl9p0mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-04": [
+      {
+        "id": "i_10byev5fmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_kiubco9vmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_pr651jt1mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_dhh1fabgmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ipwjr9flmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_uxux5vljmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_5ibze8q9mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-05": [
+      {
+        "id": "i_9d68n8odmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_cfhdqfg3mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_0biexm0kmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_jfqqrc72mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hfu3ktphmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ixsy8w14mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_gj7citcemw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-06": [
+      {
+        "id": "i_ieo6r9bkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_7l4kje4ymvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_04jrff6vmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_4it2671wmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ggv2batvmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_z30maqdbmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-07": [
+      {
+        "id": "i_wsxzvk7fmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_ul3rfpw9mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_7r010i24mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_f851l4namwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_8d4y0qftmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_cu9enulgmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_8ljfjnd4mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-08": [
+      {
+        "id": "i_0qh5ipxkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_vks0d0fqmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_wudonp0jmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_eph6kwtumwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_b3jjmg9emwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ybz3e8mimwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_oonj1ytymw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-09": [
+      {
+        "id": "i_7h5b3y9zmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_ykomuyjbmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_w4ela2lsmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_sfp4j2v3mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_t1kwatx4mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_0bv3yqfimwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_n9scj0temw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-10": [
+      {
+        "id": "i_sgdbb5y3mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_twzcnp2rmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_2soykntomw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_664slsvamwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_tbrban98mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_epxei12fmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_y0nzo45ymw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-11": [
+      {
+        "id": "i_4caff5mcmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_zrj9r0cmmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_0girj0nomw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_83md1fr2mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_5i9iniqwmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_wdhfpiz1mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_dqx5bgdwmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-12": [
+      {
+        "id": "i_ue2i6l2vmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_mq85kwq4mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_p4ooqi7zmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_gkcjs3sfmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_qgf118wkmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_aw3gli30mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_l28zi4h6mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-13": [
+      {
+        "id": "i_lrtzo52umvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_je0qe3x8mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_0h90h6lzmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_46n3v05ymwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hpn68q3vmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_6bbmchubmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-14": [
+      {
+        "id": "i_zvcubi68mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hx6ms88pmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_px9ubk40mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_xth9jkh2mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_o5zqkqecmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_qvvgx5drmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_3u68be7omw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-15": [
+      {
+        "id": "i_ekzobmo0mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_olx97b9vmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_f33z267jmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_1rengjujmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_sz5kfe7mmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_njfe3hwlmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_1ca9dbyxmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-16": [
+      {
+        "id": "i_fyov83p9mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6as4a0w5mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_xjb4qt0amw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_g8khld2fmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_1yzyv5wqmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_7ilqxmpzmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_ofmedwufmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-17": [
+      {
+        "id": "i_qwfaswq2mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_k4mojjmsmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_9gw53085mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_bu4pis5xmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ol25sxyzmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_rk8vvbnxmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_fkw726qlmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-18": [
+      {
+        "id": "i_7v4dqr58mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_ppvv46szmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_0ztd4oijmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ht7rycbqmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_jtag2k1ymwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_xbcj4omkmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_wwcqsmzfmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-19": [
+      {
+        "id": "i_285q9ldpmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_6uz100dxmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_17jlbsspmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_gb1eymnhmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_6z66cyjlmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_k1j70stimwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_m2y2f0l6mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-20": [
+      {
+        "id": "i_lmxsuczdmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hueynhffmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_lazjqlgmmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_4973ci7kmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_h2ouv3dhmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_dpyim4msmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-21": [
+      {
+        "id": "i_kydmdwemmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_74z3825kmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_wgrllpzwmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7mvlo2hxmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_7ouekj3fmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_tyv0h6qlmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_sfoegjxymw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-22": [
+      {
+        "id": "i_pldveogemvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_e06mvfszmvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_q9gyp7kqmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_n0uigj2zmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hsc0tztrmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_g6koi19rmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_f4q11zn1mw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-23": [
+      {
+        "id": "i_72dtdhcymvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_hwbhaxermvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_a4ijiyoqmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_vlje2b3hmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ed3kamabmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_gl9zn1x8mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_ilg6b7jqmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-24": [
+      {
+        "id": "i_i9t8z856mvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_5pq3exjimvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_0ra3x638mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_dun9ievzmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_kao257tgmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_jan8u3gqmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_1khcutmmmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-25": [
+      {
+        "id": "i_flfq1gptmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_94r32s09mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_sglitim2mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ih88zhefmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_xpw1sq6dmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_9cyhuvkvmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_s620ve0xmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-26": [
+      {
+        "id": "i_ejdle1rkmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_1rj8cto4mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_rpypocowmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7b324g55mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_miipc0ypmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_uqi8r0qkmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_26nlaf8umw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-27": [
+      {
+        "id": "i_fxmlxc6vmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_7sh4nnsomvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_k6eq7mi8mw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7ujewg9pmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_vjb08umemwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ovzngdqemw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-28": [
+      {
+        "id": "i_i9i7w5wvmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_stvjqjsumvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_hjhbzhnwmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_e8c1rpwtmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_yatlijfpmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_s7ghuyz5mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_wy4jjopsmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-29": [
+      {
+        "id": "i_hqwtwr2qmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_j0uwy4b3mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_omthtthkmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_74pcb1fgmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hzmj4yhjmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_ldng1r5gmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_kj8dxsadmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-30": [
+      {
+        "id": "i_pcjdlfwqmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_0o2bqdcemvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_vjwnvnzsmw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_nlllgzsfmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_6pqfh6yymwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_2qtrtq14mwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_pryar4hrmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ],
+    "2026-12-31": [
+      {
+        "id": "i_rzfertvdmvx7i7gp",
+        "title": "God",
+        "note": "Number one.",
+        "areaId": "a_ni4h5dgymucyoq4w"
+      },
+      {
+        "id": "i_4t9ll568mvx7i7gp",
+        "title": "Review goals and rhythms",
+        "note": "Daily through the end of the year. A priority.",
+        "areaId": null
+      },
+      {
+        "id": "i_xgmy0soimw131jtn",
+        "title": "Figure out church",
+        "note": "Make a step toward my home church today.",
+        "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_i1hwlshamwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_0c57tekkmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
+      },
+      {
+        "id": "i_rsihk9xnmwbqz6a7",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday, through the end of the year.",
+        "areaId": null
+      },
+      {
+        "id": "i_8p6zfksfmw130r11",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
+        "areaId": "a_6iees2memuenirlc"
+      }
+    ]
+  },
+  "horizons": {
+    "year:2026": [
+      {
+        "id": "h_gn5buw6tmwkg2qho",
+        "title": "God",
+        "note": "Number one, every day.",
+        "areaId": "a_ni4h5dgymucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_3mtguu6fmwkg2qho",
+        "title": "Review goals and rhythms",
+        "note": "Daily. A priority.",
+        "areaId": null,
+        "done": false
+      },
+      {
+        "id": "h_hyo36zf4mwkg2qho",
+        "title": "Figure out church",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Steps toward it every day.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_vmcl21aamwvf8of8",
+        "title": "Build relationship with my family",
+        "note": "Keep moving toward real relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_ic0vw4djmwkg2qho",
+        "title": "Digital cleanup",
+        "note": "Continually, every day but Sunday.",
+        "areaId": null,
+        "done": false
+      },
+      {
+        "id": "h_0w1cagptmwkg2qho",
+        "title": "Gain strength well",
+        "note": "Be healthy: eat well and hit my strength goals in a healthy way, each day.",
+        "areaId": "a_6iees2memuenirlc",
+        "done": false
+      },
+      {
+        "id": "h_fg91m4a7mwv8lwe1",
+        "title": "Guard against insecure relationships",
+        "note": "Set boundaries for how I go about dating, honestly. Watch out for relationships and interactions that make me feel insecure: they are not good for me, and I do not want to be around them.",
+        "areaId": "a_blg8d4dnmucyoq4w",
+        "done": false
+      }
+    ],
+    "month:2026-11": [
+      {
+        "id": "h_71xixmjsmwo69rsh",
+        "title": "Get ready to preach online",
+        "note": "Two questions to settle. 1. Am I prepared from a purity standpoint? 2. With the footprint I have, do I need more time off, and what do I need to do to be eligible to create Christian content? David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
+        "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_l3tn6uipmwvf8of8",
+        "title": "Missionary work: can I go without getting in trouble?",
+        "note": "Find out whether I can do missionary work, and how my online footprint affects it. Either way, prepare myself for it.",
+        "areaId": "a_2f6pma6bmus4b33l",
+        "done": false
+      }
+    ],
+    "month:2026-12": [
+      {
+        "id": "h_qy1g46wimwo69rsh",
+        "title": "Get ready to preach online",
+        "note": "Two questions to settle. 1. Am I prepared from a purity standpoint? 2. With the footprint I have, do I need more time off, and what do I need to do to be eligible to create Christian content? David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
+        "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_17b6g0j7mwvf8of8",
+        "title": "Missionary work: can I go without getting in trouble?",
+        "note": "Find out whether I can do missionary work, and how my online footprint affects it. Either way, prepare myself for it.",
+        "areaId": "a_2f6pma6bmus4b33l",
+        "done": false
+      }
+    ],
+    "long": [
+      {
+        "id": "h_l13frl4tmwvf8of8",
+        "title": "Preach through a book of the Bible online",
+        "note": "Study, prepare, and teach through a whole book, walking through it. No matter what people say or how they respond.",
+        "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_eyo1qyilmwo69rsh",
+        "title": "Develop disciples",
+        "note": "A 5 to 10 year goal.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_3j29nf38mwv9qa4q",
+        "title": "Gain strength well",
+        "note": "For the future, not just this year: build strength that lasts, in a healthy way.",
+        "areaId": "a_6iees2memuenirlc",
+        "done": false
+      }
+    ],
+    "week:2026-11-23": [
+      {
+        "id": "h_u9jyid4kmwv9if21",
+        "title": "Figure out church",
+        "note": "Keep working on it: my home church, where I will be plugged in.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_1x7z1y71mwv9if21",
+        "title": "Thanksgiving decisions",
+        "note": "Thanksgiving is Thursday. Decide the plans.",
+        "areaId": "a_2f6pma6bmus4b33l",
+        "done": false
+      },
+      {
+        "id": "h_hlhsxeo4mwv9if21",
+        "title": "Set dating boundaries",
+        "note": "Chill out on Hinge. Stay away from interactions that make me feel insecure.",
+        "areaId": "a_blg8d4dnmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_hwaxlxqomwv9if21",
+        "title": "Schoolwork",
+        "note": "Read Bavinck, Greek translation, study for the quiz.",
+        "areaId": "a_7fukniewmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_5yn8s999mwv9if21",
+        "title": "Plan the Hawaii trip",
+        "note": "Figure it out.",
+        "areaId": "a_vban11q9mucyoq4w",
+        "done": false
+      }
+    ],
+    "week:2026-11-30": [
+      {
+        "id": "h_ijykcdzzmwv9if21",
+        "title": "Figure out church",
+        "note": "Take the next step toward my home church.",
+        "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_63vfaonsmwv9if21",
+        "title": "Get ready to preach online",
+        "note": "Start on the two questions: purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_y5qdlt9cmwv9if21",
+        "title": "Hawaii trip planned",
+        "note": "Have the plan settled.",
+        "areaId": "a_vban11q9mucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_lrwy4gekmwv9if21",
+        "title": "Schoolwork",
+        "note": "Stay on top of reading and Greek.",
+        "areaId": "a_7fukniewmucyoq4w",
+        "done": false
       }
     ]
   },

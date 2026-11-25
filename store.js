@@ -82,6 +82,7 @@
       areas: [],
       template: [],
       plans: {},
+      horizons: {},
       logs: [],
       reflections: {},
     };
@@ -231,7 +232,9 @@
       standing.push({ id: n.id, title: n.title, body: typeof n.body === 'string' ? n.body : '' });
     }
 
-    return { version: SCHEMA_VERSION, settings, standing, areas, template, plans, logs, reflections };
+    const horizons = cleanHorizons(raw.horizons, areaIds);
+
+    return { version: SCHEMA_VERSION, settings, standing, areas, template, plans, horizons, logs, reflections };
   }
 
   // ---- Areas (optional tags that carry across days) ----------------------
@@ -262,6 +265,9 @@
     for (const it of s.template) if (it.areaId === areaId) it.areaId = null;
     for (const date of Object.keys(s.plans)) {
       for (const it of s.plans[date]) if (it.areaId === areaId) it.areaId = null;
+    }
+    for (const key of Object.keys(s.horizons || {})) {
+      for (const it of s.horizons[key]) if (it.areaId === areaId) it.areaId = null;
     }
     return s;
   }
@@ -497,6 +503,237 @@
     if (!state.standing.some((n) => n.id === id)) return state;
     const s = clone(state);
     s.standing = s.standing.filter((n) => n.id !== id);
+    return s;
+  }
+
+  // ---- Longer horizons ----------------------------------------------------
+  //
+  // Priorities that hold for a stretch rather than a day: the rest of a week,
+  // the rest of a month, the rest of the year. Each stretch owns one ordered
+  // list, keyed by when it starts, so it is written once instead of copied
+  // onto every day. Weeks run Monday to Sunday. One more list, 'long', holds
+  // what runs past the year (five or ten years out) and has no end date.
+
+  const LONG_KEY = 'long';
+  const HORIZON_KEY = /^(week:\d{4}-\d{2}-\d{2}|month:\d{4}-\d{2}|year:\d{4}|long)$/;
+
+  function isHorizonKey(key) {
+    return typeof key === 'string' && HORIZON_KEY.test(key);
+  }
+
+  function weekStart(date) {
+    const [y, m, d] = date.split('-').map(Number);
+    const back = (new Date(y, m - 1, d).getDay() + 6) % 7;
+    return shiftDateKey(date, -back);
+  }
+
+  function weekKey(date) {
+    return 'week:' + weekStart(date);
+  }
+
+  function monthKey(date) {
+    return 'month:' + date.slice(0, 7);
+  }
+
+  function yearKey(date) {
+    return 'year:' + date.slice(0, 4);
+  }
+
+  // The first and last day a stretch covers.
+  function horizonSpan(key) {
+    if (key === LONG_KEY) return { kind: 'long', from: '0000-01-01', to: '9999-12-31' };
+    const [kind, start] = key.split(':');
+    if (kind === 'week') return { kind, from: start, to: shiftDateKey(start, 6) };
+    if (kind === 'month') {
+      const [y, m] = start.split('-').map(Number);
+      return { kind, from: start + '-01', to: dateKey(new Date(y, m, 0)) };
+    }
+    return { kind, from: start + '-01-01', to: start + '-12-31' };
+  }
+
+  // The stretches worth planning from a given day: this week and the three
+  // after it, this month and the next, this year, and the long term.
+  function horizonKeysFrom(date) {
+    const thisMonth = monthKey(date);
+    const [y, m] = date.split('-').map(Number);
+    const nextMonth = monthKey(dateKey(new Date(y, m, 1)));
+    const weeks = [0, 1, 2, 3].map((i) => weekKey(shiftDateKey(weekStart(date), i * 7)));
+    return { week: weeks, month: [thisMonth, nextMonth], year: [yearKey(date)], long: [LONG_KEY] };
+  }
+
+  // The stretches a given day falls inside, narrowest first.
+  function horizonsCovering(date) {
+    return [weekKey(date), monthKey(date), yearKey(date)];
+  }
+
+  function cleanHorizonItems(rawItems, areaIds) {
+    const done = new Map();
+    for (const it of Array.isArray(rawItems) ? rawItems : []) {
+      if (it && typeof it.id === 'string') done.set(it.id, Boolean(it.done));
+    }
+    return cleanItems(rawItems, areaIds).map((it) => ({ ...it, done: done.get(it.id) || false }));
+  }
+
+  function cleanHorizons(raw, areaIds) {
+    const out = {};
+    if (!raw || typeof raw !== 'object') return out;
+    for (const key of Object.keys(raw)) {
+      if (isHorizonKey(key)) out[key] = cleanHorizonItems(raw[key], areaIds);
+    }
+    return out;
+  }
+
+  function horizonFor(state, key) {
+    return (state.horizons && state.horizons[key]) || [];
+  }
+
+  function addHorizonItem(state, key, title, note, areaId) {
+    const trimmed = String(title || '').trim();
+    if (!trimmed || !isHorizonKey(key)) return state;
+    const s = clone(state);
+    if (!s.horizons) s.horizons = {};
+    if (!s.horizons[key]) s.horizons[key] = [];
+    s.horizons[key].push({
+      id: uid('h'),
+      title: trimmed,
+      note: String(note || '').trim(),
+      areaId: areaId && s.areas.some((a) => a.id === areaId) ? areaId : null,
+      done: false,
+    });
+    return s;
+  }
+
+  function updateHorizonItem(state, key, itemId, fields) {
+    const s = clone(state);
+    const it = horizonFor(s, key).find((x) => x.id === itemId);
+    if (!it) return state;
+    applyFields(s, it, fields);
+    if ('done' in fields) it.done = Boolean(fields.done);
+    return s;
+  }
+
+  function moveHorizonItem(state, key, itemId, direction) {
+    const s = clone(state);
+    return swap(s, horizonFor(s, key), itemId, direction) ? s : state;
+  }
+
+  function removeHorizonItem(state, key, itemId) {
+    if (!horizonFor(state, key).some((it) => it.id === itemId)) return state;
+    const s = clone(state);
+    s.horizons[key] = s.horizons[key].filter((it) => it.id !== itemId);
+    if (!s.horizons[key].length) delete s.horizons[key];
+    return s;
+  }
+
+  // Put a longer-horizon priority onto one day's list, so it can be booked
+  // against there. Nothing happens if that day already has it by name.
+  function addHorizonItemToDay(state, key, itemId, date) {
+    const it = horizonFor(state, key).find((x) => x.id === itemId);
+    if (!it) return state;
+    const name = it.title.trim().toLowerCase();
+    if (planFor(state, date).some((x) => x.title.trim().toLowerCase() === name)) return state;
+    return addPlanItem(state, date, it.title, it.note, it.areaId);
+  }
+
+  // The stretch just before this one, of the same kind: the month before a
+  // month, the year before a year. Weeks and the long term have none here.
+  function previousHorizonKey(key) {
+    const span = horizonSpan(key);
+    if (span.kind === 'month') return monthKey(shiftDateKey(span.from, -1));
+    if (span.kind === 'year') return yearKey(shiftDateKey(span.from, -1));
+    return null;
+  }
+
+  // What the stretch before this one left unfinished and this one does not
+  // already hold by name.
+  function carryableInto(state, key) {
+    const prev = previousHorizonKey(key);
+    if (!prev) return [];
+    const have = new Set(horizonFor(state, key).map((it) => it.title.trim().toLowerCase()));
+    return horizonFor(state, prev).filter((it) => !it.done && !have.has(it.title.trim().toLowerCase()));
+  }
+
+  // Bring those unfinished priorities forward, after anything already set.
+  // The earlier stretch keeps its own record unchanged.
+  function carryOverInto(state, key) {
+    const items = carryableInto(state, key);
+    if (!items.length) return state;
+    const s = clone(state);
+    if (!s.horizons) s.horizons = {};
+    s.horizons[key] = horizonFor(s, key).concat(items.map((it) => ({
+      id: uid('h'), title: it.title, note: it.note, areaId: it.areaId, done: false,
+    })));
+    return s;
+  }
+
+  // Whether a day's list already serves a stretch priority: the same name,
+  // or something filed under the same area when no other priority in view
+  // (peers) shares that area, so one area never vouches for two goals.
+  function servedOnDay(state, item, date, peers) {
+    const name = item.title.trim().toLowerCase();
+    const areaOnly = item.areaId && !(peers || []).some((p) => p.id !== item.id && p.areaId === item.areaId
+      && p.title.trim().toLowerCase() !== name);
+    return planFor(state, date).some((x) => x.title.trim().toLowerCase() === name || (areaOnly && x.areaId === item.areaId));
+  }
+
+  function remapAreas(s, other) {
+    const byName = new Map(s.areas.map((a) => [a.name.toLowerCase(), a.id]));
+    const remap = new Map();
+    for (const a of (other.areas || [])) {
+      const key = a.name.toLowerCase();
+      if (!byName.has(key)) {
+        const id = uid('a');
+        s.areas.push({ id, name: a.name });
+        byName.set(key, id);
+      }
+      remap.set(a.id, byName.get(key));
+    }
+    return remap;
+  }
+
+  // Stretches prepared elsewhere that this browser holds nothing for.
+  function horizonsAvailableFrom(state, other) {
+    if (!other || !other.horizons) return [];
+    return Object.keys(other.horizons)
+      .filter((key) => horizonFor(other, key).length && !horizonFor(state, key).length)
+      .sort();
+  }
+
+  // Stretches both sides hold where the prepared version reads differently.
+  // Ticking something done here is not a difference.
+  function horizonsDifferingFrom(state, other) {
+    if (!other || !other.horizons) return [];
+    return Object.keys(other.horizons).filter((key) => {
+      const mine = horizonFor(state, key);
+      const theirs = horizonFor(other, key);
+      if (!mine.length || !theirs.length) return false;
+      if (mine.length !== theirs.length) return true;
+      return mine.some((it, i) => it.title !== theirs[i].title || it.note !== theirs[i].note);
+    }).sort();
+  }
+
+  // Take the prepared version of each stretch named, or of every stretch that
+  // is new or revised when none are named. What was ticked done here stays
+  // ticked, matched by id and then by name.
+  function takeHorizonsFrom(state, other, onlyKeys) {
+    const keys = onlyKeys || horizonsAvailableFrom(state, other).concat(horizonsDifferingFrom(state, other));
+    const wanted = keys.filter((k) => horizonFor(other, k).length);
+    if (!wanted.length) return state;
+    const s = clone(state);
+    if (!s.horizons) s.horizons = {};
+    const remap = remapAreas(s, other);
+    for (const key of wanted) {
+      const mine = horizonFor(s, key);
+      const doneIds = new Set(mine.filter((it) => it.done).map((it) => it.id));
+      const doneNames = new Set(mine.filter((it) => it.done).map((it) => it.title.trim().toLowerCase()));
+      s.horizons[key] = horizonFor(other, key).map((it) => ({
+        id: it.id,
+        title: it.title,
+        note: it.note,
+        areaId: it.areaId && remap.has(it.areaId) ? remap.get(it.areaId) : null,
+        done: doneIds.has(it.id) || doneNames.has(it.title.trim().toLowerCase()),
+      }));
+    }
     return s;
   }
 
@@ -958,6 +1195,28 @@
     updateStanding,
     moveStanding,
     removeStanding,
+    isHorizonKey,
+    weekStart,
+    weekKey,
+    monthKey,
+    yearKey,
+    LONG_KEY,
+    previousHorizonKey,
+    carryableInto,
+    carryOverInto,
+    servedOnDay,
+    horizonSpan,
+    horizonKeysFrom,
+    horizonsCovering,
+    horizonFor,
+    addHorizonItem,
+    updateHorizonItem,
+    moveHorizonItem,
+    removeHorizonItem,
+    addHorizonItemToDay,
+    horizonsAvailableFrom,
+    horizonsDifferingFrom,
+    takeHorizonsFrom,
     orderNotesFor,
     addOrderNote,
     updateOrderNote,

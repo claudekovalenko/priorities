@@ -5,7 +5,7 @@
   const S = window.PriorityStore;
   const STORAGE_KEY = 'priorities-tracker-v1';
   const UI_KEY = 'priorities-tracker-ui';
-  const TABS = ['today', 'tonight', 'trends', 'history', 'lists'];
+  const TABS = ['today', 'focus', 'ahead', 'tonight', 'trends', 'history', 'lists'];
   const TREND_RANGES = [
     { days: 7, label: '7 days' },
     { days: 30, label: '30 days' },
@@ -55,7 +55,7 @@
 
   function persistUi() {
     try {
-      localStorage.setItem(UI_KEY, JSON.stringify({ tab: ui.tab, trendDays: ui.trendDays }));
+      localStorage.setItem(UI_KEY, JSON.stringify({ tab: ui.tab, trendDays: ui.trendDays, horizon: ui.horizon, carryDismissed: ui.carryDismissed }));
     } catch (e) {
       /* ignore */
     }
@@ -145,6 +145,8 @@
     }
     root.replaceChildren();
     if (ui.tab === 'today') root.appendChild(renderToday());
+    else if (ui.tab === 'focus') root.appendChild(renderFocus());
+    else if (ui.tab === 'ahead') root.appendChild(renderAhead());
     else if (ui.tab === 'tonight') root.appendChild(renderTonight());
     else if (ui.tab === 'trends') root.appendChild(renderTrends());
     else if (ui.tab === 'history') root.appendChild(renderHistory());
@@ -242,6 +244,7 @@
         : h('button', { class: 'add', type: 'button', onclick: () => { ui.adding = 'off'; render(); } },
             off.length ? '+ add another off the list' : '+ something not on the list')));
 
+    parts.push(renderHorizonsFor(date));
     parts.push(renderOrderNotes(date));
 
     return h('div', {}, parts);
@@ -407,6 +410,285 @@
         : null,
       h('button', { class: 'btn', type: 'button', onclick: () => { ui.tab = 'tonight'; ui.date = S.shiftDateKey(date, -1); persistUi(); render(); } }, 'Set it now')));
 
+    return h('div', {}, wrap, renderHorizonsFor(date));
+  }
+
+  // ---- Longer horizons ----------------------------------------------------
+
+  function daysLeft(from, to) {
+    const [y1, m1, d1] = from.split('-').map(Number);
+    const [y2, m2, d2] = to.split('-').map(Number);
+    return Math.round((new Date(y2, m2 - 1, d2) - new Date(y1, m1 - 1, d1)) / 86400000) + 1;
+  }
+
+  // What a stretch is called, seen from a given day.
+  function horizonName(key, from) {
+    const span = S.horizonSpan(key);
+    if (span.kind === 'long') return 'Long term';
+    if (span.kind === 'week') {
+      const here = S.weekKey(from);
+      if (key === here) return 'This week';
+      if (key === S.weekKey(S.shiftDateKey(S.weekStart(from), 7))) return 'Next week';
+      return 'Week of ' + fmtShort(span.from);
+    }
+    if (span.kind === 'month') return MONTHS[Number(span.from.slice(5, 7)) - 1];
+    return span.from.slice(0, 4);
+  }
+
+  // A short line saying how much of the stretch is left from a given day.
+  function horizonReach(key, from) {
+    const span = S.horizonSpan(key);
+    if (span.kind === 'long') return 'No end date';
+    if (from > span.to) return 'Over';
+    const start = from < span.from ? span.from : from;
+    const n = daysLeft(start, span.to);
+    if (span.kind === 'week') {
+      return (from < span.from ? fmtShort(span.from) + ' to ' : 'Through ') + fmtDate(span.to).replace(/,.*$/, '') + ', ' + fmtShort(span.to);
+    }
+    return n + (n === 1 ? ' day left' : ' days left') + (from < span.from ? ', from ' + fmtShort(span.from) : '');
+  }
+
+  function openAhead(key) {
+    ui.tab = 'ahead';
+    ui.horizon = key;
+    ui.adding = null;
+    persistUi();
+    render();
+  }
+
+  // Offer prepared week, month and year lists that are new or have changed.
+  function horizonRevisionBar() {
+    const seed = seedState();
+    if (!seed) return null;
+    const fresh = S.horizonsAvailableFrom(state, seed);
+    const changed = S.horizonsDifferingFrom(state, seed);
+    const keys = fresh.concat(changed).filter((k) => S.horizonSpan(k).to >= today());
+    if (!keys.length) return null;
+    const names = keys.map((k) => horizonName(k, today()));
+    return h('div', { class: 'revision' },
+      h('span', { text: (changed.length ? 'Updated' : 'Prepared') + ' priorities are ready for ' + names.join(', ') + '.' }),
+      h('button', { class: 'btn small', type: 'button', onclick: () => {
+        if (changed.length && !confirm('Update ' + names.join(', ') + '? Anything you ticked done stays ticked.')) return;
+        commit(S.takeHorizonsFrom(state, seed, keys));
+        toast('Updated');
+      } }, changed.length ? 'Update' : 'Add'));
+  }
+
+  // The week, month and year a day sits in, under that day's own list.
+  function renderHorizonsFor(date) {
+    const wrap = h('div', { class: 'horizons' });
+    const bar = horizonRevisionBar();
+    if (bar) wrap.appendChild(bar);
+
+    const onDay = new Set(S.planFor(state, date).map((it) => it.title.trim().toLowerCase()));
+    let shown = 0;
+
+    for (const key of S.horizonsCovering(date)) {
+      const items = S.horizonFor(state, key);
+      const title = horizonName(key, date);
+      const heading = h('div', { class: 'hz-head' },
+        h('h3', { text: S.horizonSpan(key).kind === 'week' ? title : (date === today() ? 'Rest of ' : '') + title }),
+        h('span', { class: 'hz-reach', text: horizonReach(key, date) }),
+        h('button', { class: 'btn small', type: 'button', onclick: () => openAhead(key) }, items.length ? 'Edit' : 'Set'));
+
+      if (!items.length) {
+        wrap.appendChild(h('div', { class: 'hz empty' }, heading));
+        continue;
+      }
+      shown += items.length;
+
+      wrap.appendChild(h('div', { class: 'hz' }, heading,
+        h('ul', { class: 'hz-list' }, items.map((it) => {
+          const there = onDay.has(it.title.trim().toLowerCase());
+          return h('li', { class: it.done ? 'done' : '' },
+            h('button', {
+              class: 'tick', type: 'button', 'aria-pressed': it.done ? 'true' : 'false',
+              'aria-label': (it.done ? 'Mark not done: ' : 'Mark done: ') + it.title,
+              onclick: () => commit(S.updateHorizonItem(state, key, it.id, { done: !it.done })),
+            }, it.done ? '✓' : ''),
+            h('div', { class: 'hz-text' },
+              h('span', { class: 'hz-title', text: it.title }),
+              it.note ? h('span', { class: 'hz-note', text: it.note }) : null),
+            there
+              ? h('span', { class: 'hz-on', text: 'on the list' })
+              : h('button', { class: 'btn small', type: 'button', 'aria-label': 'Put ' + it.title + ' on ' + relativeName(date) + '’s list', onclick: () => {
+                  commit(S.addHorizonItemToDay(state, key, it.id, date));
+                  toast('Added to ' + relativeName(date));
+                } }, '+ ' + relativeName(date)));
+        }))));
+    }
+
+    if (!shown) {
+      wrap.insertBefore(h('p', { class: 'lede', text: 'Nothing set for the longer stretches yet. Set what matters for the rest of the week, the month, or the year.' }), wrap.querySelector('.hz'));
+    }
+    return wrap;
+  }
+
+  function renderAhead() {
+    const from = today();
+    const keys = S.horizonKeysFrom(from);
+    const all = keys.week.concat(keys.month, keys.year, keys.long);
+    if (!all.includes(ui.horizon)) ui.horizon = keys.week[0];
+    const key = ui.horizon;
+    const span = S.horizonSpan(key);
+    const items = S.horizonFor(state, key);
+
+    const chip = (k) => h('button', {
+      type: 'button',
+      'aria-pressed': k === key ? 'true' : 'false',
+      onclick: () => { ui.horizon = k; ui.adding = null; persistUi(); render(); },
+    }, horizonName(k, from) + (S.horizonFor(state, k).length ? ' · ' + S.horizonFor(state, k).length : ''));
+
+    const wrap = h('div', {});
+    const bar = horizonRevisionBar();
+    if (bar) wrap.appendChild(bar);
+
+    wrap.appendChild(h('div', { class: 'hz-picker' },
+      h('div', { class: 'hz-group' }, h('span', { class: 'hz-label', text: 'Week' }), h('div', { class: 'chips' }, keys.week.map(chip))),
+      h('div', { class: 'hz-group' }, h('span', { class: 'hz-label', text: 'Month' }), h('div', { class: 'chips' }, keys.month.map(chip))),
+      h('div', { class: 'hz-group' }, h('span', { class: 'hz-label', text: 'Year' }), h('div', { class: 'chips' }, keys.year.map(chip))),
+      h('div', { class: 'hz-group' }, h('span', { class: 'hz-label', text: 'Beyond' }), h('div', { class: 'chips' }, keys.long.map(chip)))));
+
+    const lede = span.kind === 'week'
+      ? 'What matters for ' + (key === S.weekKey(from) ? 'the rest of this week' : 'that week') + ', Monday to Sunday. ' + horizonReach(key, from) + '.'
+      : span.kind === 'month'
+        ? 'What matters for ' + (key === S.monthKey(from) ? 'the rest of ' : 'all of ') + horizonName(key, from) + '. ' + horizonReach(key, from) + '.'
+        : span.kind === 'year'
+          ? 'What matters from now to the end of the year. ' + horizonReach(key, from) + '.'
+          : 'What runs past this year: the five and ten year goals. They show on Focus, not under each day.';
+
+    const section = h('div', { class: 'section' },
+      h('h2', { text: span.kind === 'year' ? 'Rest of ' + horizonName(key, from) : horizonName(key, from) }),
+      h('p', { class: 'lede', text: span.kind === 'long' ? lede : lede + ' In order, and they show under each day they cover.' }));
+
+    const list = h('ol', { class: 'plan-list' }, items.map((it, i) => {
+      const title = h('input', { type: 'text', id: 'hz-' + it.id, value: it.title, 'aria-label': 'Priority ' + (i + 1) });
+      title.addEventListener('change', () => commit(S.updateHorizonItem(state, key, it.id, { title: title.value })));
+      const note = h('input', { type: 'text', class: 'note', id: 'hzn-' + it.id, value: it.note, placeholder: 'Note (optional)', 'aria-label': 'Note for ' + it.title });
+      note.addEventListener('change', () => commit(S.updateHorizonItem(state, key, it.id, { note: note.value })));
+      return h('li', { class: 'plan-item hz-item' + (it.done ? ' done' : '') },
+        h('button', {
+          class: 'tick', type: 'button', 'aria-pressed': it.done ? 'true' : 'false',
+          'aria-label': (it.done ? 'Mark not done: ' : 'Mark done: ') + it.title,
+          onclick: () => commit(S.updateHorizonItem(state, key, it.id, { done: !it.done })),
+        }, it.done ? '✓' : String(i + 1)),
+        h('div', { class: 'fields' }, title, note),
+        h('div', { class: 'ctl' },
+          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move up', disabled: i === 0, onclick: () => commit(S.moveHorizonItem(state, key, it.id, -1)) }, '↑'),
+          h('button', { class: 'btn icon', type: 'button', 'aria-label': 'Move down', disabled: i === items.length - 1, onclick: () => commit(S.moveHorizonItem(state, key, it.id, 1)) }, '↓'),
+          h('button', { class: 'btn icon danger', type: 'button', 'aria-label': 'Remove', onclick: () => commit(S.removeHorizonItem(state, key, it.id)) }, '×')));
+    }));
+    section.appendChild(list);
+
+    if (!items.length) {
+      section.appendChild(h('p', { class: 'lede empty', text: 'Nothing here yet.' }));
+    }
+
+    const add = h('input', { type: 'text', id: 'hzadd', placeholder: 'Add a priority', 'aria-label': 'Add a priority' });
+    const addNote = h('input', { type: 'text', id: 'hzaddnote', placeholder: 'Note (optional)', 'aria-label': 'Note' });
+    const submit = () => {
+      if (!add.value.trim()) return;
+      commit(S.addHorizonItem(state, key, add.value, addNote.value, null));
+      const again = document.getElementById('hzadd');
+      if (again) again.focus();
+    };
+    add.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submit(); } });
+    addNote.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submit(); } });
+    section.appendChild(h('div', { class: 'addrow', style: 'margin-top:12px' }, add, addNote, h('button', { class: 'btn', type: 'button', onclick: submit }, 'Add')));
+
+    wrap.appendChild(section);
+    return wrap;
+  }
+
+  // ---- Focus --------------------------------------------------------------
+  //
+  // The month, the rest of the year and the long term on one screen, to read
+  // rather than edit: what to keep in front of you beyond today.
+
+  function renderFocus() {
+    const from = today();
+    const keys = S.horizonKeysFrom(from);
+    const thisMonth = keys.month[0];
+    const nextMonth = keys.month[1];
+    const shown = [thisMonth];
+    // Near the end of a month, next month is close enough to keep in view.
+    if (daysLeft(from, S.horizonSpan(thisMonth).to) <= 7 && S.horizonFor(state, nextMonth).length) shown.push(nextMonth);
+    shown.push(keys.year[0], keys.long[0]);
+    const peers = shown.flatMap((k) => S.horizonFor(state, k).filter((it) => !it.done));
+
+    const wrap = h('div', {});
+    const bar = horizonRevisionBar();
+    if (bar) wrap.appendChild(bar);
+
+    wrap.appendChild(h('div', { class: 'section' },
+      h('h2', { text: 'Focus' }),
+      h('p', { class: 'lede', text: 'What to keep in front of you beyond today: this month, the rest of the year, and the long term.' })));
+
+    // How well today's list lines up with the month and the year.
+    const open = [keys.month[0], keys.year[0]].flatMap((k) => S.horizonFor(state, k).filter((it) => !it.done));
+    if (open.length && S.hasPlan(state, from)) {
+      const missing = open.filter((it) => !S.servedOnDay(state, it, from, peers));
+      const names = [...new Set(missing.map((it) => it.title))];
+      wrap.appendChild(h('p', { class: names.length ? 'alert' : 'summary', text: names.length
+        ? 'Not on today’s list: ' + names.join(', ') + '.'
+        : 'Today’s list covers every open priority for the month and the year.' }));
+    }
+
+    for (const key of shown) {
+      const span = S.horizonSpan(key);
+      const items = S.horizonFor(state, key);
+      const name = horizonName(key, from);
+      const title = span.kind === 'year' ? 'Rest of ' + name
+        : span.kind === 'month' && key === thisMonth ? 'This month · ' + name
+          : span.kind === 'month' ? 'Next month · ' + name
+            : name;
+      const left = items.filter((it) => !it.done).length;
+      const reach = horizonReach(key, from) + (items.length && left < items.length ? ' · ' + (items.length - left) + ' of ' + items.length + ' done' : '');
+
+      const card = h('div', { class: 'focus-card' + (items.length ? '' : ' empty') },
+        h('div', { class: 'hz-head' },
+          h('h3', { text: title }),
+          h('span', { class: 'hz-reach', text: reach }),
+          h('button', { class: 'btn small', type: 'button', onclick: () => openAhead(key) }, items.length ? 'Edit' : 'Set')));
+
+      const carry = S.carryableInto(state, key);
+      const prevKey = S.previousHorizonKey(key);
+      const dismissed = (ui.carryDismissed || []).includes(key);
+      if (carry.length && !dismissed) {
+        const prevName = span.kind === 'year' ? prevKey.slice(5) : horizonName(prevKey, from);
+        card.appendChild(h('div', { class: 'revision carry' },
+          h('span', { text: carry.length + (carry.length === 1 ? ' priority' : ' priorities') + ' from ' + prevName + ' not ticked done: ' + carry.map((it) => it.title).join(', ') + '.' }),
+          h('div', { class: 'actions' },
+            h('button', { class: 'btn small primary', type: 'button', onclick: () => { commit(S.carryOverInto(state, key)); toast('Carried over'); } }, 'Carry over'),
+            h('button', { class: 'btn small', type: 'button', onclick: () => {
+              ui.carryDismissed = (ui.carryDismissed || []).concat(key).slice(-12);
+              persistUi();
+              render();
+            } }, 'Leave them'))));
+      }
+
+      if (!items.length) {
+        card.appendChild(h('p', { class: 'lede', text: 'Nothing set yet.' }));
+      } else {
+        card.appendChild(h('ol', { class: 'hz-list focus-list' }, items.map((it, i) => h('li', { class: it.done ? 'done' : '' },
+          h('button', {
+            class: 'tick', type: 'button', 'aria-pressed': it.done ? 'true' : 'false',
+            'aria-label': (it.done ? 'Mark not done: ' : 'Mark done: ') + it.title,
+            onclick: () => commit(S.updateHorizonItem(state, key, it.id, { done: !it.done })),
+          }, it.done ? '✓' : String(i + 1)),
+          h('div', { class: 'hz-text' },
+            h('span', { class: 'hz-title', text: it.title }),
+            it.note ? h('span', { class: 'hz-note', text: it.note }) : null),
+          it.done ? null
+            : S.servedOnDay(state, it, from, peers)
+              ? h('span', { class: 'hz-on', text: 'on today' })
+              : h('button', { class: 'btn small', type: 'button', 'aria-label': 'Put ' + it.title + ' on today’s list', onclick: () => {
+                  commit(S.addHorizonItemToDay(state, key, it.id, from));
+                  toast('Added to today');
+                } }, '+ Today')))));
+      }
+      wrap.appendChild(card);
+    }
     return wrap;
   }
 
