@@ -2817,8 +2817,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_6g5sofp8mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_uq3bq8cvmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_uyxh99aumwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_qtoa7nqjmwbqz6a7",
@@ -2831,12 +2843,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_uq3bq8cvmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-26": [
@@ -2855,8 +2861,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_exph5p2hmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_kixv0eutmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_nmtc1bdrmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_jycnm3gbmwbqz6a7",
@@ -2869,12 +2887,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_kixv0eutmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-27": [
@@ -2893,8 +2905,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_mdsf2y4xmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_x5gf17qmmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_0o1z9043mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_n5y2y1fgmwbqz6a7",
@@ -2907,12 +2931,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_x5gf17qmmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-28": [
@@ -2931,8 +2949,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_e34nrj7hmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_vnqqikammwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_f6d4sj4dmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_3bwv8zyumwbqz6a7",
@@ -2945,12 +2975,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_vnqqikammwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-29": [
@@ -2969,20 +2993,26 @@ window.PRIORITY_SEED = {
       {
         "id": "i_ze9eboqbmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ou2pu9rrmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_e4jjcyu2mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_m5hhe3zimw130r11",
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_ou2pu9rrmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-11-30": [
@@ -3001,8 +3031,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_fsno98w1mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_yhiihgsomwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_zoksoxxwmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_6t2c78gtmwbqz6a7",
@@ -3015,12 +3057,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_yhiihgsomwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-01": [
@@ -3039,8 +3075,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_l0qoytd8mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_r1q9ms9qmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_kjj0eceimwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_i0gpz7nomwbqz6a7",
@@ -3053,12 +3101,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_r1q9ms9qmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-02": [
@@ -3077,8 +3119,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_ik37fkj0mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_tmpufl7emwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_a9ox7x1smwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_8c4oxmssmwbqz6a7",
@@ -3091,12 +3145,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_tmpufl7emwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-03": [
@@ -3115,8 +3163,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_nxzkzim8mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_gjizzaqhmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_q71or5r9mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_rezf3kttmwbqz6a7",
@@ -3129,12 +3189,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_gjizzaqhmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-04": [
@@ -3153,8 +3207,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_pr651jt1mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_dhh1fabgmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ipwjr9flmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_uxux5vljmwbqz6a7",
@@ -3167,12 +3233,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_dhh1fabgmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-05": [
@@ -3191,8 +3251,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_0biexm0kmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_jfqqrc72mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hfu3ktphmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_ixsy8w14mwbqz6a7",
@@ -3205,12 +3277,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_jfqqrc72mwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-06": [
@@ -3229,20 +3295,26 @@ window.PRIORITY_SEED = {
       {
         "id": "i_04jrff6vmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_4it2671wmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ggv2batvmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_z30maqdbmw130r11",
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_4it2671wmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-07": [
@@ -3261,8 +3333,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_7r010i24mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_f851l4namwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_8d4y0qftmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_cu9enulgmwbqz6a7",
@@ -3275,12 +3359,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_f851l4namwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-08": [
@@ -3299,8 +3377,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_wudonp0jmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_eph6kwtumwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_b3jjmg9emwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_ybz3e8mimwbqz6a7",
@@ -3313,12 +3403,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_eph6kwtumwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-09": [
@@ -3337,8 +3421,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_w4ela2lsmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_sfp4j2v3mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_t1kwatx4mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_0bv3yqfimwbqz6a7",
@@ -3351,12 +3447,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_sfp4j2v3mwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-10": [
@@ -3375,8 +3465,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_2soykntomw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_664slsvamwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_tbrban98mwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_epxei12fmwbqz6a7",
@@ -3389,12 +3491,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_664slsvamwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-11": [
@@ -3413,8 +3509,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_0girj0nomw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_83md1fr2mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_5i9iniqwmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_wdhfpiz1mwbqz6a7",
@@ -3427,12 +3535,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_83md1fr2mwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-12": [
@@ -3451,8 +3553,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_p4ooqi7zmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_gkcjs3sfmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_qgf118wkmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_aw3gli30mwbqz6a7",
@@ -3465,12 +3579,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_gkcjs3sfmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-13": [
@@ -3489,20 +3597,26 @@ window.PRIORITY_SEED = {
       {
         "id": "i_0h90h6lzmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_46n3v05ymwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hpn68q3vmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_6bbmchubmw130r11",
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_46n3v05ymwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-14": [
@@ -3521,8 +3635,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_px9ubk40mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_xth9jkh2mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_o5zqkqecmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_qvvgx5drmwbqz6a7",
@@ -3535,12 +3661,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_xth9jkh2mwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-15": [
@@ -3559,8 +3679,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_f33z267jmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_1rengjujmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_sz5kfe7mmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_njfe3hwlmwbqz6a7",
@@ -3573,12 +3705,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_1rengjujmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-16": [
@@ -3597,8 +3723,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_xjb4qt0amw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_g8khld2fmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_1yzyv5wqmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_7ilqxmpzmwbqz6a7",
@@ -3611,12 +3749,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_g8khld2fmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-17": [
@@ -3635,8 +3767,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_9gw53085mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_bu4pis5xmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ol25sxyzmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_rk8vvbnxmwbqz6a7",
@@ -3649,12 +3793,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_bu4pis5xmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-18": [
@@ -3673,8 +3811,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_0ztd4oijmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ht7rycbqmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_jtag2k1ymwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_xbcj4omkmwbqz6a7",
@@ -3687,12 +3837,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_ht7rycbqmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-19": [
@@ -3711,8 +3855,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_17jlbsspmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_gb1eymnhmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_6z66cyjlmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_k1j70stimwbqz6a7",
@@ -3725,12 +3881,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_gb1eymnhmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-20": [
@@ -3749,20 +3899,26 @@ window.PRIORITY_SEED = {
       {
         "id": "i_lazjqlgmmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_4973ci7kmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_h2ouv3dhmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_dpyim4msmw130r11",
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_4973ci7kmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-21": [
@@ -3781,8 +3937,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_wgrllpzwmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7mvlo2hxmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_7ouekj3fmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_tyv0h6qlmwbqz6a7",
@@ -3795,12 +3963,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_7mvlo2hxmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-22": [
@@ -3819,8 +3981,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_q9gyp7kqmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_n0uigj2zmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hsc0tztrmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_g6koi19rmwbqz6a7",
@@ -3833,12 +4007,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_n0uigj2zmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-23": [
@@ -3857,8 +4025,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_a4ijiyoqmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_vlje2b3hmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_ed3kamabmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_gl9zn1x8mwbqz6a7",
@@ -3871,12 +4051,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_vlje2b3hmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-24": [
@@ -3895,8 +4069,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_0ra3x638mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_dun9ievzmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_kao257tgmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_jan8u3gqmwbqz6a7",
@@ -3909,12 +4095,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_dun9ievzmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-25": [
@@ -3933,8 +4113,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_sglitim2mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_ih88zhefmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_xpw1sq6dmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_9cyhuvkvmwbqz6a7",
@@ -3947,12 +4139,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_ih88zhefmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-26": [
@@ -3971,8 +4157,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_rpypocowmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7b324g55mwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_miipc0ypmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_uqi8r0qkmwbqz6a7",
@@ -3985,12 +4183,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_7b324g55mwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-27": [
@@ -4009,20 +4201,26 @@ window.PRIORITY_SEED = {
       {
         "id": "i_k6eq7mi8mw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_7ujewg9pmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_vjb08umemwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_ovzngdqemw130r11",
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_7ujewg9pmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-28": [
@@ -4041,8 +4239,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_hjhbzhnwmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_e8c1rpwtmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_yatlijfpmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_s7ghuyz5mwbqz6a7",
@@ -4055,12 +4265,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_e8c1rpwtmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-29": [
@@ -4079,8 +4283,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_omthtthkmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_74pcb1fgmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_hzmj4yhjmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_ldng1r5gmwbqz6a7",
@@ -4093,12 +4309,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_74pcb1fgmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-30": [
@@ -4117,8 +4327,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_vjwnvnzsmw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_nlllgzsfmwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_6pqfh6yymwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_2qtrtq14mwbqz6a7",
@@ -4131,12 +4353,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_nlllgzsfmwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ],
     "2026-12-31": [
@@ -4155,8 +4371,20 @@ window.PRIORITY_SEED = {
       {
         "id": "i_xgmy0soimw131jtn",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Every day until I find it.",
+        "note": "Make a step toward my home church today.",
         "areaId": "a_d4q7ig0emucyoq4w"
+      },
+      {
+        "id": "i_i1hwlshamwtpr7s4",
+        "title": "Get ready to preach online",
+        "note": "Purity readiness, and what my footprint needs.",
+        "areaId": "a_t4nwh5czmucyoq4w"
+      },
+      {
+        "id": "i_0c57tekkmwvf8of9",
+        "title": "Build relationship with my family",
+        "note": "A step toward relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w"
       },
       {
         "id": "i_rsihk9xnmwbqz6a7",
@@ -4169,12 +4397,6 @@ window.PRIORITY_SEED = {
         "title": "Gain strength well",
         "note": "Be healthy: eat well and hit my strength goals in a healthy way.",
         "areaId": "a_6iees2memuenirlc"
-      },
-      {
-        "id": "i_i1hwlshamwtpr7s4",
-        "title": "Social media project",
-        "note": "Prepare: purity checkpoints, and whether to show my face.",
-        "areaId": "a_t4nwh5czmucyoq4w"
       }
     ]
   },
@@ -4197,8 +4419,15 @@ window.PRIORITY_SEED = {
       {
         "id": "h_hyo36zf4mwkg2qho",
         "title": "Figure out church",
-        "note": "Where I am plugged in, where I belong, where I will raise my family. Through the end of the year, until I find it.",
+        "note": "Where I am plugged in, where I belong, where I will raise my family. Steps toward it every day.",
         "areaId": "a_d4q7ig0emucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_vmcl21aamwvf8of8",
+        "title": "Build relationship with my family",
+        "note": "Keep moving toward real relationship with them.",
+        "areaId": "a_i440wh9vmucyoq4w",
         "done": false
       },
       {
@@ -4226,22 +4455,43 @@ window.PRIORITY_SEED = {
     "month:2026-11": [
       {
         "id": "h_71xixmjsmwo69rsh",
-        "title": "Prepare to make social media content",
-        "note": "Figure out the purity checkpoints, and decide whether to show my face online. David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
+        "title": "Get ready to preach online",
+        "note": "Two questions to settle. 1. Am I prepared from a purity standpoint? 2. With the footprint I have, do I need more time off, and what do I need to do to be eligible to create Christian content? David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
         "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_l3tn6uipmwvf8of8",
+        "title": "Missionary work: can I go without getting in trouble?",
+        "note": "Find out whether I can do missionary work, and how my online footprint affects it. Either way, prepare myself for it.",
+        "areaId": "a_2f6pma6bmus4b33l",
         "done": false
       }
     ],
     "month:2026-12": [
       {
         "id": "h_qy1g46wimwo69rsh",
-        "title": "Prepare to make social media content",
-        "note": "Figure out the purity checkpoints, and decide whether to show my face online. David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
+        "title": "Get ready to preach online",
+        "note": "Two questions to settle. 1. Am I prepared from a purity standpoint? 2. With the footprint I have, do I need more time off, and what do I need to do to be eligible to create Christian content? David Laddie promoting Ivan, making Gen Z biblically literate, feels like a sign.",
         "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
+      {
+        "id": "h_17b6g0j7mwvf8of8",
+        "title": "Missionary work: can I go without getting in trouble?",
+        "note": "Find out whether I can do missionary work, and how my online footprint affects it. Either way, prepare myself for it.",
+        "areaId": "a_2f6pma6bmus4b33l",
         "done": false
       }
     ],
     "long": [
+      {
+        "id": "h_l13frl4tmwvf8of8",
+        "title": "Preach through a book of the Bible online",
+        "note": "Study, prepare, and teach through a whole book, walking through it. No matter what people say or how they respond.",
+        "areaId": "a_t4nwh5czmucyoq4w",
+        "done": false
+      },
       {
         "id": "h_eyo1qyilmwo69rsh",
         "title": "Develop disciples",
@@ -4304,8 +4554,8 @@ window.PRIORITY_SEED = {
       },
       {
         "id": "h_63vfaonsmwv9if21",
-        "title": "Social media prep",
-        "note": "Work on the purity checkpoints.",
+        "title": "Get ready to preach online",
+        "note": "Start on the two questions: purity readiness, and what my footprint needs.",
         "areaId": "a_t4nwh5czmucyoq4w",
         "done": false
       },
